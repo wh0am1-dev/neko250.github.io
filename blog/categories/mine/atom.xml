@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Mine | My Octopress Blog]]></title>
-  <link href="http://Neko250.github.io/blog/categories/mine/atom.xml" rel="self"/>
-  <link href="http://Neko250.github.io/"/>
-  <updated>2014-03-06T13:35:21+01:00</updated>
-  <id>http://Neko250.github.io/</id>
+  <title><![CDATA[Category: Mine | Neko250's Blog]]></title>
+  <link href="http://neko250.github.io/blog/categories/mine/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-03-06T13:43:24+01:00</updated>
+  <id>http://neko250.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Carlos Aguilar]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Y, ¿Quién Soy Yo?]]></title>
-    <link href="http://Neko250.github.io/blog/2014/03/06/y-quien-soy-yo/"/>
+    <link href="http://neko250.github.io/blog/2014/03/06/y-quien-soy-yo/"/>
     <updated>2014-03-06T08:57:52+01:00</updated>
-    <id>http://Neko250.github.io/blog/2014/03/06/y-quien-soy-yo</id>
+    <id>http://neko250.github.io/blog/2014/03/06/y-quien-soy-yo</id>
     <content type="html"><![CDATA[<h2>Y, ¿quién soy yo?</h2>
 
 <h3>Un pequeño tour por mi vida</h3>

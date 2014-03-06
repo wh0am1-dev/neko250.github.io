@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://Neko250.github.io/sitemap.xml 
+Sitemap: http://neko250.github.io/sitemap.xml 

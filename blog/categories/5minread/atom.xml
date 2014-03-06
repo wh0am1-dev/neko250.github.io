@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 5MinRead | My Octopress Blog]]></title>
-  <link href="http://Neko250.github.io/blog/categories/5minread/atom.xml" rel="self"/>
-  <link href="http://Neko250.github.io/"/>
-  <updated>2014-03-06T13:35:21+01:00</updated>
-  <id>http://Neko250.github.io/</id>
+  <title><![CDATA[Category: 5MinRead | Neko250's Blog]]></title>
+  <link href="http://neko250.github.io/blog/categories/5minread/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-03-06T13:43:24+01:00</updated>
+  <id>http://neko250.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Carlos Aguilar]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[The Man in the Moon Came Down Too Soon]]></title>
-    <link href="http://Neko250.github.io/blog/2014/03/06/the-man-in-the-moon/"/>
+    <title type="html"><![CDATA[The Man In The Moon Came Down Too Soon]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/06/the-man-in-the-moon/"/>
     <updated>2014-03-06T03:11:50+01:00</updated>
-    <id>http://Neko250.github.io/blog/2014/03/06/the-man-in-the-moon</id>
+    <id>http://neko250.github.io/blog/2014/03/06/the-man-in-the-moon</id>
     <content type="html"><![CDATA[<h2>The Man In The Moon Came Down Too Soon</h2>
 
 <p>Mi poesía favorita, El Hombre de la Luna Descendió con Premura:</p>
