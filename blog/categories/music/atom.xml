@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Music | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/music/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-07T02:49:54+01:00</updated>
+  <updated>2014-03-07T02:57:56+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mestis, Basal Ganglia]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/07/mestis/"/>
+    <updated>2014-03-07T02:57:22+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/mestis</id>
+    <content type="html"><![CDATA[<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2449696&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I Me Mine]]></title>
