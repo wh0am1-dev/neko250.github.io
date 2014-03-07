@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mine | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/mine/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-06T22:25:58+01:00</updated>
+  <updated>2014-03-07T01:06:06+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -18,11 +18,7 @@
     <link href="http://neko250.github.io/blog/2014/03/06/y-quien-soy-yo/"/>
     <updated>2014-03-06T08:57:52+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/06/y-quien-soy-yo</id>
-    <content type="html"><![CDATA[<h2>Y, ¿quién soy yo?</h2>
-
-<h3>Un pequeño tour por mi vida</h3>
-
-<p>Y, ¿quién soy yo?</p>
+    <content type="html"><![CDATA[<p>Y, ¿quién soy yo?</p>
 
 <p>¿Soy yo aquel chaval confundido que no tenía amigos?</p>
 
@@ -70,7 +66,9 @@ Los mismos chavales cuyas espectaciones se han convertido en un mero porro; o en
 <p>A lo mejor soy alguien. A lo peor no.
 Solo espero de esta vida que, cuando ya no me queden fuerzas para vivir como he vivido hasta ahora, cuando esté postrado en una débil cama, todo tan frágil (muy lejos de aquí y ahora); pueda responder a una simple pero abrumadora pregunta:</p>
 
-<h5>Y, ¿quién soy yo?</h5>
+<h3>Y, ¿quién soy yo?</h3>
+
+<hr />
 ]]></content>
   </entry>
   
