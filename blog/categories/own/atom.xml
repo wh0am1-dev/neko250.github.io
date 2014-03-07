@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Writings | Neko250]]></title>
-  <link href="http://neko250.github.io/blog/categories/writings/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Own | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/own/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
   <updated>2014-03-07T02:29:27+01:00</updated>
   <id>http://neko250.github.io/</id>
@@ -12,23 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Through the Looking Glass]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/looking-glass/"/>
-    <updated>2014-03-07T02:18:25+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/looking-glass</id>
-    <content type="html"><![CDATA[<blockquote><p>“I know who I WAS when I got up this morning, but I think I must have been changed several times since then.”</p>
-
-<p>“I give myself very good advice, but I very seldom follow it.”</p>
-
-<p>“No, no! The adventures first, explanations take such a dreadful time.”</p>
-
-<p>· Lewis Carroll ·</p></blockquote>
-
-<hr />
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[I Me Mine]]></title>
@@ -116,21 +99,59 @@ A veces me da la impresión de <strong>que yo no he tenido</strong> la oportunid
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Alquitrán 26]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/alquitran-26/"/>
-    <updated>2014-03-07T02:16:40+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/alquitran-26</id>
-    <content type="html"><![CDATA[<p>Brillar a muerte y apagarse de golpe a los 27. En un momento dado dijo que eso era lo que quería. Supongo que a los 15 ya llevaba impresa esa frase en la camiseta con la que se iba a dormir. Supongo que aún era muy joven y muy dramática y muy imbécil. Al fin y al cabo solo tenía 26 y seguramente aún confiaba vagamente en llegar a ser algo en la vida. Un mito, por ejemplo, lo más fácil de soñar cuando empiezas a intuir que no lograrás nada.</p>
+    <title type="html"><![CDATA[Y, ¿Quién Soy Yo?]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/07/y-quien-soy-yo/"/>
+    <updated>2014-03-07T02:15:35+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/y-quien-soy-yo</id>
+    <content type="html"><![CDATA[<p>Y, ¿quién soy yo?</p>
 
-<p>La conocí anoche. Pedía un tequila a mi lado. Su codo estaba helado y su voz parecía brotar del mismo aire. Fue eso lo que hizo que la mirara. Sobre todo esa voz como un susurro lejano pero nítido por encima de los bafles. No estaba mal. Todo en su sitio. Tal vez le faltaban unos kilos, pero supongo que la delgadez era requisito indispensable de su papel. Igual que el susurro audible y su palidez y sus ojeras. Pensé en horas de ensayo. La caída de sus párpados me lo confirmó. A medio camino entre la intoxicación verdadera y la mirada inspirada en la Iris de Taxi Driver.</p>
+<p>¿Soy yo aquel chaval confundido que no tenía amigos?</p>
 
-<p>La languidez de sus muñecas cuando rebuscó en su bolso negro y sacó tabaco y fuego despejó cualquier duda al respecto. Soltó la bocanada como si la estuviera filmando Godard. Supe que soltaba la bocanada imaginando que la estaba filmando Godard. Y supe que ella no sabía que yo lo sabía. Así que después de que el camarero le recordara la vigencia de la Ley Antitabaco y ella apagara el cigarrillo con el mismo desdén mezclado con miedo con el que un niño travieso sucumbe al grito de su padre, decidí seguirle el juego y acabé invitándola a unos cuantos chupitos.</p>
+<p>¿Soy yo aquel chaval que quería cambiar el mundo tan solo con dos amigos y una <a href="http://manicomiodelalibertad.blogspot.com.es/" title="Manicomio de la Libertad">página web</a>?</p>
 
-<p>Una vez más, la noche moría y no tenía nada mejor que hacer. Cuando la transparencia empezó a licuarle las pupilas me cansé del asunto. Le dije que esperaba que todo le fuera lo bien o mal que ella quisiera. Me dijo que si en seis meses no había conseguido hacer algo digno con su vida se iría a una reserva india, tallaría el tótem más grande jamás habido y se cortaría las venas a sus pies. Me parece un plan insuperable, sentencié.</p>
+<p>¿Soy yo aquel chaval que, en su adolescencia, ya había vivido más experiencias que todos sus compañeros de clase?</p>
 
-<p>Y salí a la calle y eché a andar hacia casa pensando que quizá eso fuera lo normal de ser tan joven. Vender una imagen sólida. De la cordura o de la locura, pero sólida. Intentar impresionar. Ver muchas películas y leer muchos libros y creer que la vida puede ser igual de trágica que lo que en ellos se cuenta. Hasta que pasan los años y ves que todo en todas partes tiende a acomodarse.</p>
+<p>¿<a href="http://www.muasc.es/esp/" title="Marcha Universal para la Paz">Aquel que marchaba para la paz</a>? (Que no “por” ella, “para” ella).</p>
 
-<blockquote><p><a href="https://ivanrojo.wordpress.com/" title="Iván Rojo | Relatos">Iván Rojo</a></p></blockquote>
+<p>¿<a href="https://twitter.com/GVXMalaga" title="Grupos de Vida Cristiana">Aquel que convivía</a> con gente intentando buscar una deidad?</p>
+
+<p>¿Aquel que viajaba por el mundo escuchando a maestros de <a href="http://aeato.es.tl/" title="AEATO">Aikido</a>?</p>
+
+<p>¿Aquel que viajo por Galicia, acompañado de gente que no conocía?</p>
+
+<p>¿Soy yo <a href="http://i.imgur.com/5DeP0fY.png" title="Destroy This Club">aquel que se emborrachaba</a> fin de semana sí, fin de semana no, intentando ahogar sus jóvenes e inocentes penas?</p>
+
+<p><em>Hahaha</em> ¡O <a href="http://i.imgur.com/axDuY0B.png" title="Yo de enano">puede que no sea más que ese niño</a> al que le daba miedo separarse por un solo segundo de sus padres!
+Aquel al que, una sola carta de su padre, sirvió para quitarle ese miedo.</p>
+
+<p>O quizás soy <a href="http://i.imgur.com/upAWhpQ.png" title="Ingeniería de Software">aquel pequeño ingeniero de software</a>, ilusionado con su carrera, que quiere comerse al mundo.</p>
+
+<p>¡Oh! O aquel <a href="http://neko250.github.io/md/themaninthemoon.html" title="The Man In The Moon Came Down Too Soon">Hombre de la Luna</a>, que en el plenilunio de argén, descendió con premura, para toparse con unas gachas frías y pasadas.</p>
+
+<p>O, ¿quién sabe?, puede que yo sea <a href="http://i.imgur.com/WNHlLIU.jpg" title="Mi Batería">aquel niño llorando</a> que, cuando llega su padre a su casa y lo abraza, sin importar el porqué de sus penas, se siente protegido, en paz.</p>
+
+<p>¿Soy yo ese pequeño que hacía obras de teatro? ¿O el que jugaba al balonmano? ¿O puede que el que hacía natación?</p>
+
+<p>O soy aquel que, cada semana, <a href="http://i.imgur.com/9DjRCFc.png" title="Mis Niños">ayudaba a un grupo de niños con autismo</a> a superar todas las barreras que la genética y la sociedad les habían impuesto, sin razón aparente.</p>
+
+<p>Puede que no sea más que un <a href="http://www.youtube.com/watch?v=bJRs1PslPrQ" title="Nowhere Man, The Beatles">Nowhere Man</a>, sitting in his Nowhere Land, making all his Nowhere Plans for Nobody.
+O puede que me toque salvar al mundo.</p>
+
+<p>O, ¿seré <a href="http://i.imgur.com/vLdIa5Q.png" title="TrashTorn">aquel que libera toda su rabia</a>, toda su ira, con una guitarra, sobre un escenario? <a href="https://www.facebook.com/pages/Trashtorn/398467070245460" title="TrashTorn en Facebook">El público enloquece</a>.</p>
+
+<p>Puede que yo, aún esté ante <a href="http://i.imgur.com/f0pRd3o.png" title="The Perks of Being a Wallflower">aquella hoguera adolescente</a>, donde se fundían todas las ilusiones de un grupo de chavales, creando una aleación de maravillas y espectaciones por nuestra vida.
+Los mismos chavales cuyas espectaciones se han convertido en un mero porro; o en un desaliñado descampado donde echar la tarde en compañía del alcohol.</p>
+
+<p>O puede que la hoguera que dibuja mi mente no sea esa, <a href="http://i.imgur.com/hoKiQsC.png" title="La Pascua">¡NO! Es aquella</a> alrededor de la que cientos de chavales se congregaban, agarrandose de las manos, sintiendose uno.</p>
+
+<p>¿O es esa hoguera el calor de una cama, junto a ella, sintiéndome protegido<a href="http://i.imgur.com/B07Y9QS.jpg">,</a> sintiendo que Dios había puesto un ángel en el mundo para salvarme?</p>
+
+<p>Puede que mañana la vida me sorprenda. Puede que las corrientes del río me lleven allá donde nunca pensé que me llevarían. También es posible que, otros afluentes, traigan a mí los mejores manjares del mundo. O puede que solo traigan una mochila que yo cargaré, por miedo a perecer, pero que solo tirará de mi espalda y me marchitará.</p>
+
+<p>A lo mejor soy alguien. A lo peor no.
+Solo espero de esta vida que, cuando ya no me queden fuerzas para vivir como he vivido hasta ahora, cuando esté postrado en una débil cama, todo tan frágil (muy lejos de aquí y ahora); pueda responder a una simple pero abrumadora pregunta:</p>
+
+<h3>Y, ¿quién soy yo?</h3>
 
 <hr />
 ]]></content>

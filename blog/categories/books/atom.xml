@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Books | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/books/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-03-07T02:29:27+01:00</updated>
+  <id>http://neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Through the Looking Glass]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/07/looking-glass/"/>
+    <updated>2014-03-07T02:18:25+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/looking-glass</id>
+    <content type="html"><![CDATA[<blockquote><p>“I know who I WAS when I got up this morning, but I think I must have been changed several times since then.”</p>
+
+<p>“I give myself very good advice, but I very seldom follow it.”</p>
+
+<p>“No, no! The adventures first, explanations take such a dreadful time.”</p>
+
+<p>· Lewis Carroll ·</p></blockquote>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>
