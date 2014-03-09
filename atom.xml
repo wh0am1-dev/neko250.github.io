@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-09T19:47:35+01:00</updated>
+  <updated>2014-03-09T21:23:36+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ColourCode]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/09/colourcode/"/>
+    <updated>2014-03-09T19:54:33+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/09/colourcode</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="400"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Simply Falling]]></title>
@@ -36,9 +47,12 @@ You show me everything my heart is capable of.</p>
     <content type="html"><![CDATA[<iframe width="420" height="315" src="https://www.youtube.com/embed/mev_FBj0Fyk" frameborder="0" allowfullscreen></iframe>
 
 
-<p>The lights go out.<br/>
-Let me feel I&rsquo;m falling.<br/>
-I am falling safely to the ground.</p>
+<h1>Happiness is only real when shared.</h1>
+
+<blockquote><ul>
+<li>Christopher McCandless (Alexander Supertramp).</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -60,7 +74,7 @@ Le photograph est mort.<br/>
 3.1415&hellip; alive no longer, my amour.<br/>
 Doors open like arms, my love.</p>
 
-<p>Do not spray into eyes. I have sprayed you into my eyes.</p>
+<h3>Do not spray into eyes. I have sprayed you into my eyes.</h3>
 
 <hr />
 ]]></content>
@@ -71,9 +85,14 @@ Doors open like arms, my love.</p>
     <link href="http://neko250.github.io/blog/2014/03/07/what-the-moon-brings/"/>
     <updated>2014-03-07T03:00:56+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/what-the-moon-brings</id>
-    <content type="html"><![CDATA[<p>Over those horrors the evil moon now hung very low, but the puffy worms of the sea need no moon to feed by. And as I watched the ripples that told of the writhing of worms beneath, I felt a new chill from afar out whither the condor had flown, as if my flesh had caught a horror before my eyes had seen it.</p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/5BtphLP.jpg" alt="" /></p>
 
-<blockquote><p>· H.P. Lovecraft ·</p></blockquote>
+<p>Over those horrors the evil moon now hung very low, but the puffy worms of the sea need no moon to feed by. And as I watched the ripples that told of the writhing of worms beneath, I felt a new chill from afar out whither the condor had flown, as if my flesh had caught a horror before my eyes had seen it.</p>
+
+<blockquote><ul>
+<li>H.P. Lovecraft.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -96,85 +115,85 @@ Doors open like arms, my love.</p>
     <link href="http://neko250.github.io/blog/2014/03/07/the-player/"/>
     <updated>2014-03-07T02:51:17+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/the-player</id>
-    <content type="html"><![CDATA[<p><img src="http://media.tumblr.com/c47c3b21c318ebae261e9c5dbf3cd50a/tumblr_inline_mkycrw3tT21qz4rgp.jpg" alt="" /></p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://media.tumblr.com/c47c3b21c318ebae261e9c5dbf3cd50a/tumblr_inline_mkycrw3tT21qz4rgp.jpg" alt="" /></p>
 
 <ul>
-<li><p>I see the player you mean.</p></li>
-<li><p>%PLAYERNAME%?</p></li>
-<li><p>Yes. Take care. It has reached a higher level now. It can read our thoughts.</p></li>
-<li><p>That doesn’t matter. It thinks we are part of the game.</p></li>
-<li><p>I like this player. It played well. It did not give up.</p></li>
-<li><p>It is reading our thoughts as though they were words on a screen.</p></li>
-<li><p>That is how it chooses to imagine many things, when it is deep in the dream of a game.</p></li>
-<li><p>Words make a wonderful interface. Very flexible. And less terrifying than staring at the reality behind the screen.</p></li>
-<li><p>They used to hear voices. Before players could read. Back in the days when those who did not play called the players witches, and warlocks. And players dreamed they flew through the air, on sticks powered by demons.</p></li>
-<li><p>What did this player dream?</p></li>
-<li><p>This player dreamed of sunlight and trees. Of fire and water. It dreamed it created. And it dreamed it destroyed. It dreamed it hunted, and was hunted. It dreamed of shelter.</p></li>
-<li><p>Hah, the original interface. A million years old, and it still works. But what true structure did this player create, in the reality behind the screen?</p></li>
-<li><p>It worked, with a million others, to sculpt a true world in a fold of the §f§k§a§b§3, and created a §f§k§a§b§3 for §f§k§a§b§3, in the §f§k§a§b§3.</p></li>
-<li><p>It cannot read that thought.</p></li>
-<li><p>No. It has not yet achieved the highest level. That, it must achieve in the long dream of life, not the short dream of a game.</p></li>
-<li><p>Does it know that we love it? That the universe is kind?</p></li>
-<li><p>Sometimes, through the noise of its thoughts, it hears the universe, yes.</p></li>
-<li><p>But there are times it is sad, in the long dream. It creates worlds that have no summer, and it shivers under a black sun, and it takes its sad creation for reality.</p></li>
-<li><p>To cure it of sorrow would destroy it. The sorrow is part of its own private task. We cannot interfere.</p></li>
-<li><p>Sometimes when they are deep in dreams, I want to tell them, they are building true worlds in reality. Sometimes I want to tell them of their importance to the universe. Sometimes, when they have not made a true connection in a while, I want to help them to speak the word they fear.</p></li>
-<li><p>It reads our thoughts.</p></li>
-<li><p>Sometimes I do not care. Sometimes I wish to tell them, this world you take for truth is merely §f§k§a§b§2 and §f§k§a§b§2, I wish to tell them that they are §f§k§a§b§2 in the §f§k§a§b§2. They see so little of reality, in their long dream.</p></li>
-<li><p>And yet they play the game.</p></li>
-<li><p>But it would be so easy to tell them…</p></li>
-<li><p>Too strong for this dream. To tell them how to live is to prevent them living.</p></li>
-<li><p>I will not tell the player how to live.</p></li>
-<li><p>The player is growing restless.</p></li>
-<li><p>I will tell the player a story.</p></li>
-<li><p>But not the truth.</p></li>
-<li><p>No. A story that contains the truth safely, in a cage of words. Not the naked truth that can burn over any distance.</p></li>
-<li><p>Give it a body, again.</p></li>
-<li><p>Yes. Player…</p></li>
-<li><p>Use its name.</p></li>
-<li><p>%PLAYERNAME%. Player of games.</p></li>
-<li><p>Good.</p></li>
-<li><p>Take a breath, now. Take another. Feel air in your lungs. Let your limbs return. Yes, move your fingers. Have a body again, under gravity, in air. Respawn in the long dream. There you are. Your body touching the universe again at every point, as though you were separate things. As though we were separate things.</p></li>
-<li><p>Who are we? Once we were called the spirit of the mountain. Father sun, mother moon. Ancestral spirits, animal spirits. Jinn. Ghosts. The green man. Then gods, demons. Angels. Poltergeists. Aliens, extraterrestrials. Leptons, quarks. The words change. We do not change.</p></li>
-<li><p>We are the universe. We are everything you think isn’t you. You are looking at us now, through your skin and your eyes. And why does the universe touch your skin, and throw light on you? To see you, player. To know you. And to be known. I shall tell you a story.</p></li>
-<li><p>Once upon a time, there was a player.</p></li>
-<li><p>The player was you, %PLAYERNAME%.</p></li>
-<li><p>Sometimes it thought itself human, on the thin crust of a spinning globe of molten rock. The ball of molten rock circled a ball of blazing gas that was three hundred and thirty thousand times more massive than it. They were so far apart that light took eight minutes to cross the gap. The light was information from a star, and it could burn your skin from a hundred and fifty million kilometres away.</p></li>
-<li><p>Sometimes the player dreamed it was a miner, on the surface of a world that was flat, and infinite. The sun was a square of white. The days were short; there was much to do; and death was a temporary inconvenience.</p></li>
-<li><p>Sometimes the player dreamed it was lost in a story.</p></li>
-<li><p>Sometimes the player dreamed it was other things, in other places. Sometimes these dreams were disturbing. Sometimes very beautiful indeed. Sometimes the player woke from one dream into another, then woke from that into a third.</p></li>
-<li><p>Sometimes the player dreamed it watched words on a screen.</p></li>
-<li><p>Let’s go back.</p></li>
-<li><p>The atoms of the player were scattered in the grass, in the rivers, in the air, in the ground. A woman gathered the atoms; she drank and ate and inhaled; and the woman assembled the player, in her body.</p></li>
-<li><p>And the player awoke, from the warm, dark world of its mother’s body, into the long dream.</p></li>
-<li><p>And the player was a new story, never told before, written in letters of DNA. And the player was a new program, never run before, generated by a sourcecode a billion years old. And the player was a new human, never alive before, made from nothing but milk and love.</p></li>
-<li><p>You are the player. The story. The program. The human. Made from nothing but milk and love.</p></li>
-<li><p>Let’s go further back.</p></li>
-<li><p>The seven billion billion billion atoms of the player’s body were created, long before this game, in the heart of a star. So the player, too, is information from a star. And the player moves through a story, which is a forest of information planted by a man called Julian, on a flat, infinite world created by a man called Markus, that exists inside a small, private world created by the player, who inhabits a universe created by&hellip;</p></li>
-<li><p>Shush. Sometimes the player created a small, private world that was soft and warm and simple. Sometimes hard, and cold, and complicated. Sometimes it built a model of the universe in its head; flecks of energy, moving through vast empty spaces. Sometimes it called those flecks “electrons” and “protons”.</p></li>
-<li><p>Sometimes it called them “planets” and “stars”.</p></li>
-<li><p>Sometimes it believed it was in a universe that was made of energy that was made of offs and ons; zeros and ones; lines of code. Sometimes it believed it was playing a game. Sometimes it believed it was reading words on a screen.</p></li>
-<li><p>You are the player, reading words&hellip;</p></li>
-<li><p>Shush… Sometimes the player read lines of code on a screen. Decoded them into words; decoded words into meaning; decoded meaning into feelings, emotions, theories, ideas, and the player started to breath faster and deeper and realised it was alive, it was alive, those thousand deaths had not been real, the player was alive</p></li>
-<li><p>You. You. You are alive.</p></li>
-<li><p>And sometimes the player believed the universe had spoken to it through the sunlight that came through the shuffling leaves of the summer trees</p></li>
-<li><p>And sometimes the player believed the universe had spoken to it through the light that fell from the crisp night sky of winter, where a fleck of light in the corner of the player’s eye might be a star a million times as massive as the sun, boiling its planets to plasma in order to be visible for a moment to the player, walking home at the far side of the universe, suddenly smelling food, almost at the familiar door, about to dream again</p></li>
-<li><p>And sometimes the player believed the universe had spoken to it through the zeros and ones, through the electricity of the world, through the scrolling words on a screen at the end of a dream</p></li>
-<li><p>And the universe said I love you</p></li>
-<li><p>And the universe said you have played the game well</p></li>
-<li><p>And the universe said everything you need is within you</p></li>
-<li><p>And the universe said you are stronger than you know</p></li>
-<li><p>And the universe said you are the daylight</p></li>
-<li><p>And the universe said you are the night</p></li>
-<li><p>And the universe said the darkness you fight is within you</p></li>
-<li><p>And the universe said the light you seek is within you</p></li>
-<li><p>And the universe said you are not alone</p></li>
-<li><p>And the universe said you are not separate from every other thing</p></li>
-<li><p>And the universe said you are the universe tasting itself, talking to itself, reading its own code</p></li>
-<li><p>And the universe said I love you because you are love.</p></li>
-<li><p>And the game was over and the player woke up from the dream. And the player began a new dream. And the player dreamed again, dreamed better. And the player was the universe. And the player was love.</p></li>
-<li><p>You are the player.</p></li>
-<li><p>Wake up.</p></li>
+<li>I see the player you mean.</li>
+<li>%PLAYERNAME%?</li>
+<li>Yes. Take care. It has reached a higher level now. It can read our thoughts.</li>
+<li>That doesn’t matter. It thinks we are part of the game.</li>
+<li>I like this player. It played well. It did not give up.</li>
+<li>It is reading our thoughts as though they were words on a screen.</li>
+<li>That is how it chooses to imagine many things, when it is deep in the dream of a game.</li>
+<li>Words make a wonderful interface. Very flexible. And less terrifying than staring at the reality behind the screen.</li>
+<li>They used to hear voices. Before players could read. Back in the days when those who did not play called the players witches, and warlocks. And players dreamed they flew through the air, on sticks powered by demons.</li>
+<li>What did this player dream?</li>
+<li>This player dreamed of sunlight and trees. Of fire and water. It dreamed it created. And it dreamed it destroyed. It dreamed it hunted, and was hunted. It dreamed of shelter.</li>
+<li>Hah, the original interface. A million years old, and it still works. But what true structure did this player create, in the reality behind the screen?</li>
+<li>It worked, with a million others, to sculpt a true world in a fold of the §f§k§a§b§3, and created a §f§k§a§b§3 for §f§k§a§b§3, in the §f§k§a§b§3.</li>
+<li>It cannot read that thought.</li>
+<li>No. It has not yet achieved the highest level. That, it must achieve in the long dream of life, not the short dream of a game.</li>
+<li>Does it know that we love it? That the universe is kind?</li>
+<li>Sometimes, through the noise of its thoughts, it hears the universe, yes.</li>
+<li>But there are times it is sad, in the long dream. It creates worlds that have no summer, and it shivers under a black sun, and it takes its sad creation for reality.</li>
+<li>To cure it of sorrow would destroy it. The sorrow is part of its own private task. We cannot interfere.</li>
+<li>Sometimes when they are deep in dreams, I want to tell them, they are building true worlds in reality. Sometimes I want to tell them of their importance to the universe. Sometimes, when they have not made a true connection in a while, I want to help them to speak the word they fear.</li>
+<li>It reads our thoughts.</li>
+<li>Sometimes I do not care. Sometimes I wish to tell them, this world you take for truth is merely §f§k§a§b§2 and §f§k§a§b§2, I wish to tell them that they are §f§k§a§b§2 in the §f§k§a§b§2. They see so little of reality, in their long dream.</li>
+<li>And yet they play the game.</li>
+<li>But it would be so easy to tell them…</li>
+<li>Too strong for this dream. To tell them how to live is to prevent them living.</li>
+<li>I will not tell the player how to live.</li>
+<li>The player is growing restless.</li>
+<li>I will tell the player a story.</li>
+<li>But not the truth.</li>
+<li>No. A story that contains the truth safely, in a cage of words. Not the naked truth that can burn over any distance.</li>
+<li>Give it a body, again.</li>
+<li>Yes. Player…</li>
+<li>Use its name.</li>
+<li>%PLAYERNAME%. Player of games.</li>
+<li>Good.</li>
+<li>Take a breath, now. Take another. Feel air in your lungs. Let your limbs return. Yes, move your fingers. Have a body again, under gravity, in air. Respawn in the long dream. There you are. Your body touching the universe again at every point, as though you were separate things. As though we were separate things.</li>
+<li>Who are we? Once we were called the spirit of the mountain. Father sun, mother moon. Ancestral spirits, animal spirits. Jinn. Ghosts. The green man. Then gods, demons. Angels. Poltergeists. Aliens, extraterrestrials. Leptons, quarks. The words change. We do not change.</li>
+<li>We are the universe. We are everything you think isn’t you. You are looking at us now, through your skin and your eyes. And why does the universe touch your skin, and throw light on you? To see you, player. To know you. And to be known. I shall tell you a story.</li>
+<li>Once upon a time, there was a player.</li>
+<li>The player was you, %PLAYERNAME%.</li>
+<li>Sometimes it thought itself human, on the thin crust of a spinning globe of molten rock. The ball of molten rock circled a ball of blazing gas that was three hundred and thirty thousand times more massive than it. They were so far apart that light took eight minutes to cross the gap. The light was information from a star, and it could burn your skin from a hundred and fifty million kilometres away.</li>
+<li>Sometimes the player dreamed it was a miner, on the surface of a world that was flat, and infinite. The sun was a square of white. The days were short; there was much to do; and death was a temporary inconvenience.</li>
+<li>Sometimes the player dreamed it was lost in a story.</li>
+<li>Sometimes the player dreamed it was other things, in other places. Sometimes these dreams were disturbing. Sometimes very beautiful indeed. Sometimes the player woke from one dream into another, then woke from that into a third.</li>
+<li>Sometimes the player dreamed it watched words on a screen.</li>
+<li>Let’s go back.</li>
+<li>The atoms of the player were scattered in the grass, in the rivers, in the air, in the ground. A woman gathered the atoms; she drank and ate and inhaled; and the woman assembled the player, in her body.</li>
+<li>And the player awoke, from the warm, dark world of its mother’s body, into the long dream.</li>
+<li>And the player was a new story, never told before, written in letters of DNA. And the player was a new program, never run before, generated by a sourcecode a billion years old. And the player was a new human, never alive before, made from nothing but milk and love.</li>
+<li>You are the player. The story. The program. The human. Made from nothing but milk and love.</li>
+<li>Let’s go further back.</li>
+<li>The seven billion billion billion atoms of the player’s body were created, long before this game, in the heart of a star. So the player, too, is information from a star. And the player moves through a story, which is a forest of information planted by a man called Julian, on a flat, infinite world created by a man called Markus, that exists inside a small, private world created by the player, who inhabits a universe created by&hellip;</li>
+<li>Shush. Sometimes the player created a small, private world that was soft and warm and simple. Sometimes hard, and cold, and complicated. Sometimes it built a model of the universe in its head; flecks of energy, moving through vast empty spaces. Sometimes it called those flecks “electrons” and “protons”.</li>
+<li>Sometimes it called them “planets” and “stars”.</li>
+<li>Sometimes it believed it was in a universe that was made of energy that was made of offs and ons; zeros and ones; lines of code. Sometimes it believed it was playing a game. Sometimes it believed it was reading words on a screen.</li>
+<li>You are the player, reading words&hellip;</li>
+<li>Shush… Sometimes the player read lines of code on a screen. Decoded them into words; decoded words into meaning; decoded meaning into feelings, emotions, theories, ideas, and the player started to breath faster and deeper and realised it was alive, it was alive, those thousand deaths had not been real, the player was alive</li>
+<li>You. You. You are alive.</li>
+<li>And sometimes the player believed the universe had spoken to it through the sunlight that came through the shuffling leaves of the summer trees</li>
+<li>And sometimes the player believed the universe had spoken to it through the light that fell from the crisp night sky of winter, where a fleck of light in the corner of the player’s eye might be a star a million times as massive as the sun, boiling its planets to plasma in order to be visible for a moment to the player, walking home at the far side of the universe, suddenly smelling food, almost at the familiar door, about to dream again</li>
+<li>And sometimes the player believed the universe had spoken to it through the zeros and ones, through the electricity of the world, through the scrolling words on a screen at the end of a dream</li>
+<li>And the universe said I love you</li>
+<li>And the universe said you have played the game well</li>
+<li>And the universe said everything you need is within you</li>
+<li>And the universe said you are stronger than you know</li>
+<li>And the universe said you are the daylight</li>
+<li>And the universe said you are the night</li>
+<li>And the universe said the darkness you fight is within you</li>
+<li>And the universe said the light you seek is within you</li>
+<li>And the universe said you are not alone</li>
+<li>And the universe said you are not separate from every other thing</li>
+<li>And the universe said you are the universe tasting itself, talking to itself, reading its own code</li>
+<li>And the universe said I love you because you are love.</li>
+<li>And the game was over and the player woke up from the dream. And the player began a new dream. And the player dreamed again, dreamed better. And the player was the universe. And the player was love.</li>
+<li>You are the player.</li>
+<li>Wake up.</li>
 </ul>
 
 
@@ -187,11 +206,14 @@ Doors open like arms, my love.</p>
     <link href="http://neko250.github.io/blog/2014/03/07/anodyne/"/>
     <updated>2014-03-07T02:46:21+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/anodyne</id>
-    <content type="html"><![CDATA[<p>I know cities can be dirty and crowded and everything, but I like to come out here and look out over all the lights. It’s beautiful in its own way. It’s not nearly as infinite as the stars, but there is something about its humanness that adds a layer of wonderful complexity. Behind every light is a person with hope and fears and secrets… looking out is both terrifyingly lonely and fiercely personal. I think I love every person behind every window. I love you, people, for being my stars. I love you no matter how fucked up your life is or how far you think you’ve fallen. You are lovely for tonight&hellip;</p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://media.tumblr.com/c8dbe7220599087d01e58cec86346282/tumblr_inline_mkwo6gfAmd1qz4rgp.jpg" alt="" /></p>
 
-<blockquote><p>· Mysterious Guy, Anodyne ·</p></blockquote>
+<p>I know cities can be dirty and crowded and everything, but I like to come out here and look out over all the lights. It’s beautiful in its own way. It’s not nearly as infinite as the stars, but there is something about its humanness that adds a layer of wonderful complexity. Behind every light is a person with hope and fears and secrets… looking out is both terrifyingly lonely and fiercely personal. I think I love every person behind every window. I love you, people, for being my stars. I love you no matter how fucked up your life is or how far you think you’ve fallen. You are lovely for tonight&hellip;</p>
 
-<p><img src="http://media.tumblr.com/c8dbe7220599087d01e58cec86346282/tumblr_inline_mkwo6gfAmd1qz4rgp.jpg" alt="" /></p>
+<blockquote><ul>
+<li>Mysterious Guy, <a href="http://www.anodynegame.com/">Anodyne</a>.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -202,13 +224,18 @@ Doors open like arms, my love.</p>
     <link href="http://neko250.github.io/blog/2014/03/07/looking-glass/"/>
     <updated>2014-03-07T02:18:25+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/looking-glass</id>
-    <content type="html"><![CDATA[<blockquote><p>“I know who I WAS when I got up this morning, but I think I must have been changed several times since then.”</p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/janh0ZO.jpg" alt="" /></p>
+
+<p>“I know who I WAS when I got up this morning, but I think I must have been changed several times since then.”</p>
 
 <p>“I give myself very good advice, but I very seldom follow it.”</p>
 
 <p>“No, no! The adventures first, explanations take such a dreadful time.”</p>
 
-<p>· Lewis Carroll ·</p></blockquote>
+<blockquote><ul>
+<li>Lewis Carroll.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -219,11 +246,14 @@ Doors open like arms, my love.</p>
     <link href="http://neko250.github.io/blog/2014/03/07/lemons/"/>
     <updated>2014-03-07T02:18:16+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/lemons</id>
-    <content type="html"><![CDATA[<p>All right, I&rsquo;ve been thinking. When life gives you lemons, don&rsquo;t make lemonade! Make life take the lemons back! Get mad! I don&rsquo;t want your damn lemons; what am I supposed to do with these? Demand to see life&rsquo;s manager! Make life rue the day it thought it could give me lemons! Do you know who I am? I&rsquo;m the man who&rsquo;s gonna burn your house down&hellip; with the lemons! I&rsquo;m gonna invent a combustible lemon that burns your house down!</p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/pgGI9nE.png" width="365" alt="" /></p>
 
-<blockquote><p>Cave Johnson</p></blockquote>
+<p>All right, I&rsquo;ve been thinking. When life gives you lemons, don&rsquo;t make lemonade! Make life take the lemons back! Get mad! I don&rsquo;t want your damn lemons; what am I supposed to do with these? Demand to see life&rsquo;s manager! Make life rue the day it thought it could give me lemons! Do you know who I am? I&rsquo;m the man who&rsquo;s gonna burn your house down&hellip; with the lemons! I&rsquo;m gonna invent a combustible lemon that burns your house down!</p>
 
-<p><img src="http://i.imgur.com/pgGI9nE.png" alt="" /></p>
+<blockquote><ul>
+<li>Cave Johnson.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -238,12 +268,15 @@ Doors open like arms, my love.</p>
 This is the supreme state.<br/>
 Attain to this, and pass from death to immortality.</p>
 
-<p>· Bhagavad Gita, 2:71-72 ·</p></blockquote>
+<ul>
+<li>Bhagavad Gita, 2:71-72.</li>
+</ul>
+</blockquote>
 
 <p>Extracto del Bhagavad Gita, una escritura sagrada Hinduista.
 Ante esto, The Beatles compusieron un tema, llamado &ldquo;I Me Mine&rdquo;, que suena tal que así:</p>
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/8pFCPTYq5Tc?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/8pFCPTYq5Tc" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Acompañando al video, os dejo unas palabras de George Harrison:</p>
@@ -254,7 +287,10 @@ and the big &ldquo;I&rdquo; &ndash; is duality and ego.<br/>
 There is nothing that isn&rsquo;t part of the complete whole.<br/>
 When the little &ldquo;i&rdquo; merges into the big &ldquo;I&rdquo; then you are really smiling !</p>
 
-<p>· George Harrison ·</p></blockquote>
+<ul>
+<li>George Harrison.</li>
+</ul>
+</blockquote>
 
 <p>Quizás sea el momento de dejar a un lado el pensamiento egoísta.
 Individualmente, socialmente&hellip; creo que en cualquier ámbito, aplicar esto, supondría un cambio brutal en nuestra forma de proceder, en nuestra forma de ver el mundo.
@@ -271,39 +307,60 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
     <link href="http://neko250.github.io/blog/2014/03/07/forrest-gump/"/>
     <updated>2014-03-07T02:18:04+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/forrest-gump</id>
-    <content type="html"><![CDATA[<p><img src="http://25.media.tumblr.com/f26c354eb41d80e409bd3043994a2523/tumblr_mhf115r2SM1qbsbnoo1_250.gif" alt="" /></p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://25.media.tumblr.com/f26c354eb41d80e409bd3043994a2523/tumblr_mhf115r2SM1qbsbnoo1_250.gif" alt="" /></p>
 
-<blockquote><p><strong>Forrest Gump</strong>: Now you wouldn&rsquo;t believe me if I told you, but I could run like the wind blows. From that day on, if I was going somewhere, I was running!</p></blockquote>
+<blockquote><ul>
+<li><strong>Forrest Gump</strong>: Now you wouldn&rsquo;t believe me if I told you, but I could run like the wind blows. From that day on, if I was going somewhere, I was running!</li>
+</ul>
+</blockquote>
 
-<p><img src="http://25.media.tumblr.com/2923996eace13023932259176cd0419b/tumblr_mhf115r2SM1qbsbnoo2_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/2923996eace13023932259176cd0419b/tumblr_mhf115r2SM1qbsbnoo2_250.gif" alt="" /></p>
 
-<blockquote><p> <strong>Jenny Curran</strong>: Do you ever dream, Forrest, about who you&rsquo;re gonna be?<br/>
-<strong>Forrest Gump</strong>: Who I&rsquo;m gonna be?<br/>
-<strong>Jenny Curran</strong>: Yeah.<br/>
-<strong>Forrest Gump</strong>: Aren&rsquo;t-aren&rsquo;t I going to be me?</p></blockquote>
+<blockquote><ul>
+<li><strong>Jenny Curran</strong>: Do you ever dream, Forrest, about who you&rsquo;re gonna be?</li>
+<li><strong>Forrest Gump</strong>: Who I&rsquo;m gonna be?</li>
+<li><strong>Jenny Curran</strong>: Yeah.</li>
+<li><strong>Forrest Gump</strong>: Aren&rsquo;t-aren&rsquo;t I going to be me?</li>
+</ul>
+</blockquote>
 
-<p><img src="http://24.media.tumblr.com/942279e2c4e84b65194dd739844f54f9/tumblr_mhf115r2SM1qbsbnoo3_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://24.media.tumblr.com/942279e2c4e84b65194dd739844f54f9/tumblr_mhf115r2SM1qbsbnoo3_250.gif" alt="" /></p>
 
-<blockquote><p><strong>Forrest Gump</strong>: My momma always said, &ldquo;Life was like a box of chocolates. You never know what you&rsquo;re gonna get.&rdquo;</p></blockquote>
+<blockquote><ul>
+<li><strong>Forrest Gump</strong>: My momma always said, &ldquo;Life was like a box of chocolates. You never know what you&rsquo;re gonna get.&rdquo;</li>
+</ul>
+</blockquote>
 
-<p><img src="http://25.media.tumblr.com/c1c5d072ecbb186b3a1dad57f714ce2a/tumblr_mhf115r2SM1qbsbnoo5_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/c1c5d072ecbb186b3a1dad57f714ce2a/tumblr_mhf115r2SM1qbsbnoo5_250.gif" alt="" /></p>
 
-<blockquote><p><strong>Mrs. Gump</strong>: You have to do the best with what God gave you.</p></blockquote>
+<blockquote><ul>
+<li><strong>Mrs. Gump</strong>: You have to do the best with what God gave you.</li>
+</ul>
+</blockquote>
 
-<p><img src="http://25.media.tumblr.com/b93dbc4db9b970000a5841ab736ae5e0/tumblr_mhf115r2SM1qbsbnoo6_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/b93dbc4db9b970000a5841ab736ae5e0/tumblr_mhf115r2SM1qbsbnoo6_250.gif" alt="" /></p>
 
-<blockquote><p><strong>Lieutenant Daniel Taylor</strong>: Have you found Jesus yet, Gump?<br/>
-<strong>Forrest Gump</strong>: I didn&rsquo;t know I was supposed to be looking for him, sir.</p></blockquote>
+<blockquote><ul>
+<li><strong>Lieutenant Daniel Taylor</strong>: Have you found Jesus yet, Gump?</li>
+<li><strong>Forrest Gump</strong>: I didn&rsquo;t know I was supposed to be looking for him, sir.</li>
+</ul>
+</blockquote>
 
-<p><img src="http://25.media.tumblr.com/b3e330961b610bf63c74a282b33c9418/tumblr_mhf115r2SM1qbsbnoo7_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/b3e330961b610bf63c74a282b33c9418/tumblr_mhf115r2SM1qbsbnoo7_250.gif" alt="" /></p>
 
-<blockquote><p><strong>Forrest Gump</strong>: My Mama always said you&rsquo;ve got to put the past behind you before you can move on.</p></blockquote>
+<blockquote><ul>
+<li><strong>Forrest Gump</strong>: My Mama always said you&rsquo;ve got to put the past behind you before you can move on.</li>
+</ul>
+</blockquote>
 
-<p><img src="http://24.media.tumblr.com/d5d27bf7a9fa841833233fd14940c68e/tumblr_mhf115r2SM1qbsbnoo8_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://24.media.tumblr.com/d5d27bf7a9fa841833233fd14940c68e/tumblr_mhf115r2SM1qbsbnoo8_250.gif" alt="" /></p>
 
-<blockquote><p><strong>Forrest Gump</strong>: Mama always said, dying was a part of life. I sure wish it wasn&rsquo;t.</p></blockquote>
+<blockquote><ul>
+<li><strong>Forrest Gump</strong>: Mama always said, dying was a part of life. I sure wish it wasn&rsquo;t.</li>
+</ul>
+</blockquote>
 
-<p><img src="http://25.media.tumblr.com/5d69a43e4a74259bb8f75865acdd446d/tumblr_mhf115r2SM1qbsbnoo9_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/5d69a43e4a74259bb8f75865acdd446d/tumblr_mhf115r2SM1qbsbnoo9_250.gif" alt="" /></p>
 
 <hr />
 ]]></content>
@@ -314,7 +371,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
     <link href="http://neko250.github.io/blog/2014/03/07/cuanto-espacio/"/>
     <updated>2014-03-07T02:17:56+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/cuanto-espacio</id>
-    <content type="html"><![CDATA[<iframe width="560" height="315" src="http://www.youtube.com/embed/fpbvJX33PbM?rel=0" frameborder="0" allowfullscreen></iframe>
+    <content type="html"><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/fpbvJX33PbM" frameborder="0" allowfullscreen></iframe>
 
 
 <h3>Ecuación de Drake</h3>
@@ -351,11 +408,17 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 <h3>Fórmula y solución dada por Drake:</h3>
 
-<pre><code>N = 10 · 0.5 · 2 · 1 · 0.01 · 0.01 · 10,000
-N = 10 posibles civilizaciones detectables.
-</code></pre>
+<p>N = 10 · 0.5 · 2 · 1 · 0.01 · 0.01 · 10,000<br/>
+N = 10 posibles civilizaciones detectables</p>
 
-<h1>10 Civilizaciones Detectables !</h1>
+<h1>10 Civilizaciones Detectables.</h1>
+
+<blockquote><p>Si estuviéramos solos&hellip; ¡Cuánto espacio desaprovechado!</p>
+
+<ul>
+<li>Dra. Arroway, Contact (1997).</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -381,7 +444,10 @@ N = 10 posibles civilizaciones detectables.
 
 <p>Para esta revolución, no trates de luchar contra los productos de esta estructura social enferma. Aísla las raíces; neutraliza. Éste es el único camino para ascender.</p>
 
-<blockquote><p>The HAARP Machine</p></blockquote>
+<blockquote><ul>
+<li>The HAARP Machine.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -413,15 +479,15 @@ A veces me da la impresión de <strong>que yo no he tenido</strong> la oportunid
     <link href="http://neko250.github.io/blog/2014/03/07/supersticion/"/>
     <updated>2014-03-07T02:16:55+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/07/supersticion</id>
-    <content type="html"><![CDATA[<blockquote><p>Como la mayoría de los seres vivos, la paloma asocia enseguida el accionar la palanca con la recompensa.</p>
+    <content type="html"><![CDATA[<blockquote><p>Como la mayoría de los seres vivos, la paloma asocia enseguida el accionar la palanca con la recompensa.<br/>
+Pero, cuando un temporizador suelta una semilla de forma automática cada 20 segundos, la paloma se pregunta: ¿Qué he hecho yo para merecer esto?<br/>
+Si en ese momento estaba aleteando, continuará aleteando, convencida de que sus actos tienen una influencia decisiva en lo que ocurre.<br/>
+Llamamos a esto: <strong>Superstición de la Paloma</strong>.</p>
 
-<p>Pero, cuando un temporizador suelta una semilla de forma automática cada 20 segundos, la paloma se pregunta: ¿Qué he hecho yo para merecer esto?</p>
-
-<p>Si en ese momento estaba aleteando, continuará aleteando, convencida de que sus actos tienen una influencia decisiva en lo que ocurre.</p>
-
-<p>Llamamos a esto: <strong>Superstición de la Paloma</strong>.</p>
-
-<p>· Mr. Nobody ·</p></blockquote>
+<ul>
+<li>Mr. Nobody.</li>
+</ul>
+</blockquote>
 
 <p>¿Y si nuestras convicciones, nuestra manera de ver el mundo, nuestra manera de actuar, de ser, estuviera influenciada por un fenómeno similar al de &ldquo;La Superstición de la Paloma&rdquo;?</p>
 
@@ -450,7 +516,10 @@ A veces me da la impresión de <strong>que yo no he tenido</strong> la oportunid
 
 <p>Y salí a la calle y eché a andar hacia casa pensando que quizá eso fuera lo normal de ser tan joven. Vender una imagen sólida. De la cordura o de la locura, pero sólida. Intentar impresionar. Ver muchas películas y leer muchos libros y creer que la vida puede ser igual de trágica que lo que en ellos se cuenta. Hasta que pasan los años y ves que todo en todas partes tiende a acomodarse.</p>
 
-<blockquote><p><a href="https://ivanrojo.wordpress.com/" title="Iván Rojo | Relatos">Iván Rojo</a></p></blockquote>
+<blockquote><ul>
+<li><a href="https://ivanrojo.wordpress.com/" title="Iván Rojo | Relatos">Iván Rojo</a>.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -479,7 +548,10 @@ A veces me da la impresión de <strong>que yo no he tenido</strong> la oportunid
 
 <p>Y de esta manera seguiré siendo lo que soy y lo que me gusta ser: una sorpresa permanente para mí mismo. Este yo que no fue criado ni por mi padre, ni por mi madre ni por mi escuela, sino por todo aquello que he vivido hasta hoy, que olvidé repentinamente y que estoy descubriendo de nuevo.</p>
 
-<blockquote><p>Paulo Coelho</p></blockquote>
+<blockquote><ul>
+<li>Paulo Coelho.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>
@@ -603,7 +675,10 @@ he arrived so much too soon:<br/>
 An unwary guest on a lunatic quest<br/>
 from the Mountains of the Moon.</p>
 
-<blockquote><p>J.R.R. Tolkien</p></blockquote>
+<blockquote><ul>
+<li>J.R.R. Tolkien.</li>
+</ul>
+</blockquote>
 
 <hr />
 ]]></content>

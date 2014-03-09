@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Graphics | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/graphics/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-03-09T21:23:36+01:00</updated>
+  <id>http://neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ColourCode]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/09/colourcode/"/>
+    <updated>2014-03-09T19:54:33+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/09/colourcode</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="400"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>
