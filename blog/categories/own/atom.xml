@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Own | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/own/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-10T00:27:30+01:00</updated>
+  <updated>2014-03-10T18:43:02+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -14,11 +14,109 @@
 
   
   <entry>
+    <title type="html"><![CDATA[DNI Control Digit Calculator]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/10/dni-calc/"/>
+    <updated>2014-03-10T00:41:22+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/10/dni-calc</id>
+    <content type="html"><![CDATA[<p>``` cpp Calculadora de Dígitos de Control de DNI Español <a href="https://gist.github.com/Neko250/6497151">https://gist.github.com/Neko250/6497151</a> View Gist</p>
+
+<h1>include <iostream></h1>
+
+<h1>include &lt;stdlib.h></h1>
+
+<h1>include &lt;string.h></h1>
+
+<h1>include &lt;ctype.h></h1>
+
+<h1>include &lt;windows.h></h1>
+
+<p>using namespace std;</p>
+
+<p>int ctrlDigit(string, int&amp;);</p>
+
+<p>int main() {</p>
+
+<pre><code>string text;
+char ans;
+int error = 0;
+
+do {
+    do {
+        system("cls");
+        cout &lt;&lt; "\n\tWelcome to the\n\tCtrl digit calculator.\n\t"
+             &lt;&lt; "By Neko250; Ver. 1.0.0\n\t======================\n\n"
+             &lt;&lt; "Type the text to calculate the ctrl digit:\n\t&gt;&gt;&gt; ";
+        cin &gt;&gt; text;
+
+        if(ctrlDigit(text, error) == -1) {
+            cout &lt;&lt; "\nError. The text contains illegal characters:\n\t&gt;&gt;&gt; "
+                 &lt;&lt; text[error] &lt;&lt; "\n\n\tTry again !!!";
+            Sleep(2000);
+        }
+    } while(ctrlDigit(text, error) == -1);
+
+    cout &lt;&lt; "\nThe Ctrl digit is:\n\t&gt;&gt;&gt; " &lt;&lt; ctrlDigit(text, error);
+
+    do {
+        cout &lt;&lt; "\n\nDo you want to do more calculations? (y/n)\n\t&gt;&gt;&gt; ";
+        cin &gt;&gt; ans;
+
+        if(ans != 'y' &amp;&amp; ans != 'n') {
+            cout &lt;&lt; "\nError. Illegal answer:\n\t&gt;&gt;&gt; " &lt;&lt; ans &lt;&lt; "\n\n\tTry again!!!";
+            Sleep(2000);
+            system("cls");
+            cout &lt;&lt; "\n\tWelcome to the\n\tCtrl digit calculator.\n\t"
+                 &lt;&lt; "By Neko250; Ver. 1.0.0\n\t======================\n\n"
+                 &lt;&lt; "Type the text to calculate the ctrl digit:\n\t&gt;&gt;&gt; " &lt;&lt; text
+                 &lt;&lt; "\n\nThe Ctrl digit is:\n\t&gt;&gt;&gt; " &lt;&lt; ctrlDigit(text, error);
+        }
+    } while(ans != 'y' &amp;&amp; ans != 'n');
+} while(ans == 'y');
+
+cout &lt;&lt; "\n\nThank you for using the program.\n";
+system("pause");
+system("cls");
+
+return 0;
+</code></pre>
+
+<p>}</p>
+
+<p>int ctrlDigit(string text, int&amp; error) {</p>
+
+<pre><code>int m[3] = { 7, 3, 1 };
+int n = 0;
+
+for (int i = 0; text[i] != '\0'; i++) {
+    if (isdigit(text[i])) {
+        n += (text[i] - '0') * m[i % 3];
+    } else if (isalpha(text[i])) {
+        n += (toupper(text[i]) - 'A') * m[i % 3];
+    } else {
+        error = i;
+        return -1;
+    }
+}
+
+return n % 10;
+</code></pre>
+
+<p>}
+```</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Aquel Verano...]]></title>
     <link href="http://neko250.github.io/blog/2014/03/10/aquel-verano/"/>
     <updated>2014-03-10T00:26:29+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/10/aquel-verano</id>
-    <content type="html"><![CDATA[<p>Empezaba el verano.
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+
+
+<p>Empezaba el verano.
 La cara de mi amigo estaba apagada. Como la mía.</p>
 
 <p>MrSuicideSheep nos acompañó hasta la Secret Party: piscina, amigos, caras expresando de todo y música.</p>
@@ -61,7 +159,7 @@ Attain to this, and pass from death to immortality.</p>
 <p>Extracto del Bhagavad Gita, una escritura sagrada Hinduista.
 Ante esto, The Beatles compusieron un tema, llamado &ldquo;I Me Mine&rdquo;, que suena tal que así:</p>
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/8pFCPTYq5Tc" frameborder="0" allowfullscreen></iframe>
+<iframe src="//www.youtube.com/embed/8pFCPTYq5Tc?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 <p>Acompañando al video, os dejo unas palabras de George Harrison:</p>
@@ -130,65 +228,6 @@ Llamamos a esto: <strong>Superstición de la Paloma</strong>.</p>
 <p>Quizás debiéramos salir de esa burbuja, de ese caparazón, salir de nuestra zona de comfort y aventurarnos a conseguir esa semilla por nosotros mismos, con nuestras propias manos.</p>
 
 <p>Pero claro, ¿y si allá fuera nos damos cuenta de que no está en nuestras manos conseguir algo semejante?</p>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Y, ¿Quién Soy Yo?]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/y-quien-soy-yo/"/>
-    <updated>2014-03-07T02:15:35+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/y-quien-soy-yo</id>
-    <content type="html"><![CDATA[<p>Y, ¿quién soy yo?</p>
-
-<p>¿Soy yo aquel chaval confundido que no tenía amigos?</p>
-
-<p>¿Soy yo aquel chaval que quería cambiar el mundo tan solo con dos amigos y una <a href="http://manicomiodelalibertad.blogspot.com.es/" title="Manicomio de la Libertad">página web</a>?</p>
-
-<p>¿Soy yo aquel chaval que, en su adolescencia, ya había vivido más experiencias que todos sus compañeros de clase?</p>
-
-<p>¿<a href="http://www.muasc.es/esp/" title="Marcha Universal para la Paz">Aquel que marchaba para la paz</a>? (Que no “por” ella, “para” ella).</p>
-
-<p>¿<a href="https://twitter.com/GVXMalaga" title="Grupos de Vida Cristiana">Aquel que convivía</a> con gente intentando buscar una deidad?</p>
-
-<p>¿Aquel que viajaba por el mundo escuchando a maestros de <a href="http://aeato.es.tl/" title="AEATO">Aikido</a>?</p>
-
-<p>¿Aquel que viajo por Galicia, acompañado de gente que no conocía?</p>
-
-<p>¿Soy yo <a href="http://i.imgur.com/5DeP0fY.png" title="Destroy This Club">aquel que se emborrachaba</a> fin de semana sí, fin de semana no, intentando ahogar sus jóvenes e inocentes penas?</p>
-
-<p><em>Hahaha</em> ¡O <a href="http://i.imgur.com/axDuY0B.png" title="Yo de enano">puede que no sea más que ese niño</a> al que le daba miedo separarse por un solo segundo de sus padres!
-Aquel al que, una sola carta de su padre, sirvió para quitarle ese miedo.</p>
-
-<p>O quizás soy <a href="http://i.imgur.com/upAWhpQ.png" title="Ingeniería de Software">aquel pequeño ingeniero de software</a>, ilusionado con su carrera, que quiere comerse al mundo.</p>
-
-<p>¡Oh! O aquel <a href="http://neko250.github.io/md/themaninthemoon.html" title="The Man In The Moon Came Down Too Soon">Hombre de la Luna</a>, que en el plenilunio de argén, descendió con premura, para toparse con unas gachas frías y pasadas.</p>
-
-<p>O, ¿quién sabe?, puede que yo sea <a href="http://i.imgur.com/WNHlLIU.jpg" title="Mi Batería">aquel niño llorando</a> que, cuando llega su padre a su casa y lo abraza, sin importar el porqué de sus penas, se siente protegido, en paz.</p>
-
-<p>¿Soy yo ese pequeño que hacía obras de teatro? ¿O el que jugaba al balonmano? ¿O puede que el que hacía natación?</p>
-
-<p>O soy aquel que, cada semana, <a href="http://i.imgur.com/9DjRCFc.png" title="Mis Niños">ayudaba a un grupo de niños con autismo</a> a superar todas las barreras que la genética y la sociedad les habían impuesto, sin razón aparente.</p>
-
-<p>Puede que no sea más que un <a href="http://www.youtube.com/watch?v=bJRs1PslPrQ" title="Nowhere Man, The Beatles">Nowhere Man</a>, sitting in his Nowhere Land, making all his Nowhere Plans for Nobody.
-O puede que me toque salvar al mundo.</p>
-
-<p>O, ¿seré <a href="http://i.imgur.com/vLdIa5Q.png" title="TrashTorn">aquel que libera toda su rabia</a>, toda su ira, con una guitarra, sobre un escenario? <a href="https://www.facebook.com/pages/Trashtorn/398467070245460" title="TrashTorn en Facebook">El público enloquece</a>.</p>
-
-<p>Puede que yo, aún esté ante <a href="http://i.imgur.com/f0pRd3o.png" title="The Perks of Being a Wallflower">aquella hoguera adolescente</a>, donde se fundían todas las ilusiones de un grupo de chavales, creando una aleación de maravillas y espectaciones por nuestra vida.
-Los mismos chavales cuyas espectaciones se han convertido en un mero porro; o en un desaliñado descampado donde echar la tarde en compañía del alcohol.</p>
-
-<p>O puede que la hoguera que dibuja mi mente no sea esa, <a href="http://i.imgur.com/hoKiQsC.png" title="La Pascua">¡NO! Es aquella</a> alrededor de la que cientos de chavales se congregaban, agarrandose de las manos, sintiendose uno.</p>
-
-<p>¿O es esa hoguera el calor de una cama, junto a ella, sintiéndome protegido<a href="http://i.imgur.com/B07Y9QS.jpg">,</a> sintiendo que Dios había puesto un ángel en el mundo para salvarme?</p>
-
-<p>Puede que mañana la vida me sorprenda. Puede que las corrientes del río me lleven allá donde nunca pensé que me llevarían. También es posible que, otros afluentes, traigan a mí los mejores manjares del mundo. O puede que solo traigan una mochila que yo cargaré, por miedo a perecer, pero que solo tirará de mi espalda y me marchitará.</p>
-
-<p>A lo mejor soy alguien. A lo peor no.
-Solo espero de esta vida que, cuando ya no me queden fuerzas para vivir como he vivido hasta ahora, cuando esté postrado en una débil cama, todo tan frágil (muy lejos de aquí y ahora); pueda responder a una simple pero abrumadora pregunta:</p>
-
-<h3>Y, ¿quién soy yo?</h3>
 
 <hr />
 ]]></content>

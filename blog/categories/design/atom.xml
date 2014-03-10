@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-10T00:27:30+01:00</updated>
+  <updated>2014-03-10T18:43:02+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[ColourCode]]></title>
+    <title type="html"><![CDATA[Colourcode Hex Color Picker]]></title>
     <link href="http://neko250.github.io/blog/2014/03/09/colourcode/"/>
     <updated>2014-03-09T19:54:33+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/09/colourcode</id>
-    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="400"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="410"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
 
 <hr />
 ]]></content>

@@ -9,8 +9,7 @@
   <meta name="author" content="Carlos Aguilar">
 
   
-  <meta name="description" content="All Posts Aquel Verano&#8230; Empezaba el verano.
-La cara de mi amigo estaba apagada. Como la mía. MrSuicideSheep nos acompañó hasta la Secret Party &hellip;">
+  <meta name="description" content="All Posts YouTube Embed Code Generator function generate() { var hlink = document.getElementById("url").value; if (hlink != "") { var boom = hlink. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,10 +80,281 @@ La cara de mi amigo estaba apagada. Como la mía. MrSuicideSheep nos acompañó 
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
           <article>
+  <h2><a href="/blog/2014/03/10/youtube-embed/">YouTube Embed Code Generator</a></h2>
+  
+  <p>
+    <script>
+function generate() {
+    var hlink = document.getElementById("url").value;
+    if (hlink != "") {
+        var boom = hlink.split("?v=");
+        hlink = "//www.youtube.com/embed/" + boom[1] + "?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3";
+        var embedcode = "<iframe src=\"" + hlink + "\" width=\"730\" height=\"410\" frameborder=\"0\"></iframe>";
+        document.getElementById("code").value = embedcode;
+        document.getElementById("code").select();
+    }
+}
+</script>
+
+
+
+
+<center><input style="line-height:160p%;padding:3px 6px" type="url" id="url" size="60" autofocus onkeypress="if (event.keyCode == 13) document.getElementById('btn').click()" placeholder="Paste YouTube link here"/>
+<button style="height:28px;margin-top:5px;margin-bottom:8px;margin-left:10px;margin-right:10px" id="btn" onclick="generate();" class="generate">Generate</button><br>
+<textarea style="resize:none;padding:3px 6px;margin-bottom:20px" placeholder="Your embed code will be here" id="code" cols="60" rows="5" wrap="hard"></textarea></center>
+
+
+
+
+<p>Tool to create HTML code to embed YouTube videos with the following characteristics:</p>
+
+
+
+
+<ul>
+<li>Auto loads 720p.</li>
+<li>Disables video suggestions at the end of the video.</li>
+<li>Disables title bar and other information.</li>
+<li>Annotations are disabled for peacefull experience.</li>
+</ul>
+
+
+
+
+<hr />
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-10T17:20:52+01:00" pubdate data-updated="true">Mar 10<span>th</span>, 2014</time> in 
+    
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/code/'>Code</a>, <a class='category' href='/blog/categories/internet/'>Internet</a>, <a class='category' href='/blog/categories/tools/'>Tools</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <article>
+  <h2><a href="/blog/2014/03/10/dni-calc/">DNI Control Digit Calculator</a></h2>
+  
+  <p>
+    <p><figure class='code'><figcaption><span>Calculadora de Dígitos de Control de DNI Español</span><a href='https://gist.github.com/Neko250/6497151'>View Gist</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;stdlib.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;string.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;ctype.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;windows.h&gt;</span>
+</span><span class='line'><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">string</span> <span class="n">text</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">char</span> <span class="n">ans</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">do</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">do</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Welcome to the</span><span class="se">\n\t</span><span class="s">Ctrl digit calculator.</span><span class="se">\n\t</span><span class="s">&quot;</span>
+</span><span class='line'>                 <span class="o">&lt;&lt;</span> <span class="s">&quot;By Neko250; Ver. 1.0.0</span><span class="se">\n\t</span><span class="s">======================</span><span class="se">\n\n</span><span class="s">&quot;</span>
+</span><span class='line'>                 <span class="o">&lt;&lt;</span> <span class="s">&quot;Type the text to calculate the ctrl digit:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">;</span>
+</span><span class='line'>            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">text</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">if</span><span class="p">(</span><span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">==</span> <span class="o">&ndash;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">Error. The text contains illegal characters:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span>
+</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="n">text</span><span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n\t</span><span class="s">Try again !!!&quot;</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">Sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">==</span> <span class="o">&ndash;</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">The Ctrl digit is:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">do</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Do you want to do more calculations? (y/n)</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">;</span>
+</span><span class='line'>            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ans</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">if</span><span class="p">(</span><span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;y&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;n&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">Error. Illegal answer:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n\t</span><span class="s">Try again!!!&quot;</span><span class="p">;</span>
+</span><span class='line'>                <span class="n">Sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+</span><span class='line'>                <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+</span><span class='line'>                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Welcome to the</span><span class="se">\n\t</span><span class="s">Ctrl digit calculator.</span><span class="se">\n\t</span><span class="s">&quot;</span>
+</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="s">&quot;By Neko250; Ver. 1.0.0</span><span class="se">\n\t</span><span class="s">======================</span><span class="se">\n\n</span><span class="s">&quot;</span>
+</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="s">&quot;Type the text to calculate the ctrl digit:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">text</span>
+</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">The Ctrl digit is:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;y&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;n&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">ans</span> <span class="o">==</span> <span class="sc">&#39;y&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Thank you for using the program.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">string</span> <span class="n">text</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="p">};</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">isdigit</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">n</span> <span class="o">+=</span> <span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&ndash;</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span> <span class="o"><em></span> <span class="n">m</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">isalpha</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">n</span> <span class="o">+=</span> <span class="p">(</span><span class="n">toupper</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&ndash;</span> <span class="sc">&#39;A&#39;</span><span class="p">)</span> <span class="o"></em></span> <span class="n">m</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">error</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="o">&ndash;</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<hr />
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-10T00:41:22+01:00" pubdate data-updated="true">Mar 10<span>th</span>, 2014</time> in 
+    
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/c-plus-plus/'>C++</a>, <a class='category' href='/blog/categories/code/'>Code</a>, <a class='category' href='/blog/categories/own/'>Own</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <article>
   <h2><a href="/blog/2014/03/10/aquel-verano/">Aquel Verano&#8230;</a></h2>
   
   <p>
-    <p>Empezaba el verano.
+    <iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+
+
+
+
+<p>Empezaba el verano.
 La cara de mi amigo estaba apagada. Como la mía.</p>
 
 
@@ -175,7 +445,7 @@ Lloramos.</p>
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
           <article>
-  <h2><a href="/blog/2014/03/09/whatsapp/">3 Guys, 1 Bar</a></h2>
+  <h2><a href="/blog/2014/03/09/whatsapp/">3 Guys, 1 Bar, $27 Billion</a></h2>
   
   <p>
     <blockquote class="twitter-tweet" lang="en"><p>A machine learning researcher, a crypto-currency expert, and an Erlang programmer walk into a bar. Facebook buys the bar for $27 billion.</p>&mdash; ML Hipster (@ML_Hipster) <a href="https://twitter.com/ML_Hipster/statuses/438418306769244160">February 25, 2014</a></blockquote>
@@ -184,6 +454,21 @@ Lloramos.</p>
 
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<br>
+
+
+
+
+<p>And now Facebook says that pictures sent via WhatsApp will be posted into Facebook&hellip;</p>
+
+
+
+
+<h3>WTF, Fuck Privacy !</h3>
 
 
 
@@ -227,10 +512,10 @@ Lloramos.</p>
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
           <article>
-  <h2><a href="/blog/2014/03/09/colourcode/">ColourCode</a></h2>
+  <h2><a href="/blog/2014/03/09/colourcode/">Colourcode Hex Color Picker</a></h2>
   
   <p>
-    <p style="text-align:center;"><object data=http://colourco.de/ width="730" height="400"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
+    <p style="text-align:center;"><object data=http://colourco.de/ width="730" height="410"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
 
 
 
@@ -277,7 +562,7 @@ Lloramos.</p>
   <h2><a href="/blog/2014/03/09/simply-falling/">Simply Falling</a></h2>
   
   <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/9Pes54J8PVw" frameborder="0" allowfullscreen></iframe>
+    <iframe src="//www.youtube.com/embed/9Pes54J8PVw?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 
@@ -330,7 +615,7 @@ You show me everything my heart is capable of.</p>
   <h2><a href="/blog/2014/03/09/long-nights/">Long Nights</a></h2>
   
   <p>
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/mev_FBj0Fyk" frameborder="0" allowfullscreen></iframe>
+    <iframe src="//www.youtube.com/embed/mev_FBj0Fyk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 
@@ -390,7 +675,7 @@ You show me everything my heart is capable of.</p>
   <h2><a href="/blog/2014/03/08/taro/">Taro</a></h2>
   
   <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/S3fTw_D3l10" frameborder="0" allowfullscreen></iframe>
+    <iframe src="//www.youtube.com/embed/S3fTw_D3l10?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 
@@ -407,6 +692,11 @@ Doors open like arms, my love.</p>
 
 
 <h3>Do not spray into eyes. I have sprayed you into my eyes.</h3>
+
+
+
+
+<p style="text-align:center;"><img src="http://i.imgur.com/1zytYLf.jpg" width="400" alt="" /></p>
 
 
 
@@ -454,6 +744,11 @@ Doors open like arms, my love.</p>
   
   <p>
     <p style="text-align:center;"><img src="http://i.imgur.com/5BtphLP.jpg" alt="" /></p>
+
+
+
+
+<p style="text-align:center;"><audio controls><source src="https://dl.dropboxusercontent.com/u/51009603/blog/ascent.mp3" type="audio/mpeg"></audio></p>
 
 
 
@@ -561,6 +856,11 @@ Doors open like arms, my love.</p>
   
   <p>
     <p style="text-align:center;"><img src="http://media.tumblr.com/c47c3b21c318ebae261e9c5dbf3cd50a/tumblr_inline_mkycrw3tT21qz4rgp.jpg" alt="" /></p>
+
+
+
+
+<p style="text-align:center;"><audio controls><source src="https://dl.dropboxusercontent.com/u/51009603/blog/calm3.mp3" type="audio/mpeg"></audio></p>
 
 
 
@@ -690,6 +990,11 @@ Doors open like arms, my love.</p>
   
   <p>
     <p style="text-align:center;"><img src="http://media.tumblr.com/c8dbe7220599087d01e58cec86346282/tumblr_inline_mkwo6gfAmd1qz4rgp.jpg" alt="" /></p>
+
+
+
+
+<p style="text-align:center;"><audio controls><source src="https://dl.dropboxusercontent.com/u/51009603/blog/roof.mp3" type="audio/mpeg"></audio></p>
 
 
 
@@ -897,7 +1202,7 @@ Ante esto, The Beatles compusieron un tema, llamado &ldquo;I Me Mine&rdquo;, que
 
 
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/8pFCPTYq5Tc" frameborder="0" allowfullscreen></iframe>
+<iframe src="//www.youtube.com/embed/8pFCPTYq5Tc?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 
@@ -975,7 +1280,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
   <h2><a href="/blog/2014/03/07/forrest-gump/">Box of Chocolates</a></h2>
   
   <p>
-    <p style="text-align:center;"><img src="http://25.media.tumblr.com/f26c354eb41d80e409bd3043994a2523/tumblr_mhf115r2SM1qbsbnoo1_250.gif" alt="" /></p>
+    <p style="text-align:center;"><img src="http://25.media.tumblr.com/f26c354eb41d80e409bd3043994a2523/tumblr_mhf115r2SM1qbsbnoo1_250.gif" width="365" alt="" /></p>
 
 
 
@@ -988,7 +1293,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://25.media.tumblr.com/2923996eace13023932259176cd0419b/tumblr_mhf115r2SM1qbsbnoo2_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/2923996eace13023932259176cd0419b/tumblr_mhf115r2SM1qbsbnoo2_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1004,7 +1309,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://24.media.tumblr.com/942279e2c4e84b65194dd739844f54f9/tumblr_mhf115r2SM1qbsbnoo3_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://24.media.tumblr.com/942279e2c4e84b65194dd739844f54f9/tumblr_mhf115r2SM1qbsbnoo3_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1017,7 +1322,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://25.media.tumblr.com/c1c5d072ecbb186b3a1dad57f714ce2a/tumblr_mhf115r2SM1qbsbnoo5_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/c1c5d072ecbb186b3a1dad57f714ce2a/tumblr_mhf115r2SM1qbsbnoo5_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1030,7 +1335,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://25.media.tumblr.com/b93dbc4db9b970000a5841ab736ae5e0/tumblr_mhf115r2SM1qbsbnoo6_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/b93dbc4db9b970000a5841ab736ae5e0/tumblr_mhf115r2SM1qbsbnoo6_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1044,7 +1349,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://25.media.tumblr.com/b3e330961b610bf63c74a282b33c9418/tumblr_mhf115r2SM1qbsbnoo7_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/b3e330961b610bf63c74a282b33c9418/tumblr_mhf115r2SM1qbsbnoo7_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1057,7 +1362,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://24.media.tumblr.com/d5d27bf7a9fa841833233fd14940c68e/tumblr_mhf115r2SM1qbsbnoo8_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://24.media.tumblr.com/d5d27bf7a9fa841833233fd14940c68e/tumblr_mhf115r2SM1qbsbnoo8_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1070,7 +1375,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 
 
 
-<p style="text-align:center;"><img src="http://25.media.tumblr.com/5d69a43e4a74259bb8f75865acdd446d/tumblr_mhf115r2SM1qbsbnoo9_250.gif" alt="" /></p>
+<p style="text-align:center;"><img src="http://25.media.tumblr.com/5d69a43e4a74259bb8f75865acdd446d/tumblr_mhf115r2SM1qbsbnoo9_250.gif" width="365" alt="" /></p>
 
 
 
@@ -1117,7 +1422,7 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
   <h2><a href="/blog/2014/03/07/cuanto-espacio/">Si Estuviéramos Solos&#8230;</a></h2>
   
   <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fpbvJX33PbM" frameborder="0" allowfullscreen></iframe>
+    <iframe src="//www.youtube.com/embed/fpbvJX33PbM?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 
@@ -1241,7 +1546,7 @@ N = 10 posibles civilizaciones detectables</p>
   <h2><a href="/blog/2014/03/07/nocion-escapista/">The Escapist Notion</a></h2>
   
   <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ccneY9ijIp4" frameborder="0" allowfullscreen></iframe>
+    <iframe src="//www.youtube.com/embed/ccneY9ijIp4?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
 
 
 
