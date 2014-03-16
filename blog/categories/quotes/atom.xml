@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Quotes | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/quotes/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-16T15:23:45+01:00</updated>
+  <updated>2014-03-16T23:20:29+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sharp Axe]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/16/sharp-axe/"/>
+    <updated>2014-03-16T23:19:15+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/16/sharp-axe</id>
+    <content type="html"><![CDATA[<h1>If I had eight hours to chop down a tree, I’d spend the first six of them sharpening my axe.</h1>
+
+<blockquote><ul>
+<li>Abraham Lincoln.</li>
+</ul>
+</blockquote>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Anodyne]]></title>
@@ -153,64 +169,6 @@ Pero claro, ¿cómo es posible un cambio tan grande? Hahaha, Dios, ¿es acaso un
 </blockquote>
 
 <p style="text-align:center;"><img src="http://25.media.tumblr.com/5d69a43e4a74259bb8f75865acdd446d/tumblr_mhf115r2SM1qbsbnoo9_250.gif" width="365" alt="" /></p>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Si Estuviéramos Solos...]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/cuanto-espacio/"/>
-    <updated>2014-03-07T02:17:56+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/cuanto-espacio</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/fpbvJX33PbM?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
-
-
-<h3>Ecuación de Drake</h3>
-
-<p><img src="http://i.imgur.com/uuGWOsy.jpg" alt="" /></p>
-
-<p>Donde <strong><em>N</em></strong> representa el número de civilizaciones que podrían comunicarse en nuestra galaxia, la Vía Láctea. Este número depende de varios factores:</p>
-
-<ul>
-<li><strong><em>R*</em></strong> es el ritmo anual de formación de estrellas &ldquo;adecuadas&rdquo; en la galaxia.</li>
-<li><strong><em>fp</em></strong> es la fracción de estrellas que tienen planetas en su órbita.</li>
-<li><strong><em>ne</em></strong> es el número de esos planetas orbitando dentro de la ecosfera de la estrella (las órbitas cuya distancia a la estrella no sea tan próxima como para ser demasiado calientes, ni tan lejana como para ser demasiado frías para poder albergar vida).</li>
-<li><strong><em>fl</em></strong> es la fracción de esos planetas dentro de la ecosfera en los que la vida se ha desarrollado.</li>
-<li><strong><em>fi</em></strong> es la fracción de esos planetas en los que la vida inteligente se ha desarrollado.</li>
-<li><strong><em>fc</em></strong> es la fracción de esos planetas donde la vida inteligente ha desarrollado una tecnología e intenta comunicarse.</li>
-<li><strong><em>L</em></strong> es el lapso de tiempo, medido en años, durante el que una civilización inteligente y comunicativa puede existir.</li>
-</ul>
-
-
-<h3>Estimación:</h3>
-
-<p>En 1961, Drake y su equipo asignaron los siguientes valores a cada parámetro:</p>
-
-<ul>
-<li><strong><em>R*</em></strong> = 10/año (10 estrellas se forman cada año)</li>
-<li><strong><em>fp</em></strong> = 0.5 (La mitad de esas estrellas cuentan con planetas)</li>
-<li><strong><em>ne</em></strong> = 2 (Cada una de esas estrellas contiene 2 planetas)</li>
-<li><strong><em>fl</em></strong> = 1 (El 100% de esos planetas podría desarrollar vida)</li>
-<li><strong><em>fi</em></strong> = 0.01 (Solo el 1% albergaría vida inteligente)</li>
-<li><strong><em>fc</em></strong> = 0.01 (Solo el 1% de tal vida inteligente se puede comunicar)</li>
-<li><strong><em>L</em></strong> = 10.000 años (Cada civilización duraría 10.000 años trasmitiendo señales)</li>
-</ul>
-
-
-<h3>Fórmula y solución dada por Drake:</h3>
-
-<p>N = 10 · 0.5 · 2 · 1 · 0.01 · 0.01 · 10,000<br/>
-N = 10 posibles civilizaciones detectables</p>
-
-<h1>10 Civilizaciones Detectables.</h1>
-
-<blockquote><p>Si estuviéramos solos&hellip; ¡Cuánto espacio desaprovechado!</p>
-
-<ul>
-<li>Dra. Arroway, Contact (1997).</li>
-</ul>
-</blockquote>
 
 <hr />
 ]]></content>
