@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-16T14:48:22+01:00</updated>
+  <updated>2014-03-16T15:16:27+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Medium]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/16/medium/"/>
+    <updated>2014-03-16T15:07:57+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/16/medium</id>
+    <content type="html"><![CDATA[<script async src="https://static.medium.com/embed.js"></script>
+
+
+<p><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a></p>
+
+<p>This is my Medium profile.<br/>
+It is not even up-to-date, but, well, it&rsquo;s kind of gorgeous&hellip; hahaha.</p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Strong]]></title>
@@ -614,24 +631,6 @@ Doors open like arms, my love.</p>
 
 <blockquote><ul>
 <li>Lewis Carroll.</li>
-</ul>
-</blockquote>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[If Life Gives You Lemons]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/lemons/"/>
-    <updated>2014-03-07T02:18:16+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/lemons</id>
-    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/pgGI9nE.png" width="365" alt="" /></p>
-
-<p>All right, I&rsquo;ve been thinking. When life gives you lemons, don&rsquo;t make lemonade! Make life take the lemons back! Get mad! I don&rsquo;t want your damn lemons; what am I supposed to do with these? Demand to see life&rsquo;s manager! Make life rue the day it thought it could give me lemons! Do you know who I am? I&rsquo;m the man who&rsquo;s gonna burn your house down&hellip; with the lemons! I&rsquo;m gonna invent a combustible lemon that burns your house down!</p>
-
-<blockquote><ul>
-<li>Cave Johnson.</li>
 </ul>
 </blockquote>
 
