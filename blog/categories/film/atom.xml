@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Video | Neko250]]></title>
-  <link href="http://neko250.github.io/blog/categories/video/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Film | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/film/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
   <updated>2014-03-16T14:41:01+01:00</updated>
   <id>http://neko250.github.io/</id>
@@ -22,18 +22,6 @@
 
 
 <h2>Sometimes we just need to believe !</h2>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First Kiss]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/14/first-kiss/"/>
-    <updated>2014-03-14T03:41:33+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/14/first-kiss</id>
-    <content type="html"><![CDATA[<iframe src="https://player.vimeo.com/video/88671403" width="730" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 <hr />
 ]]></content>
