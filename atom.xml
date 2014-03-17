@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-17T20:36:15+01:00</updated>
+  <updated>2014-03-17T20:38:56+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -132,7 +132,7 @@ Ahora se diferencia el aroma a <strong>azahar</strong>.</p>
     <link href="http://neko250.github.io/blog/2014/03/14/first-kiss/"/>
     <updated>2014-03-14T03:41:33+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/14/first-kiss</id>
-    <content type="html"><![CDATA[<iframe src="https://player.vimeo.com/video/88671403" width="730" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/88671403?title=0&amp;byline=0&amp;portrait=0" width="730" height="411" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 <hr />
