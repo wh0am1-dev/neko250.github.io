@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-17T20:38:56+01:00</updated>
+  <updated>2014-03-18T14:23:32+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bacon Pancakes]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/18/bacon-pancakes/"/>
+    <updated>2014-03-18T14:21:48+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/18/bacon-pancakes</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/JqixHM3.jpg" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Speed Riding, Mont Blanc]]></title>
@@ -532,18 +543,6 @@ Doors open like arms, my love.</p>
 <li>H.P. Lovecraft.</li>
 </ul>
 </blockquote>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mestis, Basal Ganglia]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/mestis/"/>
-    <updated>2014-03-07T02:57:22+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/mestis</id>
-    <content type="html"><![CDATA[<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2449696&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
-
 
 <hr />
 ]]></content>

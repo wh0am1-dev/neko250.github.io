@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Series | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/series/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-03-18T14:23:32+01:00</updated>
+  <id>http://neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bacon Pancakes]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/18/bacon-pancakes/"/>
+    <updated>2014-03-18T14:21:48+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/18/bacon-pancakes</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/JqixHM3.jpg" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>
