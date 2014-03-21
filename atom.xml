@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-03-18T14:41:49+01:00</updated>
+  <updated>2014-03-21T17:35:37+01:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Glorg]]></title>
+    <link href="http://neko250.github.io/blog/2014/03/21/glorg/"/>
+    <updated>2014-03-21T17:30:31+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/21/glorg</id>
+    <content type="html"><![CDATA[<center><object width="730" height="547" data="https://dl.dropboxusercontent.com/u/51009603/blog/glorg-7115.swf?v=1395343247"></object></center>
+
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bacon Pancakes]]></title>
@@ -523,26 +535,6 @@ Doors open like arms, my love.</p>
 <h3>Do not spray into eyes. I have sprayed you into my eyes.</h3>
 
 <p style="text-align:center;"><img src="http://i.imgur.com/1zytYLf.jpg" width="400" alt="" /></p>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What the Moon Brings]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/07/what-the-moon-brings/"/>
-    <updated>2014-03-07T03:00:56+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/what-the-moon-brings</id>
-    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/5BtphLP.jpg" alt="" /></p>
-
-<p style="text-align:center;"><audio controls><source src="https://dl.dropboxusercontent.com/u/51009603/blog/ascent.mp3" type="audio/mpeg"></audio></p>
-
-<p>Over those horrors the evil moon now hung very low, but the puffy worms of the sea need no moon to feed by. And as I watched the ripples that told of the writhing of worms beneath, I felt a new chill from afar out whither the condor had flown, as if my flesh had caught a horror before my eyes had seen it.</p>
-
-<blockquote><ul>
-<li>H.P. Lovecraft.</li>
-</ul>
-</blockquote>
 
 <hr />
 ]]></content>
