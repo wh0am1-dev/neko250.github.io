@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Medium"
+date: 2014-03-16 15:07:57 +0100
+comments: true
+categories: [Writings, Own]
+---
+
+<script async src="https://static.medium.com/embed.js"></script><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a>
+
+This is my Medium profile.  
+It is not even up-to-date, but, well, it's kind of gorgeous... hahaha.
+
+---
+

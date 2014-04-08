@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Glorg"
+date: 2014-03-21 17:30:31 +0100
+comments: true
+categories: [Games, Indie]
+---
+
+<center><object width="730" height="547" data="https://dl.dropboxusercontent.com/u/51009603/blog/glorg-7115.swf?v=1395343247"></object></center>
+
+---

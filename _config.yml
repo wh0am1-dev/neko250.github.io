@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://neko250.github.io
+title: Neko250
+subtitle: Software Engineering Student, Indie Game Developer & Programmer @LangFriends
+author: Carlos Aguilar
 simple_search: http://google.com/search
-description:
+description: Powered by Octopress, the blogging framework for hackers.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -50,7 +50,14 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+###
+### Uncomment to use dropbot theme
+### sidebar: collapse
+### default_asides: []
+###
+### Comment to use dropbot theme
+# default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+default_asides: []
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -63,14 +70,14 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: Neko250
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_button: true
+twitter_user: Neko250
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false
@@ -79,7 +86,7 @@ google_plus_one_size: medium
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
 googleplus_user:
-googleplus_hidden: false
+googleplus_hidden: true
 
 # Pinboard
 pinboard_user:
@@ -98,3 +105,7 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Gravatar
+gravatar_email: neko_250@ymail.com
+gravatar_header: true
