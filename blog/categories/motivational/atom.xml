@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Motivational | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/motivational/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-04-09T01:09:44+02:00</updated>
+  <id>http://neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Competition]]></title>
+    <link href="http://neko250.github.io/blog/2014/04/09/competition/"/>
+    <updated>2014-04-09T01:06:45+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/04/09/competition</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/K7M87Vm.jpg" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>
