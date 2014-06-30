@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-04-09T03:05:24+02:00</updated>
+  <updated>2014-06-30T17:03:02+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Postcard From 1952]]></title>
+    <link href="http://neko250.github.io/blog/2014/06/30/1952/"/>
+    <updated>2014-06-30T16:55:23+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/06/30/1952</id>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/FBjOiAa2Zic?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+
+
+<p>You might have been to everywhere.<br/>
+Not to anytime but yours.<br/>
+Learn to appreciate it.<br/>
+Your very own time.<br/>
+<strong>Live</strong>.</p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thinking of Infinity]]></title>
@@ -510,17 +528,6 @@ Lloramos.</p>
 <p>And now Facebook says that pictures sent via WhatsApp will be posted into Facebook&hellip;</p>
 
 <h3>WTF, Fuck Privacy !</h3>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Colourcode Hex Color Picker]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/09/colourcode/"/>
-    <updated>2014-03-09T19:54:33+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/09/colourcode</id>
-    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="410"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
 
 <hr />
 ]]></content>
