@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-02T20:01:27+02:00</updated>
+  <updated>2014-07-02T20:07:01+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -14,12 +14,64 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Lucha de Gigantes]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/02/lucha-de-gigantes/"/>
+    <updated>2014-07-02T20:02:42+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/02/lucha-de-gigantes</id>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/c5S6DFiQyWo?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Lucha de gigantes<br/>
+Convierte,<br/>
+El aire en gas natural<br/>
+Un duelo salvaje<br/>
+Advierte,<br/>
+Lo cerca que ando de entrar<br/>
+En un mundo descomunal<br/>
+Siento mi fragilidad.</p>
+
+<p>Vaya pesadilla<br/>
+Corriendo,<br/>
+Con una bestia detras<br/>
+Dime que es mentira todo,<br/>
+Un sueño tonto y no más<br/>
+Me da miedo la inmesidad<br/>
+Donde nadie oye mi voz.</p>
+
+<p>Deja de engañar<br/>
+No quieras ocultar<br/>
+Que has pasado sin tropezar<br/>
+Monstruo de papel<br/>
+No sé contra quien voy<br/>
+O es que acaso hay alguien mas aquí?</p>
+
+<p>Creo en los fantasmas terribles<br/>
+De algun extraño lugar<br/>
+Y en mis tonterías<br/>
+Para hacer tu risa estallar</p>
+
+<p>Deja de engañar<br/>
+No quieras ocultar<br/>
+Que has pasado sin tropezar<br/>
+Monstruo de papel<br/>
+No se contra quien voy<br/>
+O es que acaso hay alguien más aquí?</p>
+
+<p><strong>Deja que pasemos sin miedo&hellip;</strong></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Bill Hicks]]></title>
     <link href="http://neko250.github.io/blog/2014/07/02/bill-hicks/"/>
     <updated>2014-07-02T19:04:12+02:00</updated>
     <id>http://neko250.github.io/blog/2014/07/02/bill-hicks</id>
     <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/naDXhFbXHsg?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
+
+<hr />
 ]]></content>
   </entry>
   
@@ -495,40 +547,6 @@ function generate() {
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aquel Verano...]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/10/aquel-verano/"/>
-    <updated>2014-03-10T00:26:29+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/10/aquel-verano</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
-
-
-<p>Empezaba el verano.
-La cara de mi amigo estaba apagada. Como la mía.</p>
-
-<p>MrSuicideSheep nos acompañó hasta la Secret Party: piscina, amigos, caras expresando de todo y música.</p>
-
-<p>Me enciendo un cigarro en la terraza de Pablo, hablamos.
-Lloramos.</p>
-
-<p>Mi bici nueva. El único viento fresco que podía haber en Agosto me daba en la cara. Era mío.</p>
-
-<p>Conversaciones que le daban vida a fantasmas, le daban la vuelta al universo como un calcetín, y nos dejaba a todos acojonados, saboreando Marshmallows derretidos por las brasas.</p>
-
-<p>Lluvia en verano. Los dioses me hablaban con cada gota que caía. Y yo los escuchaba. Y les respondía con una sonrisa.</p>
-
-<p>Ese verano en que, en feria, estábamos todos con una sonrisa dibujada con tiza blanca en mitad de la cara.</p>
-
-<p>¡ Me sentía libre ! Estabamos al fin, yo y el mundo, frente a frente.</p>
-
-<p>Y ahora el cigarrillo al lado del código en la pantalla suelta una fina estela de humo, que baila al lado mía, para mí, recordándome aquel verano.</p>
-
-<p>Aquel verano está tan cerca de mí, pero… ¿está cerca la estrella mas cercana?</p>
 
 <hr />
 ]]></content>
