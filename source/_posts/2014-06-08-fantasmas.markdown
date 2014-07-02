@@ -3,7 +3,7 @@ layout: post
 title: "La Fortaleza de los Fantasmas"
 date: 2014-06-08 01:26:18 +0200
 comments: true
-categories: [10MinRead, Writings, Own]
+categories: [5MinRead, Writings, Own]
 ---
 
 Llego al garaje después de una barbacoa.  
