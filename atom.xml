@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-02T20:07:01+02:00</updated>
+  <updated>2014-07-03T01:35:47+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -88,6 +88,53 @@ Not to anytime but yours.<br/>
 Learn to appreciate it.<br/>
 Your very own time.<br/>
 <strong>Live</strong>.</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[La Fortaleza de los Fantasmas]]></title>
+    <link href="http://neko250.github.io/blog/2014/06/08/fantasmas/"/>
+    <updated>2014-06-08T01:26:18+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/06/08/fantasmas</id>
+    <content type="html"><![CDATA[<p>Llego al garaje después de una barbacoa.<br/>
+Aparco la moto, detrás del coche de mi padre.</p>
+
+<p>Al mirar por la ventanilla, en el asiento trasero del coche, estamos Anna y yo, haciendo el amor.<br/>
+No muy lejos, en los asientos delanteros estamos Pablo, Marco y yo. Fumando en pipa y jugando a un rol en vivo. Rol que, a pesar de prometer mucho, no nos entusiasma como para siquiera empezarlo como se merece.</p>
+
+<p>Sigo andando. Abro la puerta del tramo del ascensor.<br/>
+Allí está Anita. Risueña, exclama: “El ascensor del terror !”. Me da un “beso mullido” y subo al ascensor.</p>
+
+<p>Al llegar a la segunda planta, noto mi presencia en el pasillo, al lado de las escaleras.<br/>
+Durmiendo, allí fuera, después de una noche en el centro, porque no puedo entrar en mi casa.</p>
+
+<p>Adentrándome más en la fortaleza de los fantasmas, en la azotea, corre una brisa refrescante.<br/>
+Allí, un grupo de muchachos, alrededor de una mesa, juegan a las cartas, beben y fuman. Ríen, se están divirtiendo.<br/>
+A unos pasos de allí: un colchón. Yo y Anita estamos viendo Donnie Darko. Pero abandonamos el largometraje a la mitad.</p>
+
+<p>Llego a la puerta de mi casa. Deslizo la llave por la cerradura:<br/>
+— “Hola, mamá”.<br/>
+— “¿Ha estado bien el día?”.<br/>
+— “Sí, sí, ¡nos lo hemos pasado bien!”.</p>
+
+<p>Llego a mi cuarto. Caigo rendido en mi futón.</p>
+
+<p>Buenas noches.</p>
+
+<hr />
+
+<br>
+
+
+<p>Y, ¿por qué? No tengo miedo por la mañana. No escucho esas voces llamándome. Supongo que habré logrado echarlas.</p>
+
+<p>Juro que oí a esos fantasmas aullando. Representando aquellas escenas, vociferando. Me decían que estaba acabado. Pero ya no están.</p>
+
+<p>Buenos días.</p>
+
+<blockquote><h3>La Fortaleza de los Fantasmas. &ndash; Carlos Aguilar.</h3></blockquote>
 
 <hr />
 ]]></content>
@@ -392,160 +439,6 @@ function generate() {
 <li>Disables title bar and other information.</li>
 <li>Annotations are disabled for peacefull experience.</li>
 </ul>
-
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DNI Control Digit Calculator]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/10/dni-calc/"/>
-    <updated>2014-03-10T00:41:22+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/10/dni-calc</id>
-    <content type="html"><![CDATA[<figure class='code'><figcaption><span>Calculadora de Dígitos de Control de DNI Español</span><a href='https://gist.github.com/Neko250/6497151'>View Gist</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
-</span><span class='line'><span class="cp">#include &lt;stdlib.h&gt;</span>
-</span><span class='line'><span class="cp">#include &lt;string.h&gt;</span>
-</span><span class='line'><span class="cp">#include &lt;ctype.h&gt;</span>
-</span><span class='line'><span class="cp">#include &lt;windows.h&gt;</span>
-</span><span class='line'><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">string</span> <span class="n">text</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">char</span> <span class="n">ans</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">do</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">do</span> <span class="p">{</span>
-</span><span class='line'>            <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
-</span><span class='line'>            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Welcome to the</span><span class="se">\n\t</span><span class="s">Ctrl digit calculator.</span><span class="se">\n\t</span><span class="s">&quot;</span>
-</span><span class='line'>                 <span class="o">&lt;&lt;</span> <span class="s">&quot;By Neko250; Ver. 1.0.0</span><span class="se">\n\t</span><span class="s">======================</span><span class="se">\n\n</span><span class="s">&quot;</span>
-</span><span class='line'>                 <span class="o">&lt;&lt;</span> <span class="s">&quot;Type the text to calculate the ctrl digit:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">;</span>
-</span><span class='line'>            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">text</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>            <span class="k">if</span><span class="p">(</span><span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">Error. The text contains illegal characters:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span>
-</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="n">text</span><span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n\t</span><span class="s">Try again !!!&quot;</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">Sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-</span><span class='line'>            <span class="p">}</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">The Ctrl digit is:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">do</span> <span class="p">{</span>
-</span><span class='line'>            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Do you want to do more calculations? (y/n)</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">;</span>
-</span><span class='line'>            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ans</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>            <span class="k">if</span><span class="p">(</span><span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;y&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;n&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">Error. Illegal answer:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n\t</span><span class="s">Try again!!!&quot;</span><span class="p">;</span>
-</span><span class='line'>                <span class="n">Sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-</span><span class='line'>                <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
-</span><span class='line'>                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Welcome to the</span><span class="se">\n\t</span><span class="s">Ctrl digit calculator.</span><span class="se">\n\t</span><span class="s">&quot;</span>
-</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="s">&quot;By Neko250; Ver. 1.0.0</span><span class="se">\n\t</span><span class="s">======================</span><span class="se">\n\n</span><span class="s">&quot;</span>
-</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="s">&quot;Type the text to calculate the ctrl digit:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">text</span>
-</span><span class='line'>                     <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">The Ctrl digit is:</span><span class="se">\n\t</span><span class="s">&gt;&gt;&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
-</span><span class='line'>            <span class="p">}</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;y&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ans</span> <span class="o">!=</span> <span class="sc">&#39;n&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">ans</span> <span class="o">==</span> <span class="sc">&#39;y&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">Thank you for using the program.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-</span><span class='line'>    <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="n">ctrlDigit</span><span class="p">(</span><span class="n">string</span> <span class="n">text</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="p">};</span>
-</span><span class='line'>    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">isdigit</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
-</span><span class='line'>            <span class="n">n</span> <span class="o">+=</span> <span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">];</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">isalpha</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
-</span><span class='line'>            <span class="n">n</span> <span class="o">+=</span> <span class="p">(</span><span class="n">toupper</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="sc">&#39;A&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">];</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>            <span class="n">error</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-</span><span class='line'>            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
 
 
 <hr />
