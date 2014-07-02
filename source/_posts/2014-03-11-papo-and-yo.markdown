@@ -15,7 +15,7 @@ Here is the trailer, a synopsis, opinions and images from this little piece of a
 
 ### Teaser Trailer.
 
-<iframe src="//www.youtube.com/embed/Rn23bgfj_f4?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+<iframe src="//www.youtube.com/embed/Rn23bgfj_f4?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 ### My Own Screenshots.
 

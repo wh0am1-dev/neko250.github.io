@@ -9,4 +9,3 @@ categories: [Video, Series]
 ->![](http://i.imgur.com/yyeNXba.jpg)<-
 
 ---
-

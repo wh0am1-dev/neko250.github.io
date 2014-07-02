@@ -6,7 +6,7 @@ comments: true
 categories: [Internet]
 ---
 
-<blockquote class="twitter-tweet" lang="en"><p>A machine learning researcher, a crypto-currency expert, and an Erlang programmer walk into a bar. Facebook buys the bar for $27 billion.</p>&mdash; ML Hipster (@ML_Hipster) <a href="https://twitter.com/ML_Hipster/statuses/438418306769244160">February 25, 2014</a></blockquote>
+<center><blockquote class="twitter-tweet" lang="en"><p>A machine learning researcher, a crypto-currency expert, and an Erlang programmer walk into a bar. Facebook buys the bar for $27 billion.</p>&mdash; ML Hipster (@ML_Hipster) <a href="https://twitter.com/ML_Hipster/statuses/438418306769244160">February 25, 2014</a></blockquote></center>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br>
 
 And now Facebook says that pictures sent via WhatsApp will be posted into Facebook...

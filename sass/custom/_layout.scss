@@ -19,3 +19,30 @@
 //$sidebar-pad-medium: 15px;
 //$sidebar-pad-wide: 20px;
 //$sidebar-width-wide: 300px;
+
+@media only screen and (max-width: 850px) {
+  .left {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    -webkit-box-shadow: inset 0 0 -3px hsla(0, 0%, 0%, 0.9);
+    -moz-box-shadow: inset 0 0 -3px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 -3px  hsla(0, 0%, 0%, 0.9);
+    max-width: 100%;
+    .subtitle {
+      display: none;
+    }
+    @media only screen and (max-width: 300px) { 
+      min-height: 400px;
+    }
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .left {
+    .subtitle {
+      display:none
+    }
+  }
+}
