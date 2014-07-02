@@ -9,11 +9,9 @@
   <meta name="author" content="Carlos Aguilar">
 
   
-  <meta name="description" content="All Posts Postcard From 1952 You might have been to everywhere.
+  <meta name="description" content="All Posts Bill Hicks written Jul 2nd, 2014 in Comedy, Videos Postcard From 1952 You might have been to everywhere.
 Not to anytime but yours.
-Learn to appreciate it.
-Your very own time.
-Live. written &hellip;">
+Learn &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +81,50 @@ Live. written &hellip;">
 
   <div class="article-list">
     <div class="container">
+      
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <article>
+  <h2><a href="/blog/2014/07/02/bill-hicks/">Bill Hicks</a></h2>
+  
+  <p>
+    <iframe src="//www.youtube.com/embed/naDXhFbXHsg?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="350" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-02T19:04:12+02:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time> in 
+    
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/comedy/'>Comedy</a>, <a class='category' href='/blog/categories/videos/'>Videos</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+        </div>
+      </div>
       
       
       <div class="row">
@@ -1007,10 +1049,18 @@ function generate() {
     var hlink = document.getElementById("url").value;
     if (hlink != "") {
         var boom = hlink.split("?v=");
-        hlink = "//www.youtube.com/embed/" + boom[1] + "?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3";
-        var embedcode = "<iframe src=\"" + hlink + "\" width=\"730\" height=\"410\" frameborder=\"0\"></iframe>";
-        document.getElementById("code").value = embedcode;
-        document.getElementById("code").select();
+        if (boom[1] == null) {
+            document.getElementById("code").value = "Invalid URL";
+        } else {
+            hlink = "//www.youtube.com/embed/" + boom[1] + "?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3";
+            if (document.getElementById("fill").checked) {
+                var embedcode = "<iframe src=\"" + hlink + "\" width=\"100%\" height=\"350\" frameborder=\"0\" allowfullscreen></iframe>";
+            } else {
+                var embedcode = "<iframe src=\"" + hlink + "\" width=\"730\" height=\"410\" frameborder=\"0\" allowfullscreen></iframe>";
+            }
+            document.getElementById("code").value = embedcode;
+            document.getElementById("code").select();
+        }
     }
 }
 </script>
@@ -1018,7 +1068,8 @@ function generate() {
 
 
 
-<center><input style="line-height:160p%;padding:3px 6px" type="url" id="url" size="60" autofocus onkeypress="if (event.keyCode == 13) document.getElementById('btn').click()" placeholder="Paste YouTube link here"/>
+<center><input style="line-height:160p%;padding:3px 6px" type="url" id="url" size="50" autofocus onkeypress="if (event.keyCode == 13) document.getElementById('btn').click()" placeholder="Paste YouTube link here"/>
+<input type="checkbox" id="fill" checked>Fill
 <button style="height:28px;margin-top:5px;margin-bottom:8px;margin-left:10px;margin-right:10px" id="btn" onclick="generate();" class="generate">Generate</button><br>
 <textarea style="resize:none;padding:3px 6px;margin-bottom:20px" placeholder="Your embed code will be here" id="code" cols="60" rows="5" wrap="hard"></textarea></center>
 
