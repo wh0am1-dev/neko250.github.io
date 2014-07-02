@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-02T19:38:14+02:00</updated>
+  <updated>2014-07-02T20:01:27+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -18,7 +18,7 @@
     <link href="http://neko250.github.io/blog/2014/07/02/bill-hicks/"/>
     <updated>2014-07-02T19:04:12+02:00</updated>
     <id>http://neko250.github.io/blog/2014/07/02/bill-hicks</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/naDXhFbXHsg?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="350" frameborder="0" allowfullscreen></iframe>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/naDXhFbXHsg?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 ]]></content>
   </entry>
@@ -28,7 +28,7 @@
     <link href="http://neko250.github.io/blog/2014/06/30/1952/"/>
     <updated>2014-06-30T16:55:23+02:00</updated>
     <id>http://neko250.github.io/blog/2014/06/30/1952</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/FBjOiAa2Zic?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/FBjOiAa2Zic?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <p>You might have been to everywhere.<br/>
@@ -58,7 +58,7 @@ Your very own time.<br/>
     <updated>2014-04-09T01:11:40+02:00</updated>
     <id>http://neko250.github.io/blog/2014/04/09/trashtorn-live</id>
     <content type="html"><![CDATA[<p>I played live at Eventual Music two weeks ago, with my band Trashtorn.<br/>
-It was a very, very great concert !</p>
+Great concert !</p>
 
 <ul>
 <li><p><a href="https://www.facebook.com/pages/Trashtorn/398467070245460"><strong>Trashtorn on Facebook</strong></a></p></li>
@@ -113,7 +113,7 @@ It was a very, very great concert !</p>
     <link href="http://neko250.github.io/blog/2014/03/17/mont-blanc/"/>
     <updated>2014-03-17T20:35:24+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/17/mont-blanc</id>
-    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/36398302?title=0&amp;byline=0&amp;portrait=0" width="730" height="411" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/36398302?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 <hr />
@@ -162,7 +162,11 @@ It was a very, very great concert !</p>
     <content type="html"><![CDATA[<script async src="https://static.medium.com/embed.js"></script>
 
 
-<p><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a></p>
+<center><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a></center>
+
+
+<br>
+
 
 <p>This is my Medium profile.<br/>
 It is not even up-to-date, but, well, it&rsquo;s kind of gorgeous&hellip; hahaha.</p>
@@ -192,7 +196,7 @@ I&rsquo;ve never been so wrong&hellip;</p>
     <link href="http://neko250.github.io/blog/2014/03/16/belief/"/>
     <updated>2014-03-16T14:38:19+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/16/belief</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/A4vE_vpkr90?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/A4vE_vpkr90?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <h2>Sometimes we just need to believe !</h2>
@@ -206,7 +210,7 @@ I&rsquo;ve never been so wrong&hellip;</p>
     <link href="http://neko250.github.io/blog/2014/03/16/party-without-me/"/>
     <updated>2014-03-16T02:06:33+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/16/party-without-me</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/TsSiGwgmqww?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/TsSiGwgmqww?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Ya se acerca la <strong>primavera</strong>.</p>
@@ -227,7 +231,7 @@ Ahora se diferencia el aroma a <strong>azahar</strong>.</p>
     <link href="http://neko250.github.io/blog/2014/03/14/first-kiss/"/>
     <updated>2014-03-14T03:41:33+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/14/first-kiss</id>
-    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/88671403?title=0&amp;byline=0&amp;portrait=0" width="730" height="411" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/88671403?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 <hr />
@@ -248,7 +252,7 @@ I would totally recommend it to you (You do not even need to be a gamer to play 
 
 <h3>Teaser Trailer.</h3>
 
-<iframe src="//www.youtube.com/embed/Rn23bgfj_f4?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+<iframe src="//www.youtube.com/embed/Rn23bgfj_f4?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <h3>My Own Screenshots.</h3>
@@ -308,7 +312,7 @@ function generate() {
         } else {
             hlink = "//www.youtube.com/embed/" + boom[1] + "?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3";
             if (document.getElementById("fill").checked) {
-                var embedcode = "<iframe src=\"" + hlink + "\" width=\"100%\" height=\"350\" frameborder=\"0\" allowfullscreen></iframe>";
+                var embedcode = "<iframe src=\"" + hlink + "\" width=\"100%\" height=\"410\" frameborder=\"0\" allowfullscreen></iframe>";
             } else {
                 var embedcode = "<iframe src=\"" + hlink + "\" width=\"730\" height=\"410\" frameborder=\"0\" allowfullscreen></iframe>";
             }
@@ -501,7 +505,7 @@ function generate() {
     <link href="http://neko250.github.io/blog/2014/03/10/aquel-verano/"/>
     <updated>2014-03-10T00:26:29+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/10/aquel-verano</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Empezaba el verano.

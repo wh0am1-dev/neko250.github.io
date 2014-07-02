@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Own | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/own/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-02T19:38:14+02:00</updated>
+  <updated>2014-07-02T20:01:27+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -19,7 +19,7 @@
     <updated>2014-04-09T01:11:40+02:00</updated>
     <id>http://neko250.github.io/blog/2014/04/09/trashtorn-live</id>
     <content type="html"><![CDATA[<p>I played live at Eventual Music two weeks ago, with my band Trashtorn.<br/>
-It was a very, very great concert !</p>
+Great concert !</p>
 
 <ul>
 <li><p><a href="https://www.facebook.com/pages/Trashtorn/398467070245460"><strong>Trashtorn on Facebook</strong></a></p></li>
@@ -43,7 +43,11 @@ It was a very, very great concert !</p>
     <content type="html"><![CDATA[<script async src="https://static.medium.com/embed.js"></script>
 
 
-<p><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a></p>
+<center><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a></center>
+
+
+<br>
+
 
 <p>This is my Medium profile.<br/>
 It is not even up-to-date, but, well, it&rsquo;s kind of gorgeous&hellip; hahaha.</p>
@@ -152,7 +156,7 @@ return n % 10;
     <link href="http://neko250.github.io/blog/2014/03/10/aquel-verano/"/>
     <updated>2014-03-10T00:26:29+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/10/aquel-verano</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/V-Zy1kT2_yk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Empezaba el verano.
@@ -198,7 +202,7 @@ Attain to this, and pass from death to immortality.</p>
 <p>Extracto del Bhagavad Gita, una escritura sagrada Hinduista.
 Ante esto, The Beatles compusieron un tema, llamado &ldquo;I Me Mine&rdquo;, que suena tal que así:</p>
 
-<iframe src="//www.youtube.com/embed/8pFCPTYq5Tc?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="730" height="410" frameborder="0"></iframe>
+<iframe src="//www.youtube.com/embed/8pFCPTYq5Tc?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Acompañando al video, os dejo unas palabras de George Harrison:</p>
