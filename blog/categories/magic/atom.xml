@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Magic | Neko250]]></title>
+  <link href="http://neko250.github.io/blog/categories/magic/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-07-23T19:21:46+02:00</updated>
+  <id>http://neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Psychic Phenomena]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/23/psychic-phenomena/"/>
+    <updated>2014-07-23T19:19:13+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/23/psychic-phenomena</id>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/uMyNIYHa_Ko?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+<h1>Amazing, it worked on me !</h1>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

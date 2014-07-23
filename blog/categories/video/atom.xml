@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Video | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/video/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-23T19:13:10+02:00</updated>
+  <updated>2014-07-23T19:21:46+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Psychic Phenomena]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/23/psychic-phenomena/"/>
+    <updated>2014-07-23T19:19:13+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/23/psychic-phenomena</id>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/uMyNIYHa_Ko?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+<h1>Amazing, it worked on me !</h1>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Iconic Houses]]></title>
@@ -57,18 +71,6 @@
 
 
 <h2>Sometimes we just need to believe !</h2>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First Kiss]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/14/first-kiss/"/>
-    <updated>2014-03-14T03:41:33+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/14/first-kiss</id>
-    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/88671403?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 <hr />
 ]]></content>
