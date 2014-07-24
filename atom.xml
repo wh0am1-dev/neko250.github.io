@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-24T16:44:07+02:00</updated>
+  <updated>2014-07-24T16:45:23+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -42,10 +42,13 @@
     <link href="http://neko250.github.io/blog/2014/07/24/fuckyeah-art/"/>
     <updated>2014-07-24T16:31:40+02:00</updated>
     <id>http://neko250.github.io/blog/2014/07/24/fuckyeah-art</id>
-    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/evKbH21.jpg" alt="" />&lt;&ndash;
-&ndash;><img src="http://i.imgur.com/gRjxR9N.jpg" alt="" />&lt;&ndash;
-&ndash;><img src="http://i.imgur.com/lnHvGY6.jpg" alt="" />&lt;&ndash;
-&ndash;><img src="http://i.imgur.com/ITEH7xt.jpg" alt="" /></p>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/evKbH21.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/gRjxR9N.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/lnHvGY6.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/ITEH7xt.jpg" alt="" /></p>
 
 <hr />
 
