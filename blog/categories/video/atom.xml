@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Video | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/video/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-23T19:21:46+02:00</updated>
+  <updated>2014-07-24T16:13:01+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PianoPhase]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/24/pianophase/"/>
+    <updated>2014-07-24T16:11:45+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/24/pianophase</id>
+    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/98823512?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Psychic Phenomena]]></title>
@@ -57,20 +69,6 @@
     <id>http://neko250.github.io/blog/2014/03/17/mont-blanc</id>
     <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/36398302?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Belief - HUVr]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/16/belief/"/>
-    <updated>2014-03-16T14:38:19+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/16/belief</id>
-    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/A4vE_vpkr90?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
-
-
-<h2>Sometimes we just need to believe !</h2>
 
 <hr />
 ]]></content>

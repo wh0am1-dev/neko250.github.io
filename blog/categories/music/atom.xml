@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Music | Neko250]]></title>
   <link href="http://neko250.github.io/blog/categories/music/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-23T19:21:46+02:00</updated>
+  <updated>2014-07-24T16:13:01+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PianoPhase]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/24/pianophase/"/>
+    <updated>2014-07-24T16:11:45+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/24/pianophase</id>
+    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/98823512?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Glare]]></title>
@@ -115,22 +127,6 @@ Great concert !</p>
 <p><img src="http://i.imgur.com/Ezec89q.jpg" alt="" />
 <img src="http://i.imgur.com/MduMdVy.jpg" alt="" />
 <img src="http://i.imgur.com/ScDRbxZ.jpg" alt="" /></p>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Strong]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/16/strong/"/>
-    <updated>2014-03-16T14:45:15+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/16/strong</id>
-    <content type="html"><![CDATA[<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/99389194&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
-
-
-<p>Yeah, I might seem so strong.<br/>
-Yeah, I might speak so long.<br/>
-I&rsquo;ve never been so wrong&hellip;</p>
 
 <hr />
 ]]></content>
