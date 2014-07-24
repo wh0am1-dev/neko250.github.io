@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-24T16:26:32+02:00</updated>
+  <updated>2014-07-24T16:44:07+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SheepyMixes]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/24/sheepymixes/"/>
+    <updated>2014-07-24T16:39:50+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/24/sheepymixes</id>
+    <content type="html"><![CDATA[<h2>Man the joy !</h2>
+
+<iframe src="//www.youtube.com/embed/hQx9df2s2XQ?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<iframe src="//www.youtube.com/embed/XCbHWihLVSI?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<iframe src="//www.youtube.com/embed/K5c7yeg8Apk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fuck Yeah Illustrative Art]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/24/fuckyeah-art/"/>
+    <updated>2014-07-24T16:31:40+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/24/fuckyeah-art</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/evKbH21.jpg" alt="" />&lt;&ndash;
+&ndash;><img src="http://i.imgur.com/gRjxR9N.jpg" alt="" />&lt;&ndash;
+&ndash;><img src="http://i.imgur.com/lnHvGY6.jpg" alt="" />&lt;&ndash;
+&ndash;><img src="http://i.imgur.com/ITEH7xt.jpg" alt="" /></p>
+
+<hr />
+
+<h3>Find more at <a href="http://fuckyeahillustrativeart.tumblr.com/" title="Fuck Yeah Illustrative Art !">Fuck Yeah Illustrative Art !</a></h3>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trinity of Creativity]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/24/creativity/"/>
+    <updated>2014-07-24T16:28:05+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/24/creativity</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/gLgdoBj.png" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Typewriter]]></title>
@@ -396,61 +449,6 @@ Great concert !</p>
     <id>http://neko250.github.io/blog/2014/03/17/mont-blanc</id>
     <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/36398302?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Star Stuff]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/17/star-stuff/"/>
-    <updated>2014-03-17T20:27:26+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/17/star-stuff</id>
-    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/rjT2lj7.jpg" alt="" /></p>
-
-<p>The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our apple pies were made in the interiors of collapsing stars. We are made of starstuff.</p>
-
-<blockquote><ul>
-<li>Carl Sagan, Cosmos.</li>
-</ul>
-</blockquote>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sharp Axe]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/16/sharp-axe/"/>
-    <updated>2014-03-16T23:19:15+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/16/sharp-axe</id>
-    <content type="html"><![CDATA[<h1>If I had eight hours to chop down a tree, I’d spend the first six of them sharpening my axe.</h1>
-
-<blockquote><ul>
-<li>Abraham Lincoln.</li>
-</ul>
-</blockquote>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Medium]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/16/medium/"/>
-    <updated>2014-03-16T15:07:57+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/16/medium</id>
-    <content type="html"><![CDATA[<script async src="https://static.medium.com/embed.js"></script>
-
-
-<center><a class="m-profile" href="https://medium.com/@Neko250">Carlos Aguilar</a></center>
-
-
-<br>
-
-
-<p>This is my Medium profile.<br/>
-It is not even up-to-date, but, well, it&rsquo;s kind of gorgeous&hellip; hahaha.</p>
 
 <hr />
 ]]></content>
