@@ -4,7 +4,7 @@
   <title><![CDATA[Neko250]]></title>
   <link href="http://neko250.github.io/atom.xml" rel="self"/>
   <link href="http://neko250.github.io/"/>
-  <updated>2014-07-24T16:54:36+02:00</updated>
+  <updated>2014-07-25T10:27:56+02:00</updated>
   <id>http://neko250.github.io/</id>
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Designers, clients be like...]]></title>
+    <link href="http://neko250.github.io/blog/2014/07/25/designer-error/"/>
+    <updated>2014-07-25T10:20:21+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/25/designer-error</id>
+    <content type="html"><![CDATA[<h3>What not to say to a graphic designer:</h3>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/Cz0xj6B.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/fZ3o5ki.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/O9v01v7.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/fWVqq4G.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/6y8wKDS.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/VGkkU7g.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/wscGhjp.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/Nl66v5D.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/kLxAc7D.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/bZiMpiN.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/ek2P4Hb.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/oHV6BzJ.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/PUDxNel.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/baGSKZG.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/eQOx1pQ.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/ervv9ZU.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/HVhAtRB.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/Bd8Vwrt.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/JOdVAZC.jpg" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SheepyMixes]]></title>
@@ -443,18 +492,6 @@ Great concert !</p>
     <updated>2014-03-18T14:21:48+01:00</updated>
     <id>http://neko250.github.io/blog/2014/03/18/bacon-pancakes</id>
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/yyeNXba.jpg" alt="" /></p>
-
-<hr />
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Speed Riding, Mont Blanc]]></title>
-    <link href="http://neko250.github.io/blog/2014/03/17/mont-blanc/"/>
-    <updated>2014-03-17T20:35:24+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/17/mont-blanc</id>
-    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/36398302?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 <hr />
 ]]></content>
