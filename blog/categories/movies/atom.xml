@@ -2,17 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Movies | Neko250]]></title>
-<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/movies/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
-=======
-  <link href="http://neko250.github.io/blog/categories/movies/atom.xml" rel="self"/>
-  <link href="http://neko250.github.io/"/>
-  <updated>2014-10-14T15:42:34+02:00</updated>
-  <id>http://neko250.github.io/</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -22,15 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Long Nights]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/09/long-nights/"/>
     <updated>2014-03-09T19:38:11+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/09/long-nights</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/09/long-nights/"/>
-    <updated>2014-03-09T19:38:11+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/09/long-nights</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/mev_FBj0Fyk?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
@@ -47,15 +34,9 @@
   
   <entry>
     <title type="html"><![CDATA[Box of Chocolates]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/forrest-gump/"/>
     <updated>2014-03-07T02:18:04+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/forrest-gump</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/07/forrest-gump/"/>
-    <updated>2014-03-07T02:18:04+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/forrest-gump</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://25.media.tumblr.com/f26c354eb41d80e409bd3043994a2523/tumblr_mhf115r2SM1qbsbnoo1_250.gif" width="365" alt="" /></p>
 
 <blockquote><ul>
@@ -117,15 +98,9 @@
   
   <entry>
     <title type="html"><![CDATA[Si Estuviéramos Solos...]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/cuanto-espacio/"/>
     <updated>2014-03-07T02:17:56+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/cuanto-espacio</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/07/cuanto-espacio/"/>
-    <updated>2014-03-07T02:17:56+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/cuanto-espacio</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/fpbvJX33PbM?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
@@ -181,15 +156,9 @@ N = 10 posibles civilizaciones detectables</p>
   
   <entry>
     <title type="html"><![CDATA[La Superstición de la Paloma]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/supersticion/"/>
     <updated>2014-03-07T02:16:55+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/supersticion</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/07/supersticion/"/>
-    <updated>2014-03-07T02:16:55+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/supersticion</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<blockquote><p>Como la mayoría de los seres vivos, la paloma asocia enseguida el accionar la palanca con la recompensa.<br/>
 Pero, cuando un temporizador suelta una semilla de forma automática cada 20 segundos, la paloma se pregunta: ¿Qué he hecho yo para merecer esto?<br/>
 Si en ese momento estaba aleteando, continuará aleteando, convencida de que sus actos tienen una influencia decisiva en lo que ocurre.<br/>

@@ -2,17 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Art | Neko250]]></title>
-<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/art/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
-=======
-  <link href="http://neko250.github.io/blog/categories/art/atom.xml" rel="self"/>
-  <link href="http://neko250.github.io/"/>
-  <updated>2014-10-14T15:42:34+02:00</updated>
-  <id>http://neko250.github.io/</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -22,15 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fuck Yeah Illustrative Art]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/07/24/fuckyeah-art/"/>
     <updated>2014-07-24T16:31:40+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/07/24/fuckyeah-art</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/07/24/fuckyeah-art/"/>
-    <updated>2014-07-24T16:31:40+02:00</updated>
-    <id>http://neko250.github.io/blog/2014/07/24/fuckyeah-art</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/evKbH21.jpg" alt="" /></p>
 
 <p style="text-align:center;"><img src="http://i.imgur.com/gRjxR9N.jpg" alt="" /></p>
@@ -52,15 +39,9 @@
   
   <entry>
     <title type="html"><![CDATA[Typewriter]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/07/24/typewriter/"/>
     <updated>2014-07-24T16:24:03+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/07/24/typewriter</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/07/24/typewriter/"/>
-    <updated>2014-07-24T16:24:03+02:00</updated>
-    <id>http://neko250.github.io/blog/2014/07/24/typewriter</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/rJNhqdT.jpg" alt="" /></p>
 
 <hr />
@@ -69,15 +50,9 @@
   
   <entry>
     <title type="html"><![CDATA[Descensus Ad Inferos]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/07/06/dante-and-virgil/"/>
     <updated>2014-07-06T12:39:59+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/07/06/dante-and-virgil</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/07/06/dante-and-virgil/"/>
-    <updated>2014-07-06T12:39:59+02:00</updated>
-    <id>http://neko250.github.io/blog/2014/07/06/dante-and-virgil</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<blockquote><p>So on his Nightmare through the evening fog<br/>
 Flits the squab Fiend o'er fen, and lake, and bog;<br/>
 Seeks some love-wilder&rsquo;d maid with sleep oppress&rsquo;d,<br/>
@@ -140,15 +115,9 @@ The Nightmare II, 1790.</p>
   
   <entry>
     <title type="html"><![CDATA[PixelArt Masterpieces]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/07/03/pixel-art/"/>
     <updated>2014-07-03T02:20:46+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/07/03/pixel-art</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/07/03/pixel-art/"/>
-    <updated>2014-07-03T02:20:46+02:00</updated>
-    <id>http://neko250.github.io/blog/2014/07/03/pixel-art</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/hHDxRcz.png" alt="" /></p>
 
 <p style="text-align:center;"><img src="http://i.imgur.com/7l27wz9.png" alt="" /></p>

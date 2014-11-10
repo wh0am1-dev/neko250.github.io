@@ -2,17 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Videogames | Neko250]]></title>
-<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/videogames/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
-=======
-  <link href="http://neko250.github.io/blog/categories/videogames/atom.xml" rel="self"/>
-  <link href="http://neko250.github.io/"/>
-  <updated>2014-10-14T15:42:34+02:00</updated>
-  <id>http://neko250.github.io/</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -22,15 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Player]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/the-player/"/>
     <updated>2014-03-07T02:51:17+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/the-player</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/07/the-player/"/>
-    <updated>2014-03-07T02:51:17+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/the-player</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://media.tumblr.com/c47c3b21c318ebae261e9c5dbf3cd50a/tumblr_inline_mkycrw3tT21qz4rgp.jpg" alt="" /></p>
 
 <p style="text-align:center;"><audio controls><source src="https://dl.dropboxusercontent.com/u/51009603/blog/calm3.mp3" type="audio/mpeg"></audio></p>
@@ -121,15 +108,9 @@
   
   <entry>
     <title type="html"><![CDATA[Anodyne]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/anodyne/"/>
     <updated>2014-03-07T02:46:21+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/anodyne</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/07/anodyne/"/>
-    <updated>2014-03-07T02:46:21+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/anodyne</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://media.tumblr.com/c8dbe7220599087d01e58cec86346282/tumblr_inline_mkwo6gfAmd1qz4rgp.jpg" alt="" /></p>
 
 <p style="text-align:center;"><audio controls><source src="https://dl.dropboxusercontent.com/u/51009603/blog/roof.mp3" type="audio/mpeg"></audio></p>
@@ -147,15 +128,9 @@
   
   <entry>
     <title type="html"><![CDATA[If Life Gives You Lemons]]></title>
-<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/lemons/"/>
     <updated>2014-03-07T02:18:16+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/lemons</id>
-=======
-    <link href="http://neko250.github.io/blog/2014/03/07/lemons/"/>
-    <updated>2014-03-07T02:18:16+01:00</updated>
-    <id>http://neko250.github.io/blog/2014/03/07/lemons</id>
->>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/pgGI9nE.png" width="365" alt="" /></p>
 
 <p>All right, I&rsquo;ve been thinking. When life gives you lemons, don&rsquo;t make lemonade! Make life take the lemons back! Get mad! I don&rsquo;t want your damn lemons; what am I supposed to do with these? Demand to see life&rsquo;s manager! Make life rue the day it thought it could give me lemons! Do you know who I am? I&rsquo;m the man who&rsquo;s gonna burn your house down&hellip; with the lemons! I&rsquo;m gonna invent a combustible lemon that burns your house down!</p>
