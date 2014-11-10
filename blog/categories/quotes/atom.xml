@@ -2,10 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Quotes | Neko250]]></title>
+<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/quotes/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
+=======
+  <link href="http://neko250.github.io/blog/categories/quotes/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-10-14T15:42:34+02:00</updated>
+  <id>http://neko250.github.io/</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -15,9 +22,15 @@
   
   <entry>
     <title type="html"><![CDATA[Designers, clients be like...]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/07/25/designer-error/"/>
     <updated>2014-07-25T10:20:21+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/07/25/designer-error</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/07/25/designer-error/"/>
+    <updated>2014-07-25T10:20:21+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/25/designer-error</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<h3>What not to say to a graphic designer:</h3>
 
 <p style="text-align:center;"><img src="http://i.imgur.com/Cz0xj6B.jpg" alt="" /></p>
@@ -64,9 +77,15 @@
   
   <entry>
     <title type="html"><![CDATA[Trinity of Creativity]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/07/24/creativity/"/>
     <updated>2014-07-24T16:28:05+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/07/24/creativity</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/07/24/creativity/"/>
+    <updated>2014-07-24T16:28:05+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/07/24/creativity</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/gLgdoBj.png" alt="" /></p>
 
 <hr />
@@ -75,9 +94,15 @@
   
   <entry>
     <title type="html"><![CDATA[Thinking of Infinity]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/04/09/mankind-lovecraft/"/>
     <updated>2014-04-09T03:03:24+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/04/09/mankind-lovecraft</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/04/09/mankind-lovecraft/"/>
+    <updated>2014-04-09T03:03:24+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/04/09/mankind-lovecraft</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/Bs2adYU.png" alt="" /></p>
 
 <hr />
@@ -86,9 +111,15 @@
   
   <entry>
     <title type="html"><![CDATA[Competition]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/04/09/competition/"/>
     <updated>2014-04-09T01:06:45+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/04/09/competition</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/04/09/competition/"/>
+    <updated>2014-04-09T01:06:45+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/04/09/competition</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/K7M87Vm.jpg" alt="" /></p>
 
 <hr />
@@ -97,9 +128,15 @@
   
   <entry>
     <title type="html"><![CDATA[Star Stuff]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/17/star-stuff/"/>
     <updated>2014-03-17T20:27:26+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/17/star-stuff</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/17/star-stuff/"/>
+    <updated>2014-03-17T20:27:26+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/17/star-stuff</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/rjT2lj7.jpg" alt="" /></p>
 
 <p>The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our apple pies were made in the interiors of collapsing stars. We are made of starstuff.</p>

@@ -2,10 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 10MinRead | Neko250]]></title>
+<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/10minread/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
+=======
+  <link href="http://neko250.github.io/blog/categories/10minread/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-10-14T15:42:34+02:00</updated>
+  <id>http://neko250.github.io/</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -15,9 +22,15 @@
   
   <entry>
     <title type="html"><![CDATA[Alquitrán 26]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/alquitran-26/"/>
     <updated>2014-03-07T02:16:40+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/alquitran-26</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/07/alquitran-26/"/>
+    <updated>2014-03-07T02:16:40+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/alquitran-26</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p>Brillar a muerte y apagarse de golpe a los 27. En un momento dado dijo que eso era lo que quería. Supongo que a los 15 ya llevaba impresa esa frase en la camiseta con la que se iba a dormir. Supongo que aún era muy joven y muy dramática y muy imbécil. Al fin y al cabo solo tenía 26 y seguramente aún confiaba vagamente en llegar a ser algo en la vida. Un mito, por ejemplo, lo más fácil de soñar cuando empiezas a intuir que no lograrás nada.</p>
 
 <p>La conocí anoche. Pedía un tequila a mi lado. Su codo estaba helado y su voz parecía brotar del mismo aire. Fue eso lo que hizo que la mirara. Sobre todo esa voz como un susurro lejano pero nítido por encima de los bafles. No estaba mal. Todo en su sitio. Tal vez le faltaban unos kilos, pero supongo que la delgadez era requisito indispensable de su papel. Igual que el susurro audible y su palidez y sus ojeras. Pensé en horas de ensayo. La caída de sus párpados me lo confirmó. A medio camino entre la intoxicación verdadera y la mirada inspirada en la Iris de Taxi Driver.</p>
@@ -39,9 +52,15 @@
   
   <entry>
     <title type="html"><![CDATA[Como si Fuese la Primera Vez]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/primera-vez/"/>
     <updated>2014-03-07T02:16:23+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/primera-vez</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/07/primera-vez/"/>
+    <updated>2014-03-07T02:16:23+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/primera-vez</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p>Yo quiero creer que voy a abrir los ojos cada día como si fuese la primera vez. Ver a las personas que me rodean con sorpresa y espanto, alegre por descubrir que están a mi lado compartiendo algo llamado amor, de lo que se habla mucho pero se entiende poco.</p>
 
 <p>Subiré al primer autobús que pase, sin preguntar adónde se dirige, y me bajaré en cuanto vea algo que me llame la atención. Pasaré junto a un mendigo que me pedirá una limosna. Tal vez se la dé, tal vez me parezca que se la va a gastar en bebida y pase de largo -escuchando sus insultos y entendiendo que esta es su manera de comunicarse conmigo-. Veré a alguien que está intentando destruir la cabina telefónica. Tal vez intente impedírselo, tal vez entienda que hace eso porque no tiene a nadie con quien conversar al otro lado de la línea y, de esta manera, busca espantar su soledad.</p>
@@ -71,9 +90,15 @@
   
   <entry>
     <title type="html"><![CDATA[The Man in the Moon came down too soon]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/the-man-in-the-moon/"/>
     <updated>2014-03-07T02:16:11+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/the-man-in-the-moon</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/07/the-man-in-the-moon/"/>
+    <updated>2014-03-07T02:16:11+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/the-man-in-the-moon</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<h3>Mi poesía favorita, &ldquo;El Hombre de la Luna Descendió con Premura&rdquo;.</h3>
 
 <p>The Man in the Moon had silver shoon,<br/>
@@ -198,9 +223,15 @@ from the Mountains of the Moon.</p>
   
   <entry>
     <title type="html"><![CDATA[Y, ¿Quién Soy Yo?]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/y-quien-soy-yo/"/>
     <updated>2014-03-07T02:15:35+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/y-quien-soy-yo</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/07/y-quien-soy-yo/"/>
+    <updated>2014-03-07T02:15:35+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/y-quien-soy-yo</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p>Y, ¿quién soy yo?</p>
 
 <p>¿Soy yo aquel chaval confundido que no tenía amigos?</p>

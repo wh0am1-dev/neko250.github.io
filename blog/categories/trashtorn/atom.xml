@@ -2,10 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: TrashTorn | Neko250]]></title>
+<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/trashtorn/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
+=======
+  <link href="http://neko250.github.io/blog/categories/trashtorn/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-10-14T15:42:34+02:00</updated>
+  <id>http://neko250.github.io/</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -15,9 +22,15 @@
   
   <entry>
     <title type="html"><![CDATA[TrashTorn Live @ Eventual Music]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/04/09/trashtorn-live/"/>
     <updated>2014-04-09T01:11:40+02:00</updated>
     <id>http://Neko250.github.io/blog/2014/04/09/trashtorn-live</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/04/09/trashtorn-live/"/>
+    <updated>2014-04-09T01:11:40+02:00</updated>
+    <id>http://neko250.github.io/blog/2014/04/09/trashtorn-live</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p>I played live at Eventual Music two weeks ago, with my band Trashtorn.<br/>
 Great concert !</p>
 

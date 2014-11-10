@@ -2,10 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Alt-J | Neko250]]></title>
+<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/alt-j/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
+=======
+  <link href="http://neko250.github.io/blog/categories/alt-j/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-10-14T15:42:34+02:00</updated>
+  <id>http://neko250.github.io/</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -15,9 +22,15 @@
   
   <entry>
     <title type="html"><![CDATA[Taro]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/08/taro/"/>
     <updated>2014-03-08T14:28:40+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/08/taro</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/08/taro/"/>
+    <updated>2014-03-08T14:28:40+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/08/taro</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/S3fTw_D3l10?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 

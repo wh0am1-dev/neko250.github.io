@@ -2,10 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Science | Neko250]]></title>
+<<<<<<< HEAD
   <link href="http://Neko250.github.io/blog/categories/science/atom.xml" rel="self"/>
   <link href="http://Neko250.github.io/"/>
   <updated>2014-11-10T23:09:32+01:00</updated>
   <id>http://Neko250.github.io/</id>
+=======
+  <link href="http://neko250.github.io/blog/categories/science/atom.xml" rel="self"/>
+  <link href="http://neko250.github.io/"/>
+  <updated>2014-10-14T15:42:34+02:00</updated>
+  <id>http://neko250.github.io/</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
   <author>
     <name><![CDATA[Carlos Aguilar]]></name>
     
@@ -15,9 +22,15 @@
   
   <entry>
     <title type="html"><![CDATA[Star Stuff]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/17/star-stuff/"/>
     <updated>2014-03-17T20:27:26+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/17/star-stuff</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/17/star-stuff/"/>
+    <updated>2014-03-17T20:27:26+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/17/star-stuff</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/rjT2lj7.jpg" alt="" /></p>
 
 <p>The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our apple pies were made in the interiors of collapsing stars. We are made of starstuff.</p>
@@ -33,9 +46,15 @@
   
   <entry>
     <title type="html"><![CDATA[Belief - HUVr]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/16/belief/"/>
     <updated>2014-03-16T14:38:19+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/16/belief</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/16/belief/"/>
+    <updated>2014-03-16T14:38:19+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/16/belief</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/A4vE_vpkr90?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
@@ -47,9 +66,15 @@
   
   <entry>
     <title type="html"><![CDATA[Si Estuviéramos Solos...]]></title>
+<<<<<<< HEAD
     <link href="http://Neko250.github.io/blog/2014/03/07/cuanto-espacio/"/>
     <updated>2014-03-07T02:17:56+01:00</updated>
     <id>http://Neko250.github.io/blog/2014/03/07/cuanto-espacio</id>
+=======
+    <link href="http://neko250.github.io/blog/2014/03/07/cuanto-espacio/"/>
+    <updated>2014-03-07T02:17:56+01:00</updated>
+    <id>http://neko250.github.io/blog/2014/03/07/cuanto-espacio</id>
+>>>>>>> d2337313ea9c461023fc1619cd5911153de95c67
     <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/fpbvJX33PbM?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
 
 
