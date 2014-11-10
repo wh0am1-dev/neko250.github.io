@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Design | Neko250]]></title>
+  <link href="http://Neko250.github.io/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://Neko250.github.io/"/>
+  <updated>2014-11-10T23:09:32+01:00</updated>
+  <id>http://Neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Designers, clients be like...]]></title>
+    <link href="http://Neko250.github.io/blog/2014/07/25/designer-error/"/>
+    <updated>2014-07-25T10:20:21+02:00</updated>
+    <id>http://Neko250.github.io/blog/2014/07/25/designer-error</id>
+    <content type="html"><![CDATA[<h3>What not to say to a graphic designer:</h3>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/Cz0xj6B.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/fZ3o5ki.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/O9v01v7.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/fWVqq4G.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/6y8wKDS.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/VGkkU7g.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/wscGhjp.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/Nl66v5D.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/kLxAc7D.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/bZiMpiN.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/ek2P4Hb.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/oHV6BzJ.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/PUDxNel.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/baGSKZG.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/eQOx1pQ.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/ervv9ZU.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/HVhAtRB.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/Bd8Vwrt.jpg" alt="" /></p>
+
+<p style="text-align:center;"><img src="http://i.imgur.com/JOdVAZC.jpg" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Iconic Houses]]></title>
+    <link href="http://Neko250.github.io/blog/2014/07/23/iconic-houses/"/>
+    <updated>2014-07-23T19:09:27+02:00</updated>
+    <id>http://Neko250.github.io/blog/2014/07/23/iconic-houses</id>
+    <content type="html"><![CDATA[<iframe src="//player.vimeo.com/video/94449276?title=0&amp;byline=0&amp;portrait=0" width="100%" height="410" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Colourcode Hex Color Picker]]></title>
+    <link href="http://Neko250.github.io/blog/2014/03/09/colourcode/"/>
+    <updated>2014-03-09T19:54:33+01:00</updated>
+    <id>http://Neko250.github.io/blog/2014/03/09/colourcode</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="410"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

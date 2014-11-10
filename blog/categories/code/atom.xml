@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Code | Neko250]]></title>
+  <link href="http://Neko250.github.io/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://Neko250.github.io/"/>
+  <updated>2014-11-10T23:09:32+01:00</updated>
+  <id>http://Neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[YouTube Embed Code Generator]]></title>
+    <link href="http://Neko250.github.io/blog/2014/03/10/youtube-embed/"/>
+    <updated>2014-03-10T17:20:52+01:00</updated>
+    <id>http://Neko250.github.io/blog/2014/03/10/youtube-embed</id>
+    <content type="html"><![CDATA[<script>
+function generate() {
+    var hlink = document.getElementById("url").value;
+    if (hlink != "") {
+        var boom = hlink.split("?v=");
+        if (boom[1] == null) {
+            document.getElementById("code").value = "Invalid URL";
+        } else {
+            hlink = "//www.youtube.com/embed/" + boom[1] + "?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3";
+            if (document.getElementById("fill").checked) {
+                var embedcode = "<iframe src=\"" + hlink + "\" width=\"100%\" height=\"410\" frameborder=\"0\" allowfullscreen></iframe>";
+            } else {
+                var embedcode = "<iframe src=\"" + hlink + "\" width=\"730\" height=\"410\" frameborder=\"0\" allowfullscreen></iframe>";
+            }
+            document.getElementById("code").value = embedcode;
+            document.getElementById("code").select();
+        }
+    }
+}
+</script>
+
+
+
+
+<center><input style="line-height:160p%;padding:3px 6px" type="url" id="url" size="50" autofocus onkeypress="if (event.keyCode == 13) document.getElementById('btn').click()" placeholder="Paste YouTube link here"/>
+<input type="checkbox" id="fill" checked>Fill
+<button style="height:28px;margin-top:5px;margin-bottom:8px;margin-left:10px;margin-right:10px" id="btn" onclick="generate();" class="generate">Generate</button><br>
+<textarea style="resize:none;padding:3px 6px;margin-bottom:20px" placeholder="Your embed code will be here" id="code" cols="60" rows="5" wrap="hard"></textarea></center>
+
+
+<p>Tool to create HTML code to embed YouTube videos with the following characteristics:</p>
+
+<ul>
+<li>Auto loads 720p.</li>
+<li>Disables video suggestions at the end of the video.</li>
+<li>Disables title bar and other information.</li>
+<li>Annotations are disabled for peacefull experience.</li>
+</ul>
+
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DNI Control Digit Calculator]]></title>
+    <link href="http://Neko250.github.io/blog/2014/03/10/dni-calc/"/>
+    <updated>2014-03-10T00:41:22+01:00</updated>
+    <id>http://Neko250.github.io/blog/2014/03/10/dni-calc</id>
+    <content type="html"><![CDATA[<p>``` cpp Calculadora de Dígitos de Control de DNI Español <a href="https://gist.github.com/Neko250/6497151">https://gist.github.com/Neko250/6497151</a> View Gist</p>
+
+<h1>include <iostream></h1>
+
+<h1>include &lt;stdlib.h></h1>
+
+<h1>include &lt;string.h></h1>
+
+<h1>include &lt;ctype.h></h1>
+
+<h1>include &lt;windows.h></h1>
+
+<p>using namespace std;</p>
+
+<p>int ctrlDigit(string, int&amp;);</p>
+
+<p>int main() {</p>
+
+<pre><code>string text;
+char ans;
+int error = 0;
+
+do {
+    do {
+        system("cls");
+        cout &lt;&lt; "\n\tWelcome to the\n\tCtrl digit calculator.\n\t"
+             &lt;&lt; "By Neko250; Ver. 1.0.0\n\t======================\n\n"
+             &lt;&lt; "Type the text to calculate the ctrl digit:\n\t&gt;&gt;&gt; ";
+        cin &gt;&gt; text;
+
+        if(ctrlDigit(text, error) == -1) {
+            cout &lt;&lt; "\nError. The text contains illegal characters:\n\t&gt;&gt;&gt; "
+                 &lt;&lt; text[error] &lt;&lt; "\n\n\tTry again !!!";
+            Sleep(2000);
+        }
+    } while(ctrlDigit(text, error) == -1);
+
+    cout &lt;&lt; "\nThe Ctrl digit is:\n\t&gt;&gt;&gt; " &lt;&lt; ctrlDigit(text, error);
+
+    do {
+        cout &lt;&lt; "\n\nDo you want to do more calculations? (y/n)\n\t&gt;&gt;&gt; ";
+        cin &gt;&gt; ans;
+
+        if(ans != 'y' &amp;&amp; ans != 'n') {
+            cout &lt;&lt; "\nError. Illegal answer:\n\t&gt;&gt;&gt; " &lt;&lt; ans &lt;&lt; "\n\n\tTry again!!!";
+            Sleep(2000);
+            system("cls");
+            cout &lt;&lt; "\n\tWelcome to the\n\tCtrl digit calculator.\n\t"
+                 &lt;&lt; "By Neko250; Ver. 1.0.0\n\t======================\n\n"
+                 &lt;&lt; "Type the text to calculate the ctrl digit:\n\t&gt;&gt;&gt; " &lt;&lt; text
+                 &lt;&lt; "\n\nThe Ctrl digit is:\n\t&gt;&gt;&gt; " &lt;&lt; ctrlDigit(text, error);
+        }
+    } while(ans != 'y' &amp;&amp; ans != 'n');
+} while(ans == 'y');
+
+cout &lt;&lt; "\n\nThank you for using the program.\n";
+system("pause");
+system("cls");
+
+return 0;
+</code></pre>
+
+<p>}</p>
+
+<p>int ctrlDigit(string text, int&amp; error) {</p>
+
+<pre><code>int m[3] = { 7, 3, 1 };
+int n = 0;
+
+for (int i = 0; text[i] != '\0'; i++) {
+    if (isdigit(text[i])) {
+        n += (text[i] - '0') * m[i % 3];
+    } else if (isalpha(text[i])) {
+        n += (toupper(text[i]) - 'A') * m[i % 3];
+    } else {
+        error = i;
+        return -1;
+    }
+}
+
+return n % 10;
+</code></pre>
+
+<p>}
+```</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Colourcode Hex Color Picker]]></title>
+    <link href="http://Neko250.github.io/blog/2014/03/09/colourcode/"/>
+    <updated>2014-03-09T19:54:33+01:00</updated>
+    <id>http://Neko250.github.io/blog/2014/03/09/colourcode</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><object data=http://colourco.de/ width="730" height="410"> <embed src=http://colourco.de/ width="730" height="400"> </embed> Error: Embedded data could not be displayed. </object></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Motivational | Neko250]]></title>
+  <link href="http://Neko250.github.io/blog/categories/motivational/atom.xml" rel="self"/>
+  <link href="http://Neko250.github.io/"/>
+  <updated>2014-11-10T23:09:32+01:00</updated>
+  <id>http://Neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Postcard From 1952]]></title>
+    <link href="http://Neko250.github.io/blog/2014/06/30/1952/"/>
+    <updated>2014-06-30T16:55:23+02:00</updated>
+    <id>http://Neko250.github.io/blog/2014/06/30/1952</id>
+    <content type="html"><![CDATA[<iframe src="//www.youtube.com/embed/FBjOiAa2Zic?hl=hu_HU&hd=1&vq=hd720&rel=0&showinfo=0&modestbranding=0&autohide=1&showsearch=0&version=3&fs=1&iv_load_policy=3" width="100%" height="410" frameborder="0" allowfullscreen></iframe>
+
+
+<p>You might have been to everywhere.<br/>
+Not to anytime but yours.<br/>
+Learn to appreciate it.<br/>
+Your very own time.<br/>
+<strong>Live</strong>.</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Competition]]></title>
+    <link href="http://Neko250.github.io/blog/2014/04/09/competition/"/>
+    <updated>2014-04-09T01:06:45+02:00</updated>
+    <id>http://Neko250.github.io/blog/2014/04/09/competition</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/K7M87Vm.jpg" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

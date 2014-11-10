@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Infographic | Neko250]]></title>
+  <link href="http://Neko250.github.io/blog/categories/infographic/atom.xml" rel="self"/>
+  <link href="http://Neko250.github.io/"/>
+  <updated>2014-11-10T23:09:32+01:00</updated>
+  <id>http://Neko250.github.io/</id>
+  <author>
+    <name><![CDATA[Carlos Aguilar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trinity of Creativity]]></title>
+    <link href="http://Neko250.github.io/blog/2014/07/24/creativity/"/>
+    <updated>2014-07-24T16:28:05+02:00</updated>
+    <id>http://Neko250.github.io/blog/2014/07/24/creativity</id>
+    <content type="html"><![CDATA[<p style="text-align:center;"><img src="http://i.imgur.com/gLgdoBj.png" alt="" /></p>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>
