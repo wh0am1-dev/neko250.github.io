@@ -9,6 +9,8 @@
     <meta name="author" content="Carlos Aguilar">
     <meta name="viewport" content="width=800, user-scalable=no">
 
+    <link rel="stylesheet" href="http://neko250.github.io/GoldenPhi/resources/pace/themes/neko250.css">
+    <script src="http://neko250.github.io/GoldenPhi/resources/pace/pace.min.js"></script>
     <link href="http://neko250.github.io/Blog250/favicon.png" rel="icon">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -20,6 +22,9 @@
     <link rel="stylesheet" href="http://neko250.github.io/GoldenPhi/resources/neko250.css">
 
     <style>
+      body {
+        overflow: hidden;
+      }
       .pull-bot-right {
         position: absolute;
         bottom: 0;
@@ -57,20 +62,24 @@
         <li><a href="http://www.twitch.tv/Neko250"><i class="fa fa-twitch fa-fw"></i> · Twitch.tv</a></li>
         <li><a href="http://series.ly/@Neko250"><i class="fa fa-film fa-fw"></i> · Series.ly</a></li>
       </ul><br>
-      <center><button id="button" class="btn btn-warning" style="color:#222;">Random Background</button><center>
+      <center>
+        <button id="button" class="btn btn-warning" style="color:#222;">
+          Change Background
+        </button>
+      <center>
     </div>
 
     <div class="meny-arrow">&nbsp;Menu</div>
 
     <div id="frame" class="contents" style="padding-left:80px;">
-      <article id="header" style="display: none;" class="wow bounceInRight" data-wow-duration="2.0s" data-wow-delay="0.5s">
+      <article id="header" style="display: none;" class="wow bounceInDown" data-wow-duration="2.0s" data-wow-delay="0.5s">
         <h1><i class="fa fa-terminal"></i> Neko250</h1>
         <p>
           Welcome to my homepage.
         </p>
         <img src="http://i.imgur.com/f8I1CpH.png" width="150px" style="border-radius:5px;">
       </article>
-      <article id="text" style="display: none;" class="wow bounceInLeft pull-bot-right" data-wow-duration="2.0s" data-wow-delay="1.0s">
+      <article id="text" style="display: none;" class="wow bounceInDown pull-bot-right" data-wow-duration="2.0s" data-wow-delay="1.0s">
         <h1><i class="fa fa-book"></i> · What the Moon Brings</h1>
         <h3>- H.P. Lovecraft</h3><br>
         <center><img src="http://i.imgur.com/AuYvJW3.jpg" width="200px" style="border-radius:20px;"></center><br>
@@ -91,6 +100,9 @@
       var button = document.getElementById('button');
 
       button.onclick = function() {
+        if (meny.isOpen()) {
+          meny.close();
+        }
         meny.destroy();
         regenerate();
         redraw();
@@ -98,6 +110,9 @@
       }
 
       window.onresize = function() {
+        if (meny.isOpen()) {
+          meny.close();
+        }
         meny.destroy();
         redraw();
         newMeny();
