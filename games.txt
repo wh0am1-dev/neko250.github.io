@@ -15,6 +15,7 @@
 [+] English Country Tune
 [+] FEZ
 [+] Garry's Mod
+[+] Intrusion 2
 [+] Hexels
 [+] HOARD
 [+] Home
@@ -45,6 +46,7 @@
 [+] Stacking
 [+] Starbound
 [+] Strike Suit Zero
+[+] Super Crate Box
 [+] Super Hexagon
 [+] Surgeon Simulator
 [+] Team Fortress 2
@@ -62,14 +64,12 @@
 
 [ ] Gnomoria
 [ ] Half-Minute Hero
-[ ] Intrusion 2
 [ ] Lunnye Devitsy
 [ ] Magicka
 [ ] Natural Selection
 [ ] Orcs Must Die
 [ ] Orcs Must Die 2
 [ ] Outlast
-[ ] Super Crate Box
 [ ] Super House of Dead Ninjas
 [ ] Terraria
 [ ] Universe Sandbox
