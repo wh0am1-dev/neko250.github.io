@@ -5,6 +5,7 @@
 [+] Antichamber
 [+] Awesomenauts
 [+] BIT.TRIP Runner 2
+[+] Capsized
 [+] Cities in Motion 2
 [+] Cobalt
 [+] Costume Quest
@@ -26,6 +27,7 @@
 [+] Nuclear Pizza War !!!
 [+] Oil Rush
 [+] Only If
+[+] Papo & Yo
 [+] Pixel Fireplace
 [+] Portal
 [+] Portal 2
@@ -33,6 +35,7 @@
 [+] Psychonauts
 [+] Realm of the Mad God
 [+] Retro City Rampage
+[+] Reus
 [+] Risk of Rain
 [+] Rymdkapsel
 [+] Sanctum
@@ -57,7 +60,6 @@
 [+] Voxatron
 [+] VVVVVV
 
-[ ] Capsized
 [ ] Gnomoria
 [ ] Half-Minute Hero
 [ ] Intrusion 2
@@ -67,8 +69,6 @@
 [ ] Orcs Must Die
 [ ] Orcs Must Die 2
 [ ] Outlast
-[ ] Papo & Yo
-[ ] Reus
 [ ] Super Crate Box
 [ ] Super House of Dead Ninjas
 [ ] Terraria
