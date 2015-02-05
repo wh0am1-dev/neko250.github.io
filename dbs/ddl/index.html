@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SQL DDL</title>
+<link href="https://neko250.github.io/Blog250/favicon.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="generator" content="http://www.texts.io/">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/reveal.min.css"/>
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" media="print" href="http://lab.hakim.se/reveal-js/css/print/pdf.css" />
+<!--[if lt IE 9]>
+<script src="http://lab.hakim.se/reveal-js/lib/js/html5shiv.js"></script>
+<![endif]-->
+<script src="http://lab.hakim.se/reveal-js/js/reveal.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section class="slide"><div><h1>Definición de Datos (DDL)</h1></div></section>
+
+<section>
+<section class="slide"><div><h1>Operaciones DDL</h1></div></section>
+
+<section class="slide"><div><h2>Operaciones sobre el Esquema</h2><ul>
+<li>
+<p>Esquema conceptual</p><ul>
+<li>
+<p>Crear estructura: <code>CREATE TABLE</code></p>
+</li><li>
+<p>Modificar estructura: <code>ALTER TABLE</code></p>
+</li><li>
+<p>Borrar estructura: <code>DROP TABLE</code></p>
+</li>
+</ul>
+</li><li>
+<p>Esquema externo</p><ul>
+<li>
+<p>Estructura: <code>VIEW</code></p>
+</li><li>
+<p>Permisos: <code>GRANT</code>, <code>REVOKE</code></p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Crear Tablas</h1></div></section>
+
+<section class="slide"><div><h2>Creación de Tablas</h2><ul>
+<li>
+<p>Creación de elementos del Esquema Conceptual</p>
+</li><li>
+<p>Contenido de la Tabla</p><ul>
+<li>
+<p>Atributos: IDs, types &amp; default values</p>
+</li><li>
+<p>Restricciones: IDs &amp; tipos de restricción</p>
+</li>
+</ul>
+</li><li>
+<p>Sentencia: <code>CREATE TABLE</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Tipos de Datos</h2><ul>
+<li>
+<p><code>VARCHAR2</code>: Entre 1 y 4000 caracteres o bytes</p>
+</li><li>
+<p><code>NUMBER</code>: Hasta 38 (entera) y 127 (decimal)</p>
+</li><li>
+<p><code>DATE</code>: Entre el 1 de enero de 4712 A.C. y el 31 de diciembre de 9999 D.C.</p>
+</li><li>
+<p>Funciones de Conversión: <code>TO_CHAR</code>, <code>TO_NUMBER</code>, <code>TO_DATE</code></p>
+</li><li>
+<p><code>LONG</code>: Hasta 2Gb</p>
+</li><li>
+<p><code>RAW</code> y <code>LONGRAW</code>: Binario hasta 2000 bytes y 2Gb</p>
+</li><li>
+<p><code>BLOB</code> y <code>BFILE</code>: Binarios hasta 4Gb internos y externos</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Sentencia CREATE TABLE</h2><pre><code>CREATE TABLE &lt;esquema&gt;.&lt;tabla&gt; (
+    &lt;definición_atributos&gt;,
+    &lt;definición_restricciones&gt;
+);
+</code></pre></div></section>
+
+<section class="slide"><div><h2> </h2><ul>
+<li>
+<p><strong>Atributos</strong>: <code>&lt;id&gt; &lt;tipo&gt; DEFAULT &lt;valor&gt;</code></p>
+</li><li>
+<p><strong>Restricciones</strong>: <code>CONSTRAINT &lt;id&gt; &lt;restricción&gt;</code></p><ul>
+<li>
+<p><code>PRIMARY KEY</code></p>
+</li><li>
+<p><code>UNIQUE</code></p>
+</li><li>
+<p><code>NOT NULL</code></p>
+</li><li>
+<p><code>FOREIGN KEY</code></p>
+</li><li>
+<p><code>ON DELETE CASCADE | ON DELETE SET NULL</code></p>
+</li><li>
+<p><code>CHECK</code></p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2> </h2><p>Crear tabla como copia de otra:</p><pre><code>CREATE TABLE &lt;esquema&gt;.&lt;tabla&gt; AS
+    SELECT *
+    FROM &lt;tabla&gt;;
+</code></pre><p>Crear tabla como modificación de otra:</p><pre><code>CREATE TABLE &lt;esquema&gt;.&lt;tabla&gt; AS
+    SELECT DISTINCT &lt;atributos&gt;
+    FROM &lt;tabla&gt;
+    WHERE &lt;condición&gt;;
+</code></pre></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Modificar Tablas</h1></div></section>
+
+<section class="slide"><div><h2>Modificación del Esquema de la Relación</h2><ul>
+<li>
+<p>Operación: <code>DROP TABLE</code></p>
+</li><li>
+<p>Operación: <code>RENAME</code></p>
+</li><li>
+<p>Operación: <code>ALTER TABLE</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2> </h2><p>Añadir atributo o restricción</p><pre><code>ALTER TABLE &lt;tabla&gt; ADD &lt;definición&gt;
+</code></pre><p>Eliminar restricción</p><pre><code>ALTER TABLE &lt;tabla&gt; DROP CONSTRAINT &lt;nombre_restricción&gt; [CASCADE]
+</code></pre><p>Eliminar primaria</p><pre><code>ALTER TABLE &lt;tabla&gt; DROP PRIMARY KEY [CASCADE]
+</code></pre><p>Eliminar candidata</p><pre><code>ALTER TABLE &lt;tabla&gt; DROP UNIQUE (&lt;lista_atributos&gt;) [CASCADE]
+</code></pre></div></section>
+
+<section class="slide"><div><h2> </h2><p>Eliminar atributo</p><pre><code>ALTER TABLE &lt;tabla&gt; DROP COLUMN &lt;nombre_columna&gt; [CASCADE CONSTRAINTS]
+</code></pre><p>Modificar la definición de un atributo</p><pre><code>ALTER TABLE &lt;tabla&gt; MODIFY &lt;nueva_definición&gt;
+</code></pre><p>(Des)activar una restricción</p><pre><code>ALTER TABLE &lt;tabla&gt; ENABLE | DISABLE CONSTRAINT &lt;nombre_restricción&gt;
+</code></pre><p>Renombrar una columna / restricción</p><pre><code>ALTER TABLE &lt;tabla&gt; RENAME COLUMN | CONSTRAINT &lt;anterior&gt; TO &lt;nuevo&gt;
+</code></pre></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Vistas</h1></div></section>
+
+<section class="slide"><div><h2>Creación de Esquemas Externos</h2><ul>
+<li>
+<p>Esquema Externo:</p><ul>
+<li>
+<p>Parcelas de la info del esquema conceptual (<code>VIEW</code>)</p>
+</li><li>
+<p>Permisos para acceder a esos nuevos objetos (<code>GRANT</code> / <code>REVOKE</code>)</p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Creación de Vistas</h2><ul>
+<li>
+<p>Comando: <code>CREATE VIEW</code></p>
+</li><li>
+<p>Definir adecuadamente los nombres de los atributos de la lista</p>
+</li><li>
+<p>Accesibles como una tabla más</p>
+</li><li>
+<p>Creación independiente de los esquemas: <code>FORCE</code></p>
+</li><li>
+<p>Vistas de solo lectura: <code>WITH READ ONLY</code></p>
+</li><li>
+<p>Tuplas consistentes con la lectura: <code>WITH CHECK OPTION</code></p>
+</li><li>
+<p>Problemas en la inserción y modificación de vistas</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Modificación de Vistas</h2><ul>
+<li>
+<p>Borrado de vistas: <code>DROP VIEW</code></p>
+</li><li>
+<p>Modificar vistas: <code>ALTER VIEW</code></p><ul>
+<li>
+<p>Añadir restricciones: <code>ADD</code></p>
+</li><li>
+<p>Eliminar restricciones: <code>DROP</code></p>
+</li><li>
+<p>Compilarla: <code>COMPILE</code></p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Permisos sobre los Objetos</h2><ul>
+<li>
+<p>Dar permisos: <code>GRANT...TO</code></p>
+</li><li>
+<p>Quitar permisos: <code>REVOKE...TO</code></p>
+</li><li>
+<p>Permisos: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code></p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Metadatos</h1></div></section>
+
+<section class="slide"><div><h2>Diccionario de Datos (Catálogo)</h2><ul>
+<li>
+<p>Tablas con información de los esquemas <em>ORACLE</em></p><ul>
+<li>
+<p><code>ALL</code>: Accesibles por este esquema</p>
+</li><li>
+<p><code>DBA</code>: Existentes en la base de datos</p>
+</li><li>
+<p><code>USER</code>: Creados por este esquema</p>
+</li>
+</ul>
+</li><li>
+<p><code>USER_TABLES</code>, <code>USER_CONSTRAINTS</code>, <code>USER_TAB_COLUMNS</code>, <code>USER_CONS_COLUMNS</code>, <code>USER_VIEWS</code></p>
+</li><li>
+<p>Son vistas, susceptibles de ser consultadas y descritas</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Información de las Tablas</h2><p><strong>USER_TABLES</strong></p><pre><code>OWNER &gt;&gt;&gt; Creador de la tabla
+TABLE_NAME &gt;&gt;&gt; Nombre de la tabla
+TABLESPACE_NAME &gt;&gt;&gt; Espacio de tablas de la tabla
+</code></pre></div></section>
+
+<section class="slide"><div><h2>Información de las Restricciones</h2><p><strong>USER_CONSTRAINTS</strong></p><pre><code>CONSTRAINT_NAME &gt;&gt;&gt; Nombre único de la restricción
+TABLE_NAME &gt;&gt;&gt; Tabla que lo contiene
+CONSTRAINT_TYPE &gt;&gt;&gt; Tipo de la restricción
+SEARCH_CONDITION &gt;&gt;&gt; Predicado del CHECK
+R_CONSTRAINT_NAME &gt;&gt;&gt; Restricción destino de la FOREIGN
+</code></pre></div></section>
+
+<section class="slide"><div><h2>Información de las Columnas de las Tablas</h2><p><strong>USER_TAB_COLUMNS</strong></p><pre><code>TABLE_NAME &gt;&gt;&gt; Nombre de la tabla o vista
+COLUMN_NAME &gt;&gt;&gt; Nombre de la columna
+DATA_TYPE &gt;&gt;&gt; Tipo de datos de la columna
+DATA_LENGTH &gt;&gt;&gt; Longitud del tipo de datos
+DATA_PRECISION, DATA_SCALE &gt;&gt;&gt; Precisión y longitud de los NUMBER
+NULLABLE &gt;&gt;&gt; Obligatoriedad del atributo
+COLUMN_ID &gt;&gt;&gt; Orden del atributo en la creación
+</code></pre></div></section>
+
+<section class="slide"><div><h2>Información de las Columnas de las Restricciones</h2><p><strong>USER_CONS_COLUMNS</strong></p><pre><code>CONSTRAINT_NAME &gt;&gt;&gt; Nombre de la restricción
+TABLE_NAME &gt;&gt;&gt; Nombre de la tabla
+COLUMN_NAME &gt;&gt;&gt; Nombre de la columna que aparece en la restricción
+POSITION &gt;&gt;&gt; Posición de la columna en la definición de la restricción
+</code></pre></div></section>
+
+<section class="slide"><div><h2>Información de los Triggers</h2><p><strong>USER_TRIGGERS</strong></p><pre><code>TRIGGER_NAME &gt;&gt;&gt; Nombre del trigger
+TRIGGER_TYPE &gt;&gt;&gt; Tipo del trigger
+    (BEFORE / AFTER y FOR EACH ROW / STATEMENT)
+TRIGGERING_EVENT &gt;&gt;&gt; Acción que lo desencadena
+    (INSERT, UPDATE, ALTER...)
+BASE_OBJECT_TYPE &gt;&gt;&gt; Tipo de objeto sobre el que está definido
+    (TABLE, VIEW, SCHEMA o DATABASE)
+TABLE_NAME &gt;&gt;&gt; Nombre de la tabla o vista sobre la que está definido
+WHEN_CLAUSE &gt;&gt;&gt; Descripción del filtro del trigger
+STATUS &gt;&gt;&gt; Estado del trigger
+    (ENABLED / DISABLED)
+TRIGGER_BODY &gt;&gt;&gt; Cuerpo del trigger
+</code></pre></div></section>
+</section>
+
+</div>
+</div>
+<script>
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	transition: 'convex',
+	slideNumber: true,
+	parallaxBackgroundImage: 'http://i.imgur.com/LTM9h0x.jpg',
+    parallaxBackgroundSize: '2560px 1440px'
+    // transitionSpeed: 'slow'
+});
+</script>
+</body>
+</html>

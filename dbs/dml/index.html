@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SQL DML</title>
+<link href="https://neko250.github.io/Blog250/favicon.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="generator" content="http://www.texts.io/">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/reveal.min.css"/>
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" media="print" href="http://lab.hakim.se/reveal-js/css/print/pdf.css" />
+<!--[if lt IE 9]>
+<script src="http://lab.hakim.se/reveal-js/lib/js/html5shiv.js"></script>
+<![endif]-->
+<script src="http://lab.hakim.se/reveal-js/js/reveal.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section class="slide"><div><h1>Manipulación de Datos (DML)</h1></div></section>
+
+<section>
+<section class="slide"><div><h1>Introducción</h1></div></section>
+
+<section class="slide"><div><h2>Operaciones</h2><ul>
+<li>
+<p>Consultar: <code>SELECT</code></p>
+</li><li>
+<p>Insertar: <code>INSERT</code></p>
+</li><li>
+<p>Borrar: <code>DELETE</code></p>
+</li><li>
+<p>Modificar: <code>UPDATE</code></p>
+</li><li>
+<p>Transacciones: <code>COMMIT</code> y <code>ROLLBACK</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Mostrar Información</h2><ul>
+<li>
+<p>Mostrar el esquema: <code>DESC &lt;nombre_tabla&gt;</code></p>
+</li><li>
+<p>Mostrar el cuerpo: <code>SELECT * FROM &lt;nombre_tabla&gt;</code></p>
+</li><li>
+<p>Catálogo: <code>USER_TABLES</code></p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Proyección</h1></div></section>
+
+<section class="slide"><div><h2>Proyección</h2><pre><code>SELECT &lt;lista_atributos&gt;
+</code></pre><ul>
+<li>
+<p>Aparición de tuplas repetidas: <code>SELECT DISTINCT</code></p>
+</li><li>
+<p>Alias de atributos:</p>
+</li>
+</ul><p><code>SELECT &lt;atributo&gt; "&lt;alias_completo&gt;"</code></p></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Ordenación</h1></div></section>
+
+<section class="slide"><div><h2>Orden de las Tuplas</h2><ul>
+<li>
+<p>Máscara de salida de las tuplas:</p>
+</li>
+</ul><pre><code>ORDER BY &lt;lista_atributos&gt;
+</code></pre><ul>
+<li>
+<p>Identificación por posición (<strong>no recomendable</strong>)</p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Operaciones de Conjuntos</h1></div></section>
+
+<section class="slide"><div><h2>Operaciones de Conjuntos</h2><ul>
+<li>
+<p>Unión compatibilidad</p>
+</li><li>
+<p>Complementariedad con proyección</p>
+</li>
+</ul><pre><code>UNION, UNION ALL, INTERSECT, MINUS
+</code></pre></div></section>
+
+<section class="slide"><div><h2>Producto Cartesiano</h2><ul>
+<li>
+<p>No Unión compatibilidad</p>
+</li>
+</ul><pre><code>FROM &lt;lista_de_tablas&gt;
+</code></pre><ul>
+<li>
+<p>Notación punto para identificar atributos con el mismo nombre</p>
+</li><li>
+<p>Alias de la tabla: <code>FROM &lt;tabla&gt; &lt;alias&gt;</code></p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Selección</h1></div></section>
+
+<section class="slide"><div><h2>Selección</h2><ul>
+<li>
+<p>Determinación de un subconjunto del cuerpo basado en un predicado</p>
+</li><li>
+<p>Cláusula: <code>WHERE</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Funciones de la Selección</h2><ul>
+<li>
+<p>Caracteres:</p>
+</li>
+</ul><pre><code>CONCAT (||), SUBSTR, LOWER, UPPER, etc.
+</code></pre><ul>
+<li>
+<p>Números:</p>
+</li>
+</ul><pre><code>Aritmética, Trigonometría, ROUND, TRUNC, etc.
+</code></pre><ul>
+<li>
+<p>Fechas:</p>
+</li>
+</ul><pre><code>ADD_MONTHS, MONTHS_BETWEEN, NEXT_DAY, Diferencia de fechas, SYSDATE, etc.
+</code></pre></div></section>
+
+<section class="slide"><div><h2> </h2><ul>
+<li>
+<p>Funciones de conversión:</p>
+</li>
+</ul><pre><code>TO_NUMBER, TO_CHAR, TO_DATE
+</code></pre><ul>
+<li>
+<p>Pseudo-columnas:</p>
+</li>
+</ul><pre><code>ROWNUM, ROWID
+</code></pre><ul>
+<li>
+<p>Combinar con operadores lógicos:</p>
+</li>
+</ul><pre><code>AND, OR, NOT
+</code></pre></div></section>
+
+<section class="slide"><div><h2>Manejo de Valores Nulos</h2><ul>
+<li>
+<p>Lógica Trivaluada:</p>
+</li>
+</ul><pre><code>TRUE, FALSE, NULL
+</code></pre><ul>
+<li>
+<p><code>F(NULL) = NULL</code> y <code>P(NULL, A) = (ver tabla de verdad)</code></p>
+</li><li>
+<p>Operador: <code>IS [NOT] NULL</code></p>
+</li><li>
+<p>Función: <code>NVL</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Manejo de Valores Nulos</h2><table>
+<tr>
+<td>
+<p><strong>Exp 1</strong></p>
+</td><td>
+<p><strong>Exp 2</strong></p>
+</td><td>
+<p><strong>AND</strong></p>
+</td><td>
+<p><strong>OR</strong></p>
+</td>
+</tr><tr>
+<td>
+<p>TRUE</p>
+</td><td>
+<p>TRUE</p>
+</td><td>
+<p>TRUE</p>
+</td><td>
+<p>TRUE</p>
+</td>
+</tr><tr>
+<td>
+<p>TRUE</p>
+</td><td>
+<p>FALSE</p>
+</td><td>
+<p>FALSE</p>
+</td><td>
+<p>TRUE</p>
+</td>
+</tr><tr>
+<td>
+<p>TRUE</p>
+</td><td>
+<p>NULL</p>
+</td><td>
+<p>NULL</p>
+</td><td>
+<p>TRUE</p>
+</td>
+</tr><tr>
+<td>
+<p>FALSE</p>
+</td><td>
+<p>FALSE</p>
+</td><td>
+<p>FALSE</p>
+</td><td>
+<p>FALSE</p>
+</td>
+</tr><tr>
+<td>
+<p>FALSE</p>
+</td><td>
+<p>NULL</p>
+</td><td>
+<p>FALSE</p>
+</td><td>
+<p>NULL</p>
+</td>
+</tr><tr>
+<td>
+<p>NULL</p>
+</td><td>
+<p>NULL</p>
+</td><td>
+<p>NULL</p>
+</td><td>
+<p>NULL</p>
+</td>
+</tr>
+</table></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Reunión</h1></div></section>
+
+<section class="slide"><div><h2>Reunión</h2><ul>
+<li>
+<p>Operación natural para enlazar información de dos tablas</p>
+</li><li>
+<p>Reunión basada en producto cartesiano y en selección</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2><code>SELF JOIN</code></h2><ul>
+<li>
+<p>Reunión de una tabla consigo misma</p>
+</li><li>
+<p>Importancia del alias de tablas y atributos</p>
+</li><li>
+<p>Combinación de <code>SELF JOIN</code> y reunión</p>
+</li><li>
+<p>Cuidado con el producto cartesiano</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2><code>NATURAL JOIN</code></h2><ul>
+<li>
+<p>Aplicación de la reunión en la cláusula: <code>FROM</code></p>
+</li><li>
+<p>Problema: coincidencia en <strong>todos</strong> los atributos con nombre idéntico</p>
+</li><li>
+<p>Solución: creación de tablas temporales en el: <code>FROM</code></p>
+</li><li>
+<p>Efecto Secundario: determinación de orden de ejecución</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2><code>JOIN USING</code></h2><ul>
+<li>
+<p>Especificación de los atributos que solapan en el: <code>JOIN</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2><code>CONDITION JOIN</code></h2><ul>
+<li>
+<p>Problema: los atributos de la reunión no se llaman igual</p>
+</li><li>
+<p>Solución: espacificar atributos que se solapan en las dos tablas</p>
+</li><li>
+<p>Uso de:</p>
+</li>
+</ul><pre><code>JOIN ... ON ...
+</code></pre></div></section>
+
+<section class="slide"><div><h2><code>OUTER JOIN</code></h2><ul>
+<li>
+<p>Consideración de valores nulos en la reunión</p>
+</li><li>
+<p>No conmutativo</p>
+</li>
+</ul><pre><code>LEFT OUTER JOIN, FULL OUTER JOIN, RIGHT OUTER JOIN
+</code></pre></div></section>
+</section>
+
+<section class="slide"><div><h1>DML Enriquecido</h1></div></section>
+
+<section>
+<section class="slide"><div><h1>Subconsultas</h1></div></section>
+
+<section class="slide"><div><h2>Consultas Anidadas</h2><ul>
+<li>
+<p>Anidamos consultas con operadores de comparación</p>
+</li><li>
+<p>Forma de estructurar las consultas</p>
+</li><li>
+<p>Ámbito de las cláusulas: <code>FROM</code></p>
+</li><li>
+<p>¿Qué sucede si la subconsulta devuelve más de una tupla?</p>
+</li><li>
+<p>Comparadores con <code>ANY</code> / <code>ALL</code></p>
+</li><li>
+<p>Emular las reuniones</p>
+</li><li>
+<p>Operadores: <code>IN</code>, <code>EXISTS</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Ámbito de tablas en <code>EXISTS</code></h2><ul>
+<li>
+<p>Conservar el ámbito de la tabla que hace la reunión</p>
+</li><li>
+<p>Problema: necesidad de referencia interna a dicha tabla</p>
+</li><li>
+<p>Solución: Alias de tabla</p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Consultas Negativas</h1></div></section>
+
+<section class="slide"><div><h2>Consultas Negativas</h2><ul>
+<li>
+<p>Condición positiva: una tupla tiene un valor diferente</p>
+</li><li>
+<p>Condición de negación: comprobar en todas las tuplas exhaustivamente que no se da una condición</p>
+</li><li>
+<p>Cláusula: <code>NOT IN</code> / <code>NOT EXISTS</code></p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Agrupación</h1></div></section>
+
+<section class="slide"><div><h2>Funciones de Agrupación</h2><ul>
+<li>
+<p>Información implícita</p>
+</li><li>
+<p>Nuevas funciones: <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, <code>COUNT</code>, <code>AVG</code></p>
+</li><li>
+<p>Limitaciones de la aparición en cláusulas <code>SELECT</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Consultas de Agrupación</h2><ul>
+<li>
+<p>Extraer información de varios grupos de tuplas</p>
+</li><li>
+<p>Cláusula: <code>GROUP BY</code></p>
+</li><li>
+<p>Limitaciones de la aparición en cláusulas: <code>SELECT</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Condiciones sobre la Agrupación</h2><ul>
+<li>
+<p>Impone un predicado para los grupos</p>
+</li><li>
+<p>Cláusula: <code>HAVING</code></p>
+</li><li>
+<p>Delimitar los predicados: <code>WHERE</code> y <code>HAVING</code></p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Resumen de la Operación <code>SELECT</code></h1></div></section>
+
+<section class="slide"><div><pre><code>5. SELECT F(&lt;atr&gt;), &lt;atr_1&gt;, ..., &lt;atr_i&gt;
+1.     FROM &lt;tabla_1&gt;, ..., &lt;tabla_n&gt;
+2.     WHERE &lt;predicado&gt;
+3.     GROUP BY &lt;atr_1&gt;, ..., &lt;atr_k&gt;
+4.     HAVING G(&lt;atr&gt;)
+6.     ORDER BY &lt;atr_1&gt;, ..., &lt;atr_i&gt;;
+</code></pre></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Jerarquías</h1></div></section>
+
+<section class="slide"><div><h2>Consultas a una jerarquía</h2><ul>
+<li>
+<p>Problema de las consultas sobre una jerarquía</p>
+</li><li>
+<p>Limitación expresiva del SQL</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Problemas con los Recorridos Jerárquicos</h2><ul>
+<li>
+<p>No se puede establecer un nodo de comienzo</p>
+</li><li>
+<p>No se puede extraer la raíz del árbol (porque su atributo conector es nulo)</p>
+</li><li>
+<p>No salen las tuplas ordenadas según el recorrido del árbol</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Solución <em>ORACLE</em></h2><ul>
+<li>
+<p>Cláusula: <code>CONNECT BY</code></p><ul>
+<li>
+<p>Nodo de comienzo (opcional)</p>
+</li><li>
+<p>Condición de reunión (recursión)</p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Orden de Ejecución</h2><ol>
+<li>
+<p>Cláusulas <code>WHERE</code> si son de reunión</p>
+</li><li>
+<p>Cláusula <code>START WITH</code>. Nodo(s) raíz de la consulta</p>
+</li><li>
+<p>Cláusula <code>CONNECT BY</code>. Nodos hijos del siguiente nivel</p>
+</li><li>
+<p>Cláusula <code>WHERE</code> que no tiene reunión</p>
+</li><li>
+<p>Orden de recorrido: preorden</p>
+</li>
+</ol></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Anidamiento Avanzado</h1></div></section>
+
+<section class="slide"><div><h2>Motivación</h2><ul>
+<li>
+<p>El resultado de una sentencia <code>SELECT</code> sigue un esquema relacional</p>
+</li><li>
+<p>Dicho resultado se puede usar como una relación (<code>UNION</code>, etc)</p>
+</li><li>
+<p>¿Por qué no usarla en el <code>FROM</code>?</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Ventajas</h2><ul>
+<li>
+<p>Estructurar la consulta</p>
+</li><li>
+<p>Adaptar el orden de ejecución de la consulta a nuestras necesidades</p>
+</li>
+</ul></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Manipulación</h1></div></section>
+
+<section class="slide"><div><h2>Operaciones de Manipulación</h2><ul>
+<li>
+<p>Operaciones: <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code></p>
+</li><li>
+<p>Diseño de transacciones: <code>COMMIT</code>, <code>ROLLBACK</code></p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Operaciones de Manipulación</h2><ul>
+<li>
+<p>Posibilidad de usar <code>SELECT</code> anidados</p><ul>
+<li>
+<p><code>INSERT</code>: carga desde otra tabla</p>
+</li><li>
+<p><code>DELETE</code>: referencia a otra tabla en <code>WHERE</code></p>
+</li><li>
+<p><code>UPDATE</code>: referencia a otra tabla en <code>WHERE</code> y en <code>SET</code></p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+</section>
+
+</div>
+</div>
+<script>
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	transition: 'convex',
+	slideNumber: true,
+	parallaxBackgroundImage: 'http://i.imgur.com/LTM9h0x.jpg',
+    parallaxBackgroundSize: '2560px 1440px'
+    // transitionSpeed: 'slow'
+});
+</script>
+</body>
+</html>
