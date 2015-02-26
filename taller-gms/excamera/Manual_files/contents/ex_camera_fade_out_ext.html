@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_fade_out_ext</h1>
+<h2 class="subtitle">Fades the camera out to a room</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_fade_out_ext(cameraHandle, duration, room, delay)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>duration</td>
+			<td>The duration of the effect, in steps</td>
+		</tr>
+		<tr>
+			<td>room</td>
+			<td>The room to go to after the fade out</td>
+		</tr>
+		<tr>
+			<td>delay</td>
+			<td>A delay after the fade out effect and before going to the room</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function will perform a fade out effect and will switch the room at the end of the effect.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//fade the camera out, the effect lasting 40 steps then go to room "rm_level1" with a small delay of 10 steps after the fade
+ex_camera_fade_out(global._camera, 40, rm_level1, 10);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.5.0</small> <script>prettyPrint();</script>

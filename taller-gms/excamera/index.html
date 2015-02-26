@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-us" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>exCamera Documentation</title>
+		<link rel="shortcut icon" href="Manual_files/images/favicon.ico" />
+		<link rel="stylesheet" href="Manual_files/stylesheets/monokai.css" />
+		<link rel="stylesheet" href="Manual_files/stylesheets/base.css" />
+		<link rel="stylesheet" href="Manual_files/stylesheets/main.css" />
+		<script src="Manual_files/javascripts/tweenmax.min.js"></script>
+		<script src="Manual_files/javascripts/jquery.min.js"></script>
+		<script src="Manual_files/javascripts/jquery.easing.min.js"></script>
+		<script src="Manual_files/javascripts/jquery.gsap.min.js"></script>
+		<script src="Manual_files/javascripts/main.js"></script>
+		<script src="Manual_files/javascripts/prettify.js"></script>
+		<script src="Manual_files/javascripts/lang-basic.js"></script>
+		<script src="Manual_files/javascripts/main.js"></script>
+	</head>
+	<body>
+		<div class="layout-container">
+			<div class="layout-header"><img src="Manual_files/images/logo.png" class="logo" alt="Logo" /><div class="version">1.0.2</div></div>
+			<div class="javascript-warning">This manual requires a browser/viewer with <strong>Javascript</strong> enabled. Please enable Javascript and reload this document.</div>
+			<div class="layout-content clear">
+				<div class="sidebar">
+					<div class="filter">
+						<input type="search" onkeyup="filter(this)" placeholder="Filter..." />
+					</div>
+					<div class="sidebar-inner">
+						<ul class="topics" style="display:block">
+							<li onclick="loadPage('ex_camera_welcome.html')"><span>Welcome</span></li>
+							<li onclick="loadPage('ex_camera_installation.html')">Installation</li>
+							<li onclick="loadPage('ex_camera_license.html')">License</li>
+							<span class="hr"></span>
+							<li onclick="loadPage('ex_camera_create.html')">ex_camera_create</li>
+							<li onclick="loadPage('ex_camera_destroy.html')">ex_camera_destroy</li>
+							<li onclick="loadPage('ex_camera_fade_in.html')">ex_camera_fade_in</li>
+							<li onclick="loadPage('ex_camera_fade_out.html')">ex_camera_fade_out</li>
+							<li onclick="loadPage('ex_camera_fade_out_ext.html')">ex_camera_fade_out_ext</li>
+							<li onclick="loadPage('ex_camera_fade_to.html')">ex_camera_fade_to</li>
+							<li onclick="loadPage('ex_camera_flash.html')">ex_camera_flash</li>
+							<li onclick="loadPage('ex_camera_scroll_by.html')">ex_camera_scroll_by</li>
+							<li onclick="loadPage('ex_camera_scroll_to.html')">ex_camera_scroll_to</li>
+							<li onclick="loadPage('ex_camera_shake.html')">ex_camera_shake</li>
+							<li onclick="loadPage('ex_camera_zoom.html')">ex_camera_zoom</li>
+							<li onclick="loadPage('ex_camera_set_visible.html')">ex_camera_set_visible</li>
+							<li onclick="loadPage('ex_camera_set_tracking_object.html')">ex_camera_set_tracking_object</li>
+							<li onclick="loadPage('ex_camera_set_region.html')">ex_camera_set_region</li>
+							<li onclick="loadPage('ex_camera_set_safe_area.html')">ex_camera_set_safe_area</li>
+							<li onclick="loadPage('ex_camera_set_easing.html')">ex_camera_set_easing</li>
+							<li onclick="loadPage('ex_camera_set_fade_alpha.html')">ex_camera_set_fade_alpha</li>
+							<li onclick="loadPage('ex_camera_set_fade_blend.html')">ex_camera_set_fade_blend</li>
+							<li onclick="loadPage('ex_camera_set_fade_color.html')">ex_camera_set_fade_color</li>
+							<li onclick="loadPage('ex_camera_set_fade_easing.html')">ex_camera_set_fade_easing</li>
+							<li onclick="loadPage('ex_camera_set_fade_draw_target.html')">ex_camera_set_fade_draw_target</li>
+							<li onclick="loadPage('ex_camera_set_flash_blend.html')">ex_camera_set_flash_blend</li>
+							<li onclick="loadPage('ex_camera_set_flash_color.html')">ex_camera_set_flash_color</li>
+							<li onclick="loadPage('ex_camera_set_flash_easing.html')">ex_camera_set_flash_easing</li>
+							<li onclick="loadPage('ex_camera_set_flash_draw_target.html')">ex_camera_set_flash_draw_target</li>
+							<li onclick="loadPage('ex_camera_set_position.html')">ex_camera_set_position</li>
+							<li onclick="loadPage('ex_camera_set_scroll_offset.html')">ex_camera_set_scroll_offset</li>
+							<li onclick="loadPage('ex_camera_set_scroll_easing.html')">ex_camera_set_scroll_easing</li>
+							<li onclick="loadPage('ex_camera_set_tilt_angle.html')">ex_camera_set_tilt_angle</li>
+							<li onclick="loadPage('ex_camera_set_tilt_easing.html')">ex_camera_set_tilt_easing</li>
+							<li onclick="loadPage('ex_camera_set_shake_easing.html')">ex_camera_set_shake_easing</li>
+							<li onclick="loadPage('ex_camera_set_zoom_scale.html')">ex_camera_set_zoom_scale</li>
+							<li onclick="loadPage('ex_camera_set_zoom_easing.html')">ex_camera_set_zoom_easing</li>
+							<li onclick="loadPage('ex_camera_set_bounds.html')">ex_camera_set_bounds</li>
+							<li onclick="loadPage('ex_camera_get_fade_alpha.html')">ex_camera_get_fade_alpha</li>
+							<li onclick="loadPage('ex_camera_get_fade_color.html')">ex_camera_get_fade_color</li>
+							<li onclick="loadPage('ex_camera_get_flash_alpha.html')">ex_camera_get_flash_alpha</li>
+							<li onclick="loadPage('ex_camera_get_flash_color.html')">ex_camera_get_flash_color</li>
+							<li onclick="loadPage('ex_camera_get_tilt_angle.html')">ex_camera_get_tilt_angle</li>
+							<li onclick="loadPage('ex_camera_get_tracking_object.html')">ex_camera_get_tracking_object</li>
+							<li onclick="loadPage('ex_camera_get_safe_area.html')">ex_camera_get_safe_area</li>
+							<li onclick="loadPage('ex_camera_get_x.html')">ex_camera_get_x</li>
+							<li onclick="loadPage('ex_camera_get_x_offset.html')">ex_camera_get_x_offset</li>
+							<li onclick="loadPage('ex_camera_get_y.html')">ex_camera_get_y</li>
+							<li onclick="loadPage('ex_camera_get_y_offset.html')">ex_camera_get_y_offset</li>
+							<li onclick="loadPage('ex_camera_get_width.html')">ex_camera_get_width</li>
+							<li onclick="loadPage('ex_camera_get_height.html')">ex_camera_get_height</li>
+							<li onclick="loadPage('ex_camera_get_zoom_scale.html')">ex_camera_get_zoom_scale</li>
+							<li onclick="loadPage('ex_camera_is_visible.html')">ex_camera_is_visible</li>
+							<li onclick="loadPage('ex_camera_is_fading.html')">ex_camera_is_fading</li>
+							<li onclick="loadPage('ex_camera_is_flashing.html')">ex_camera_is_flashing</li>
+							<li onclick="loadPage('ex_camera_is_scrolling.html')">ex_camera_is_scrolling</li>
+							<li onclick="loadPage('ex_camera_is_shaking.html')">ex_camera_is_shaking</li>
+							<li onclick="loadPage('ex_camera_is_tilting.html')">ex_camera_is_tilting</li>
+							<li onclick="loadPage('ex_camera_is_zooming.html')">ex_camera_is_zooming</li>
+							<li onclick="loadPage('ex_camera_stop_fade.html')">ex_camera_stop_fade</li>
+							<li onclick="loadPage('ex_camera_stop_flash.html')">ex_camera_stop_flash</li>
+							<li onclick="loadPage('ex_camera_stop_scroll.html')">ex_camera_stop_scroll</li>
+							<li onclick="loadPage('ex_camera_stop_shake.html')">ex_camera_stop_shake</li>
+							<li onclick="loadPage('ex_camera_stop_tilt.html')">ex_camera_stop_tilt</li>
+							<li onclick="loadPage('ex_camera_stop_zoom.html')">ex_camera_stop_zoom</li>
+							<li onclick="loadPage('ex_camera_reset_easing.html')">ex_camera_reset_easing</li>
+							<li onclick="loadPage('ex_camera_reset_bounds.html')">ex_camera_reset_bounds</li>							
+						</ul>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="contents-inner">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

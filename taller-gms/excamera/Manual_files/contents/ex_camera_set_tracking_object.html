@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_tracking_object</h1>
+<h2 class="subtitle">Sets the tracking object for the camera</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_tracking_object(cameraHandle, object)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>object</td>
+			<td>The object to follow</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function sets the object that will be followed by the camera's view. You can use this function to switch between different objects to e.g. create a static camera system or stop tracking the player (e.g. set to noone). To manipulate the camera manually, when no tracking object is being followed, you can use the function ex_camera_set_position()</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the tracking object to obj_camera_manipulator
+ex_camera_set_tracking_object(global._camera, obj_camera_manipulator);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.5.0</small> <script>prettyPrint();</script>

@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_safe_area</h1>
+<h2 class="subtitle">Sets the safe area for the camera</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_safe_area(cameraHandle, amount)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>amount</td>
+			<td>The safe area, default is 128</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function allows you to increase or decrease the <a href="http://en.wikipedia.org/wiki/Safe_area_(television)" target="_blank">safe area</a> around the camera view. This can help if you plan to rotate or shake the camera a lot, so that several effect overlays such as fade or flash do not appear cut-off. This increases the out-of-view overlay edges to help prevent the effects looking bad.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the safe area for the camera to 512 pixels
+ex_camera_set_safe_area(global._camera, 512);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.8.0</small> <script>prettyPrint();</script>

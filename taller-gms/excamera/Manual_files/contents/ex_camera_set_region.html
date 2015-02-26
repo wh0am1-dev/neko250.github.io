@@ -1,0 +1,56 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_region</h1>
+<h2 class="subtitle">Sets the camera's region position and dimensions</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_region(cameraHandle, x, y, width, height)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>x</td>
+			<td>The camera's region X</td>
+		</tr>
+		<tr>
+			<td>y</td>
+			<td>The camera's region Y</td>
+		</tr>
+		<tr>
+			<td>width</td>
+			<td>The camera's region width</td>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td>The camera's region height</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function will set the camera region x/y and dimensions. It can help when positioning and resizing multiple cameras to achieve a split screen view for example.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Split two camera views horizontally over a 640x480 resolution
+ex_camera_set_region(global._camera, 0, 0, 320, 480);
+ex_camera_set_region(global._camera2, 321, 0, 319, 480);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 1.0.0</small> <script>prettyPrint();</script>

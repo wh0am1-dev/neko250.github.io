@@ -1,0 +1,141 @@
+
+@import url(base.css);
+
+@font-face {
+	font-family: 'Museo Sans 500';
+	src: url('../fonts/museosans.woff') format('woff'),
+	     url('../fonts/museosans.ttf')  format('truetype'),
+	     url('../fonts/museosans.svg#svgFontName') format('svg');
+}
+
+body {
+	background: #eee;
+	font: normal 13px/1.3 'Museo Sans 500', 'Arial', 'Tahoma', 'Helvetica', sans-serif;
+	color: #222;
+	padding: 4px;
+	overflow: auto;
+	cursor: default;
+}
+
+p {
+	font-size: 14px;
+	cursor: default;
+}
+
+a, a:link, a:visited {
+	color: #2ba6cb;
+	text-decoration: underline;
+}
+
+a:hover, a:focus, a:active {
+	color: #3ac4ed;
+	text-decoration: none;
+	outline: 0;
+}
+
+h1 {
+	font-size: 27px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0 0 3px 0;
+	cursor: default;
+}
+
+h2 {
+	font-size: 17px;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+	margin: 0 0 16px 0;
+	cursor: default;
+}
+
+h3 {
+	font-size: 15px;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+	margin: 7px 0 2px 0;
+	cursor: default;
+}
+
+code {
+	display: inline-block;
+	width: auto;
+	background: #333;
+	border-radius: 8px;
+	padding: 6px;
+	margin-bottom: 12px;
+	color: #fafafa;
+	cursor: default;
+}
+
+table {
+	empty-cells: show;
+	border-collapse: separate !important;
+	border-radius: 8px;
+	margin: 0 0 5px 0;
+	border: 1px solid #b2b2b2;
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+	cursor: default;
+}
+
+table th {
+	padding: 4px;
+}
+
+table td {
+	padding: 4px;
+}
+
+table th:first-child, .contents table td:first-child {
+	width: 20%;
+}
+
+small {
+	display: block;
+	font-size: 13px;
+	margin-bottom: 20px;
+	color: #555;
+	cursor: default;
+}
+
+p {
+	margin: 0 0 17px 0;
+}
+
+
+/* -----------------------------------------
+   Utility
+----------------------------------------- */
+
+@media print {
+	
+	.no-print {
+		display: none;
+	}
+	
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	background: #ddd;
+	border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: #555;
+	padding: 4px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5); 
+}
+
+

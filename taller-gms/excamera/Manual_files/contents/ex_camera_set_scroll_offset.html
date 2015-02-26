@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_scroll_offset</h1>
+<h2 class="subtitle">Sets the camera's scroll offset</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_scroll_offset(cameraHandle, offsetX, offsetY)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>offsetX</td>
+			<td>The camera's X offset</td>
+		</tr>
+		<tr>
+			<td>offsetY</td>
+			<td>The camera's Y offset</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function sets the camera's scroll offset values instantly. For example set to 0, 0 in order to reset the offset.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the camera's offset to 100 pixels to the right horizontally and 0 vertically
+ex_camera_set_scroll_offset(global._camera, 100, 0);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.6.0</small> <script>prettyPrint();</script>

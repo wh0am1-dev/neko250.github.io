@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_reset_easing</h1>
+<h2 class="subtitle">Resets the easing for the all effects</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_reset_easing(cameraHandle)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">By default the camera uses a smoothstep animation. This function gives more control over this and resets the easing algorithm for <strong>all</strong> effect functions in order to achieve a smoother animation or other effects. Because this affects all the camera animations it may interfere with other currently playing animations and as such it should be used when necessary. The camera effects will revert using the default smoothstep animation.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Reset the easing method for the all the effects
+ex_camera_reset_easing(global._camera);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.8.0</small> <script>prettyPrint();</script>

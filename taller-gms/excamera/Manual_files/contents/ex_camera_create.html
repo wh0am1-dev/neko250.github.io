@@ -1,0 +1,46 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_create</h1>
+<h2 class="subtitle">Creates a new camera object and assigns a view to it</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_create(viewIndex, trackingObject)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>viewIndex</td>
+			<td>The view index</td>
+		</tr>
+		<tr>
+			<td>trackingObject</td>
+			<td>The tracking object, the object that the camera's view will follow</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the ID of the created camera object, referred to as cameraHandle</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Before you can manipulate your view with exCamera, you first need to create a new camera object. It is strongly recommended to use a global variable to store your camera handle. ex_camera_create() should be used before using any other ex_camera functions that explicitly manipulate the view. The trackingObject parameter should contain a valid instance id but it is optional (you can pass the keyword <strong>noone</strong>) and can be specified later on using ex_camera_set_tracking_object(). To manipulate the camera manually, when no tracking object is being specified, you can use the function ex_camera_set_position(). The camera width &amp; height is predetermined by the view Room settings and can be changed either through that or with ex_camera_set_size() function.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Create a camera object, store the resulting cameraHandle in global variable "global._camera" and don't assign the tracking object
+global._camera = ex_camera_create(0, noone);
+
+//Create a camera object, store the resulting cameraHandle in global variable "global._camera" and assign the tracking object to obj_camera_manipulator
+global._camera = ex_camera_create(0, obj_camera_manipulator);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.5.0</small> <script>prettyPrint();</script>

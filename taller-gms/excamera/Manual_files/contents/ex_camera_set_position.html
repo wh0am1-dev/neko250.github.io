@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_position</h1>
+<h2 class="subtitle">Sets the camera's position</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_position(cameraHandle, x, y)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>x</td>
+			<td>The camera's X position</td>
+		</tr>
+		<tr>
+			<td>y</td>
+			<td>The camera's Y position</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function will set the camera's x and y position manually. This will <em>not</em> set the scroll offset rather than the actual x, y positions of the camera object. This function will not work if there's an active tracking object that the camera already follows.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the camera's x, y position to 300, 400
+ex_camera_set_position(global._camera, 300, 400);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.5.0</small> <script>prettyPrint();</script>

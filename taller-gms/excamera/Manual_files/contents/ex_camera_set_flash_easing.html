@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_flash_easing</h1>
+<h2 class="subtitle">Sets the easing for the flash effect</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_flash_easing(cameraHandle, easing)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>easing</td>
+			<td>The easing script, pass it without arguments and brackets</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">By default the camera uses a smoothstep animation. This function gives more control over this and sets the easing algorithm for all <strong>flash</strong> effect functions in order to achieve a smoother animation or other effects. You are required to import the supplied scripts first before using an easing function. You may also import only the ones you plan to use.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the easing method for the following flash effect
+ex_camera_set_flash_easing(global._camera, ease_out_elastic);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.8.0</small> <script>prettyPrint();</script>

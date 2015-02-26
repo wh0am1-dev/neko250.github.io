@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_scroll_to</h1>
+<h2 class="subtitle">Scrolls the camera to an offset absolutely</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_scroll_to(cameraHandle, scrollX, scrollY, duration)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>scrollX</td>
+			<td>The x value to scroll to</td>
+		</tr>
+		<tr>
+			<td>scrollY</td>
+			<td>The y value to scroll to</td>
+		</tr>
+		<tr>
+			<td>duration</td>
+			<td>The duration of the effect, in steps</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function will scroll the camera's offset to a x/y amount absolutely. Please note, this will <em>not</em> set the camera's actual X/Y position. Finally note that the offset 0,0 position is the camera's view 0,0 position and not the room 0,0 position</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Scroll the camera to position [20, 20], the effect lasting 40 steps
+ex_camera_scroll_to(global._camera, 20, 20, 40);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.5.0</small> <script>prettyPrint();</script>

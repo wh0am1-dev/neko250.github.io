@@ -1,0 +1,46 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_set_fade_draw_target</h1>
+<h2 class="subtitle">Sets the drawing target for fade effects</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_set_fade_draw_target(cameraHandle, value)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+		<tr>
+			<td>DrawGUI</td>
+			<td>Whether the fade effects will draw on the DrawGUI layer instead (globally) or just the assigned view (default)</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function changes where the fade effects for the particular object will be drawn. You can use this in order to allow a camera object to show a fade effect on the entire screen and not just the view.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the drawing target for the camera's fade effects to its view only
+ex_camera_set_fade_draw_target(global._camera, false);
+
+//Set the drawing target for the camera's fade effects to the entire screen
+ex_camera_set_fade_draw_target(global._camera, true);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 0.5.0</small> <script>prettyPrint();</script>

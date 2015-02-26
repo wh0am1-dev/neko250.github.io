@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_camera_get_height</h1>
+<h2 class="subtitle">Returns the height for the camera</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_camera_get_height(cameraHandle)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cameraHandle</td>
+			<td>The camera handle</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the height for the camera</small>
+
+<h3 class="section">Description</h3>
+<p class="description">This function returns the camera's height.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Return the camera's height and store it in variable "_value"
+_value = ex_camera_get_height(global._camera);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exCamera 1.0.0</small> <script>prettyPrint();</script>
