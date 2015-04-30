@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+  <!-- Load MathJax for math display -->
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <title></title>
+</head>
+<body>
+<div class="container">
+
+<h1>comienza lo güeno !</h1>
+<h1>global settings</h1>
+<ul>
+<li><p>windows</p></li>
+<li><p>graphics</p>
+<ul>
+<li><p>use vsync</p></li>
+<li><p>keep aspect ratio</p></li>
+<li><p>allow switching to fullscreen</p></li>
+</ul></li>
+</ul>
+<h1>excamera</h1>
+<p>importar la extensión desde el .zip que se han descargado con los recursos del taller</p>
+<h1>sprites</h1>
+<ul>
+<li><p>subdir para el jugador</p></li>
+<li><p><code>spr_player_walk</code></p></li>
+<li><p><code>spr_player_idle</code></p></li>
+<li><p><code>spr_player_jump</code></p></li>
+<li><p><code>spr_player_fall</code></p></li>
+<li><p><code>spr_baddie</code></p></li>
+<li><p>subdir para los items:</p></li>
+<li><p><code>spr_gold</code></p></li>
+<li><p><code>spr_potion_green</code></p></li>
+<li><p><code>spr_explosion</code></p></li>
+<li><p><code>spr_wall</code></p></li>
+<li><p><code>spr_torch</code></p></li>
+</ul>
+<p><code>spr_wall y spr_torch</code> son los únicos que no tienen el origen centrado</p>
+<h1>sounds</h1>
+<ul>
+<li><p><code>bgm_music</code></p></li>
+<li><p><code>sfx_jump</code></p></li>
+</ul>
+<p>usar <em>uncompressed</em></p>
+<h1>backgrounds</h1>
+<ul>
+<li><p><code>tiles</code></p></li>
+</ul>
+<p>use as tileset; tile: horizontal; tile: vertical; tile width: 16; tile height: 16; 0; 0; 0; 0;</p>
+<h1>objects !</h1>
+<h2><code>obj_genesis</code></h2>
+<ul>
+<li><p>create: initialize vars*;</p></li>
+<li><p>alarm 0: goto room level1;</p></li>
+</ul>
+<pre><code>* initialize vars
+
+lives = 3;
+score = 0;
+alarm[0] = room_speed * 1;</code></pre>
+<h2><code>obj_ctr_game</code></h2>
+<ul>
+<li><p>create: initialize camera*; play bgm_music(loop);</p></li>
+<li><p>draw GUI: draw score(5, 5); draw lives(200, 5);</p></li>
+<li><p>press : end the game;</p></li>
+</ul>
+<pre><code>* initialize camera
+
+global._camera = ex_camera_create(0, obj_player);
+ex_camera_set_zoom_scale(global._camera, 50);
+ex_camera_set_bounds(global._camera, 0, 0, 1024, 320);
+ex_camera_set_fade_alpha(global._camera, 1);
+ex_camera_fade_in(global._camera, 60);
+ex_camera_set_easing(global._camera, ease_out_quad);
+ex_camera_set_safe_area(global._camera, 256);</code></pre>
+<h2><code>obj_player</code></h2>
+<ul>
+<li><p>create: initialize vars*;</p></li>
+<li><p>alarm 0: lives--; if lives = 0 then goto room genesis else restart current room</p></li>
+<li><p>step: update player*;</p></li>
+<li><p>collision <code>obj_baddie</code>: sprite alpha = 0; stop bgm_music; alarm[0] = 5;</p></li>
+<li><p>collision <code>obj_gold_big</code>: with other destroy(); set score 1,000,000</p></li>
+</ul>
+<pre><code>* initialize vars
+
+image_speed_idle = 0.1;
+image_speed_walk = 0.25;
+image_speed_jump = 0;
+image_speed_fall = 0;
+image_speed = image_speed_idle;
+dead = false;
+grav = 0.5;
+hsp = 0;
+vsp = 0;
+jumpspeed = 7;
+movespeed = 3;</code></pre>
+<pre><code>* update player
+
+key_right = keyboard_check(ord(&quot;D&quot;)) * !dead;
+key_left = -keyboard_check(ord(&quot;A&quot;)) * !dead;
+key_jump = (keyboard_check(vk_space) || keyboard_check(ord(&quot;W&quot;))) &amp;&amp; !dead;
+move = key_left + key_right;
+hsp = move * movespeed;
+
+if (vsp &lt; 10) {
+  vsp += grav;
+}
+
+if (place_meeting(x, y + 1, obj_wall)) {
+  vsp = key_jump * -jumpspeed;
+
+  if (key_jump) {
+    audio_play_sound(sfx_jump, 1, false);
+  }
+}
+
+if (place_meeting(x + hsp, y, obj_wall)) {
+  while (!place_meeting(x + sign(hsp), y, obj_wall)) {
+    x += sign(hsp);
+  }
+
+  hsp = 0;
+}
+
+if (place_meeting(x, y + vsp, obj_wall)) {
+  while (!place_meeting(x, y + sign(vsp), obj_wall)) {
+    y += sign(vsp);
+  }
+
+  vsp = 0;
+}
+
+x += hsp;
+y += vsp;
+
+if (move != 0) {
+  image_xscale = move;
+  ex_camera_scroll_to(global._camera, move * 40, 0, 20);
+}
+
+if (place_meeting(x, y + 1, obj_wall)) {
+  if (hsp != 0) {
+    sprite_index = spr_player_walk;
+    image_speed = image_speed_walk;
+  } else {
+    sprite_index = spr_player_idle;
+    image_speed = image_speed_idle;
+  }
+} else {
+  if (vsp &lt; 0) {
+    sprite_index = spr_player_jump;
+    image_speed = image_speed_jump;
+  } else {
+    sprite_index = spr_player_fall;
+    image_speed = image_speed_fall;
+  }
+}</code></pre>
+<h2><code>obj_baddie</code></h2>
+<ul>
+<li><p>create: initialize vars*;</p></li>
+<li><p>step: update enemy*;</p></li>
+</ul>
+<pre><code>* initialize vars
+
+hp = 1;
+image_speed = 0.25;
+grav = 0.5;
+hsp = 0;
+vsp = 0;
+movespeed = 2;
+dir = -1;
+fear_of_heights = false;</code></pre>
+<pre><code>* update enemy
+
+hsp = dir * movespeed;
+
+if (vsp &lt; 10) {
+  vsp += grav;
+}
+
+if (place_meeting(x + hsp, y, obj_wall)) {
+  while (!place_meeting(x + sign(hsp), y, obj_wall)) {
+    x += sign(hsp);
+  }
+
+  dir *= -1;
+  hsp = 0;
+}
+
+if (place_meeting(x, y + vsp, obj_wall)) {
+  while (!place_meeting(x, y + sign(vsp), obj_wall)) {
+    y += sign(vsp);
+  }
+
+  vsp = 0;
+
+  if (fear_of_heights &amp;&amp; !position_meeting(x + (8 * dir), y + 16, obj_wall)) {
+    dir *= -1;
+  }
+}
+
+x += hsp;
+y += vsp;
+
+if (dir != 0) {
+  image_xscale = dir;
+}</code></pre>
+<h2><code>obj_baddie_nofall</code></h2>
+<ul>
+<li><p>create: call inherited event; fear_of_heights = true;</p></li>
+</ul>
+<h2><code>obj_wall</code></h2>
+<p>nothing here... :sad:</p>
+<h2><code>obj_torch</code></h2>
+<ul>
+<li><p>create: image_speed = 0.2;</p></li>
+</ul>
+<h2><code>obj_gold</code></h2>
+<ul>
+<li><p>create: grav = 0.5; vsp = 0;</p></li>
+<li><p>step: update*;</p></li>
+</ul>
+<pre><code>* update
+
+if (vsp &lt; 10) {
+  vsp += grav;
+}
+
+if (place_meeting(x, y + vsp, obj_wall)) {
+  while (!place_meeting(x, y + sign(vsp), obj_wall)) {
+    y += sign(vsp);
+  }
+
+  vsp = 0;
+}
+
+y += vsp;</code></pre>
+<h1>levels</h1>
+<h2>genesis</h2>
+<ul>
+<li><p>settings</p></li>
+<li><p>width: 1024</p></li>
+<li><p>height: 320</p></li>
+<li><p>speed: 30</p></li>
+<li><p>backgrounds</p></li>
+<li><p>draw background color: #000000</p></li>
+<li><p>visible when room starts</p></li>
+<li><p>views</p></li>
+<li><p>enable</p></li>
+<li><p>visible when room starts</p></li>
+<li><p>view</p>
+<ul>
+<li><p>0, 0</p></li>
+<li><p>320, 240</p></li>
+</ul></li>
+<li><p>port</p>
+<ul>
+<li><p>0, 0</p></li>
+<li><p>640, 480</p></li>
+</ul></li>
+<li><p>objects</p></li>
+<li><p><code>obj_genesis</code></p></li>
+</ul>
+<h2>level</h2>
+<ul>
+<li><p>settings</p></li>
+<li><p>width: 1024</p></li>
+<li><p>height: 320</p></li>
+<li><p>speed: 30</p></li>
+<li><p>backgrounds</p></li>
+<li><p>draw background color: #55CCFF</p></li>
+<li><p>visible when room starts</p></li>
+<li><p>views</p></li>
+<li><p>enable</p></li>
+<li><p>visible when room starts</p></li>
+<li><p>view</p>
+<ul>
+<li><p>0, 80</p></li>
+<li><p>320, 240</p></li>
+</ul></li>
+<li><p>port</p>
+<ul>
+<li><p>0, 0</p></li>
+<li><p>640, 480</p></li>
+</ul></li>
+<li><p>follow</p>
+<ul>
+<li><p><code>obj_player</code></p></li>
+</ul></li>
+<li><p>tiles</p></li>
+<li><p>objects</p></li>
+</ul>
+<div class="references">
+
+</div>
+
+</div>
+</body>
+</html>
