@@ -1,13 +1,21 @@
-## Pablete
+# Whyskey @ Parador
 
-++Fecha++: ¿? - 08 - 2015
-Preferiblemente después del 17 - 08 - 2015
+*****
 
-++Idea++:
+### Fecha
+
+¿? - 08 - 2015
+Preferiblemente el fin de semana del 21-23 de agosto
+
+*****
+
+### Idea
 
 > Comprar una botella de Jack Daniels Honey y llevárnoslo al parador a tomarnos un algo, ir elegantes
 
-++Precio++:
+*****
+
+### Precio
 
 | Concepto                | Precio  |
 |:------------------------|--------:|
@@ -15,9 +23,21 @@ Preferiblemente después del 17 - 08 - 2015
 | Copa en el Parador      | 5 - 10€ |
 | **Total (11 personas)** | ~7.20€  |
 
-++Vienen++:
+*****
 
-- [x] Yo
+### Imágenes
+
+###### Jack Daniels Honey
+![](http://i.imgur.com/CksqfPS.jpg)
+
+###### Parador
+![](http://i.imgur.com/0nVgS3V.jpg)
+
+*****
+
+### Vienen
+
+- [x] Nano
 - [x] Rocío
 - [x] Jose
 - [x] Leko
@@ -30,7 +50,9 @@ Preferiblemente después del 17 - 08 - 2015
 - [x] Mary
 - [ ] Dani
 
------
+*****
+
+### Discusión
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">

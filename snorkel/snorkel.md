@@ -1,20 +1,30 @@
-## Jose
+# Snorkeling
 
-++Fecha++: ¿? - 08 - 2015
-Preferiblemente después del 17 - 08 - 2015, para que Pablete pueda llevar cierto cacharro
+*****
 
-++Idea++:
+### Fecha
+
+¿? - 08 - 2015
+Preferiblemente el fin de semana del 21-23 de agosto
+
+*****
+
+### Idea
 
 > Comprarle un snorkel completo, llevárnoslo a una playa que esté bien para bucear y echar allí el día
 
-++Playas++:
+*****
+
+### Playas
 
 - Calas de Nerja (cerca del Balcón de Europa)
 - Playa del cumpleaños de Aida del año pasado
 - Maro
 - La Herradura
 
-++Precio++:
+*****
+
+### Precio
 
 | Concepto               | Precio |
 |:-----------------------|-------:|
@@ -23,25 +33,44 @@ Preferiblemente después del 17 - 08 - 2015, para que Pablete pueda llevar ciert
 | Pack Mares             | 55€    |
 | **Total (x personas)** | ¿?€    |
 
+*****
+
+### Imágenes
+
 ###### Pack Tribord
-![Tribord](http://i.imgur.com/yljZIR3.jpg)
+![](http://i.imgur.com/yljZIR3.jpg)
 
 ###### Pack Cressi
-![Cressi](http://i.imgur.com/ss9TqFQ.jpg)
+![](http://i.imgur.com/ss9TqFQ.jpg)
 
 ###### Pack Mares
-![Mares](http://i.imgur.com/oOFlXsZ.jpg)
+![](http://i.imgur.com/oOFlXsZ.jpg)
 
-++Vienen++:
+*****
 
-- [x] Yo
+### Vienen
+
+- [x] Nano
 - [ ] Adry
 - [ ] Pablo
 - [ ] Aida
 - [ ] Davi
 - [ ] Rocio
 
------
+*****
+
+### Tienen Snorkel
+
+- [ ] Nano
+- [ ] Adry
+- [ ] Pablo
+- [x] Aida
+- [ ] Davi
+- [x] Rocio
+
+*****
+
+### Discusión
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
