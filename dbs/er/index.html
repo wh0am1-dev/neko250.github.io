@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Entidad Relacion</title>
+<link href="https://neko250.github.io/Blog250/favicon.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="generator" content="http://www.texts.io/">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/reveal.min.css"/>
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" media="print" href="http://lab.hakim.se/reveal-js/css/print/pdf.css" />
+<!--[if lt IE 9]>
+<script src="http://lab.hakim.se/reveal-js/lib/js/html5shiv.js"></script>
+<![endif]-->
+<script src="http://lab.hakim.se/reveal-js/js/reveal.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section class="slide"><div><h1>Diseño Lógico de Bases de Datos</h1></div></section>
+
+<section class="slide"><div><h2>Diseño de Bases de Datos</h2><ol>
+<li>
+<p>Análisis de requisitos</p>
+</li><li>
+<p>Diseño lógico</p><ul>
+<li>
+<p>Modelado conceptual</p>
+</li><li>
+<p>Integración de vistas</p>
+</li><li>
+<p>Modelado relacional</p>
+</li><li>
+<p>Normalización</p>
+</li>
+</ul>
+</li><li>
+<p>Diseño físico</p>
+</li><li>
+<p>Monitorización y afinamiento</p>
+</li>
+</ol></div></section>
+
+<section class="slide"><div><h2>Análisis de Requisitos</h2><ul>
+<li>
+<p>Entrevistas con los usuarios</p>
+</li><li>
+<p>Datos, relaciones y restricciones</p>
+</li><li>
+<p>Plataforma software (opcional)</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Diseño Lógico: Modelado Conceptual</h2><ul>
+<li>
+<p>Modelo Entidad/Relación</p>
+</li><li>
+<p>Todos los datos y sus relaciones</p>
+</li><li>
+<p>Esquema global</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Diseño Lógico: Integración de Vistas</h2><ul>
+<li>
+<p>Diseños grandes</p>
+</li><li>
+<p>Varias personas en el análisis</p>
+</li><li>
+<p>Eliminación de redundancia e inconsistencia</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Diseño Lógico: Modelado Relacional</h2><ul>
+<li>
+<p>Tablas</p>
+</li><li>
+<p>SQL</p>
+</li><li>
+<p>Reglas de transformación (algoritmo)</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Diseño Lógico: Normalización</h2><ul>
+<li>
+<p>Técnica eliminación anomalías</p>
+</li><li>
+<p>Disponer de BD sin redundancia y fáciles de mantener</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Diseño Físico</h2><ul>
+<li>
+<p>Métodos de acceso (índices)</p>
+</li><li>
+<p>Particionamiento y clusters</p>
+</li><li>
+<p>Rendimiento</p>
+</li><li>
+<p>Desnormalización</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Monitorización y Afinamiento</h2><ul>
+<li>
+<p>Implementación (DDL)</p>
+</li><li>
+<p>Modificaciones</p><ul>
+<li>
+<p>Rendimiento</p>
+</li><li>
+<p>Requisitos</p>
+</li>
+</ul>
+</li>
+</ul></div></section>
+
+</div>
+</div>
+<script>
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	transition: 'convex',
+	slideNumber: true
+    // transitionSpeed: 'slow'
+});
+</script>
+</body>
+</html>
