@@ -8,6 +8,10 @@
 
 - [Node.js](https://nodejs.org/en/)
 
+## Networking
+
+- [Socket.io](http://socket.io/)
+
 ## Desktop Natives
 
 - [NW.js](http://nwjs.io/)
