@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link href="https://humblebundle-a.akamaihd.net/misc/files/hashed/daa4f4f06ae0362be8738d5a33f17ca31bf298b3.png" rel="icon">
+        <title>pico-8 api</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="bootstrap" charset="utf-8">
+        <link rel="stylesheet" href="css/highlight/monokai.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>pico-8 api cheatsheet (v0.1.3)</h1>
+            </div>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <!-- class="active" in li -->
+                <li role="presentation"><a href="#system" aria-controls="system" role="tab" data-toggle="tab">system</a></li>
+                <li role="presentation"><a href="#graphics" aria-controls="graphics" role="tab" data-toggle="tab">graphics</a></li>
+                <li role="presentation"><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">tables</a></li>
+                <li role="presentation"><a href="#input" aria-controls="input" role="tab" data-toggle="tab">input</a></li>
+                <li role="presentation"><a href="#audio" aria-controls="audio" role="tab" data-toggle="tab">audio</a></li>
+                <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">map</a></li>
+                <li role="presentation"><a href="#memory" aria-controls="memory" role="tab" data-toggle="tab">memory</a></li>
+                <li role="presentation"><a href="#math" aria-controls="math" role="tab" data-toggle="tab">math</a></li>
+                <li role="presentation"><a href="#strings" aria-controls="strings" role="tab" data-toggle="tab">strings</a></li>
+                <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">cart data</a></li>
+                <li role="presentation"><a href="#keys" aria-controls="keys" role="tab" data-toggle="tab">key combos</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- HOME -->
+                <div role="tabpanel" class="tab-pane fade in active" id="home">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <div class="jumbotron">
+                                <center><h1>welcome to the</h1></center>
+                                <center><p style="color: #e45875;">prettiest</p></center>
+                                <center><h1>pico-8 v0.1.3</h1></center>
+                                <center><h1>api cheatsheet !</h1></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                </div>
+
+                <!-- SYSTEM -->
+                <div role="tabpanel" class="tab-pane fade" id="system">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">load(filename) -- load cart
+save(filename) -- save cart
+folder() -- open folder
+ls() -- list items
+run() -- boot cart
+resume() -- resume cart execution
+reboot() -- reboot pico8
+stat(x) -- 0 = mem; 1 = cpu;
+info() -- print cart info
+flip() -- flip screen back buffer
+printh(str) -- print string to terminal</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                </div>
+
+                <!-- GRAPHICS -->
+                <div role="tabpanel" class="tab-pane fade" id="graphics">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <p>
+                                <center><img src="http://i.imgur.com/8QY2kfJ.png" alt=""></center>
+                            </p>
+                            <div class="row">&nbsp;</div>
+                            <pre><code class="lua">clip([x, y, w, h]) -- set screen clipping region
+pget(x, y) -- get pixel colour
+pset(x, y, [c]) -- set pixel colour
+sget(x, y) -- get spritesheet pixel colour
+sset(x, y, [c]) -- set spritesheet pixel colour
+fget(n, [f]) -- get values of sprite flags
+fset(n, [f], v) -- set values of sprite flags
+print(str, [x, y, [col]]) -- print string
+cursor(x, y) -- set cursor and CR/LF margin position
+color(col) -- set default color
+cls() -- clear screen
+camera([x, y]) -- set camera position
+circ(x, y, r, [col]) -- draw circle
+circfill(x, y, r, [col]) -- draw filled circle
+line(x0, y0, x1, y1, [col]) -- draw line
+rect(x0, y0, x1, y1, [col]) -- draw rectangle
+rectfill(x0, y0, x1, y1, [col]) -- draw filled rectangle
+pal(c0, c1, [p]) -- switch colour 0 to colour 1; p = 0 = draw palette; p = 1 = screen palette
+palt(c, t) -- set transparency for colour to t (bool)
+spr(n, x, y, [w, h], [flip_x], [flip_y]) -- draw sprite
+sspr(sx, sy, sw, sh, dx, dy, [dw, dh], [flip_x], [flip_y]) -- draw texture from spritesheet</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- TABLES -->
+                <div role="tabpanel" class="tab-pane fade" id="tables">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">add(t, v) -- add v to t
+del(t, v) -- delete first instance of v in t
+all(t) -- used in 'for v in all(t)' loops
+foreach(t, f) -- call f() for each v in t
+pairs(t) -- used in 'for k,v in pairs(t)' loops</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- INPUT -->
+                <div role="tabpanel" class="tab-pane fade" id="input">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <p>
+                                <center><img src="http://i.imgur.com/B4DRlJ5.png" alt=""></center>
+                            </p>
+                            <div class="row">&nbsp;</div>
+                            <pre><code class="lua">btn([i, [p]]) -- get button i state for player p
+btnp([i, [p]]) -- was button just pressed ? turbo after 12 frames</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- AUDIO -->
+                <div role="tabpanel" class="tab-pane fade" id="audio">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">sfx(n, [channel, [offset]]) -- play sfx, -1: stop in channel, -2: release loop in channel
+music([n, [fade_len, [channel_mask]]]) -- play music, -1: stop</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- MAP -->
+                <div role="tabpanel" class="tab-pane fade" id="map">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">mget(x, y) -- get map value
+mset(x, y, v) -- set map value
+map(cel_x, cel_y, sx, sy, cel_w, cel_h, [layer]) -- draw map, layers from flags, sprite 0 is empty</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- MEMORY -->
+                <div role="tabpanel" class="tab-pane fade" id="memory">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="markdown"># types:
+
+1. base ram (32kB)
+2. cart rom
+3. lua ram (256kB)</code></pre>
+                            <div class="row">&nbsp;</div>
+                            <pre><code class="markdown"># ram layout:
+
+0x0    - gfx
+0x1000 - gfx2/map2
+0x2000 - map
+0x3000 - gfx props
+0x3100 - song
+0x3200 - sfx
+0x4300 - user-defined
+0x5f00 - draw state (+ unused)
+0x5f80 - persistent cart data (64B)
+0x5fc0 - unused
+0x6000 - screen (8kB)</code></pre>
+                            <div class="row">&nbsp;</div>
+                            <pre><code class="lua">peek(addr) -- read byte in ram address
+poke(addr, val) -- write val in ram address
+memcpy(dest_addr, src_addr, len) -- copy bytes
+reload(dest_addr, src_addr, len) -- copy bytes from rom to ram
+cstore(dest_addr, src_addr, len) -- copy bytes from ram to rom
+memset(dest_addr, val, len) -- set len bytes to val</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- MATH -->
+                <div role="tabpanel" class="tab-pane fade" id="math">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">max(x, y) -- x/y maximum
+min(x, y) -- x/y minimum
+mid(x, y, z) -- x/y/z middle value
+flr(x) -- round down
+cos(x) -- x cosine, [0..1]
+sin(x) -- x sine, [0..1]
+atan2(dx, dy) -- convert (dx, dy) to an angle in [0..1]
+sqrt(x) -- x square root
+abs(x) -- x absolute value
+rnd(x) -- random, 0 &lt;= n &lt; x
+srand(x) -- set random seed
+band(x, y) -- bitwise conjunction
+bor(x, y) -- bitwise disjunction
+bxor(x, y) -- bitwise exclusive disjunction
+bnot(x) -- bitwise negation
+shl(x, y) -- shift left
+shr(x, y) -- shift right</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- STRINGS -->
+                <div role="tabpanel" class="tab-pane fade" id="strings">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">#s -- string length
+"three "..4 -- string concatenation
+sub(str, from, [to]) -- substring</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- DATA -->
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <pre><code class="lua">cartdata(id) -- open cart data named id (once per execution!)
+dget(idx) -- get number at index
+dset(idx) -- set number at index</code></pre>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- KEYS -->
+                <div role="tabpanel" class="tab-pane fade" id="keys">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <h6>general</h6>
+                            <ul>
+                                <li>
+                                    <strong>fullscreen</strong>: alt + enter / cmd + f</li>
+                                <li>
+                                    <strong>quit</strong>: alt + f4 / cmd + q</li>
+                                <li>
+                                    <strong>run cart</strong>: ctrl + r</li>
+                                <li>
+                                    <strong>save</strong>: ctrl + s</li>
+                                <li>
+                                    <strong>screenshot</strong>: f6 / f1</li>
+                                <li>
+                                    <strong>cart img</strong>: f7 / f2</li>
+                                <li>
+                                    <strong>start video</strong>: f8 / f3</li>
+                                <li>
+                                    <strong>save video</strong>: f9 / f4</li>
+                                <li>
+                                    <strong>navigate editors</strong>: alt + right / alt + left</li>
+                            </ul>
+                            <h6>code editor</h6>
+                            <ul>
+                                <li>
+                                    <strong>select</strong>: shift</li>
+                                <li>
+                                    <strong>cut</strong>: ctrl + x</li>
+                                <li>
+                                    <strong>copy</strong>: ctrl + c</li>
+                                <li>
+                                    <strong>paste</strong>: ctrl + v</li>
+                                <li>
+                                    <strong>undo</strong>: ctrl + z</li>
+                                <li>
+                                    <strong>redo</strong>: ctrl + y</li>
+                                <li>
+                                    <strong>search</strong>: ctrl + f</li>
+                                <li>
+                                    <strong>repeat search</strong>: ctrl + g</li>
+                                <li>
+                                    <strong>navigate functions</strong>: alt + up / alt + down</li>
+                            </ul>
+                            <h6>sprite / map editor</h6>
+                            <ul>
+                                <li>
+                                    <strong>undo</strong>: ctrl + z</li>
+                                <li>
+                                    <strong>copy</strong>: ctrl + c</li>
+                                <li>
+                                    <strong>paste</strong>: ctrl + v</li>
+                                <li>
+                                    <strong>navigate sprites</strong>: q / w</li>
+                                <li>
+                                    <strong>navigate colours</strong>: 1 / 2</li>
+                                <li>
+                                    <strong>fullscreen</strong>: tab</li>
+                                <li>
+                                    <strong>zoom</strong>: mouse wheel</li>
+                                <li>
+                                    <strong>flip y</strong>: f</li>
+                                <li>
+                                    <strong>flip x</strong>: v</li>
+                                <li>
+                                    <strong>rotate</strong>: r</li>
+                                <li>
+                                    <strong>move</strong>: cursors</li>
+                                <li>
+                                    <strong>draw tool</strong>:
+                                    <ul>
+                                        <li>
+                                            <strong>replace colour</strong>: lctrl</li>
+                                        <li>
+                                            <strong>eyedropper</strong>: rmb</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>stamp tool</strong>:
+                                    <ul>
+                                        <li>
+                                            <strong>stamp w/ transparency</strong>: lctrl</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>select tool</strong>:
+                                    <ul>
+                                        <li>
+                                            <strong>select sprites</strong>: shift + drag</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h6>sfx / music editor</h6>
+                            <ul>
+                                <li>
+                                    <strong>set all notes</strong>: shift + lmb</li>
+                                <li>
+                                    <strong>snap to Cm pentatonic</strong>: ctrl</li>
+                                <li>
+                                    <strong>speed x4</strong>: shift</li>
+                                <li>
+                                    <strong>start / stop</strong>: space</li>
+                                <li>
+                                    <strong>release loop</strong>: a</li>
+                                <li>
+                                    <strong>tracker mode</strong>:
+                                    <ul>
+                                        <li>
+                                            <strong>note</strong>s__: zsxdcvgbhnjm q2w3er5t6y7u</li>
+                                        <li>
+                                            <strong>delete</strong>: backspace</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>effects</strong>:
+                                    <ul>
+                                        <li>
+                                            <strong>0</strong> none</li>
+                                        <li>
+                                            <strong>1</strong> slide</li>
+                                        <li>
+                                            <strong>2</strong> vibrato</li>
+                                        <li>
+                                            <strong>3</strong> drop (drum kick!)</li>
+                                        <li>
+                                            <strong>4</strong> fade in</li>
+                                        <li>
+                                            <strong>5</strong> fade out</li>
+                                        <li>
+                                            <strong>6</strong> fast arpeggio (4 notes)</li>
+                                        <li>
+                                            <strong>7</strong> slow arpeggio (4 notes)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js" charset="utf-8"></script>
+        <script src="js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="js/highlight.default.lua.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script>
+        </script>
+    </body>
+
+</html>
