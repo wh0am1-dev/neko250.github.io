@@ -1,0 +1,1571 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>patrones de diseño</title>
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+<style type="text/css">
+div.prism-show-language {
+	position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+</style>
+</head>
+<body>
+<h1 id="toc_0">patrones de diseño</h1>
+
+<h2 id="toc_1">patrón <em>Singleton</em></h2>
+
+<ul>
+<li>patrón de <strong>creación</strong> de <strong>objetos</strong></li>
+<li>único ejemplar de una clase</li>
+<li>mecanismo de acceso al ejemplar</li>
+</ul>
+
+<h3 id="toc_2">implementación sin patrón</h3>
+
+<ul>
+<li>se puede usar una variable global:</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">public static Contador contador = new Contador();
+// ...
+Contador.contador.nuevoIdentificador();</code></pre></div>
+
+<ul>
+<li>pero esto no evita que se puedan crear varios ejemplares</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">miContador = new Contador();</code></pre></div>
+
+<ul>
+<li>o que se destruya</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">Contador.contador = null;</code></pre></div>
+
+<h3 id="toc_3">consideraciones</h3>
+
+<ul>
+<li>para asegurar un único ejemplar
+
+<ul>
+<li>constructor privado</li>
+</ul></li>
+<li>el almacenamiento del ejemplar
+
+<ul>
+<li>variable estática privada</li>
+</ul></li>
+<li>acceso al ejemplar
+
+<ul>
+<li>a través de un método estático público</li>
+</ul></li>
+<li>creación del ejemplar
+
+<ul>
+<li>la primera vez que se invoque el método de acceso</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_4">solución</h3>
+
+<div><pre class="line-numbers"><code class="language-java">public class Singleton {
+    private static Singleton ejemplar;
+    
+    private Singleton() {}
+    
+    public static Singleton ejemplar() {
+        if (ejemplar == null)
+            ejemplar = new Singleton();
+        
+        return ejemplar;
+    }
+    
+    public void operacion() {} // adicional
+}</code></pre></div>
+
+<h2 id="toc_5">patrón <em>Método Fábrica</em></h2>
+
+<ul>
+<li>patrón de <strong>creación</strong> de <strong>objetos</strong></li>
+<li>sin indicar la clase concreta del objeto creado
+
+<ul>
+<li>no se invoca a un constructor sino a un método abstracto <code>Fábrica</code></li>
+</ul></li>
+<li>aplicación a la creación de objetos del patrón <em>Plantilla de Métodos</em>
+
+<ul>
+<li>define una interfaz para crear un objeto</li>
+<li>deja su implementación a las subclases</li>
+</ul></li>
+<li>se aplica cuando:
+
+<ul>
+<li>un sistema debe fabricar / crear objetos</li>
+<li>debe ser independiente de los productos concretos fabricados</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_6">implementación</h3>
+
+<div><pre class="line-numbers"><code class="language-java">public abstract class MazeGame {
+    public MazeGame() {
+        Room room1 = makeRoom();
+        Room room2 = makeRoom();
+        room1.connect(room2);
+        this.addRoom(room1);
+        this.addRoom(room2);
+    }
+    
+    abstract protected Room makeRoom(); // método fábrica
+}</code></pre></div>
+
+<div><pre class="line-numbers"><code class="language-java">public class OrdinaryMazeGame extends MazeGame {
+    protected Room makeRoom() {
+        return new OrdinaryRoom();
+    }
+}</code></pre></div>
+
+<div><pre class="line-numbers"><code class="language-java">public class MagicMazeGame extends MazeGame {
+    protected Room makeRoom() {
+        return new MagicRoom();
+    }
+}</code></pre></div>
+
+<h2 id="toc_7">patrón <em>Fábrica Abstracta</em></h2>
+
+<ul>
+<li>patrón de <strong>creación</strong> de <strong>objetos</strong></li>
+<li>proporciona una interfaz para crear familias de objetos relacionados</li>
+<li>sin especificar las clases concretas de las que son instancia</li>
+<li>se aplica cuando:
+
+<ul>
+<li>un sistema debe fabricar o crear objetos</li>
+<li>debe ser independiente de los productos concretos fabricados</li>
+<li>pueden fabricarse varias familias intercambiables de productos</li>
+<li>los productos de una familia deben usarse conjuntamente, no pudiendo combinarse productos de familias distintas</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_8">problema</h3>
+
+<ul>
+<li>considerar diferentes frameworks de creación de GUIs
+
+<ul>
+<li>swing, motif, open windows...</li>
+</ul></li>
+<li>cada framework define una serie de elementos similares pero definidos diferentemente en cada uno</li>
+</ul>
+
+<h3 id="toc_9">solución</h3>
+
+<ul>
+<li>para cada componente se define una clase abstracta (o interfaz)</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">interface Ventana {
+    // ...
+}
+
+interface Boton {
+    // ...
+}
+
+interface Menu {
+    // ...
+}</code></pre></div>
+
+<ul>
+<li>definimos una clase abstracta (o interfaz) <code>FábricaDeComponentes</code>, que declara los métodos fábrica para crear cada tipo de componente</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">abstract Ventana crearVentana();
+abstract Boton crearBoton();
+abstract Menu crearMenu();</code></pre></div>
+
+<ul>
+<li><code>FábricaDeComponentes</code> se especializa en distintas fábricas, una para cada estándar GUI</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">class FabricaMotif extends FabricaDeComponentes {}
+class FabricaPM extends FabricaDeComponentes {}
+class FabricaOW extends FabricaDeComponentes {}</code></pre></div>
+
+<ul>
+<li>cada componente abstracto se especializa para cada estándar</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">class VentanaMotif implements Ventana {}
+class VentanaPM implements Ventana {}
+class VentanaOW implements Ventana {}</code></pre></div>
+
+<h3 id="toc_10">consideraciones</h3>
+
+<ul>
+<li>los clientes quedan aislados de los componentes concretos
+
+<ul>
+<li>la responsabilidad de crear objetos se encapsula en las fábricas</li>
+</ul></li>
+<li>facilita el intercambio de familias de productos
+
+<ul>
+<li>el nombre de una fábrica concreta aparece sólo una vez en la aplicación</li>
+</ul></li>
+<li>la extensión para una nueva familia de productos es sencilla
+
+<ul>
+<li>crearemos nuevas clases fábrica concreta y productos concretos</li>
+</ul></li>
+<li>la extensión para nuevos tipos de productos no es fácil
+
+<ul>
+<li>la interfaz de <code>FábricaAbstracta</code> fija los productos que pueden crearse</li>
+<li>cuando existe un ascendente común a todos los productos, este inconveniente se puede resolver mediante <em>casting</em></li>
+<li>pero si la naturaleza de los nuevos objetos a crear es distinta, la reutilización se ve comprometida</li>
+</ul></li>
+<li>normalmente sólo se necesita un ejemplar de cada fábrica
+
+<ul>
+<li>las fábricas concretas pueden utilizar el patrón <em>Singleton</em></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_11">patrón <em>Prototipo</em></h2>
+
+<ul>
+<li>patrón de <strong>creación</strong> de <strong>objetos</strong></li>
+<li>especifica el tipo de objetos que se deben crear utilizando un ejemplar como prototipo</li>
+<li>crea nuevos objetos a partir del prototipo</li>
+<li>se aplica cuando:
+
+<ul>
+<li>un sistema debe ser independiente de cómo se crean, componen y representan sus productos</li>
+<li>las clases a instanciar se especifican en tiempo de ejecución (<em>carga dinámica</em>)</li>
+<li>se quiere evitar construir jerarquías de clases paralelas</li>
+<li>las instancias de una clase pueden contener una de un número limitado de combinaciones de estados</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_12">ejemplo</h3>
+
+<ul>
+<li>consideremos la construcción de un editor de pentagramas
+
+<ul>
+<li>se pretende reutilizar un marco de trabajo para editres gráficos mediante la incorporación de nuevos objetos que representan notas y otros elementos musicales</li>
+</ul></li>
+<li>el editor de pentagramas dispondrá de una paleta de herramientas para añadir estos elementos musicales al pentagrama</li>
+<li><p>la paleta también incluirá herramientas básicas para seleccionar, mover y manipular estos elementos, funcionalidad ofrecida por el marco de trabajo</p></li>
+<li><p>supongamos que el marco proporciona:</p>
+
+<ul>
+<li>una clase abstracta <code>Graphic</code>
+
+<ul>
+<li>con subclases para los componentes gráficos</li>
+</ul></li>
+<li>una clase abstracta <code>Tool</code>
+
+<ul>
+<li>con subclases para las herramientas que constituyen la paleta</li>
+</ul></li>
+<li>una subclase de <code>Tool</code>, <code>CreationTool</code>
+
+<ul>
+<li>para herramientas que crean instancias de objetos gráficos y las añaden al documento</li>
+</ul></li>
+</ul></li>
+<li><p>la clase <code>CreationTool</code> presenta un problema</p>
+
+<ul>
+<li>las clases para notas y demás elementos musicales son específicas de nuestra aplicación</li>
+<li>pero <code>CreationTool</code> pertenece al marco genérico, y desconoce cómo crear instancias de las clases musicales</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_13">solución inicial</h3>
+
+<ul>
+<li>especializar <code>CreationTool</code> para cada objeto musical</li>
+<li>produce una jerarquía de clases que reproduce la de <code>Graphic</code> y que sólo difieren en el tipo de objeto musical a instanciar</li>
+</ul>
+
+<h3 id="toc_14">solución alternativa</h3>
+
+<ul>
+<li>parametrizar <code>CreationTool</code> con el <code>Graphic</code> que debe crear</li>
+<li><code>CreationTool</code> creará objetos clonando una instancia de la subclase adecuada de <code>Graphic</code></li>
+<li>las subclases de <code>Graphic</code> deben implementar la interfaz <code>Clonable</code></li>
+</ul>
+
+<p><img src="http://i.imgur.com/YnMBfpV.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/v0ktFDJ.png" alt=""></p>
+
+<h2 id="toc_15">patrón <em>Adaptador</em></h2>
+
+<ul>
+<li>también se conoce como <em>Wrapper</em></li>
+<li>patrón <strong>estructural</strong> con una versión para <strong>clases</strong> y otra para <strong>objetos</strong></li>
+<li>se aplica cuando:
+
+<ul>
+<li>se desea reutilizar una clase existente pero su interfaz no concuerda con la que se necesita</li>
+</ul></li>
+<li>adapta la interfaz de una clase a la interfaz esperada por sus clientes</li>
+<li>favorece la reutilización (de la clase adaptada) y permite la colaboración entre interfaces incompatibles</li>
+</ul>
+
+<h3 id="toc_16">ejemplo</h3>
+
+<ul>
+<li>un editor de diagramas
+
+<ul>
+<li>con elementos como líneas, círculos, textos...</li>
+</ul></li>
+<li><code>ObjetoGráfico</code> representa estos elementos
+
+<ul>
+<li>declara operaciones para modificarlos (<code>editar</code>) y dibujarlos (<code>dibujar</code>)</li>
+<li>se especializa en línea, círculo... donde se han implementado las operaciones</li>
+</ul></li>
+<li>la edición y representación de textos es complicada
+
+<ul>
+<li>por ello se desea reutilizar la clase <code>Text</code> de la biblioteca de clases del entorno de programación</li>
+</ul></li>
+<li>la interfaz de <code>Text</code> no se corresponde con <code>ObjetoGráfico</code>
+
+<ul>
+<li>implementa operaciones <code>edit</code> y <code>draw</code></li>
+</ul></li>
+<li>se necesita desarrollar un <em>adaptador</em>
+
+<ul>
+<li>que adapte <code>Text</code> a la interfaz declarada por <code>ObjetoGráfico</code></li>
+</ul></li>
+</ul>
+
+<p><img src="http://i.imgur.com/ojQkOWR.png" alt=""></p>
+
+<h3 id="toc_17">versión con herencia</h3>
+
+<p><img src="http://i.imgur.com/xptFKtY.png" alt=""></p>
+
+<h3 id="toc_18">versión con delegación</h3>
+
+<p><img src="http://i.imgur.com/IKXHO9L.png" alt=""></p>
+
+<h3 id="toc_19">esquema</h3>
+
+<p><img src="http://i.imgur.com/iZAeB9K.png" alt=""></p>
+
+<h3 id="toc_20">consideraciones</h3>
+
+<ul>
+<li>el tipo de adaptación puede ser muy variado
+
+<ul>
+<li>desde una simple conversión de interfaces hasta añadir un conjunto totalmente diferente de operaciones</li>
+</ul></li>
+<li>versión con herencia (clases):
+
+<ul>
+<li>introduce sólo una clase y no necesita ninguna referencia adicional para acceder al objeto adaptado</li>
+<li>no permite adaptar una clase a sus subclases</li>
+<li>permite redefinir parte del comportamiento de la clase adaptada pues el adaptador es una subclase suya</li>
+</ul></li>
+<li>versión con delegación (objetos):
+
+<ul>
+<li>permite adaptar una clase y sus subclases</li>
+<li>el adaptador puede añadir funcionalidad a todos los adaptados</li>
+<li>complica la redefinición de la clase adaptada, pues requeriría crear un descendiente de dicha clase y adaptar esa clase en vez de la original</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_21">patrón <em>Decorador</em></h2>
+
+<ul>
+<li>patrón <strong>estructural</strong> de <strong>objetos</strong></li>
+<li>permite añadir responsabilidades a un objeto de forma dinámica</li>
+<li>proporciona una alternativa flexible a la subclasificación para añadir funcionalidad</li>
+</ul>
+
+<h3 id="toc_22">ejemplo</h3>
+
+<p><img src="http://i.imgur.com/x1AsMkj.png" alt=""></p>
+
+<h3 id="toc_23">solución</h3>
+
+<p><img src="http://i.imgur.com/LpqDGC9.png" alt=""></p>
+
+<h3 id="toc_24">ejemplo de aplicación</h3>
+
+<p>Paquete <code>java.io</code> de Java:</p>
+
+<ul>
+<li>la jerarquía de clases cuya raíz es la clase abstracta <code>OutputStream</code> permite la combinación de filtros (<code>filterOutputStream</code>) para combinar funciones diversas
+
+<ul>
+<li>salida a ficheros</li>
+<li>utilizando un buffer</li>
+<li>manipulando directamente datos básicos Java</li>
+</ul></li>
+<li>de forma análoga se organiza la jerarquía <code>InputStream</code></li>
+</ul>
+
+<h3 id="toc_25">ejemplo de aplicación</h3>
+
+<p><img src="http://i.imgur.com/IFYFXF3.png" alt=""></p>
+
+<h2 id="toc_26">patrón <em>Compuesto</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> de <strong>objetos</strong></li>
+<li>compone objetos en tres estructuras para representar jerarquías que relacionan el todo con las partes</li>
+<li>permite a los clientes tratar objetos individuales y su composición de forma uniforme</li>
+</ul>
+
+<h3 id="toc_27"> ejemplo</h3>
+
+<ul>
+<li>las herramientas de desarrollo de GUIs proporcionan mecanismos para la creación y gestión de ventanas con diversos componentes
+
+<ul>
+<li>gráficos, áreas de texto, botones, etiquetas, ventanas con barras de desplazamiento...</li>
+<li>el usuario de la herramienta puede crear ventanas a partir de cualquier combinación de estos elementos</li>
+</ul></li>
+<li>en Java se utiliza la clase <code>Component</code> del paquete <code>java.awt</code> y una clase <code>Container</code> que puede estar compuesta de un número indeterminado de componentes:
+
+<ul>
+<li>simples, como <code>JButton</code>, <code>JLabel</code>, <code>JTextField</code>...</li>
+<li>complejos, como los proporcionados por el paquete <code>javax.swing</code>: <code>JScrollPane</code>, <code>JTabbedPane</code>, <code>JSplitPane</code>...</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_28">ejemplo</h3>
+
+<p><img src="http://i.imgur.com/SrpoJMi.png" alt=""></p>
+
+<h3 id="toc_29">solución</h3>
+
+<p><img src="http://i.imgur.com/ei7xVjS.png" alt=""></p>
+
+<h2 id="toc_30">patrón <em>Representante</em></h2>
+
+<ul>
+<li>patrón <strong>estructural</strong> de <strong>objetos</strong></li>
+<li>proporciona un representante (<strong>proxy</strong>) para controlar el acceso a un objeto</li>
+</ul>
+
+<h3 id="toc_31">primera aproximación</h3>
+
+<ul>
+<li><p>utilizamos un puntero nulo para hacer referencia a la imagen cuando no está aún cargada</p></li>
+<li><p>inconvenientes:</p>
+
+<ul>
+<li>un puntero no es un objeto, no puede recibir mensajes</li>
+<li>se complica el editor, que debe conocer el uso del objeto y distinguir si está cargado o no</li>
+<li>no permite almacenar datos necesarios como el tamaño de la imagen</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_32">solución</h3>
+
+<ul>
+<li>utilizaremos un objeto como representante de la imagen</li>
+<li>el representante hará las funciones de la imagen mientras aún no esté cargada</li>
+</ul>
+
+<p><img src="http://i.imgur.com/dES3mRh.png" alt=""></p>
+
+<ul>
+<li>el mecanismo básico utilizado es la delegación</li>
+</ul>
+
+<h3 id="toc_33">funcionamiento</h3>
+
+<ul>
+<li>utilizamos un objeto como representante</li>
+</ul>
+
+<p><img src="http://i.imgur.com/DJr0AHp.png" alt=""></p>
+
+<ul>
+<li>el estado de la imagen (cargada o no) es transparente al editor</li>
+</ul>
+
+<h3 id="toc_34">tipos de proxies</h3>
+
+<ul>
+<li><em>proxy remoto</em>
+
+<ul>
+<li>proporciona un representante local a un objeto remoto, ocultando que cliente y representado residen en espacios de direcciones distintos</li>
+</ul></li>
+<li><em>proxy virtual</em>
+
+<ul>
+<li>permite crear objetos pesados bajo demanda</li>
+</ul></li>
+<li><em>proxy de protección</em>
+
+<ul>
+<li>controla el acceso al objeto representado</li>
+</ul></li>
+<li><em>referencia inteligente</em>
+
+<ul>
+<li>reemplaza a un puntero para permitir funciones adicionales</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_35">estructura</h3>
+
+<ul>
+<li>el proxy debe apuntar al objeto representado</li>
+</ul>
+
+<p><img src="http://i.imgur.com/F0HojuB.png" alt=""></p>
+
+<ul>
+<li>las interfaces de representante y representado son sustancialmente similares</li>
+</ul>
+
+<p><img src="http://i.imgur.com/bG6uokk.png" alt=""></p>
+
+<ul>
+<li>los objetos representados pueden ser de distintos tipos</li>
+<li>el proxy permite un acceso transparente</li>
+</ul>
+
+<p><img src="http://i.imgur.com/I7F2NZ4.png" alt=""></p>
+
+<h2 id="toc_36">patrón <em>Estrategia</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> de <strong>objetos</strong></li>
+<li>define una familia de algoritmos, los encapsula en clases distintas y los hace intercambiables</li>
+<li>permite variar los algoritmos haciéndolos independientes de los clientes que los utilizan</li>
+</ul>
+
+<h3 id="toc_37">ejemplo</h3>
+
+<ul>
+<li>existen múltiples algoritmos para dividir un párrafo en líneas
+
+<ul>
+<li>dependiendo del lenguaje en el que está escrito</li>
+</ul></li>
+<li>no es deseable incluirlos todos dentro de las clases que los pueden requerir
+
+<ul>
+<li>las clases se hacen más complejas
+
+<ul>
+<li>más grandes y difíciles de mantener</li>
+</ul></li>
+<li>cada algoritmo puede ser apropiado en un momento determinado</li>
+<li>es difícil añadir nuevos algoritmos o modificar alguno existente</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_38">alternativa</h3>
+
+<ul>
+<li>definir clases estrategia por cada uno de los algoritmos</li>
+</ul>
+
+<h3 id="toc_39">solución</h3>
+
+<p><img src="http://i.imgur.com/r8NVbzP.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/EKTr2MI.png" alt=""></p>
+
+<h3 id="toc_40"> consideraciones</h3>
+
+<ul>
+<li>define una familia de comportamientos intercambiables</li>
+<li>las estrategias son diferentes implementaciones del mismo comportamiento</li>
+<li>permite organizar la funcionalidad común de las estrategias</li>
+<li>evita utilizar construcciones condicionales para seleccionar el comportamiento deseado</li>
+<li>la interfaz de <code>Estrategia</code> es compartida por todas las clases que determinan estrategias concretas
+
+<ul>
+<li>es probable que algunas estrategias no utilicen toda la información</li>
+</ul></li>
+<li>incrementa el número de objetos en la aplicación
+
+<ul>
+<li><code>Singleton</code> permite implementar las estrategias como objetos sin estado que los contextos pueden compartir</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_41">patrón <em>Estado</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> para <strong>objetos</strong></li>
+<li>se aplica cuando:
+
+<ul>
+<li>un objeto pasa por diferentes estados, típicamente representados por un tipo enumerado</li>
+<li>su comportamiento depende del estado</li>
+<li>sus operaciones se implementan mediante grandes instrucciones condicionales que dependen del estado</li>
+</ul></li>
+<li>permite que un objeto cambie su comportamiento
+
+<ul>
+<li>cuando cambia su estado</li>
+<li>tal como si el objeto cambiase de clase</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_42">ejemplo</h3>
+
+<ul>
+<li>supongamos una clase <code>Buffer</code> que representa un buffer de tamaño 1 con métodos <code>put</code> y <code>get</code></li>
+<li>la extracción de elementos de un buffer vacío y la inserción en un buffer lleno produce una excepción</li>
+</ul>
+
+<h3 id="toc_43">implementación sin patrón</h3>
+
+<div><pre class="line-numbers"><code class="language-java">class Buffer {
+    enum Estado {
+        vacio,
+        lleno
+    };
+    
+    private Estado estado;
+    private Elemento elemento;
+    
+    public Buffer() {
+        estado = Estado.vacio;
+    }
+    
+    public void put(Elemento elem) {
+        if (estado == Estado.lleno) {
+            throw new RuntimeException(&quot;Buffer lleno&quot;);
+        }
+        
+        elemento = elem;
+        estado = Estado.lleno;
+    }
+    
+    public Elemento get() {
+        if (estado == Estado.vacio) {
+            throw new RuntimeException(&quot;Buffer vacio&quot;);
+        }
+        
+        estado = Estado.vacio;
+        return elemento;
+    }
+}</code></pre></div>
+
+<h3 id="toc_44">consideraciones</h3>
+
+<ul>
+<li>codificar el estado mediante un valor enumerado
+
+<ul>
+<li>da lugar a un análisis de casos en los métodos</li>
+<li>código complejo</li>
+<li>problemas de mantenimiento</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_45">alternativa</h3>
+
+<ul>
+<li>codificar el estado mediante una clase abstracta
+
+<ul>
+<li>con tantas subclases como estados</li>
+<li>permite explotar el polimorfismo de datos</li>
+<li>haciendo corresponder cada rama de comportamiento condicional con una subclase</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_46">solución</h3>
+
+<p><img src="http://i.imgur.com/X6cDUZ0.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/8sFa3aV.png" alt=""></p>
+
+<h3 id="toc_47">consideraciones</h3>
+
+<ul>
+<li>la interfaz del <code>Contexto</code> se delega en su <code>Estado</code>
+
+<ul>
+<li>excepto los métodos independientes del estado</li>
+</ul></li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">void operacion() {
+    estado.operacion();
+}</code></pre></div>
+
+<ul>
+<li>en los métodos de los estados
+
+<ul>
+<li>es necesario acceder a atributos y/o métodos del contexto
+
+<ul>
+<li>mediante una asociación bidireccional</li>
+<li>pasando el contexto como argumento</li>
+</ul></li>
+<li>se realizan los cambios de estado
+
+<ul>
+<li>causa interdependencia entre los estados</li>
+<li>podemos usar el patrón <em>Fábrica</em></li>
+</ul></li>
+</ul></li>
+<li>si los objetos <code>Estado</code> no tienen atributos
+
+<ul>
+<li>pueden ser compartidos por todos los objetos <code>Contexto</code></li>
+<li>podemos usar el patrón <em>Singleton</em></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_48">patrón <em>Plantilla de Método</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> para <strong>clases</strong></li>
+<li>define el esqueleto de un algoritmo en una operación
+
+<ul>
+<li>retrasando la implementación de los pasos a las subclases</li>
+</ul></li>
+<li>las subclases redefinen ciertos pasos de un algoritmo
+
+<ul>
+<li>sin cambiar la estructura global del mismo</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_49">motivación</h3>
+
+<ul>
+<li>supongamos que:
+
+<ul>
+<li>queremos extraer información de una fuente externa (fichero)</li>
+<li>los datos son tratados y almacenados en una estructura interna</li>
+</ul></li>
+<li>el problema surge en que la forma de tratamiento, puede variar de clases que aún no conocemos, o que pueden variar en el futuro</li>
+<li>codificar un tratamiento inicial directamente en el algoritmo de lectura puede comprometer el diseño en el futuro</li>
+</ul>
+
+<p><img src="http://i.imgur.com/xT5WteT.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/ZCGrkwm.png" alt=""></p>
+
+<h3 id="toc_50">consideraciones</h3>
+
+<ul>
+<li>se aplica:
+
+<ul>
+<li>para implementar las partes invariantes de un algoritmo, dejando a las subclases implementar el comportamiento que puede variar</li>
+<li>cuando el comportamiento común entre subclases debe ser factorizado y localizado en una clase común para evitar duplicación de código</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_51">patrón <em>Iterador</em></h2>
+
+<ul>
+<li>proporciona una forma de acceder secuencialmente a los elementos de una colección sin mostrar la representación interna de la misma</li>
+<li>permite definir diversos recorridos sobre una estructura admitiendo el uso simultáneo de la misma por parte de varios clientes</li>
+</ul>
+
+<h3 id="toc_52">solución</h3>
+
+<ul>
+<li>cada cliente tendrá acceso a la colección mediante una instancia de la clase <code>Iterador</code>
+
+<ul>
+<li>dicha instancia será proporcionada por la colección a la que se quiera acceder</li>
+</ul></li>
+<li>la clase que implemente el iterador deberá tener acceso a la implementación de la colección sobre la que itera</li>
+<li>se podrán proporcionar tantos iteradores como se desee, implementando diversos recorridos:
+
+<ul>
+<li>del principio al final (o viceversa)</li>
+<li>según el orden de los elementos almacenados</li>
+<li>de forma aleatoria</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_53">ejemplo</h3>
+
+<ul>
+<li>en Java se utiliza este patrón para iterar sobre colecciones</li>
+</ul>
+
+<p><img src="http://i.imgur.com/7a7j27j.png" alt=""></p>
+
+<h2 id="toc_54">patrón <em>Cadena de Mando</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> de <strong>objetos</strong></li>
+<li>disminuye el acoplamiento entre el emisor de una petición y el receptor que finalmente la atiende</li>
+<li>se consigue dando a más de un objeto la oportunidad de responder a la petición</li>
+<li>los objetos receptores se encadenan y se van pasando la petición hasta que uno de ellos la atiende</li>
+</ul>
+
+<h3 id="toc_55">motivación</h3>
+
+<ul>
+<li>consideremos un sistema de ayudas sensible al contexto en una interfaz gráfica de usuario:
+
+<ul>
+<li>el usuario puede obtener información de ayuda sobre cualquier parte de la interfaz situándose sobre ella</li>
+<li>la ayuda que se obtiene depende de la parte de la interfaz sobre la que se solicita y su contexto</li>
+<li>si no existe ayuda específica sobre el elemento del que se solicita, el sistema debería ofrecer un mensaje de ayuda más general sobre el contexto inmediato</li>
+</ul></li>
+<li>la información de ayuda se organiza atendiendo a su profundidad en el contexto: de los más internos a los más externos</li>
+<li>el problema radica en que el objeto que finalmente proporciona la ayuda no es conocido explícitamente por el objeto solicitante</li>
+<li>la idea del patrón es desacoplar los emisores de los receptores dando a diferentes objetos la posibilidad de atender peticiones</li>
+<li>la petición se va pasando de un objeto a otro a lo largo de una cadena &quot;de mando&quot; hasta que uno de ellos la atiende</li>
+</ul>
+
+<h3 id="toc_56"> aplicación</h3>
+
+<p><img src="http://i.imgur.com/WzsWnyf.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/xgxDwb0.png" alt=""></p>
+
+<h3 id="toc_57">consideraciones</h3>
+
+<ul>
+<li>este patrón libera a un objeto de conocer quién atiende sus peticiones: el objeto sólo tiene que confiar en que la petición se tratará adecuadamente</li>
+<li>sin embargo, nada lo garantiza: si la peticiónno se atiende al final de la cadena, o ésta no está bien configurada</li>
+<li>ni el emisor ni el receptor tienen conocimiento explícito uno de otro: en vez de mantener referencias a todos los receptores, el emisor sólo mantiene una referencia a su sucesor</li>
+<li>habitualmente, en los casos susceptibles de aplicar este patrón, los enlaces que establecen la cadena de mando ya existen: patrón <em>Compuesto</em> o <em>Decorador</em></li>
+</ul>
+
+<h2 id="toc_58">patrón <em>Mediador</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> para <strong>objetos</strong></li>
+<li>define un objeto que encapsula cómo un conunto de objetos interactúa entre sí</li>
+<li>el DOO promueve la distribución del comportamiento
+
+<ul>
+<li>pero esa distribución puede implicar estructuras con muchas conexiones entre los objetos</li>
+<li>en el peor de los casos, cada objeto tiene conocimiento de todos los demás</li>
+</ul></li>
+<li>dividir un sistema en objetos aumenta la reutilización
+
+<ul>
+<li>pero la proliferación de interconexiones tiende a disminuirla</li>
+<li>los objetos son difícilmente reutilizables sin la presencia de los otros con los que se comunica</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_59">motivación</h3>
+
+<ul>
+<li>cuadros de diálogo en una interfaz gráfica</li>
+<li>un cuadro de diálogo presenta una colección de componentes</li>
+<li>a menudo de producen dependencias entre los componentes</li>
+<li>diferentes diálogos presentan diferentes dependencias</li>
+</ul>
+
+<h3 id="toc_60">solución</h3>
+
+<ul>
+<li>definir un objeto mediador independiente</li>
+<li>responsable de controlar y coordinar las interacciones entre componentes</li>
+<li>éstos sólo conocen al mediador y no necesitan tener constancia unos de otros</li>
+</ul>
+
+<p><img src="http://i.imgur.com/cZwDAub.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/PgFCWvn.png" alt=""></p>
+
+<h3 id="toc_61"> consideraciones</h3>
+
+<ul>
+<li>un mediador reúne el comportamiento que, de otro modo, estaría distribuido entre varios objetos
+
+<ul>
+<li>extender dicho comportamiento sólo requiere heredar de la clase <code>Mediador</code></li>
+</ul></li>
+<li>un mediador permite el desacoplamiento entre componentes
+
+<ul>
+<li>reemplazando interacciones muchos-a-muchos por uno-a-muchos</li>
+</ul></li>
+<li>los componentes han de comunicarse con su mediador cuando ocurre algo de interés
+
+<ul>
+<li>esto se puede implementar con ayuda del patrón <em>Observador</em></li>
+</ul></li>
+<li>no es necesario definir una clase abstracta <code>Mediador</code> cuando los componentes se organizan con un solo mediador</li>
+</ul>
+
+<h2 id="toc_62">patrón <em>Observador</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> para <strong>objetos</strong></li>
+<li>define dependencias entre observacores y observables
+
+<ul>
+<li>si un observable cambia de estado todos los observadores son notificados automáticamente con independencia de cuántos puedan existir</li>
+</ul></li>
+<li>es una forma de implementar el patrón MVC
+
+<ul>
+<li>proporciona mecanismos para registrar observadores en el objeto observable y notificar a los observadores cuando observable sufre alguna modificación</li>
+</ul></li>
+<li>se aplica cuando:
+
+<ul>
+<li>se quiere mantener la consistencia entre objetos relacionados</li>
+<li>sin acoplarlos fuertemente para no comprometer su reutilización</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_63">ejemplo</h3>
+
+<ul>
+<li>una GUI que ofrece diversas representaciones o vistas de los datos o modelo de una aplicación</li>
+<li>las clases <code>Observable</code> (modelo) y <code>Observadores</code> (vistas) deben poder reutilizarse independientemente</li>
+<li>las modificaciones al modelo deben repercutir en las vistas
+
+<ul>
+<li>incluso alguno de los diagramas puede ser editable, y modificaciones en él también repercutirían en el resto de diagramas y en el propio modelo</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_64">solución</h3>
+
+<p><img src="http://i.imgur.com/8NQDhgB.png" alt=""></p>
+
+<p><img src="http://i.imgur.com/vlrb0D6.png" alt=""></p>
+
+<h3 id="toc_65"> interacción</h3>
+
+<p><img src="http://i.imgur.com/st7lFp5.png" alt=""></p>
+
+<h3 id="toc_66">consideraciones</h3>
+
+<ul>
+<li>se aplica cuando:
+
+<ul>
+<li>una abstracción tiene más de un aspecto, unos dependientes de otros</li>
+<li>se desea reutilizar cada uno de ellos independientemente de los otros</li>
+<li>el cambio de un objeto requiere cambiar los otros, y no se sabe cuántos objetos deben actualizarse</li>
+<li>un objeto debe notificar ciertos cambios a otros pero sin saber quiénes son dichos objetos</li>
+</ul></li>
+<li>mínimo acoplamiento entre <code>Observables</code> y <code>Observadores</code>
+
+<ul>
+<li>basado en clases abstractas e interfaces</li>
+<li>la notificación se realiza mediante difusión</li>
+<li>un objeto <code>Modelo</code> no necesita saber quiénes son sus <code>Observadores</code></li>
+</ul></li>
+<li>si un mismo <code>Observador</code> tiene varios <code>Observables</code>
+
+<ul>
+<li><code>notificar()</code> deberá pasar el objeto observado como argumento</li>
+</ul></li>
+<li>cada cambio de estado dispara la notificación
+
+<ul>
+<li>puede producir un problema de actualizaciones en cascada</li>
+</ul></li>
+<li>permite suscripción especializada
+
+<ul>
+<li>los observadores especifican qué cambios les son relevantes</li>
+</ul></li>
+<li>mecanismo de notificación:
+
+<ul>
+<li>cada cambio de estado puede disparar una notificación: política simple, pero puede provocar cascadas de actualizaciones</li>
+<li>el propio objeto observado decide qué cambios son relevantes para ser notificados</li>
+</ul></li>
+<li>es conveniente evitar notificaiones específicas para observadores concretos, y llegar a un comprmiso entre:
+
+<ul>
+<li>un protocolo de notificación que envía a cada observador la información que necesita (a través de parámetros adicionales de la operación &quot;actualizar&quot;): alto acoplamiento entre observable y observadores, y baja reutilización</li>
+<li>un protocolo de notificación que sólo advierte a los observacores de la existencia de cambios; cada observador debe ser capaz de saber qué información relevante es la que ha cambiado: ineficiencia</li>
+</ul></li>
+<li>suscripción especializada de observadores:
+
+<ul>
+<li>al suscribir un observador a un observable puede ser interesante especificar qué tipo de aspectos pueden serle relevantes</li>
+<li>en algunas librerías de clases (<code>java.swing</code>) se organizan jerarquías de esta tipo de aspectos (<code>ActionListener</code>)</li>
+</ul></li>
+<li>actualizaciones en cascada cuando las relaciones entre observados y observadores son complejas:
+
+<ul>
+<li>varios objetos observados pueden estar estrechamente relacionados entre sí</li>
+<li>las notificaciones a los observadores deben realizarse después de que los observables relacionados queden en un estado consistente</li>
+</ul></li>
+<li>en estos casos, es conveniente complementar el patrón con un gestor de cambios cuya responsabilidad incluye:
+
+<ul>
+<li>mantener la asociación de cada observable con sus observadores, liberando de ello a los observables</li>
+<li>definir una política de actualización</li>
+<li>actualizar todos los observadores necesarioes a petición de un observable</li>
+<li>el gestor puede especializarse con diferentes políticas, construyendo una jerarquía</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_67">gestor de cambios</h3>
+
+<p><img src="http://i.imgur.com/QhXhC3c.png" alt=""></p>
+
+<h2 id="toc_68">patrón <em>Visitante</em></h2>
+
+<ul>
+<li>patrón de <strong>comportamiento</strong> de <strong>objetos</strong></li>
+<li>define una operación a aplicar sobre los objetos de una estructura</li>
+<li>permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera</li>
+<li>da prioridad a la descomposición funcional sobre la orientada a objetos</li>
+</ul>
+
+<h3 id="toc_69">ejemplo</h3>
+
+<ul>
+<li>un compilador</li>
+<li>representa programas mediante grafos sintácticos</li>
+<li>varios tipos de nodos:
+
+<ul>
+<li>variables</li>
+<li>asignaciones</li>
+<li>operaciones aritméticas...</li>
+</ul></li>
+<li>varias operaciones a realizar:
+
+<ul>
+<li>type checking</li>
+<li>análisis de lfujo</li>
+<li>generación de código</li>
+<li>pretty printing</li>
+</ul></li>
+</ul>
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=_self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==n)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,n,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(n.call(e,l,e[l],a||l),"Object"!==t.util.type(e[l])||r[e[l]]?"Array"!==t.util.type(e[l])||r[e[l]]||(r[e[l]]=!0,t.languages.DFS(e[l],n,l,r)):(r[e[l]]=!0,t.languages.DFS(e[l],n,null,r)))}},plugins:{},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),l=0;a=r[l++];)t.highlightElement(a,e===!0,n)},highlightElement:function(n,a,r){for(var l,i,o=n;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=t.languages[l]),n.className=n.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=n.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=n.textContent,u={element:n,language:l,grammar:i,code:s};if(!s||!i)return t.hooks.run("complete",u),void 0;if(t.hooks.run("before-highlight",u),a&&_self.Worker){var g=new Worker(t.filename);g.onmessage=function(e){u.highlightedCode=e.data,t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=t.highlight(u.code,u.grammar,u.language),t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(n),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},highlight:function(e,a,r){var l=t.tokenize(e,a);return n.stringify(t.util.encode(l),r)},tokenize:function(e,n){var a=t.Token,r=[e],l=n.rest;if(l){for(var i in l)n[i]=l[i];delete n.rest}e:for(var i in n)if(n.hasOwnProperty(i)&&n[i]){var o=n[i];o="Array"===t.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],g=u.inside,c=!!u.lookbehind,f=0,h=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var d=r[p];if(r.length>e.length)break e;if(!(d instanceof a)){u.lastIndex=0;var m=u.exec(d);if(m){c&&(f=m[1].length);var y=m.index-1+f,m=m[0].slice(f),v=m.length,k=y+v,b=d.slice(0,y+1),w=d.slice(k+1),P=[p,1];b&&P.push(b);var A=new a(i,g?t.tokenize(m,g):m,h);P.push(A),w&&P.push(w),Array.prototype.splice.apply(r,P)}}}}}return r},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var l={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}t.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code,l=n.immediateClose;_self.postMessage(t.highlight(r,t.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+<script type="text/javascript">
+Prism.languages.java=Prism.languages.extend("clike",{keyword:/\b(abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while)\b/,number:/\b0b[01]+\b|\b0x[\da-f]*\.?[\da-fp\-]+\b|\b\d*\.?\d+(?:e[+-]?\d+)?[df]?\b/i,operator:{pattern:/(^|[^.])(?:\+[+=]?|-[-=]?|!=?|<<?=?|>>?>?=?|==?|&[&=]?|\|[|=]?|\*=?|\/=?|%=?|\^=?|[?:~])/m,lookbehind:!0}});
+</script>
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+<script type="text/javascript">
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e={css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",asciidoc:"AsciiDoc",aspnet:"ASP.NET (C#)",autoit:"AutoIt",autohotkey:"AutoHotkey",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript","css-extras":"CSS Extras",fsharp:"F#",glsl:"GLSL",http:"HTTP",inform7:"Inform 7",json:"JSON",latex:"LaTeX",lolcode:"LOLCODE",matlab:"MATLAB",mel:"MEL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",parigp:"PARI/GP",php:"PHP","php-extras":"PHP Extras",powershell:"PowerShell",jsx:"React JSX",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",typescript:"TypeScript",vhdl:"VHDL",vim:"vim",wiki:"Wiki markup",yaml:"YAML"};Prism.hooks.add("before-highlight",function(s){var a=s.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var t,i,r=a.getAttribute("data-language")||e[s.language]||s.language.substring(0,1).toUpperCase()+s.language.substring(1),l=a.previousSibling;l&&/\s*\bprism-show-language\b\s*/.test(l.className)&&l.firstChild&&/\s*\bprism-show-language-label\b\s*/.test(l.firstChild.className)?i=l.firstChild:(t=document.createElement("div"),i=document.createElement("div"),i.className="prism-show-language-label",t.className="prism-show-language",t.appendChild(i),a.parentNode.insertBefore(t,a)),i.innerHTML=r}})}}();
+</script>
+</body>
+
+</html>
