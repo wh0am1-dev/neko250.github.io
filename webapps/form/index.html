@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Test Form</title>
+
+    <meta name="description" content="Neko250: Test Form">
+    <meta name="author" content="Carlos Aguilar">
+    <meta name="viewport" content="width=800, user-scalable=no">
+
+    <link href="https://neko250.github.io/Blog250/favicon.png" rel="icon">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+      html, body {
+        font-family: Lato !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="grey darken-4">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Neko250's Form</a>
+      </div>
+    </nav>
+    
+    <div class="row" style="margin-top: 0px;">
+      <form class="col s12">
+        <div class="col s6">
+          <div class="row">
+            <div class="col s3">&nbsp;</div>
+            <div class="col s8"><h5>Datos del usuario</h5></div>
+            <div class="col s1">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s3">&nbsp;</div>
+            <div class="input-field col s8">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">Nombre</label>
+            </div>
+            <div class="col s1">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s3">&nbsp;</div>
+            <div class="input-field col s8">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Apellidos</label>
+            </div>
+            <div class="col s1">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s3">&nbsp;</div>
+            <div class="input-field col s8">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+            <div class="col s1">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s5">&nbsp;</div>
+            <div class="input-field col s4">
+              <input id="age" type="number" class="validate">
+              <label for="age">Edad</label>
+            </div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s4">&nbsp;</div>
+            <div class="col s1"><h6>Sexo</h6></div>
+            <div class="col s4">
+              <p>
+                <input name="gender" type="radio" id="female" />
+                <label for="female">Mujer</label>
+              </p>
+              <p>
+                <input name="gender" type="radio" id="male" />
+                <label for="male">Hombre</label>
+              </p>
+              <p>
+                <input name="gender" type="radio" id="other" />
+                <label for="other">Otro</label>
+              </p>
+            </div>
+            <div class="col s3"></div>
+          </div>
+        </div>
+        
+        <div class="col s6">
+          <div class="row">
+            <div class="col s1">&nbsp;</div>
+            <div class="col s8"><h5>Aficiones</h5></div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s1">&nbsp;</div>
+            <div class="col s8">
+              <p>
+                <input type="checkbox" id="fishing" />
+                <label for="fishing">Pesca</label>
+              </p>
+              <p>
+                <input type="checkbox" id="music" />
+                <label for="music">M&uacute;sica</label>
+              </p>
+              <p>
+                <input type="checkbox" id="sports" />
+                <label for="sports">Deporte</label>
+              </p>
+              <p>
+                <input type="checkbox" id="social" />
+                <label for="social">Redes Sociales</label>
+              </p>
+            </div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s1">&nbsp;</div>
+            <div class="col s8"><h5>Titulaci&oacute;n</h5></div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s1">&nbsp;</div>
+            <div class="input-field col s8">
+              <select>
+                <option value="" disabled selected>Escoge tu titulaci&oacute;n</option>
+                <option value="1">Ingenier&iacute;a del Software</option>
+                <option value="2">Ingenier&iacute;a Inform&aacute;tica</option>
+                <option value="3">Ingenier&iacute;a de Computadores</option>
+              </select>
+              <label>Titulaci&oacute;n</label>
+            </div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s1">&nbsp;</div>
+            <div class="col s8"><h5>Comentario</h5></div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col s1">&nbsp;</div>
+            <div class="input-field col s8">
+              <textarea id="comments" class="materialize-textarea"></textarea>
+              <label for="comments">Textarea</label>
+            </div>
+            <div class="col s3">&nbsp;</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s5">&nbsp;</div>
+          <div class="col s2">
+            <span>
+              <h4>Enviar&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn-floating btn-large waves-effect waves-light grey darken-4"><i class="material-icons">done</i></a></h4>
+            </span>
+          </div>
+          <div class="col s5">&nbsp;</div>
+        </div>
+      </form>
+    </div>
+    
+    <script src="https://neko250.github.io/GoldenPhi/resources/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
+  </body>
+</html>
