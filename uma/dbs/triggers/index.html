@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SQL Triggers</title>
+<link href="https://neko250.github.io/Blog250/favicon.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="generator" content="http://www.texts.io/">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/reveal.min.css"/>
+<link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" media="print" href="http://lab.hakim.se/reveal-js/css/print/pdf.css" />
+<!--[if lt IE 9]>
+<script src="http://lab.hakim.se/reveal-js/lib/js/html5shiv.js"></script>
+<![endif]-->
+<script src="http://lab.hakim.se/reveal-js/js/reveal.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section class="slide"><div><h1>SQL Triggers</h1></div></section>
+<section>
+<section class="slide"><div><h1>Creación</h1></div></section>
+
+<section class="slide"><div><h2>Definición</h2><p>Especifican acciones desencadenadas por una operación sobre una tabla.</p><p>Tabla <code>USER_TRIGGERS</code>.</p></div></section>
+
+<section class="slide"><div><h2>Creación</h2><pre><code>CREATE [OR REPLACE] TRIGGER &lt;nombre&gt;
+    {BEFORE | AFTER} &lt;suceso&gt; ON &lt;tabla&gt;
+    [FOR EACH ROW [WHEN &lt;condicion&gt;]]
+    &lt;cuerpo trigger&gt; (PL/SQL);
+</code></pre><ul>
+<li>
+<p>El suceso determina el tipo de trigger (<em>DML/DDL</em>).</p>
+</li><li>
+<p>Si el trigger es <em>DML</em>, suele tener <code>INSERT</code>, <code>UPDATE</code> o <code>DELETE</code>.</p>
+</li><li>
+<p>La cláusula <code>FOR EACH ROW</code> determina que el trigger sea de fila o de tabla.</p>
+</li>
+</ul></div></section>
+
+<section class="slide"><div><h2>Utilidad</h2><p>Los triggers añaden restricciones de <strong>integridad</strong> no soportadas por el lenguaje de definición.</p><p>También añaden un <strong>mantenimiento</strong> automático.</p></div></section>
+
+<section class="slide"><div><h2>Trigger de Sustitución</h2><p><code>INSTEAD OF &lt;suceso&gt;</code></p><p>Actualización de <strong>vistas</strong> basadas en agrupación. Solo pueden ser de fila, no de tabla.</p></div></section>
+
+<section class="slide"><div><h2>Cuerpo del Trigger</h2><p>Es un bloque de <em>PL/SQL</em>.</p><p>No tiene órdenes de control de transacciones. Igual para rutinas invocadas por el trigger.</p><p>No se pueden declarar variables tipo <code>LONG</code> o <code>LONG RAW</code>.</p><p>No hay libertad absoluta de acceso a tablas.</p><p>Pueden usarse los predicados <code>INSERTING</code>, <code>UPDATING</code> o <code>DELETING</code> en el cuerpo para discriminar el suceso.</p></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Modificación</h1></div></section>
+
+<section class="slide"><div><p><strong>Eliminación</strong></p><pre><code>DROP TRIGGER &lt;nombre&gt;
+</code></pre><p><strong>ON - OFF</strong></p><pre><code>ALTER TRIGGER &lt;nombre&gt; ENABLE | DISABLE
+</code></pre><p><strong>Desactivar Globalmente</strong></p><pre><code>ALTER TABLE &lt;nombre&gt; ENABLE | DISABLE ALL TRIGGERS
+</code></pre><p>Ver el atributo <strong>"status"</strong> de la tabla <code>USER_TRIGGERS</code>.</p></div></section>
+</section>
+
+<section>
+<section class="slide"><div><h1>Funcionamiento</h1></div></section>
+
+<section class="slide"><div><h2>Orden de Ejecución</h2><ol>
+<li>
+<p><code>BEFORE</code> a nivel de tabla.</p>
+</li><li>
+<p>Para cada fila:</p><ol>
+<li>
+<p><code>BEFORE</code> a nivel de fila.</p>
+</li><li>
+<p><strong>"suceso"</strong></p>
+</li><li>
+<p><code>AFTER</code> a nivel de fila.</p>
+</li>
+</ol>
+</li><li>
+<p><code>AFTER</code> a nivel de tabla.</p>
+</li>
+</ol></div></section>
+
+<section class="slide"><div><h2>Variables de acoplamiento</h2><pre><code>:OLD; :NEW;
+</code></pre><p>Solo para triggers de fila !</p></div></section>
+</section>
+
+</div>
+</div>
+<script>
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	transition: 'convex',
+	slideNumber: true
+    // transitionSpeed: 'slow'
+});
+</script>
+</body>
+</html>
