@@ -1,0 +1,125 @@
+07:30 - 08:10   Chill       BeInRoom BurrowsNorth
+08:10 - 17:00	Work		WorkWithModifier Lodge_Room1
+17:00 - 17:30   Chill       BeInRoom BurrowsNorth
+17:30 - 02:00	Clubbing	BeAtTing BarYvonne_PixiePoint
+02:00 - 07:30	Sleep		Sleep Poor_Bed_Poor_Bed
+
+[PixieClubDotDay]
+08:30 - 09:00 	Breakfast			BeAtTing PixiesApartment_Point
+09:00 - 17:10	Work				WorkWithModifier Lodge_Room1
+17:10 - 20:00	Waiting				BeAtTing BarYvonne_PixiePoint
+20:00 - 03:00	AtClubDot			Sit Mines_ClubDot_DevotchkaArmChair_1 Mines_ClubDot_SofaSeat_2 Mines_ClubDot_SofaSeat_1
+03:00 - 08:30	ClubDotPartyIsOver	Sleep Poor_Bed_Poor_Bed
+
+[Pixie_DanceAtClubDot]
+08:30 - 09:00   Breakfast           BeAtTing PixiesApartment_Point
+09:00 - 17:10   Work                WorkWithModifier Lodge_Room1
+17:10 - 20:00   Waiting             BeAtTing BarYvonne_PixiePoint
+20:00 - 03:00   AtClubDot           Party Mines_ClubDot
+03:00 - 08:30   ClubDotPartyIsOver  Sleep Poor_Bed_Poor_Bed
+
+[ShowTheWayToClubDot]
+00:00 - 24:00 	ShowTheWay   		GuideTo Mines_ClubDot_Point Sebastian
+
+[BeAtClubDot]
+00:00 - 24:00	BeAtClubDot			BeInRoom	Mines_ClubDot
+
+[PixieOvertime]
+06:00 - 22:00	Work				BeAtTing Lodge_Room1_Point1
+22:00 - 06:00	SleepAtLodge		Sleep Lodge_Room1_Point1
+
+[WorkAtLodgeRoom1]
+00:00 - 24:00   Work                BeInRoom Lodge_Room1
+
+[Pixie_WorkLate]
+06:00 - 22:00	Work WorkWithModifier Lodge_Room1
+22:00 - 06:00	_ Sleep Poor_Bed_Poor_Bed
+
+[Pixie_WaitInLodgeRoom2]
+00:00 - 24:00 _ BeInRoom Lodge_Room2
+
+[Pixie_PyjamasParty]
+00:00 - 24:00 Dance Party FelixApartment
+
+[PixieCakeParty]
+00:00 - 24:00	Sad Sit PixiesApartment_Chair_SimpleCarver_Chair_SimpleCarver_1 PixiesApartment_SofaSeat_1 Chair_SimpleCarver_Chair_SimpleCarver2
+
+[CakeParty]
+00:00 - 24:00   Sad BeInRoom PixiesApartment
+
+[PixieGoHome]
+00:00 - 24:00  	GoingHome Sleep  Poor_Bed_Poor_Bed
+
+[Pixie_Trial3]
+00:00 - 24:00   _ BeInRoom Lodge_Underwater
+
+[PixieWaitForFactoryMission]
+00:00 - 24:00  	Work WorkWithModifier Lodge_Room1
+
+[PixieFactoryMission]
+00:00 - 24:00  	FactoryMission GuideTo  Mines_Entry_Trigger_1 Sebastian
+
+[PixieGambling]
+08:30 - 09:00 	Breakfast		BeAtTing 	PixiesApartment_Point
+09:00 - 18:00	Work			BeInRoom 	Lodge_Room1
+18:00 - 22:00	WaitingOutside	BeInRoom 	Casino_Exterior
+22:00 - 02:00	Gambling		BeInRoom 	Casino_Floor1
+02:00 - 08:30	Sleep			Sleep 		Poor_Bed_Poor_Bed
+
+[PixieGamblingEarlier]
+08:30 - 02:00	Gambling		BeInRoom 	Casino_Floor1
+02:00 - 08:30	Sleep			Sleep 		Poor_Bed_Poor_Bed
+
+[PixieInfiltrateCasino]
+00:00 - 24:00	Gambling	BeInRoom Casino_Floor1
+
+[PixieGuideToFrank]
+00:00 - 24:00  	_ GuideTo  Frank 	Sebastian
+
+[PixieInteractIvan]
+00:00 - 24:00  	_ Interact Ivan
+
+[PixieInteractYulian]
+00:00 - 24:00   _ Interact Yulian
+
+[Pixie_SitDownExperimentHall]
+00:00 - 24:00  	_ Sit Ministry_ExperimentHall_SofaSeat_6 Ministry_ExperimentHall_SofaSeat_2 Ministry_ExperimentHall_SofaSeat_5
+
+[Pixie_CrazyParty]
+02:00 - 08:00	Sleep		Sleep 		PixiesApartment_Point
+08:00 - 18:15 	Work 		BeInRoom	Lodge_Room1
+18:15 - 02:00   _           Sit         PetrasApartment_SofaSeat_4 PetrasApartment_SofaSeat_3
+
+[Pixie_CurseIsOver]
+00:00 - 24:00  	_ Sit Chair_SimpleCarver_Chair_SimpleCarver2 PixiesApartment_Chair_SimpleCarver_Chair_SimpleCarver_1 PixiesApartment_SofaSeat_1
+
+[Pixie_GuideToHarborEast]
+00:00 - 24:00  	_ GuideTo HarborEast_Point Sebastian
+
+[Pixie_GuideToHackedFusebox]
+00:00 - 24:00   _ GuideTo Plaza_CurcuitLocker_4 Sebastian
+
+[TalkToAraki]
+00:00 - 24:00   _ Interact Araki
+
+[TalkToSebastian]
+00:00 - 24:00   _ Interact Sebastian
+
+[TalkToIvan]
+00:00 - 24:00   _ Interact Ivan
+
+[Pixie_AfterExperiment]
+10:00 - 00:00   Breakfast   BeInRoom PixiesApartment
+00:00 - 10:00   Sleep       Sleep Poor_Bed_Poor_Bed
+
+[Pixie_VisitIvan]
+00:00 - 24:00   _ BeInRoom IvanApartment
+
+[Pixie_Ministry_Lobby_Point2]
+00:00 - 24:00 _ BeAtTing Ministry_Lobby_Point2
+
+[Pixie_Ministry_Elevator1_Point]
+00:00 - 24:00 _ BeAtTing Ministry_Elevator1_Point
+
+[Interact_Ministry_Elevator1_Computer]
+00:00 - 24:00 _ Interact Ministry_Elevator1_Computer

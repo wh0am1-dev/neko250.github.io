@@ -1,0 +1,8 @@
+
+
+Idén är att man ska kunna följa storyn genom att kolla i "StoryWeb"-mappen.
+Varje fil där är ett "state" för berättelsen och det väntar på något slags villkor för att gå vidare till ett annat state.
+
+När man kallar på Story("") med ett namn så startar det statet samt alla dialoger för karaktärer som har dialog skriven för den situationen. Om dessa karaktärer har andra dialoger aktiva kommer de att stoppas då.
+
+StoryWeb-filerna ska vara så absolut ENKLA och SMÅ som möjligt. Helst bara ett villkor och vilken Story de startar. Om de behöver lyssna på mer avancerade eller varierade händelser ska detta göras med hjälp av BROADCAST meddelanden från de olika dialogerna för karaktärerna.

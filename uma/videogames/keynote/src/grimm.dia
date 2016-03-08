@@ -1,0 +1,93 @@
+START SetupListeners
+START SetupSebastian
+
+IF Cheat() {
+    # do nothing
+}
+ELSE {
+    INTERRUPT CompleteIntro
+}
+
+# All this must run when you get to Dorisburg
+START SetupClock
+START SetupWeather
+START SetupComputers
+START SetupRadios
+START SetupFuseboxes
+START SetupDoors
+START SetupElevators
+START SetupCharacters
+START SetupCreditCards
+START TrumpetLoop
+START SendMessages
+RunPathfindingTests()
+RunLevelIntegrityTests()
+StoryItemsSanityTests()
+Story("Arrival")
+
+##################################################
+
+IF Cheat("FirstLecture") {
+    START SkipToFirstLecture
+}
+
+IF Cheat("Experiment") {
+    START SkipToHelmetDay
+}
+
+##################################################
+
+# TESTING AREA (turn these things off usually)
+#SetHour(0)
+#START SkipToDoorProblems
+#START SkipToFirstDay
+#START SkipToCanSellSoda
+#START SkipToMeetPixie
+#START SkipToBeforeClubDotGig1
+#START SkipToAfterRedBag
+#START SkipToMoreInstructions
+#START SkipToClubDotGig1
+#START SkipToTryFindLodge # <-- ACT 2
+#START SkipToAfterStalking
+#START SkipToPyjamasParty
+#START SkipToLookForModifier
+#START SkipToFirstLecture
+#START SkipToSecondLecture
+#START SkipToAfterPyjamas
+#START SkipToHackerTrial1
+#START SkipToHackerTrial2
+#START SkipToHackerTrial3
+#START SkipToAlternativeExperiment
+#START SkipToDieOnInternet
+#START SkipToYouAreMemberNow
+#START SkipToBuyShoes
+#START SkipToFactoryMission
+#START SkipToGettingCaughtInFactory
+#START SkipToAfterFactoryMission
+#START SkipToRazzia
+#START SkipToCrazyParty
+#START SkipToCasinoHeist
+#START SkipToGamblingTonight
+#START SkipToAfterCasinoHeist
+#START SkipToDowntime
+#START SkipToCakeParty # <- ACT 3
+#START SkipToHelmetDay
+#START SkipToInExperimentHall
+#START SkipToIvanGhostMeeting
+#START SkipToQueenOfTheInternet
+#START SkipToCaughtBySvante
+#START SkipToAfterGhosts
+#START SkipToMeetIvanAtInternet
+#START SkipToCurseIsOver
+#START TestFindSeat
+#START TestStability
+#START TestLoadingAllRooms
+#START TestDoors
+#START TestBadDoor
+
+#START Teleport
+#START GetHackdev
+#START GetMap
+#START GetSoda
+#START GetKey
+#God()
