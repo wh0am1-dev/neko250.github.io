@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>1_funcionales</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+<style type="text/css">
+div.prism-show-language {
+	position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0"> Pruebas funcionales</h1>
+
+<ul>
+<li>También conocidas como:
+
+<ul>
+<li>Pruebas basadas en especificaciones</li>
+<li>Pruebas de caja negra (no tenemos en cuenta el código)</li>
+</ul></li>
+<li>Pruebas funcionales: derivamos los casos de prueba a partir de las especificaciones del programa</li>
+<li>Entendemos especificaicón funcional como una descripción del comportamiento esperado del sistema
+
+<ul>
+<li>Ya sea formal o informal</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_1">Pruebas sistemáticas VS. aleatorias</h2>
+
+<ul>
+<li>Pruebas aleatorias (uniformes)
+
+<ul>
+<li>Se seleccionan entradas uniformemente</li>
+<li>Evitamos vicios del diseñador
+
+<ul>
+<li>El diseñador de pruebas puede cometer los mismos errores y suposiciones erróneas que el diseñador del programa</li>
+</ul></li>
+<li>Todas las posibles entradas son equiprobables</li>
+</ul></li>
+<li>Pruebas sistemáticas (no uniformes)
+
+<ul>
+<li>Se intenta seleccionar pruebas de especial interés</li>
+<li>Habitualmente eligiendo representantes de las clases de valores con posibilidades de fallo</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Las pruebas funcionales son pruebas sistemáticas</h2>
+
+<ul>
+<li>Los errores no se distribuyen de forma uniforme</li>
+<li>Los valores de error están dispersos en el espacio de entrada... agujas en un inmenso pajar !</li>
+<li>Es muy improbable que un muestreo aleatorio elija valores <code>a = 0</code> y <code>b = 0</code></li>
+<li>Para buscar una aguja en un pajar:
+
+<ul>
+<li>Busca de forma sistemática, no uniforme</li>
+<li>Necesitamos utilizar toda la información disponible sobre agujas y pajares</li>
+<li>Los errores suelen esconderse en los &quot;rincones&quot; del comportamiento</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">El principio de la partición</h2>
+
+<ul>
+<li>Explota el conocimiento que tienes para seleccionar muestras que son más probables de incluir regiones del espacio de entradas &quot;especiales&quot; o propensas a fallos
+
+<ul>
+<li>Los fallos están dispersos por todo el espacio de entradas...</li>
+<li>... pero podemos encontrar regiones en las que abunden</li>
+</ul></li>
+<li>Pruebas de (cuasi-)particiones: separamos el espacio de entradas en clases cuya unión constituye el espacio completo
+
+<ul>
+<li>&quot;cuasi&quot; porque puede haber solapamientos</li>
+</ul></li>
+<li>Dependemos de heurísticos basados en la experiencia</li>
+</ul>
+
+<h2 id="toc_4">Pruebas funcionales: explotando la especificación</h2>
+
+<ul>
+<li>Particionamos el espacio de búsqueda utilizando la especificación</li>
+<li>Probamos cada categoría, y los bordes entre estas</li>
+<li>A veces carecemos de dicha especificación
+
+<ul>
+<li>O es informal, textual</li>
+<li>O simplemente no hay forma de darla (GUIs, usabilidad...)</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_5">Funcionales (caja negra) VS. Estructurales (caja blanca)</h2>
+
+<ul>
+<li>Diferentes estrategias de pruebas son más efectivas para encontrar diferentes tipos de errores
+
+<ul>
+<li>Funcionales</li>
+<li>Estructurales</li>
+<li>Basadas en fallos</li>
+<li>Basadas en modelos</li>
+</ul></li>
+<li>Las pruebas funcionales son especialmente buenas encontrando fallos de &quot;lógica perdida&quot;
+
+<ul>
+<li>Alguna funcionalidad no fue implementada</li>
+<li>Pruebas estructurales jamás encontrarán errores en un código que no está</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_6">Funcionales VS. Estructurales: niveles de granularidad</h3>
+
+<ul>
+<li>Las pruebas funcionales se aplican a todos los niveles
+
+<ul>
+<li>Unidad (a partir de las especificaciones de interfaces de módulos)</li>
+<li>Integración (a partir de las especificaciones de APIs o subsistemas)</li>
+<li>Sistema (a partir de las especificaciones de requisitos del sistema)</li>
+<li>Regresión (a partir de los requisitos del sistema y el historial de bugs)</li>
+</ul></li>
+<li>Las estructurales son aplicables a partes relativamente pequeñas del sistema:
+
+<ul>
+<li>Unidad</li>
+<li>Integración</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_7">De especificaciones a casos de prueba</h2>
+
+<ul>
+<li>Descomponemos la especificación
+
+<ul>
+<li>Características probables independientemente</li>
+</ul></li>
+<li>Seleccionamos representantes
+
+<ul>
+<li>De los valores para cada entrada o</li>
+<li>De los comportamientos de un modelo</li>
+</ul></li>
+<li>Producimos las especificaciones de pruebas
+
+<ul>
+<li>Combinaciones de valores de entradas o comportamientos del modelo</li>
+</ul></li>
+<li>Producimos y ejecutamos las pruebas</li>
+</ul>
+
+<h2 id="toc_8"> Un ejemplo: <code>find</code></h2>
+
+<ul>
+<li>Un comando: <code>find</code></li>
+<li>Sintaxis: <code>find &lt;pattern&gt; &lt;filename&gt;</code></li>
+<li>Funcionamiento: se utiliza para localizar una o más instancias de un patrón en un fichero. Las líneas del fichero que encajan con el patrón se muestran en la salida estándar. Una línea que contiene el patrón se escribe exactamente una vez, independientemente de si el patrón ocurre una o más veces en la línea. El patrón es una secuencia de caracteres cuya longitud no excede la longitud máxima de una línea del fichero. Para incluir espacios en blando en el patrón, el patrón ha de ir encerrado entre comillas (&quot;&quot;). Para incluir comillas en el patrón, deben usarse dobles comillas.</li>
+</ul>
+
+<h3 id="toc_9">Identificamos ITFs</h3>
+
+<ul>
+<li>La especificación es pequeña, en este caso tenemos un único ITF, la colección de líneas devuelta contiene el patrón y aquellas líneas que no están en la colección no lo tienen.</li>
+<li>Identificamos ITFs adicionales correspondientes a condiciones de error: problemas con el fichero o con el nombre del fichero o patrones mal formados</li>
+<li>Nuestros ITFs:
+
+<ul>
+<li>Identifica correctamente patrones mal formados</li>
+<li>Identifica correctamente nombres de ficheros incorrectos y otros problemas relacionados con ficheros</li>
+<li>Identifica correctamente las líneas que contienen el patrón:
+
+<ul>
+<li>Identifica el patrón en una línea</li>
+<li>Identifica el patrón en todas las líneas que aparece</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_10">Identificamos las categorías</h3>
+
+<ul>
+<li>Parámetro patrón
+
+<ul>
+<li>Tamaño del patrón</li>
+<li>Dobles comillas</li>
+<li>Espacios en blanco</li>
+<li>Dobles comillas dentro del patrón</li>
+</ul></li>
+<li>Parámetro nombre de fichero
+
+<ul>
+<li>Lo asumimos correcto para este ITF</li>
+</ul></li>
+<li>Entorno: fichero correspondiente al nombre del fichero
+
+<ul>
+<li>Número de ocurrencias del patrón en el fichero</li>
+<li>Número de ocurrencias del patrón en una línea del fichero</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_11">Particionamos las categorías</h3>
+
+<ul>
+<li>Parámetro patrón
+
+<ul>
+<li>Tamaño del patrón: vacío, de un caracter, de varios, demasiado largo</li>
+<li>Dobles comillas: con comillas, sin comillas</li>
+<li>Espacios en blanco: ninguno, uno, varios</li>
+<li>Dobles comillas dentro del patrón: ninguno, uno, varios</li>
+</ul></li>
+<li>Parámetro nombre de fichero
+
+<ul>
+<li>Lo asumimos correcto para este ITF</li>
+</ul></li>
+<li>Entorno: fichero correspondiente al nombre del fichero
+
+<ul>
+<li>Número de ocurrencias del patrón en el fichero: ninguno, uno, varios</li>
+<li>Número de ocurrencias del patrón en una línea del fichero: ninguno, uno, varios</li>
+</ul></li>
+<li>Sin restricciones: 4 x 2 x 3 x 3 x 3 x 2 = 432 posibilidades</li>
+</ul>
+
+<h3 id="toc_12">Restricciones</h3>
+
+<ul>
+<li>Si el tamaño del patrón es cero no tiene sentido considerar varias comillas o varios espacios en blanco</li>
+<li>Esto puede reducir significativamente el número de categorías
+
+<ul>
+<li>Parámetro patrón:
+
+<ul>
+<li>Tamaño del patrón:
+
+<ul>
+<li>Vacío, [vacío]</li>
+<li>Un caracter, varios, demasiado largo [no vacío]</li>
+</ul></li>
+<li>Dobles comillas:
+
+<ul>
+<li>Con comillas, [con comillas]</li>
+<li>Sin comillas [si no vacío]</li>
+</ul></li>
+<li>Espacios en blanco:
+
+<ul>
+<li>Ninguno, [si no vacío]</li>
+<li>Uno, varios [si no vacío y con comillas]</li>
+</ul></li>
+<li>Dobles comillas dentro del patrón: ...</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_13">Modelos y criterios de cobertura</h2>
+
+<ul>
+<li>Necesitamos algún criterio de cobertura para reducir la explosión combinatoria</li>
+<li>Los modelos de los sistemas pueden ayudarnos:
+
+<ul>
+<li>Árboles o grafos de decisión</li>
+<li>Flujos de trabajo</li>
+<li>Máquinas de estados finitos</li>
+<li>Gramáticas</li>
+<li>...</li>
+</ul></li>
+<li>Estos modelos proporcionan una abstracción del sistema real, el cual podemos utilizar para comprobar el funcionamiento</li>
+</ul>
+
+<h3 id="toc_14">Propiedades de los modelos</h3>
+
+<ul>
+<li>Representación <strong>compacta</strong> y manipulable
+
+<ul>
+<li>Depende de lo que queramos hacer con él</li>
+</ul></li>
+<li>Debe permitir <strong>análisis predictivo</strong> de alguna característica del sistema
+
+<ul>
+<li>Debe permitirnos saber si las salidas son correctas o no</li>
+</ul></li>
+<li>Debe tener <strong>contenido semántico</strong>, de forma que podamos utilizarlo para diagnosticar las causas del fallo</li>
+<li>Deben ser lo <strong>suficientemente generales</strong> como para tener aplicación práctica</li>
+</ul>
+
+<h2 id="toc_15">Testing basado en modelos</h2>
+
+<ul>
+<li>Los modelos proporcionan representaciones abstractas del comportamiento de los sistemas</li>
+<li>La estructura de una especificación o modelo de diseño a menudo propocionan información útil para distinguir casos similares de casos diferentes</li>
+<li>En el testing basado en modelos utilizamos esta estructura para enumerar los representantes de las distintas clases de comportamiento</li>
+<li>Propocionan un criterio de cobertura</li>
+</ul>
+
+<h2 id="toc_16">Máquinas de estados finitos (FSMs)</h2>
+
+<ul>
+<li>Un tipo de modelo para describir comportamiento que depende de secuencias de eventos o estímulos</li>
+<li>Ampliamente utilizados
+
+<ul>
+<li>Statecharts</li>
+<li>Diagramas de estados UML</li>
+<li>...</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_17">De una especificación informal...</h2>
+
+<p>Mantenimiento</p>
+
+<ul>
+<li>La función de mantenimiento registra la historia de los elementos relacionados con el mantenimiento</li>
+<li>Si el producto está cubierto por una garantía o contrato de mantenimiento, el mantenimiento puede ser solicitado llamando a un número gratuito, a través de una página web o llevando el producto a una oficina de mantenimiento</li>
+<li>Si el mantenimiento se solicita por teléfono o a través de la web y el cliente reside en los EEUU o en la UE el producto es recogido en el domicilio del cliente; en caso contrario el cliente es responsable de enviar el producto por servicio de mensajería</li>
+<li>Si el número de contrato de mantenimiento proporcionado por el cliente no es válido, el producto sigue el procedimiento de productos no buertos por garantía. Si el producto no está cubierto por una garantía o contrato de mantenimiento, una reparación puede ser solicitada pero siempre haciendo llegar al producto a la oficina de mantenimiento</li>
+<li>La oficina de mantenimiento informa al cliente del coste estimado de reparación. El mantenimiento solo comienza cuando el cliente acepta la estimación. Si el cliente no acepta la estimación el producto es devuelto al cliente</li>
+<li>Problemas pequeños pueden ser reparados directamente en la oficina de mantenimiento. Si la oficina de mantenimiento no puede solucionar el problema, el producto es enviado a las oficinas centrales regionales (si en EEUU o UE) o a la oficina central (en otro caso). Si la oficina central regional no puede solucionar el problema, el producto es enviado a la oficina central de mantenimiento</li>
+<li>El mantenimiento se suspende si alguno de los componentes no está disponible</li>
+<li>Una vez reparado, el producto es devuelto al cliente</li>
+</ul>
+
+<h3 id="toc_18">... a una máquina de estados finita</h3>
+
+<p><img src="state_machine.png" alt=""></p>
+
+<h3 id="toc_19">... a una coleción de pruebas</h3>
+
+<ul>
+<li>Entradas que guían al sistema a través de secuencias de transiciones específicas:
+
+<ul>
+<li>TC1: 0 - 2 - 4 - 1 - 0</li>
+<li>TC2: 0 - 5 - 2 - 4 - 5 - 6 - 0</li>
+<li>TC3: 0 - 3 - 5 - 9 - 6 - 0</li>
+<li>TC4: 0 - 3 - 5 - 7 - 5 - 8 - 7 - 8 - 9 - 6 - 0</li>
+</ul></li>
+<li>Cubre esto todos los casos posibles ?</li>
+</ul>
+
+<p><img src="state_machine_cases.png" alt=""></p>
+
+<h2 id="toc_20">Critarios de cobertura para FSMs</h2>
+
+<ul>
+<li>Cobertura de estados
+
+<ul>
+<li>Cada estdo del modelo es visitado al menos por un caso de prueba</li>
+</ul></li>
+<li>Cobertura de transiciones
+
+<ul>
+<li>Cada transición entre estados es recorrida por al menos un caso de prueba</li>
+<li>Criterio más utilizado
+
+<ul>
+<li>Una transición puede verse como un par (precondición, post-condición)</li>
+</ul></li>
+</ul></li>
+<li>Cobertura de bucles
+
+<ul>
+<li>Número de veces que se recorren los bucles
+
+<ul>
+<li>Mínimo, intermedio y máximo</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_21">Testing basado en grafos de control de flujo</h2>
+
+<ul>
+<li>Utilizados para especificar el proceso humano que el sistema ha de soportar</li>
+<li>Ejemplo: diagramas de actividades UML.</li>
+<li>Si la especificación o el modelo tiene lógica de decisiones y secuencial, podemos tratarlo como si fuera código fuente</li>
+<li>Nos abstraemos de representaciones internas</li>
+<li>Nos centramos en las interacciones con el sistema</li>
+</ul>
+
+<h2 id="toc_22">De una especificación formal...</h2>
+
+<ul>
+<li>Procesamiento de orden de envío</li>
+<li>La función de proceso de órdenes de envío comprueba la validez de las órdenes y prepara el recibo</li>
+<li>Una orden válida contiene la siguiente información
+
+<ul>
+<li>Coste de los bienes: si el coste de los bienes es inferior que un mínimo (<code>MinOrder</code>) entonces la orden no es válida</li>
+<li>Dirección de envío: la dirección incluye el nombre, dirección, ciudad, código postal y país</li>
+<li>Método de envío preferido: si la dirección es nacional, el método de envío ha de ser normal, urgente o aéreo; si la dirección es internacional, el método de envío ha de ser normal o urgente</li>
+</ul></li>
+<li>El coste del envío se computa teniendo en cuenta:
+
+<ul>
+<li>El método de envío y la dirección</li>
+<li>Tipo de cliente (individual, negocio, académico...)</li>
+</ul></li>
+<li>...</li>
+</ul>
+
+<h3 id="toc_23">... a un grafo de flujo de control</h3>
+
+<p><img src="flux_control.png" alt=""></p>
+
+<h3 id="toc_24">... a casos de prueba</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center"></th>
+<th style="text-align: center">Demasiado pequeño</th>
+<th style="text-align: center">Destino</th>
+<th style="text-align: center">Tipo de envío</th>
+<th style="text-align: center">Tipo de cliente</th>
+<th style="text-align: center">Forma de pago</th>
+<th style="text-align: center">Misma dirección</th>
+<th style="text-align: center">Tarjeta correcta</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">TC-1</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Internacional</td>
+<td style="text-align: center">Aéreo</td>
+<td style="text-align: center">Negocio</td>
+<td style="text-align: center">Tarjeta</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Sí</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-2</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Nacional</td>
+<td style="text-align: center">Tierra</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-3</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-4</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Nacional</td>
+<td style="text-align: center">Aéreo</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-5</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Internacional</td>
+<td style="text-align: center">Tierra</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-6</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">Academia</td>
+<td style="text-align: center">Factura</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-7</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">Tarjeta</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">-</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-8</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">Tarjeta</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">No (cancelar)</td>
+</tr>
+<tr>
+<td style="text-align: center">TC-9</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">Tarjeta</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">No (no cancelar)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_25">Criterios de cobertura</h2>
+
+<ul>
+<li>Criterios
+
+<ul>
+<li>Cobertura de nodos
+
+<ul>
+<li>Los casos de prueba pasan por todos los nodos del grafo</li>
+</ul></li>
+<li>Cobertura de ramas
+
+<ul>
+<li>En cada bifurcación se consideran ambas ramas</li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+<script type="text/javascript">
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",asciidoc:"AsciiDoc",aspnet:"ASP.NET (C#)",autoit:"AutoIt",autohotkey:"AutoHotkey",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript","css-extras":"CSS Extras",fsharp:"F#",glsl:"GLSL",http:"HTTP",inform7:"Inform 7",json:"JSON",latex:"LaTeX",lolcode:"LOLCODE",matlab:"MATLAB",mel:"MEL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",parigp:"PARI/GP",php:"PHP","php-extras":"PHP Extras",powershell:"PowerShell",jsx:"React JSX",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",typescript:"TypeScript",vhdl:"VHDL",vim:"vim",wiki:"Wiki markup",yaml:"YAML"};Prism.hooks.add("before-highlight",function(s){var a=s.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var t,i,r=a.getAttribute("data-language")||e[s.language]||s.language.substring(0,1).toUpperCase()+s.language.substring(1),l=a.previousSibling;l&&/\s*\bprism-show-language\b\s*/.test(l.className)&&l.firstChild&&/\s*\bprism-show-language-label\b\s*/.test(l.firstChild.className)?i=l.firstChild:(t=document.createElement("div"),i=document.createElement("div"),i.className="prism-show-language-label",t.className="prism-show-language",t.appendChild(i),a.parentNode.insertBefore(t,a)),i.innerHTML=r}})}}();
+</script>
+
+
+</body>
+
+</html>

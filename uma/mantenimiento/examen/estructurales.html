@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>2_estructurales</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+<style type="text/css">
+div.prism-show-language {
+	position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Pruebas estructurales</h1>
+
+<h2 id="toc_1">Tipos de pruebas de unidad</h2>
+
+<ul>
+<li>Sin considerar detalles de implementación
+
+<ul>
+<li>Pruebas basadas en las especificaciones o modelos</li>
+</ul></li>
+<li>Considerando detalles de implementación
+
+<ul>
+<li>Errore de programación habituales</li>
+<li>Pruebas estructurales
+
+<ul>
+<li>Pruebas dinámicas: implican ejecutar el código</li>
+<li>Pruebas estáticas: revisiones de código</li>
+</ul></li>
+</ul></li>
+<li>Complementarias
+
+<ul>
+<li>Las pruebas estructurales incluyen casos que no pueden identificarse de la especificación, ejemplos:
+
+<ul>
+<li>Implementación de un elemento de la especificación en varias partes del programa</li>
+<li>Errores en la estructura de datos elegida, colisiones en una tabla hash...</li>
+<li>...</li>
+</ul></li>
+<li>Y viceversa
+
+<ul>
+<li>Caminos no implementados</li>
+<li>...</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Top 10 errors Java Programmers Make</h2>
+
+<ol>
+<li>Null pointers</li>
+<li>Capitalization errors</li>
+<li>Preventing concurrent access to shared variables by threads</li>
+<li>Forgeting that Java is zero-indexed</li>
+<li>Writing blank exception handlers</li>
+<li>Confusion over passing by value and passing by reference</li>
+<li>Comparing two objects (<code>==</code> instead of <code>.equals()</code>)</li>
+<li>Comparison assignment (<code>=</code> rather than <code>==</code>)</li>
+<li>Mistyping the name of a method when overriding</li>
+<li>Accessing non-static member variables from static methods (such as <code>main()</code>)</li>
+</ol>
+
+<h2 id="toc_3">Pruebas estructurales</h2>
+
+<ul>
+<li>Mejor para encontrar defectos que para explorar el comportamiento del sistema</li>
+<li>Si parte de un programa no ha sido ejecutado por ningún caso de prueba no podemos encontrar errores ahí</li>
+<li>Pero, en qué parte ? Dos enfoques:
+
+<ul>
+<li>Orientado al flujo de control
+
+<ul>
+<li>Cuánto del flujo de control ha sido analizado ?</li>
+</ul></li>
+<li>Orientado al flujo de datos
+
+<ul>
+<li>Cuánto de la relación definición-uso de los datos ha sido analizado ?</li>
+</ul></li>
+</ul></li>
+<li>Complemento a las pruebas funcionales</li>
+</ul>
+
+<h2 id="toc_4">Las garantías de la cobertura</h2>
+
+<ul>
+<li>El que se ejecuten todos los elementos del flujo de control no garantiza encontrar todos los errores
+
+<ul>
+<li>La ejecución de una sentencia errónea no siempre resulta en un fallo
+
+<ul>
+<li>Puede que el estado no esté corrupto cuando la sentencia es ejecutada con ciertos valores</li>
+<li>Puede que estados corruptos no se propaguen para acabar produciendo un fallo</li>
+</ul></li>
+</ul></li>
+<li>Qué valor tiene la cobertura estructural ?
+
+<ul>
+<li>Incrementa la confianza en la amplitud de las pruebas</li>
+</ul></li>
+</ul>
+
+<p><img src="cobertura.png" alt=""></p>
+
+<h2 id="toc_5">Pruebas estructurales en la práctica</h2>
+
+<ul>
+<li>Creamos las pruebas funcionales y a continuación medimos su cobertura para identificar lo que nos falta</li>
+<li>Identificamos elementos no ejecutados:
+
+<ul>
+<li>Debidos a diferencias entre la especificación y la implementación</li>
+<li>O a errores en el software o en su proceso de desarrollo
+
+<ul>
+<li>Especificaciones incompletas, que no incluyen casos presentes en la implementación</li>
+<li>Metodología de implementación muy diferente de la de especificación</li>
+<li>Pruebas funcionales inadecuadas</li>
+</ul></li>
+</ul></li>
+<li>Automatizado: muy atractivo !
+
+<ul>
+<li>Medidas de cobertura representan indecadores de progreso</li>
+<li>A veces utilizados como criterio de compleción
+
+<ul>
+<li>Hay que tener cuidado, no siempre pueden garantizar la efectividad !</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><img src="flux_control_diagram.png" alt=""></p>
+
+<h2 id="toc_6">Representaciones del software como grafos</h2>
+
+<ul>
+<li>La ejecución del SW puede ser considerada como una secuencia de estados alternada con acciones (operaciones de la máquina, eventos...) que modifican el estado del sistema</li>
+<li>Utilizamos grafos para representar modelos de ejecución:
+
+<ul>
+<li>Opción 1: las acciones ocurren en los nodos del grafo y los arcos representan los estados del sistema durante las transferencias de flujos de control</li>
+<li>Opción 2: un estado del sistema se representa por un nodo del grafo y las acciones ocurren en los arcos del grafo</li>
+</ul></li>
+</ul>
+
+<p><img src="flux.png" alt=""></p>
+
+<h2 id="toc_7">Diagramas de control de flujo</h2>
+
+<ul>
+<li>Grafo de flujo <strong>intra</strong>-procedural:
+
+<ul>
+<li>Modela los caminos de control de flujo dentro de un procedimiento o método</li>
+<li>Los nodos del grafo representan bloques de código</li>
+<li>Los arcos del grafo representan caminos alternativos a las sentencias de código que podrían ejecutarse a continuación</li>
+</ul></li>
+<li>Grafo de flujo <strong>inter</strong>-procedural o <strong>grafo de llamadas</strong>:
+
+<ul>
+<li>Modela las secuencias de llamadas potenciales a varios métodos</li>
+<li>Los nodos del grafo representan métodos</li>
+<li>Los arcos del grafo indican que el método en el origen del arco puede llamar al método en el extremo del arco</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_8"> Grafos de flujo intraprocedural</h2>
+
+<ul>
+<li>Qué se incluye en un nodo:
+
+<ul>
+<li>Una serie de sentencias con un único punto de entrada y un único punto de salida
+
+<ul>
+<li>Si hay varios puntos de entrada a una sentencia de código, la sentencia ha de ser la primera de un nodo</li>
+</ul></li>
+<li>Si entras en un nodo todas las sentencias del nodo serán ejecutadas
+
+<ul>
+<li>Y las excepciones</li>
+</ul></li>
+</ul></li>
+<li>Los arcos se utilizan cuando hay alternativas a lo que podría ejecutarse a continuación, o para transferir el control a una sentencia para la que hay varios puntos de entrada
+
+<ul>
+<li>El diagrama debe hacer explícitas las condiciones para que se seleccione una u otra alternativa</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_9">Basado en construcciones de lenguajes de programación</h3>
+
+<p><img src="languages.png" alt=""></p>
+
+<h3 id="toc_10">Ejemplo Java</h3>
+
+<ul>
+<li>Función: reemplazar <code>n</code> con <code>n &gt;= 2</code>, retornos de carro consecutivos por uno y quitar todos los que aparezcan al principio</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">public static String collapseNewLines(String arg) {
+    char last = arg.charAt(0);
+    StringBuilder buffer = new StringBuilder();
+    
+    for (int index = 0; index &lt; arg.length(); index++) {
+        char ch = arg.charAt(index);
+        
+        if (ch != &#39;\n&#39; || last != &#39;\n&#39;) {
+            buffer.append(ch);
+            last = ch;
+        }
+    }
+    
+    return buffer.toString();
+}</code></pre></div>
+
+<h3 id="toc_11">Grafo de control de flujo</h3>
+
+<p><img src="flux_example.png" alt=""></p>
+
+<p>Notación alternativa</p>
+
+<p><img src="flux_example_alt.png" alt=""></p>
+
+<h3 id="toc_12">Grafo de control de flujo</h3>
+
+<ul>
+<li>El nivel de precisión puede variar dependiendo de cada caso</li>
+<li>Importa la evaluación de cortocircuitos ?
+
+<ul>
+<li><code>if (a != null &amp;&amp; a.algo())</code>
+
+<ul>
+<li>Sí, previene de excepciones por puntero null</li>
+</ul></li>
+<li><code>if (a &gt; 36 &amp;&amp; a &lt; 72)</code>
+
+<ul>
+<li>El orden de evaluación no es relevante</li>
+</ul></li>
+</ul></li>
+<li>Deberían considerarse las excepciones
+
+<ul>
+<li>Sí, siempre</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_13">Ejemplo</h3>
+
+<p><img src="breakpoints.png" alt=""></p>
+
+<ul>
+<li>Propósito del grafo:
+
+<ul>
+<li>Derivamos casos de prueba para ejecutar los diferentes caminos</li>
+<li>Si hubiera un número infinito (o muy grande) de caminos tendremos que utilizar algún tipo de criterio de selección para elegir un subconjunto</li>
+<li>Para cada camino determinaremos qué datos de entrada son necesarios</li>
+</ul></li>
+<li>Algunos de los posibles caminos de ejecución:
+
+<ul>
+<li>1 - 2 - 7
+
+<ul>
+<li>In: <code>&quot;&quot;</code></li>
+<li>Out: <code>&quot;&quot;</code></li>
+</ul></li>
+<li>1 - 2 - 3 - 4 - 6 - 2 - 7
+
+<ul>
+<li>In: <code>&quot;\n&quot;</code></li>
+<li>Out: <code>&quot;&quot;</code></li>
+</ul></li>
+<li>1 - 2 - 3 - 5 - 6 - 2 - 7
+
+<ul>
+<li>In: <code>&quot;a&quot;</code></li>
+<li>Out: <code>&quot;a&quot;</code></li>
+</ul></li>
+<li>1 - 2 - 3 - 4 - 5 - 6 - 2 - 7
+
+<ul>
+<li>In: <code>!</code></li>
+<li>Out: <code>null</code></li>
+</ul></li>
+<li>1 - 2 - 3 - 4 - 6 - 2 - 3 - 4 - 6 - 2 - 7
+
+<ul>
+<li>In: <code>&quot;\n\n&quot;</code></li>
+<li>Out: <code>&quot;&quot;</code></li>
+</ul></li>
+<li>1 - 2 - 3 - 5 - 6 - 2 - 3 - 4 - 6 - 2 - 7
+
+<ul>
+<li>In: <code>!</code></li>
+<li>Out: <code>null</code></li>
+</ul></li>
+<li>1 - 2 - 3 - 5 - 6 - 2 - 3 - 5 - 6 - 2 - 3 - 4 - 6 - 2 - 7
+
+<ul>
+<li>In: <code>&quot;a\n\n&quot;</code></li>
+<li>Out: <code>&quot;a\n&quot;</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_14">Grafos de llamadas interprocedurales</h2>
+
+<ul>
+<li>Muestra las relaciones entre métodos llamantes y llamados</li>
+<li>En lenguajes orientados a objetos con polimorfismo el determinar los métodos que se van a ejecutar no es fácil
+
+<ul>
+<li>Hay una subclase que redefine un método ?</li>
+<li>Llama el método redefinido al método de la superclase ?</li>
+<li>Se está usando un objeto factoría que devuelve objetos de diferentes tipos ?</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_15">Ejemplo</h3>
+
+<div><pre class="line-numbers"><code class="language-java">public class C {
+    public static C cFactory(String kind) {
+        if (kind.equals(&quot;C&quot;))
+            return new C();
+        
+        if (kind.equals(&quot;S&quot;))
+            return new S();
+        
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        (new A()).check();
+    }
+    
+    void foo() {
+        System.out.println(&quot;Parent foo() called&quot;);
+    }
+    
+    class S extends C {
+        void foo() {
+            System.out.println(&quot;Child foo() called&quot;);
+        }
+    }
+    
+    class A {
+        void check() {
+            C myC = C.cFactory(&quot;S&quot;);
+            myC.foo();
+        }
+    }
+}</code></pre></div>
+
+<h3 id="toc_16">Grafos de llamadas</h3>
+
+<ul>
+<li>Con vinculación dinámica solo podemos determinar cuál de los métodos <code>C.foo()</code> y <code>S.foo()</code> será invocado en tiempo de ejecución</li>
+<li>Podemos analizar el código y determinar que se llamará a <code>S.foo()</code>, pero un analizador estático de código no siempre podrá determinarlo</li>
+<li>Con análisis estático, debemos considerar la posibilidad de que si un método <code>foo()</code> es invocado sobre una variable de tipo <code>C</code> entonces la versión de <code>foo()</code> ejecutada puede ser una de:
+
+<ul>
+<li>Una subclase de <code>C</code>, si <code>C</code> tiene subclases, o</li>
+<li>Una implementación de <code>C</code>, si <code>C</code> es una interfaz</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_17">Los grafos de llamadas y los contextos</h3>
+
+<div><pre class="line-numbers"><code class="language-java">public class C {
+    public static void main(String[] args) {
+        C myC = new C();
+        myC.foo(3);
+        myC.foo(17);
+    }
+    
+    void foo(int n) {
+        int[] myArray = new int[n];
+        depends(myArray, 2);
+    }
+    
+    void bar(int n) {
+        int[] myArray = new int[n];
+        depends(myArray, 2);
+    }
+    
+    void depends(int[] a, int n) {
+        a[n] = 42; // Podemos decir si existe a[n] ?
+    }
+}</code></pre></div>
+
+<ul>
+<li>Un grafo sensible al contexto muestra el contexto de parámetros en el que un método es invocado
+
+<ul>
+<li>En este caso, el grafo sensible al contexto puede ayudar a responder a la pregutna &quot;exite <code>a[n]</code> ?&quot; en <code>depends()</code></li>
+</ul></li>
+</ul>
+
+<p><img src="context.png" alt=""></p>
+
+<h3 id="toc_18">Caminos en los grafos de llamadas</h3>
+
+<p><img src="paths.png" alt=""></p>
+
+<ul>
+<li>Hay 4 contextos diferentes en los que el método F puede ser invocado</li>
+<li>El número de contextos puede crecer rápidamente, incluso sin recursión...</li>
+</ul>
+
+<h2 id="toc_19">Criterios de cobertura para código</h2>
+
+<ul>
+<li>Sentencias</li>
+<li>Ramas</li>
+<li>Condiciones (básicas)</li>
+<li>Ramas y condiciones</li>
+<li>Condiciones compuestas</li>
+<li>Condiciones/decisiones modificado</li>
+<li>Caminos</li>
+<li>Caminos interiores</li>
+<li>Bucles</li>
+<li>Complejidad ciclomática</li>
+<li>Llamadas a procedimientos</li>
+<li>...</li>
+</ul>
+
+<h2 id="toc_20">Cobertura de las sentencias</h2>
+
+<ul>
+<li>Criterio: cada sentencia (o nodo del GCF) ha de ejecutarse al menos una vez</li>
+<li>Cobertura: <code>numero_de_sentencias_ejecutadas / numero_de_sentencias</code></li>
+<li>Intuición: un fallo en una sentencia puede ser detectado solo ejecutando dicha sentencia</li>
+<li>No siempre es posible alcanzar cobertura 1</li>
+<li>Diferencia entre sentencias y bloques: granularidad
+
+<ul>
+<li>100% cobertura de nodos <code>&lt;====&gt;</code> 100% cobertura de sentencias</li>
+<li>No coincidirá para valores menores de 100</li>
+</ul></li>
+</ul>
+
+<p><img src="cobertura_sentencias.png" alt=""></p>
+
+<h2 id="toc_21">Cobertura de ramas</h2>
+
+<ul>
+<li>Criterio: cada rama (arista en el GCF) ha de ejecutarse al menos una vez</li>
+<li>Cobertura: <code>numero_de_ramas_ejecutadas / numero_de_ramas</code></li>
+<li>Intuición: número de ramas ejecutadas por un conjunto de pruebas</li>
+<li>No siempre es posible alcanzar sobertura 1</li>
+<li>Si cubrimos todas las ramas de un grafo visitamos todos los nodos
+
+<ul>
+<li>100% cobertura de ramas <code>====&gt;</code> 100% cobertura de sentencias</li>
+</ul></li>
+</ul>
+
+<p><img src="cobertura_ramas.png" alt=""></p>
+
+<p><img src="cobertura_ramas_2.png" alt=""></p>
+
+<h2 id="toc_22">Cobertura de condiciones (básicas)</h2>
+
+<ul>
+<li>Criterio: cada condición básica ha de tomar valor <code>true</code> para al menos un caso de prueba y <code>false</code> para al menos un caso de prueba</li>
+<li>Cobertura: <code>numero_de_valores_de_verdad_tomados_por_cada_condicion_basica / (2 * numero_de_condiciones_basicas)</code></li>
+<li>Intuición: las pruebas hacen que cada condición tome valores <code>true</code> y <code>false</code></li>
+</ul>
+
+<p><img src="cobertura_condiciones.png" alt=""></p>
+
+<h2 id="toc_23">Cobertura de ramas y condiciones</h2>
+
+<ul>
+<li>Cobertura de ramas y condiciones
+
+<ul>
+<li>Cubre todas las ramas y todas las condiciones</li>
+</ul></li>
+<li>Cobertura de condiciones compuestas
+
+<ul>
+<li>Criterio
+
+<ul>
+<li>Cubre todas las posibles evaluaciones de condiciones compuestas</li>
+<li>Cubre todas las ramas del árbol de decisión</li>
+<li>Exponencial, incluso con cortocircuito</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_24">Criterio de condiciones compuestas</h2>
+
+<p><img src="criterio_condiciones_compuestas.png" alt=""></p>
+
+<ul>
+<li>El cortocircuito puede reducir el número de casos, pero no siempre...
+
+<ul>
+<li>Una condición con 16 condiciones puede requerir 32000 casos de prueba</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_25">Criterio de condiciones/decisiones modificado: MC/DC</h2>
+
+<ul>
+<li>Probamos combinaciones relevantes de las condiciones, sin el crecimiento exponencial en el número de pruebas
+
+<ul>
+<li>Cada condición básica que afecta independientemente a la decisión</li>
+</ul></li>
+<li>Requiere 2 casos de prueba para cada condición básica
+
+<ul>
+<li>Las evaluaciones del resto de las condiciones básicas son los mismos</li>
+<li>La condición compuesta se evalúa con valores distintos</li>
+</ul></li>
+</ul>
+
+<p><img src="criterio_modificada.png" alt=""></p>
+
+<h3 id="toc_26">MC/DC: complejidad lineal</h3>
+
+<ul>
+<li><code>N + 1</code> casos de prueba para <code>N</code> condiciones básicas</li>
+</ul>
+
+<p><img src="modificada_complejidad.png" alt=""></p>
+
+<ul>
+<li>Buen equilibrio entre cobertura y número de casos
+
+<ul>
+<li>Menos estricto que el criterio de condiciones compuestas, pero más que el resto de los criterios discutidos</li>
+</ul></li>
+<li>Requerido por estándares de calidad internacionales en aviación (<em>RTCA/DO-178B</em> y <em>EUROCAE ED-12B</em>)</li>
+</ul>
+
+<h2 id="toc_27">Cobertura de caminos</h2>
+
+<ul>
+<li>Criterio: cada camino ha de ejecutarse al menos una vez</li>
+<li>Cobertura: <code>numero_de_caminos_ejecutados / numero_de_caminos</code></li>
+<li>Intuición:
+
+<ul>
+<li>Más caminos que ramas</li>
+<li>Los criterios basados en decisiones y condiciones consideran las decisiones individualmente</li>
+<li>El criterio basado en caminos considera combinaciones de decisiones a lo largo de los caminos</li>
+</ul></li>
+</ul>
+
+<p><img src="caminos.png" alt=""></p>
+
+<h3 id="toc_28">Cobertura de caminos en la práctica</h3>
+
+<ul>
+<li>El número de caminos en un programa con bucles es infinito
+
+<ul>
+<li>Criterio imposible de satisfacer</li>
+</ul></li>
+<li>Compromiso: particionamos el conjunto infinito de caminos en un número finito de clases de caminos</li>
+<li>Limitamos:
+
+<ul>
+<li>El número de iteraciones de los bucles</li>
+<li>La longitud de los caminos a recorrer</li>
+<li>Las dependencias entre caminos seleccionados</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_29">Caminos interiores</h3>
+
+<ul>
+<li>Agrupamos los caminos que se diferencian solo en el subcamino que siguen cuando repiten el cuerpo del bucle
+
+<ul>
+<li>Seguimos el flujo de control hasta el primer nodo que se repite</li>
+<li>Cubrimos el conjunto de caminos desde la raíz del árbol hasta cada hoja</li>
+</ul></li>
+</ul>
+
+<p><img src="caminos_interiores.png" alt=""></p>
+
+<h3 id="toc_30">Limitaciones del criterio de caminos interiores</h3>
+
+<ul>
+<li>El número de caminos puede crecer exponencialmente incluso sin bucles
+
+<ul>
+<li><code>N</code> ramas suponen <code>2^N</code> caminos</li>
+<li>Deducir los datos de entrada puede ser muy complicado, incluso imposible si las condiciones no son independientes</li>
+</ul></li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">if (a) {
+    S1;
+}
+
+if (b) {
+    S2;
+}
+
+if (d) {
+    S3;
+}
+
+// ...
+
+if (x) {
+    Sn;
+}</code></pre></div>
+
+<h2 id="toc_31">Criterio de los bucles</h2>
+
+<ul>
+<li>Variante del criterio de los caminos interiores que trata de la misma forma los bucles pero es menos exigente con otros caminos</li>
+<li>Criterio: un test suite satisface el criterio de los bucles si cada bucle:
+
+<ul>
+<li>En al menos un caso de prueba el cuerpo del bucle se repite 0 veces</li>
+<li>En al menos un caso de prueba el cuerpo del bucle se repite 1 vez</li>
+<li>En al menos un caso de prueba el cuerpo del bucle se repite más de una vez</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_32">Criterio de la complejidad ciclomática</h2>
+
+<ul>
+<li>Criterio: se ha ejecutado un número de caminos independientes mayor que la complejidad ciclomática</li>
+</ul>
+
+<h2 id="toc_33">Criterio de llamadas a procedimientos</h2>
+
+<ul>
+<li>Pruebas de entradas y salidas de procedimientos
+
+<ul>
+<li>Procedimientos pueden tener múltiples puntos de entrada y múltiples puntos de salida</li>
+</ul></li>
+<li>Cobertura de invocaciones
+
+<ul>
+<li>Un mismo método puede ser invocado desde distintos puntos</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_34">Satisfacción de los criterios estructurales</h2>
+
+<ul>
+<li>Algunas veces es imposible alcanzar coberturas del 100%
+
+<ul>
+<li>Sentencias que no pueden ejecutarse
+
+<ul>
+<li>Programación defensiva</li>
+<li>Reutilización de código (p.ej. más general de lo necesario)</li>
+</ul></li>
+<li>Condiciones que no pueden satisfacerse
+
+<ul>
+<li>Condiciones interdependientes</li>
+</ul></li>
+<li>Caminos que no pueden ejecutarse
+
+<ul>
+<li>Decisiones interdependientes</li>
+</ul></li>
+</ul></li>
+<li>Código muerto puede indicar un problema de mantenibilidad
+
+<ul>
+<li>Habitual incluso en aplicaciones bien diseñadas y bien mantenidas</li>
+</ul></li>
+<li>Soluciones
+
+<ul>
+<li>Establecer objetivos de cobertura inferiores al 100%</li>
+<li>Requerir justificación de elementos no cubiertos
+
+<ul>
+<li>Estándares <em>RTCA-DO-178B</em> y <em>EUROCAE ED-12B</em> para MC/DC</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_35">Pruebas basadas en los flujos de datos</h2>
+
+<ul>
+<li>Pruebas basadas en los flujos de control
+
+<ul>
+<li>Las coberturas de nodos y ramas no tienen en cuenta las interacciones entre instrucciones</li>
+<li>Las coberturas basadas en condiciones y caminos son impracticables
+
+<ul>
+<li>Enorme número de casos de prueba</li>
+</ul></li>
+</ul></li>
+<li>Pruebas basadas en los flujos de datos
+
+<ul>
+<li>Necesitamos centrarnos en los caminos &quot;importantes&quot;</li>
+<li>Las instrucciones interaccionan a lo largo de flujos de datos</li>
+<li>Criterios basados en la forma en que las variables son definidas y utilizadas
+
+<ul>
+<li>Los valores calculados en una sentencia son utilizaod en otra</li>
+<li>Los cálculos incorrectos solo se revelan cuando se utilizan</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_36">Flujo de datos</h3>
+
+<p><img src="data_flux.png" alt=""></p>
+
+<ul>
+<li>El valor de <code>x</code> en 6 podría ser calculado en 1 o en 4</li>
+<li>Un error en 1 o en 4 se desvelaría solo si fuesen usadas en 6</li>
+<li><em>def</em>: instrucción que asigna un valor a una variable</li>
+<li><em>uso</em>: instrucción que usa una variable</li>
+<li>Par <em>def-uso</em> (DU):
+
+<ul>
+<li>(1,6)</li>
+<li>(4,6)</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_37">Pares y caminos DU</h3>
+
+<ul>
+<li>Par DU: par de definición y uso de alguna variable tal que hay al menos un camino DU entre la definición y el uso
+
+<ul>
+<li><code>x = ...</code>: es una definición de <code>x</code></li>
+<li><code>... x ...</code>: es un uso de <code>x</code></li>
+</ul></li>
+<li>Camino DU: un camino sin definiciones en el GFC desde una definición a un uso de la misma variable
+
+<ul>
+<li>&quot;Sin definiciones&quot;: el valor no se cambia en el camino</li>
+<li>Los bucles podrían crear infinitos caminos DU</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_38">Caminos sin definiciones</h3>
+
+<p><img src="no_def_path.png" alt=""></p>
+
+<ul>
+<li>1 - 2 - 3 - 5 - 6
+
+<ul>
+<li>Es un camino sin definiciones (para <code>x</code>) de 1 a 6
+
+<ul>
+<li>A <code>x</code> no se le (re-)asigna ningún valor entre 1 y 6</li>
+</ul></li>
+</ul></li>
+<li>1 - 2 - 4 - 5 - 6
+
+<ul>
+<li>No es un camino sin definiciones (para <code>x</code>) de 1 a 6
+
+<ul>
+<li>A <code>x</code> se le asigna un valor en 4</li>
+</ul></li>
+</ul></li>
+<li>(1,6) es un par DU (para <code>x</code>) porque <code>1 - 2 - 3 - 5 - 6</code> es un camino DU sin definiciones (para <code>x</code>)</li>
+</ul>
+
+<p><img src="no_def_path-2.png" alt=""></p>
+
+<h3 id="toc_39">Variables, punteros y estructuras</h3>
+
+<ul>
+<li>Casos difíciles
+
+<ul>
+<li><code>x[i] = ...; ...; y = x[j];</code>
+
+<ul>
+<li>Par DU (solo) si <code>i == j</code></li>
+</ul></li>
+<li><code>p = &amp;x; ...; *p = 99; ...; q = x;</code>
+
+<ul>
+<li><code>*p</code> es un alias de <code>x</code></li>
+</ul></li>
+<li><code>m.putX(...); ...; y = n.getX(...);</code>
+
+<ul>
+<li>Son <code>m</code> y <code>n</code> el mismo objeto ?</li>
+<li>Comparten <code>m</code> y <code>n</code> el atributo <code>x</code> ?</li>
+</ul></li>
+</ul></li>
+<li>Arrays y punteros son críticos para análisis de flujo de datos
+
+<ul>
+<li>Infra-estimación puede hacer que se nos escapen pares DU</li>
+<li>Sobre-estimación puede hacer que sea irrealizable</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_40">Criterios de cobertura</h3>
+
+<ul>
+<li><strong>Pares DU</strong>: cada par DU ha de ser ejecutado por al menos un caso de prueba</li>
+<li><strong>Caminos DU</strong>: cada camino DU simple (un bucle) ha de ser ejecutado por al menos un caso de prueba</li>
+<li><strong>Definiciones</strong>: para cada definición, hay al menos un caso de prueba que ejecuta un par DU que lo contiene
+
+<ul>
+<li>Cada valor computado es usado al menos una vez</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_41">Ejemplo: funciones estadísticas</h3>
+
+<div><pre class="line-numbers"><code class="language-java">public static void computeStats(int[] numbers) {
+    int length = numbers.length;
+    double med, var, sd, mean, sum, varsum;
+    
+    sum = 0.0;
+    for (int i = 0; i &lt; length; i++) {
+        sum += numbers[i];
+    }
+    
+    med = numbers[length / 2];
+    mean = sum / length;
+    
+    varsum = 0.0;
+    for (int i = 0; i &lt; length; i++) {
+        varsum = varsum + ((numbers[i] - mean) * (numbers[i] - mean));
+    }
+    
+    var = varsum / (length - 1.0);
+    sd = Math.sqrt(var);
+    
+    System.out.println(&quot;length: &quot; + length);
+    System.out.println(&quot;mean: &quot; + mean);
+    System.out.println(&quot;median: &quot; + median);
+    System.out.println(&quot;variance: &quot; + var);
+    System.out.println(&quot;standard deviation: &quot; + sd);
+}</code></pre></div>
+
+<p><img src="top1.png" alt=""></p>
+
+<p><img src="top2.png" alt=""></p>
+
+<p><img src="top3.png" alt=""></p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:{pattern:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+
+<script type="text/javascript">
+Prism.languages.java=Prism.languages.extend("clike",{keyword:/\b(abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while)\b/,number:/\b0b[01]+\b|\b0x[\da-f]*\.?[\da-fp\-]+\b|\b\d*\.?\d+(?:e[+-]?\d+)?[df]?\b/i,operator:{pattern:/(^|[^.])(?:\+[+=]?|-[-=]?|!=?|<<?=?|>>?>?=?|==?|&[&=]?|\|[|=]?|\*=?|\/=?|%=?|\^=?|[?:~])/m,lookbehind:!0}}),Prism.languages.insertBefore("java","function",{annotation:{alias:"punctuation",pattern:/(^|[^.])@\w+/,lookbehind:!0}});
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+<script type="text/javascript">
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",asciidoc:"AsciiDoc",aspnet:"ASP.NET (C#)",autoit:"AutoIt",autohotkey:"AutoHotkey",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript","css-extras":"CSS Extras",fsharp:"F#",glsl:"GLSL",http:"HTTP",inform7:"Inform 7",json:"JSON",latex:"LaTeX",lolcode:"LOLCODE",matlab:"MATLAB",mel:"MEL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",parigp:"PARI/GP",php:"PHP","php-extras":"PHP Extras",powershell:"PowerShell",jsx:"React JSX",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",typescript:"TypeScript",vhdl:"VHDL",vim:"vim",wiki:"Wiki markup",yaml:"YAML"};Prism.hooks.add("before-highlight",function(s){var a=s.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var t,i,r=a.getAttribute("data-language")||e[s.language]||s.language.substring(0,1).toUpperCase()+s.language.substring(1),l=a.previousSibling;l&&/\s*\bprism-show-language\b\s*/.test(l.className)&&l.firstChild&&/\s*\bprism-show-language-label\b\s*/.test(l.firstChild.className)?i=l.firstChild:(t=document.createElement("div"),i=document.createElement("div"),i.className="prism-show-language-label",t.className="prism-show-language",t.appendChild(i),a.parentNode.insertBefore(t,a)),i.innerHTML=r}})}}();
+</script>
+
+
+</body>
+
+</html>
