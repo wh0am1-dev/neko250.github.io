@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>0_sistema_aceptacion_regresion</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+<style type="text/css">
+div.prism-show-language {
+	position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Pruebas de sistema, aceptación y regresión</h1>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center"></th>
+<th style="text-align: center">Sistema</th>
+<th style="text-align: center">Aceptación</th>
+<th style="text-align: center">Regresión</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">procedimiento...</td>
+<td style="text-align: center">Pruebas contra especificaciones de requisitos</td>
+<td style="text-align: center">Prueba si el sistema se ajusta a las necesidades del usuario</td>
+<td style="text-align: center">Re-ejecuta casos de prueba superados por versiones anteriores del sistema</td>
+</tr>
+<tr>
+<td style="text-align: center">prueba...</td>
+<td style="text-align: center">Corrección, completitud</td>
+<td style="text-align: center">Utilidad, satisfacción</td>
+<td style="text-align: center">Cambios accidentales</td>
+</tr>
+<tr>
+<td style="text-align: center">realizada por...</td>
+<td style="text-align: center">Equipo de desarrollo de pruebas</td>
+<td style="text-align: center">Equipo de pruebas con ususarios</td>
+<td style="text-align: center">Equipo de desarrollo de pruebas</td>
+</tr>
+<tr>
+<td style="text-align: center"></td>
+<td style="text-align: center">Verificación</td>
+<td style="text-align: center"><strong>Validación</strong></td>
+<td style="text-align: center">Verificación</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_1">Pruebas de sistema</h2>
+
+<ul>
+<li>Características clave:
+
+<ul>
+<li>Completa (el sistema completo, la especificación completa)</li>
+<li>Basada en la especificación de comportamiento observable
+
+<ul>
+<li>Verificación contra una especificación de requisitos</li>
+</ul></li>
+<li>Independiente del diseño y de la implementación
+
+<ul>
+<li>Evita repetir en el diseño de las pruebas de sistema errores en el diseño del software</li>
+</ul></li>
+</ul></li>
+<li>Pruebas muy heterogéneas, lo que incluimos en las pruebas es muy dependiente del tipo de aplicación</li>
+<li>Las pruebas de sistema pueden ser muy costosas y requerir mucho tiempo
+
+<ul>
+<li>Puede incluir la construcción de componentes físicos y software para proporcionar el entorno de pruebas necesario (que puede incluso superar el coste del sistema software desarrollado)</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">Verificación y validación independientes</h2>
+
+<ul>
+<li>Una estrategia para maximizar la independencia:
+
+<ul>
+<li>Pruebas de sistema (y aceptación) realizadas por una organización diferente
+
+<ul>
+<li>Aislada organizacionalmente de los desarrolladores (libre de presión)</li>
+<li>A veces externalizada a otra empresa
+
+<ul>
+<li>Especialmente para sitemas críticos</li>
+<li>Externalizada para tener un juicio independiente, no para ahorrar dinero</li>
+<li>Puede que solo se externalice parte del análisis, o que se realice uno adicional sin reemplazar el interno</li>
+</ul></li>
+</ul></li>
+<li>En caso de desarrollarlas la misma organización
+
+<ul>
+<li>Independencia perfecta no es alcanzable</li>
+<li>Pero podemos mejorarla desarrollando la especificación de las pruebas cuanto antes
+
+<ul>
+<li>Como parte del análisis de requisitos (<em>agile test first</em> o <em>modelo en V</em>)</li>
+<li>Podemos explotar el que sea la misma organización: &quot;<em>design for test</em>&quot;</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">Pruebas de sistemas incrementales</h2>
+
+<ul>
+<li>Las pruebas de sistema suelen utilizarse para medir el progreso del desarrollo
+
+<ul>
+<li>Las pruebas de sistema cubren todas las funcionalidades y escenarios de uso</li>
+<li>Conforme el proyecto progresa el sistema pasa más y más pruebas de sistema</li>
+</ul></li>
+<li>Ej: con un plan de desarrollo basado en <em>threads</em>, hay disponibles más funcionalidades conforme se avanza en el desarrollo</li>
+</ul>
+
+<h2 id="toc_4">Propiedades globales</h2>
+
+<ul>
+<li>Algunas propiedades de los sistemas osn inherentemente globales
+
+<ul>
+<li>rendimiento, latencia, fiabilidad, seguridad...</li>
+<li>las pruebas tempranas e incrementales son todavía necesarias, pero solo proporcionan estimaciones</li>
+</ul></li>
+<li>Objetivo primordial de las pruebas de sistema
+
+<ul>
+<li>La única oportunidad para verificar propiedades globales contra las especificaciones del sistema</li>
+<li>En particular para encontrar efectos imprevistos
+
+<ul>
+<li>por ejemplo, un cuello de botella imprevisto en el rendimiento</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_5">Propiedades dependientes del contexto</h2>
+
+<ul>
+<li>Algunas propiedades (globales) dependen del contexto y del uso
+
+<ul>
+<li>Ej: el rendimiento puede depender del entorno y de la configuración</li>
+<li>Ej: la privacidad depende del sistema y de cómo este es utilizado
+
+<ul>
+<li>los sistemas de informes médicos deben ser protegidos de usos no autorizados, las autorizaciones deben darse cuando sean necesarias</li>
+</ul></li>
+</ul></li>
+<li>Cuando una propiedad (rendimiento, tiempo de respuesta...) depende de su uso (peticiones por seg., tamaño de BDs...)
+
+<ul>
+<li>debemos variar los parámetros dentro de los rangos aceptables, cerca de los bordes, y más allá</li>
+</ul></li>
+<li>Objetivo: Modelo de cómo la propiedad varía con el parámetro
+
+<ul>
+<li>cómo de sensible es la propiedad con respecto a dicho parámetro</li>
+<li>cuál es el límite</li>
+<li>qué podemos esperar cuando se supera este valor</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_6">Tipos de pruebas de sistema</h2>
+
+<ul>
+<li>Pruebas de capacidad</li>
+<li>Pruebas de estrés</li>
+<li>Pruebas de usabilidad</li>
+<li>Pruebas de seguridad</li>
+<li>Pruebas de rendimiento</li>
+<li>Pruebas de fiabilidad</li>
+<li>Pruebas de conformidad</li>
+<li>Pruebas de disponibilidad/reparabilidad</li>
+<li>Pruebas de documentación</li>
+<li>Pruebas de configuración</li>
+</ul>
+
+<h3 id="toc_7">Pruebas de capacidad</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: los sistemas que deben tratar grandes volúmenes de datos deben tener probados sus límites, y cómo reaccionan ante fallos cuando se sobrepasa esa capacidad</li>
+<li><strong>Qué/Cómo</strong>: construiremos un arnés que genere una gran cantidad de datos, bien simulados o con datos existentes</li>
+<li><strong>Por qué</strong>: debemos asegurarnos de que el sistema es capaz de manejar el volumen de datos para el que fue pensado</li>
+<li><strong>A favor</strong>: proporciona confianza en que el sistema es capaz de manejar volúmenes elevados de datos</li>
+<li><strong>En contra</strong>: puede ser complicado crear datos representativos, puede llevar mucho tiempo hacer las pruebas</li>
+</ul>
+
+<h3 id="toc_8">Pruebas de estrés</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: sistemas que deben responder en tiempo real (sistemas de control) o sistemas empotrados (sistemas antibloqueo de frenado)</li>
+<li><strong>Qué/Cómo</strong>: tráfico de mensajes muy grande y condiciones extremas. Construimos una estructura en que se integren componentes mecánicos, electrónicos y software</li>
+<li><strong>Por qué</strong>: es necesario tener la certeza de que funcionan en esas condiciones para que se pueda confiar en ellos</li>
+<li><strong>A favor</strong>: inevitable para este tipo de sistemas</li>
+<li><strong>En contra</strong>: es posible que no se pueda reproducir las condiciones y es fácil omitir algún componente</li>
+</ul>
+
+<h3 id="toc_9">Pruebas de usabilidad</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: sistemas con una interfaz de usuario significativa y donde es importante evitar errores de uso (cuadro de mandos de un avión, sistema de entretenimiento...)</li>
+<li><strong>Qué/Cómo</strong>: podríamos construir un simulador, o simplemente hacer que lo prueben muchos usuarios en un entorno controlado. Es necesario estructurar las pruebas con objetivos claros y tener formas adecuadas de recopilar y analizar datos</li>
+<li><strong>Por qué</strong>: puede haber cuestiones de seguridad o simplemente hacer de la usabilidad un valor del producto</li>
+<li><strong>A favor</strong>: en contextos controlados puede producir buen feedback, a menudo respaldado por alguna teoría (estimaciones de carga cognitiva, etc.)</li>
+<li><strong>En contra</strong>: ciertos requisitos de usabilidad son difíciles de expresar y probar, es posible que se prueben extensivamente y después no se sepa qué hacer con los datos</li>
+</ul>
+
+<h3 id="toc_10">Pruebas de seguridad</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: la mayoría de sistemas abiertos, para evitar usuarios malintencionados</li>
+<li><strong>Qué/Cómo</strong>: un amplio abanico de posibilidades: tablas de errores típicos a comprobar y revisar, preparar equipos que intenten romper el sistema...</li>
+<li><strong>Por qué</strong>: es esencial para ciertos sistemas</li>
+<li><strong>A favor</strong>: el mayor esfuerzo ha de hacerse en el diseño del sistema y en el uso de componentes seguros</li>
+<li><strong>En contra</strong>: si nos limitamos a listas de errores habituales estamos desprotegidos ante nuevos tipos de ataques</li>
+</ul>
+
+<h3 id="toc_11">Pruebas de rendimiento</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: muchos sistemas están obligados a satisfacer determinados niveles de rendimiento de acuerdo con sus contratos a nivel de servicio</li>
+<li><strong>Qué/Cómo</strong>: dos enfoques:
+
+<ul>
+<li>modelado/simulación</li>
+<li>ejecución directa en un entorno simulado (o en el entorno real)</li>
+</ul></li>
+<li><strong>Por qué</strong>: muchas compañías cobran por ofrecer un determinado nivel de servicio (ej: el sistema de pagos de VISA garantiza autorizaciones de servicio en menos de 5s)</li>
+<li><strong>A favor</strong>: muestra evidencias del rendimiento del sistema, el modelado puede indentificar cuellos de botella y otros problemas</li>
+<li><strong>En contra</strong>: no es fácil encontrar pruebas realmente significativas</li>
+</ul>
+
+<h3 id="toc_12">Pruebas de fiabilidad</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: necesitamos probar que ciertos sistemas fallarán con muy poca frecuencia (ej: sistema de control de una central nuclear no fallará más de una vez por 10000 horas de funcionamiento)</li>
+<li><strong>Qué/Cómo</strong>: creamos una prueba relevante y recopilamos información suficiente para apoyar la afirmación estadística</li>
+<li><strong>Por qué</strong>: sistemas regulados o porque queremos hacer de la fiabilidad un valor añadido</li>
+<li><strong>A favor</strong>: si los datos de prueba son representativos es posible hacer predicciones precisas</li>
+<li><strong>En contra</strong>: es necesario recopilar enormes cantidades de datos para sistemas de alta fiabilidad</li>
+</ul>
+
+<h3 id="toc_13">Pruebas de conformidad</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: en mercados regulados es necesario demostrar que el sistema es conforme con las especificaciones (ej: un compilador de C debe ser conforme con ANSI C)</li>
+<li><strong>Qué/Cómo</strong>: es habitual que haya conjuntos de pruebas estandarizadas que consituyen buenos niveles de cobertura del comportamiento del sistema</li>
+<li><strong>Por qué</strong>: podemos identificar áreas problemáticas y proporcionar pruebas para comprobar dichas condiciones</li>
+<li><strong>A favor</strong>: el coste de las pruebas es compartido</li>
+<li><strong>En contra</strong>: normalmente el desarrollo se orienta a superar las pruebas y se cuidan menos otros aspectos</li>
+</ul>
+
+<h3 id="toc_14">Pruebas de disponibilidad/reparabilidad</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: estamos interesados en conocer la frecuencia con que ocurren los fallos y el tiempo que tarda el sistema en recuperarse (ej: proveedor de servicio)</li>
+<li><strong>Qué/Cómo</strong>: similar a los tests de fiabilidad, aunque en este caso se está más interesado en conocer cuánto tarda en recuperarse</li>
+<li><strong>Por qué</strong>: no queremos largas interrupciones en servicios críticos</li>
+<li><strong>A favor</strong>: similar a los de fiabilidad</li>
+<li><strong>En contra</strong>: similar a los de fiabilidad (puede ser más fácil recuperarse de errores conocidos)</li>
+</ul>
+
+<h3 id="toc_15">Pruebas de documentación</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: la documentación de todos los sistemas con documentación debería ser probada</li>
+<li><strong>Qué/Cómo</strong>: la documentación se corresponde con el sistema. Bastaría con que alguien siguiera la documentación completa</li>
+<li><strong>Por qué</strong>: los usuarios pueden confundirse si la documentación no se corresponde con el sisteam</li>
+<li><strong>A favor</strong>: garantiza la consistencia</li>
+<li><strong>En contra</strong>: difícil comprobar la consistencia de la narrativa y no solo de los ejemplos</li>
+</ul>
+
+<h3 id="toc_16">Pruebas de configuración</h3>
+
+<ul>
+<li><strong>Cuándo</strong>: a lo largo de la vida del sistema, cuando la configuración software o hardware son modificadas</li>
+<li><strong>Qué/Cómo</strong>: típicamente establecemos relaciones o restricciones entre los diferentes componentes (ej: bibliotecas y sistemas, hardware y drivers, etc.)</li>
+<li><strong>Por qué</strong>: cambios en la configuración provocarán fallos si no son corregidos</li>
+<li><strong>A favor</strong>: trata un tipo de errores cada vez más frecuente. Es posible automatizar este tipo de comprobaciones</li>
+<li><strong>En contra</strong>: depende de las dependencias que se establezcan</li>
+</ul>
+
+<h2 id="toc_17">Pruebas de aceptación</h2>
+
+<ul>
+<li>Propósito: guiar en la decisión de si el producto puede ser distribuido</li>
+<li>Medidas de calidad, no se buscan errores</li>
+<li>Los criterios de aceptación son estadísticos
+
+<ul>
+<li>fiabilidad</li>
+<li>disponibilidad</li>
+<li>tiempo medio entre fallos</li>
+<li>...</li>
+</ul></li>
+<li>Requiere muestras estadísticas válidas de registros de funcionamiento normal</li>
+</ul>
+
+<h3 id="toc_18">Muestreo estadístico</h3>
+
+<ul>
+<li>Necesita un modelo preciso de uso: qué se está midiendo y para qué población
+
+<ul>
+<li>una versión previa del sistema</li>
+<li>un modelo del entorno de actividad (ej: para un controlador empotrado)</li>
+<li>pruebas de sensibilidad pueden revelar qué parámetros son más importantes</li>
+</ul></li>
+<li>Necesita una definición clara de qué se está midiendo
+
+<ul>
+<li>ratio de fallo ? por sesión, por hora, por operación ?</li>
+<li>un sistema que se ejecuta 1 vez por segundo, con 99.9999% de fiabilidad (un ratio de fallos de 1 entre un millón) falla 31 veces en un año !</li>
+</ul></li>
+<li>Son necesarias cantidades enormes de muestras aleatorias
+
+<ul>
+<li>en especial para niveles elevados de fiabilidad</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_19">Medidas basadas en el proceso</h3>
+
+<ul>
+<li>Menos riguroso que las pruebas estadísticas
+
+<ul>
+<li>basadas en la similitud con proyectos anteriores</li>
+</ul></li>
+<li>Proceso de pruebas de sistema
+
+<ul>
+<li>historia esperada de errores encontrados y resueltos</li>
+</ul></li>
+<li>Pruebas alfa y beta
+
+<ul>
+<li>pruebas alfa: usuarios reales en entornos controlados</li>
+<li>pruebas beta: usuarios reales en entornos reales no controlados</li>
+<li>muestrea estadísticamente usuarios, no usos</li>
+<li>historia esperada de informes de errores</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_20">Usabilidad</h2>
+
+<ul>
+<li>Qué es un producto usable
+
+<ul>
+<li>se aprende rápido</li>
+<li>permite que los usuarios lo utilicen eficientemente</li>
+<li>es agradable de usar</li>
+</ul></li>
+<li>Criterios
+
+<ul>
+<li>tiempo y número de operaciones para realizar una tarea</li>
+<li>frecuencia de errores de usuario
+
+<ul>
+<li>los errores del usuario son culpa del producto !</li>
+</ul></li>
+<li>y sobre todo, satisfacción subjetiva</li>
+</ul></li>
+<li>La usabilidad es algo que depende de los usuarios reales (validación, no verificación)</li>
+<li>Es necesario identificar criterios para poder establecer la usabilidad a lo largo del desarrollo del proyecto
+
+<ul>
+<li>prototipos incrementales, listas de objetivos...</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_21">Variedades de pruebas de usabilidad</h3>
+
+<ul>
+<li>Pruebas exploratorias
+
+<ul>
+<li>modelos mentales de los usuarios</li>
+<li>realizado previamente para guiar el diseño de interfaces</li>
+</ul></li>
+<li>Pruebas de comparación
+
+<ul>
+<li>evaluar opciones (opciones de diseño de interfaces)</li>
+<li>observar (y medir) las interacciones con patrones de interacción alternativos</li>
+</ul></li>
+<li>Pruebas de validación de usabilidad
+
+<ul>
+<li>estimar la usabilidad global (cualitativa y cuantitativamente)</li>
+<li>medidas consideradas: ratio de errores, tiempo para completar tareas...</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_22">Protocolo de pruebas de usabilidad típico</h3>
+
+<ul>
+<li>Seleccionar muestra representativa de grupos de usuarios
+
+<ul>
+<li>Típicamente 3-5 usuarios de cada uno de 1-4 grupos</li>
+<li>La pertenencia a cada grupo es verificada con cuestionarios</li>
+</ul></li>
+<li>Pedir a los usuarios que realicen una secuencia representativa de tareas</li>
+<li>Observar, sin interferencia (sin ayuda)</li>
+<li>Medir (clicks de ratón, movimientos de ojos, tiempo...)</li>
+<li>Acabar con un cuestrionario (opinión...)</li>
+</ul>
+
+<h2 id="toc_23">Pruebas de regresión</h2>
+
+<ul>
+<li>&quot;Ayer funcionaba, hoy no&quot;
+
+<ul>
+<li>&quot;Estaba arreglando X y accidentalmente romí Y&quot;</li>
+<li>&quot;Ese error estaba corregido, ahora ha vuelto&quot;</li>
+</ul></li>
+<li>Las pruebas han de ser ejecutadas de nuevo tras cada cambio
+
+<ul>
+<li>Al añadir nuevas funcionalidades</li>
+<li>Al cambiar, adaptar el software a nuevas condiciones</li>
+<li>Arreglando otros errores</li>
+</ul></li>
+<li>Las pruebas de regresión pueden suponer una parte importante de los costes de mantenimiento del software
+
+<ul>
+<li>Algunas veces mucho más que hacer el cambio</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_24">Problemas de las pruebas de regresión</h3>
+
+<ul>
+<li>Mantenimiento del suite de pruebas
+
+<ul>
+<li>Si cambio una característica, cuántos casos de prueba han de ser revisados ?</li>
+<li>Qué casos de prueba deberían ser eliminados o reemplazados ?</li>
+<li>Qué nuevos casos de prueba deberían añadirse ?</li>
+</ul></li>
+<li>Coste de re-ejecutar las pruebas
+
+<ul>
+<li>A menudo proporcional al tamaño del código, no del cambio</li>
+<li>Muy costoso si requiere un esfuerzo manual
+
+<ul>
+<li>Incluso para pruebas automáticas si el tiempo de ejecución de las pruebas es superior a un par de horas</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_25">Mantenimiento de los casos de prueba</h3>
+
+<ul>
+<li>Es inevitable tener que mantener las pruebas
+
+<ul>
+<li>Si ha cambiado la característica X los casos de prueba para X necesitarán ser actualizados</li>
+</ul></li>
+<li>Parte del mantenimiento puede evitarse
+
+<ul>
+<li>Ej: cambios triviales a las GUIs o formatos de ficheros no deberían invalidar grandes cantidades de pruebas</li>
+</ul></li>
+<li>Los suites de pruebas deberían ser modulares
+
+<ul>
+<li>Evita dependencias innecesarias</li>
+<li>El generar casos de pruebas específicos para cada especificación de prueba puede ayudar</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_26">Selección de casos de prueba de regresión</h3>
+
+<ul>
+<li>Debemos re-ejecutar el conjunto de pruebas de regresión completo ? Y si la respuesta es sí, en qué orden ?
+
+<ul>
+<li>Si el coste es bajo (tiempo y recursos) adelante</li>
+</ul></li>
+<li>El orden importa cuando
+
+<ul>
+<li>Es caro ejecutar los casos de prueba
+
+<ul>
+<li>requieren equipamiento especial</li>
+<li>largos tiempos de ejecución</li>
+<li>no pueden ser automatizadas</li>
+</ul></li>
+</ul></li>
+<li>Es importante dar prioridades cuando
+
+<ul>
+<li>Un gran conjunto de pruebas tarda demasiado en ser ejecutado</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_27">Selección de pruebas de regresión basada en código</h3>
+
+<ul>
+<li>Observación: un caso de prueba no puede encontrar un error en código que no ejecuta
+
+<ul>
+<li>En un gran sistema, muchas partes del código no son tocadas por muchos casos de prueba</li>
+</ul></li>
+<li>Y por tanto: ejecutemos solo casos de prueba que ejecutan código cambiado o nuevo</li>
+</ul>
+
+<p><img src="https://i.imgur.com/CLk6PwQ.png" alt=""></p>
+
+<h3 id="toc_28">Selección de casos de prueba basados en flujos de control y datos</h3>
+
+<ul>
+<li>Misma idea que para la selección basada en código
+
+<ul>
+<li>Re-ejecuta casos de prueba solo si incluyen elementos cambiados</li>
+<li>Los elementos cambiados pueden ser nodos y arcos en los flujos de control, o pares DU en los flujos de datos</li>
+</ul></li>
+<li>Para automatizar la selección
+
+<ul>
+<li>Hay herramientas que registran los elementos afectados por cada caso de prueba
+
+<ul>
+<li>Almacenados en bases de datos de casos de prueba de regresión</li>
+</ul></li>
+<li>Hay herramientas que detectan cambios en los programas</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_29">Selección de casos de prueba de regresión basados en especificación</h3>
+
+<ul>
+<li>Seleccionamos casos de prueba que prueban funcionalidades nuevas o alteradas</li>
+<li>Diferencia. no hay garantía de independencia
+
+<ul>
+<li>Un caso que no es &quot;para&quot; una característica cambiada o añadida puede encontrar un error en esa característica</li>
+</ul></li>
+<li>Enfoque típico
+
+<ul>
+<li>Ejecuta todos los casos de prueba, pero empieza por aquellos que están relacionados con las características cambiadas o añadidas</li>
+</ul></li>
+</ul>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+<script type="text/javascript">
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",asciidoc:"AsciiDoc",aspnet:"ASP.NET (C#)",autoit:"AutoIt",autohotkey:"AutoHotkey",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript","css-extras":"CSS Extras",fsharp:"F#",glsl:"GLSL",http:"HTTP",inform7:"Inform 7",json:"JSON",latex:"LaTeX",lolcode:"LOLCODE",matlab:"MATLAB",mel:"MEL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",parigp:"PARI/GP",php:"PHP","php-extras":"PHP Extras",powershell:"PowerShell",jsx:"React JSX",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",typescript:"TypeScript",vhdl:"VHDL",vim:"vim",wiki:"Wiki markup",yaml:"YAML"};Prism.hooks.add("before-highlight",function(s){var a=s.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var t,i,r=a.getAttribute("data-language")||e[s.language]||s.language.substring(0,1).toUpperCase()+s.language.substring(1),l=a.previousSibling;l&&/\s*\bprism-show-language\b\s*/.test(l.className)&&l.firstChild&&/\s*\bprism-show-language-label\b\s*/.test(l.firstChild.className)?i=l.firstChild:(t=document.createElement("div"),i=document.createElement("div"),i.className="prism-show-language-label",t.className="prism-show-language",t.appendChild(i),a.parentNode.insertBefore(t,a)),i.innerHTML=r}})}}();
+</script>
+
+
+</body>
+
+</html>

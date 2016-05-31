@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>3_gui_testing</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+<style type="text/css">
+div.prism-show-language {
+	position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Pruebas de interfaces de usuario</h1>
+
+<h2 id="toc_1">Pruebas de GUIs</h2>
+
+<ul>
+<li>La principal característica de cualquier aplicación con interfaz gráfica de usuario es que es <strong>guiada por eventos</strong></li>
+<li>La esencia de las pruebas de sistema para aplicaciones con GUI es ejercitar esta naturaleza guiada por eventos</li>
+<li>Los modelos UML proporcionan diagramas muy apropiados para ello
+
+<ul>
+<li>Diagramas de comportamiento
+
+<ul>
+<li>Statecharts</li>
+<li>Máquinas de estados finitos</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_2">El programa de conversión de moneda</h2>
+
+<p><img src="https://i.imgur.com/8kKq8cB.png" alt=""></p>
+
+<ul>
+<li>Para probar una aplicación con GUI, lo primero será identificar
+
+<ul>
+<li>todos los eventos de entrada del usuario</li>
+<li>todos los eventos de salida del sistema (observables externamente)</li>
+</ul></li>
+</ul>
+
+<p><img src="https://i.imgur.com/hwcX87T.png" alt=""></p>
+
+<ul>
+<li>Máquina de estados finitos de alto nivel de la GUI
+
+<ul>
+<li>Los estados representan apariencias de la GUI visibles externamente</li>
+</ul></li>
+</ul>
+
+<p><img src="https://i.imgur.com/3d3Ey1D.png" alt=""></p>
+
+<ul>
+<li>El estado <em>Country Selected</em> en realidad es un &quot;macro estado&quot; que se refiere a uno de los cuatro países seleccionados. Los eventos (artificiales) <em>ip2</em> y <em>op2</em>, <em>op3</em> y <em>op4</em> simplifican la máquina de estados</li>
+</ul>
+
+<p><img src="https://i.imgur.com/NGELjKQ.png" alt=""></p>
+
+<h2 id="toc_3">Las pruebas de GUIs son complicadas</h2>
+
+<ul>
+<li>Son <strong>imprescindibles</strong>, el usuario identifica la aplicación con su uso</li>
+<li>Dependiendo de la complejidad (casos de uso, puntos de inicio y de final, etc.) las pruebas pueden ser muy <strong>numerosas</strong>
+
+<ul>
+<li>GUIs complicadas</li>
+<li>Código de las GUIs denso, a menudo sensible a cambios de entorno</li>
+</ul></li>
+<li>Por distintas razones (falta de conocimiento, falta de timepo, complejidad) las pruebas de GUIs normalmente se hacen <strong>a mano, con efectos negativos</strong>:
+
+<ul>
+<li>Las pruebas son repetitivas</li>
+<li>Las pruebas manuales son extremadamente largas</li>
+<li>Difícil conseguir alto nivel de cobertura</li>
+</ul></li>
+<li>Las pruebas, para ser efectivas, <strong>han de automatizarse</strong>
+
+<ul>
+<li>Las GUIs son diseñadas para ser usadas por personas, no por programas</li>
+<li>Las pruebas de unidad no encajan con las GUIs, estas normalmente implican más de una clase</li>
+</ul></li>
+<li>Una GUI es guiada por eventos
+
+<ul>
+<li>El kit de pruebas debería simular eventos, esperar a que el evento llegue a un oyente de eventos, lo maneja y por último comprobar que la GUI ha respondido satisfactoriamente</li>
+</ul></li>
+<li>Una GUI puede cambiar layout y apariencia sin cambiar su funcionalidad</li>
+</ul>
+
+<h2 id="toc_4">Pruebas de GUIs semi-automáticas</h2>
+
+<ul>
+<li>La creación de pruebas automatizadas es más cara que las pruebas normales</li>
+<li>Los costes de mantenimiento son altos</li>
+<li>Las interfaces pueden ser bastante dinámicas</li>
+<li>Imponer la estabilidad del sistema para poder automatizar las pruebas puede hacerlo demasiado rígido</li>
+<li>Los beneficios de las pruebas de GUIs vienen tarde (cuando el sistema es estable)</li>
+</ul>
+
+<h2 id="toc_5">Requisitos básicos para las pruebas de GUI</h2>
+
+<ul>
+<li>Pruebas funcionales: probamos si el programa se comporta como se espera desde el punto de vista del usuario
+
+<ul>
+<li>Son la forma más fiable de garantizar que una GUI funciona como se espera</li>
+</ul></li>
+<li>No deberíamos tener que probar comportamiento de los componentes
+
+<ul>
+<li>Un botón debería comportarse como un botón, es trabajo del desarrollador de GUIs probar estas cosas</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_6">Construcción de GUIs</h2>
+
+<ul>
+<li>Recomendaciones para construir GUIs &quot;probables&quot;:
+
+<ul>
+<li>Seguir el patrón de diseño Modelo-Vista-Controlador (MVC) para separar la lógica interna del aspecto visual
+
+<ul>
+<li>Así la lógica interna puede probarse por métodos de prueba normales independientemente de la GUI</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_7">Una buena herramienta para pruebas de GUIs</h2>
+
+<ul>
+<li>Debe haber una forma fiable de acceder a los componentes de las GUIs
+
+<ul>
+<li>Cambios de posición, tamaño y layout no deben romper las pruebas</li>
+</ul></li>
+<li>Características que una buena biblioteca de pruebas de GUIs debería proporcionar:
+
+<ul>
+<li>Una API intuitiva. Debería permitir que tanto desarrolladores como probadores se centren en los escenarios de casos de uso a probar, en lugar de cómo usar las herramientas</li>
+<li>Una API concisa. Fácil de leer, de forma que las pruebas son cortas y legibles, y haciendo que el mantenimiento sea menos costoso</li>
+<li>Información útil. Debería proporcioinar suficiente información sobre la GUI probada de forma que se garantice la localización de los fallos detectados</li>
+</ul></li>
+<li>Extra:
+
+<ul>
+<li>Debería soportar pruebas
+
+<ul>
+<li>grabadas (scripts record/playback)</li>
+<li>programadas</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Herramienta</th>
+<th style="text-align: center">Comercial</th>
+<th style="text-align: center">Grabación</th>
+<th style="text-align: center">Orientación</th>
+<th style="text-align: center">Integrado con JUnit</th>
+<th style="text-align: center">Especificidades</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">UISpec4J</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">Programador</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">Enfoque basado en proxies (permite definir pruebas antes de implementación)</td>
+</tr>
+<tr>
+<td style="text-align: center">FEST</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">Programador</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">Permite usar mock objects (pruebas funcionales)</td>
+</tr>
+<tr>
+<td style="text-align: center">Abbot/Costello</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">Probador</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">Permite especificación de pruebas con XML</td>
+</tr>
+<tr>
+<td style="text-align: center">Pounder</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Marathon</td>
+<td style="text-align: center">No</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Jubula</td>
+<td style="text-align: center">+/-</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">Probador</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">BD para almacenamiento de pruebas</td>
+</tr>
+<tr>
+<td style="text-align: center">QF-Test</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">Testing Anywhere</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">TOSCA</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td style="text-align: center">IBM Rational Functional Tester (RTF)</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">Sí</td>
+<td style="text-align: center">Probador</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_8">Métodos para las pruebas de GUIs</h2>
+
+<ul>
+<li>Scripts record/playback
+
+<ul>
+<li>Las pruebas interaccionan con una GUI existente</li>
+<li>Todos los eventos generados por el usuario son grabados en un script</li>
+<li>Los desarrolladores pueden repetir el script para reproducir las interacciones con el usuario</li>
+<li>Tiempo de desarrollo de pruebas pequeño</li>
+<li>Tiempo de mantenimiento de las pruebas grande. Requiere regrabar todos los escenarios de prueba afectados por el cambio</li>
+<li>Escritos en lenguajes propietarios</li>
+</ul></li>
+<li>Pruebas de GUIs programadas
+
+<ul>
+<li>Escritos en lenguajes OO
+
+<ul>
+<li>más fáciles de mantener</li>
+<li>más fácilmente ajustables a cambios en la aplicación</li>
+</ul></li>
+<li>Utilización de IDEs
+
+<ul>
+<li>más productividad</li>
+<li>menos coste de mantenimiento</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="toc_9">Problemas con el record/playback</h3>
+
+<ul>
+<li>Localización
+
+<ul>
+<li>Idiomas</li>
+<li>Formatos locales (fechas)</li>
+</ul></li>
+<li>Personalización
+
+<ul>
+<li>Esquemas de colores, imágenes, tipos de letra, tamaño y posición de pop-ups...</li>
+<li>Formatos preferidos (primer día de la semana, un día/semana por página...)</li>
+<li>Shortcuts, pasos de diálogo opcionales</li>
+</ul></li>
+<li>Entorno
+
+<ul>
+<li>Qué navegador web o gestor de ventanas</li>
+<li>Disponibilidad de aplicaciones de apoyo</li>
+<li>Diferentes entornos pueden llevar a diferentes comportamientos de una GUI para la misma secuencia de gestos</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_10">Pruebas de GUIs programadas</h3>
+
+<ul>
+<li>Más fáciles y baratas de mantener</li>
+<li>Más difíciles de desarrollar
+
+<ul>
+<li>Requiere una forma de encontrar los componentes de la GUI</li>
+<li>Simula las interacciones con estas componentes</li>
+<li>Verifica que la salida obtenida es la esperada</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_11"><a href="http://abbot.sourceforge.net">Abbot</a></h2>
+
+<ul>
+<li>Record/playback: script basados en XML</li>
+<li>Robusto: utiliza atributos para identificar componentes de la GUI dinámicamente sin depender de posiciones</li>
+<li>Extensión de JUnit/TestNG: permite escribir pruebas programadas</li>
+<li>ComponentFinder (encuentra componentes)</li>
+<li>Robot (simula acciones)</li>
+</ul>
+
+<h2 id="toc_12">Pruebas de GUIs con <code>java.awt.Robot</code></h2>
+
+<ul>
+<li><code>java.awt.Robot</code> fue introducida en JDK 1.3</li>
+<li>Útil para probar GUIs construidas con Swing y AWT</li>
+<li>Posibilidad de simular eventos de usuario
+
+<ul>
+<li>Robot puede simular acciones del ususario controlando el ratón y el teclado del entorno de la aplicación</li>
+</ul></li>
+<li><code>java.awt.Robot</code> es una clase de muy bajo nivel, y necesita demasiado código para simular acciones de usuario</li>
+<li>Pruebas muy frágiles</li>
+</ul>
+
+<h2 id="toc_13">Abbot</h2>
+
+<ul>
+<li>Tests &quot;robustos&quot;
+
+<ul>
+<li>Tolerancia a cambios en las posiciones y layout de componentes</li>
+</ul></li>
+<li>API complicada de usar</li>
+</ul>
+
+<h2 id="toc_14">FEST (Fixtures for Easy Software Testing)</h2>
+
+<ul>
+<li>Biblioteca de código abierto bajo Apache 2.0</li>
+<li>Construido sobre Abbot y JUnit/TestNG</li>
+<li>Facilita la creación y mantenimiento de pruebas funcionales de GUIs</li>
+<li>Características que lo distinguen de otros proyectos:
+
+<ul>
+<li>Métodos-aserto para comprobar el estado de los componentes de la GUI</li>
+<li>Puede generar capturas de pantalla de pruebas fallidas</li>
+<li>Integración con herramientas para mocking</li>
+<li>Proporciona facilidades para acceso reflexivo</li>
+<li>Extensiones a Groovy, Selenium...</li>
+<li>API fácil de usar (<em>fluent interfaces</em>)</li>
+</ul></li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">@Test
+public void shouldChangeTextInTextFieldWhenClickingButton() {
+    naive.button(&quot;byeButton&quot;).click();
+    naive.label(&quot;messageLabel&quot;).requireText(&quot;Bye!&quot;);
+}</code></pre></div>
+
+<h3 id="toc_15">Localización de componentes</h3>
+
+<ul>
+<li>Se necesitan identificadores únicos para cada componente
+
+<ul>
+<li>El texto mostrado en un componente no debería utilizarse para identificarlo (internacionalización, evolución...)</li>
+<li>Aunque complicado, sería posible identificarlo por tipo</li>
+</ul></li>
+<li>FEST tiene tres formas de localizar componentes
+
+<ul>
+<li>Por nombre</li>
+<li>Por tipo</li>
+<li>Específica</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_16">Desarrollo de GUIs guiado por pruebas con FEST</h3>
+
+<ul>
+<li>Supongamos que queremos desarrollar una GUI con el siguiente aspecto</li>
+</ul>
+
+<p><img src="https://i.imgur.com/qJaaELg.png" alt=""></p>
+
+<ul>
+<li>Comportamiento esperado
+
+<ul>
+<li>El usuario introduce su <code>username</code> y <code>password</code></li>
+<li>El usuario selecciona el dominio al que quiere conectarse de entre los ofrecidos en el desplegable</li>
+<li>Si uno de los campos se deja en blanco se abre una ventana de diálogo notificando al usuario de que la información que falta es necesaria</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_17"> Creamos nuestras pruebas con FEST</h3>
+
+<ul>
+<li>Primero creamos nuestra clase de pruebas</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">public class LoginWindowTest {
+    // TODO implement
+}</code></pre></div>
+
+<ul>
+<li>Activamos la comprobación automática de que todos los componentes Swing son actualizados a través de la EDT de Swing (Event Dispatcher Thread)
+
+<ul>
+<li>Con esto FEST comprobará que la EDT será usada correctamente</li>
+</ul></li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">@BeforeClass
+public static void setUpOnce() {
+    FailOnThreadViolationRepaintManager.install();
+}</code></pre></div>
+
+<ul>
+<li>Como JUnit se ejecuta en su propio thread, debemos lanzar nuestro frame o dialog desde FEST, para asegurarnos de que se usa bien la EDT</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">@Before
+public void setUp() {
+    frame = new FrameFixture(
+        GuiActionRunner.execute(
+            new GuiQuery&lt;JFrame&gt;() {
+                protected JFrame executeInEDT() {
+                    return new LoginFrame();
+                }
+            }
+        )
+    );
+    
+    frame.show();
+    // testFrame.robot.settings().delayBetweenEvents(500);
+}</code></pre></div>
+
+<ul>
+<li>Al acabar nos aseguramos de descargar el frame y los recursos utilizados</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">@After
+public void tearDown() {
+    frame.cleanUp();
+}</code></pre></div>
+
+<ul>
+<li>Ya estamos listos para crear nuestras pruebas</li>
+<li>Comprobemos que al pulsar el botón <code>ok</code> con el campo <code>username</code> vacío se abre una ventana de diálogo indicando la situación</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">@Test
+public void shouldShowErrorIfUsernameIsMissing() {
+    frame.textBox(&quot;username&quot;).deleteText();
+    frame.textBox(&quot;password&quot;).enterText(&quot;secret&quot;);
+    frame.comboBox(&quot;domain&quot;).selectItem(&quot;USERS&quot;);
+    frame.button(&quot;ok&quot;).click();
+    frame.optionPane().requireErrorMessage().requireMessage(&quot;Please enter your username&quot;);
+}</code></pre></div>
+
+<ul>
+<li>Ahora podemos ejecutar nuestras pruebas como siempre</li>
+<li>Es aconsejable no hacer nada en el ordenador mientras se hacen las pruebas</li>
+</ul>
+
+<h2 id="toc_18">Selenium WebDriver</h2>
+
+<ul>
+<li>WebDriver proporciona una API orientada a objetos para realizar pruebas de aplicaciones web</li>
+<li>WebDriver hace llamadas directas al navegador, utilizando soporte nativo de este</li>
+<li>Ofrece drivers para varios navegadores: ChromeDriver, FirefoxDriver, OperaDriver, AndroidDriver e iOSDriver</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">WebDriver driver = new ChromeDriver();</code></pre></div>
+
+<h3 id="toc_19">Cargar una página</h3>
+
+<div><pre class="line-numbers"><code class="language-java">driver.get(&quot;https://neko250.github.io&quot;);</code></pre></div>
+
+<ul>
+<li>El comportamiento de get depende del SO y del navegador utilizados</li>
+<li>WebDriver puede devolver el control antes de que la página haya sido cargada, siendo en algunos casos necesario introducir esperas explícitas o implícitas</li>
+</ul>
+
+<h3 id="toc_20">Localización de componentes (WebElements)</h3>
+
+<div><pre class="line-numbers"><code class="language-java">WebElement f = driver.findElement(By.id(&quot;formacion&quot;));</code></pre></div>
+
+<ul>
+<li>Podemos localizar elementos en un WebDriver o en un WebElement</li>
+<li>Podemos localizar
+
+<ul>
+<li>Un objeto WebElement (lanza una excepción si no se localiza)</li>
+<li>Una lista de WebElements (vacía si no se encuentra ningún elemento)</li>
+</ul></li>
+<li>By:
+
+<ul>
+<li><code>By.id(String)</code></li>
+<li><code>By.className(String)</code></li>
+<li><code>By.tagName(String)</code></li>
+<li><code>By.name(String)</code></li>
+<li><code>By.linkText(String)</code></li>
+<li><code>By.partialLinkText(String)</code></li>
+<li><code>By.cssSelector(String)</code></li>
+<li><code>By.xpath(String)</code></li>
+<li>Usando JavaScript...</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_21">Acciones sobre WebElements</h3>
+
+<ul>
+<li><code>sendKeys(String)</code>
+
+<ul>
+<li>Introduce texto en un área o compo de texto</li>
+</ul></li>
+<li><code>click()</code></li>
+<li><code>getText()</code></li>
+<li><code>getAttribute()</code> / <code>setAttribute()</code></li>
+<li><code>submit()</code>
+
+<ul>
+<li>Para enviar formularios (forms), en cualquier elemento del formulario</li>
+</ul></li>
+<li><code>switch()</code>
+
+<ul>
+<li>Para cambiarnos entre frames, windows o pop-ups</li>
+</ul></li>
+<li><code>navigate()</code>
+
+<ul>
+<li>Para movernos entre frames, windows o pop-ups</li>
+</ul></li>
+<li>Gestionar cookies</li>
+<li>Profiles</li>
+<li>Drag&amp;Drop</li>
+</ul>
+
+<h3 id="toc_22">Seleccionar una opción de un desplegable</h3>
+
+<div><pre class="line-numbers"><code class="language-java">WebElement units = driver.findElement(By.xpath(&quot;//*[@id=\&quot;aspnetForm\&quot;]/div[5]/table/tbody/tr[1]/td[2]/select&quot;));
+Iterator&lt;WebElement&gt; it = units.findElements(By.tagName(&quot;option&quot;)).iterator();
+boolean found = false;
+WebElement option = null;
+
+while (!found &amp;&amp; it.hasNext()) {
+    option = it.next();
+    found = option.getAttribute(&quot;value&quot;).equals(&quot;km&quot;);
+}
+
+if (found)
+    option.click();</code></pre></div>
+
+<h3 id="toc_23">Esperas explícitas</h3>
+
+<ul>
+<li><code>WebDriverWait(driver, timeout)</code>
+
+<ul>
+<li>Driver que se pasa al gestor de condiciones</li>
+<li>Timeout en segundos</li>
+</ul></li>
+<li><code>ExpectedConditions</code>
+
+<ul>
+<li>Modela condiciones booleanas
+
+<ul>
+<li><code>presenceOfElementLocated</code>, <code>alertIsPresent</code>, <code>elementToBeClickable</code>...</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+WebElement elt1 = driver.until(ExpectedConditions.presenceOfElementLocated(By.id(&quot;myDynamicElement&quot;)));
+WebElement elt2 = driver.until(ExpectedConditions.elementToBeClickable(By.id(&quot;myDynamicElement&quot;)));</code></pre></div>
+
+<h3 id="toc_24">Esperas implícitas</h3>
+
+<ul>
+<li>Espera un tiempo al buscar elementos si no están disponibles</li>
+<li>Por defecto la espera es 0</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-java">WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);</code></pre></div>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:{pattern:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+
+<script type="text/javascript">
+Prism.languages.java=Prism.languages.extend("clike",{keyword:/\b(abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while)\b/,number:/\b0b[01]+\b|\b0x[\da-f]*\.?[\da-fp\-]+\b|\b\d*\.?\d+(?:e[+-]?\d+)?[df]?\b/i,operator:{pattern:/(^|[^.])(?:\+[+=]?|-[-=]?|!=?|<<?=?|>>?>?=?|==?|&[&=]?|\|[|=]?|\*=?|\/=?|%=?|\^=?|[?:~])/m,lookbehind:!0}}),Prism.languages.insertBefore("java","function",{annotation:{alias:"punctuation",pattern:/(^|[^.])@\w+/,lookbehind:!0}});
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+<script type="text/javascript">
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",asciidoc:"AsciiDoc",aspnet:"ASP.NET (C#)",autoit:"AutoIt",autohotkey:"AutoHotkey",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript","css-extras":"CSS Extras",fsharp:"F#",glsl:"GLSL",http:"HTTP",inform7:"Inform 7",json:"JSON",latex:"LaTeX",lolcode:"LOLCODE",matlab:"MATLAB",mel:"MEL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",parigp:"PARI/GP",php:"PHP","php-extras":"PHP Extras",powershell:"PowerShell",jsx:"React JSX",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",typescript:"TypeScript",vhdl:"VHDL",vim:"vim",wiki:"Wiki markup",yaml:"YAML"};Prism.hooks.add("before-highlight",function(s){var a=s.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var t,i,r=a.getAttribute("data-language")||e[s.language]||s.language.substring(0,1).toUpperCase()+s.language.substring(1),l=a.previousSibling;l&&/\s*\bprism-show-language\b\s*/.test(l.className)&&l.firstChild&&/\s*\bprism-show-language-label\b\s*/.test(l.firstChild.className)?i=l.firstChild:(t=document.createElement("div"),i=document.createElement("div"),i.className="prism-show-language-label",t.className="prism-show-language",t.appendChild(i),a.parentNode.insertBefore(t,a)),i.innerHTML=r}})}}();
+</script>
+
+
+</body>
+
+</html>
