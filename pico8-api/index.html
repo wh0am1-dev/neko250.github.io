@@ -49,6 +49,28 @@
           <h3>version 0.1.6</h3>
         </div>
 
+        <!-- AUDIO -->
+        <div role="tabpanel" class="tab-pane fade" id="audio">
+          <pre><code class="lua">music([n, [fade_len, [channel_mask]]]) -- play music, -1: stop
+sfx(n, [channel, [offset]]) -- play sfx, -1: stop in channel, -2: release loop in channel</code></pre>
+        </div>
+
+        <!-- COROUTINES -->
+        <div role="tabpanel" class="tab-pane fade" id="coroutines">
+          <pre><code class="lua">-- coreoutines, see: http://www.lexaloffle.com/bbs/?tid=3458
+ocreate()
+coresume()
+costatus()
+yield()</code></pre>
+        </div>
+
+        <!-- DATA -->
+        <div role="tabpanel" class="tab-pane fade" id="data">
+          <pre><code class="lua">cartdata(id) -- open cart data named id (once per execution!)
+dget(idx) -- get number at index
+dset(idx, val) -- set number at index to value</code></pre>
+        </div>
+
         <!-- GRAPHICS -->
         <div role="tabpanel" class="tab-pane fade" id="graphics">
           <p>
@@ -80,28 +102,6 @@ sspr(sx, sy, sw, sh, dx, dy, [dw, dh], [flip_x], [flip_y]) -- draw texture from 
 </code></pre>
         </div>
 
-        <!-- COROUTINES -->
-        <div role="tabpanel" class="tab-pane fade" id="coroutines">
-          <pre><code class="lua">-- coreoutines, see: http://www.lexaloffle.com/bbs/?tid=3458
-ocreate()
-coresume()
-costatus()
-yield()</code></pre>
-        </div>
-
-        <!-- TABLES -->
-        <div role="tabpanel" class="tab-pane fade" id="tables">
-          <pre><code class="lua">add(t, v) -- add v to t
-all(t) -- used in 'for v in all(t)' loops
-count(t) -- returns number of elements in the table
-del(t, v) -- delete first instance of v in t
-foreach(t, f) -- call f() for each v in t
-pairs(t) -- used in 'for k,v in pairs(t)' loops
-
--- metatables, see: http://www.lexaloffle.com/bbs/?tid=3342
-setmetatable()</code></pre>
-        </div>
-
         <!-- INPUT -->
         <div role="tabpanel" class="tab-pane fade" id="input">
           <p>
@@ -111,17 +111,35 @@ setmetatable()</code></pre>
 btnp([i, [p]]) -- only true when the button was not pressed the last frame. repeats every 4 frames after button held for 15 frames</code></pre>
         </div>
 
-        <!-- AUDIO -->
-        <div role="tabpanel" class="tab-pane fade" id="audio">
-          <pre><code class="lua">music([n, [fade_len, [channel_mask]]]) -- play music, -1: stop
-sfx(n, [channel, [offset]]) -- play sfx, -1: stop in channel, -2: release loop in channel</code></pre>
-        </div>
-
         <!-- MAP -->
         <div role="tabpanel" class="tab-pane fade" id="map">
           <pre><code class="lua">map(cel_x, cel_y, sx, sy, cel_w, cel_h, [layer]) -- draw map, layers from flags, sprite 0 is empty
 mget(x, y) -- get map value
 mset(x, y, v) -- set map value</code></pre>
+        </div>
+
+        <!-- MATH -->
+        <div role="tabpanel" class="tab-pane fade" id="math">
+          <pre><code class="lua">abs(x) -- x absolute value
+atan2(dx, dy) -- convert (dx, dy) to an angle in [0..1]
+band(x, y) -- bitwise conjunction
+bnot(x) -- bitwise negation
+bor(x, y) -- bitwise disjunction
+bxor(x, y) -- bitwise exclusive disjunction
+cos(x) -- x cosine, [0..1]
+flr(x) -- round down
+-flr(-x) -- not a function per se, but will work as ceil(x)
+max(x, y) -- x/y maximum
+mid(x, y, z) -- x/y/z middle value
+min(x, y) -- x/y minimum
+rnd(x) -- random, 0 &lt;= n &lt; x
+sgn(x) -- returns argument sign, -1, 0, 1
+shl(x, y) -- shift left
+shr(x, y) -- shift right
+sin(x) -- x sine, [0..1]
+sqrt(x) -- x square root
+srand(x) -- set random seed
+</code></pre>
         </div>
 
         <!-- MEMORY -->
@@ -154,30 +172,6 @@ reload(dest_addr, src_addr, len) [filename] -- copy bytes from rom to ram [load 
 </code></pre>
         </div>
 
-        <!-- MATH -->
-        <div role="tabpanel" class="tab-pane fade" id="math">
-          <pre><code class="lua">abs(x) -- x absolute value
-atan2(dx, dy) -- convert (dx, dy) to an angle in [0..1]
-band(x, y) -- bitwise conjunction
-bnot(x) -- bitwise negation
-bor(x, y) -- bitwise disjunction
-bxor(x, y) -- bitwise exclusive disjunction
-cos(x) -- x cosine, [0..1]
-flr(x) -- round down
--flr(-x) -- not a function per se, but will work as ceil(x)
-max(x, y) -- x/y maximum
-mid(x, y, z) -- x/y/z middle value
-min(x, y) -- x/y minimum
-rnd(x) -- random, 0 &lt;= n &lt; x
-sgn(x) -- returns argument sign, -1, 0, 1
-shl(x, y) -- shift left
-shr(x, y) -- shift right
-sin(x) -- x sine, [0..1]
-sqrt(x) -- x square root
-srand(x) -- set random seed
-</code></pre>
-        </div>
-
         <!-- STRINGS -->
         <div role="tabpanel" class="tab-pane fade" id="strings">
           <pre><code class="lua">#s -- string length
@@ -185,11 +179,17 @@ srand(x) -- set random seed
 sub(str, from, [to]) -- substring</code></pre>
         </div>
 
-        <!-- DATA -->
-        <div role="tabpanel" class="tab-pane fade" id="data">
-          <pre><code class="lua">cartdata(id) -- open cart data named id (once per execution!)
-dget(idx) -- get number at index
-dset(idx, val) -- set number at index to value</code></pre>
+        <!-- TABLES -->
+        <div role="tabpanel" class="tab-pane fade" id="tables">
+          <pre><code class="lua">add(t, v) -- add v to t
+all(t) -- used in 'for v in all(t)' loops
+count(t) -- returns number of elements in the table
+del(t, v) -- delete first instance of v in t
+foreach(t, f) -- call f() for each v in t
+pairs(t) -- used in 'for k,v in pairs(t)' loops
+
+-- metatables, see: http://www.lexaloffle.com/bbs/?tid=3342
+setmetatable()</code></pre>
         </div>
 
         <!-- PICO-8 COMMAND LINE -->
