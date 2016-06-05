@@ -27,9 +27,10 @@
 
       <ul class="nav nav-pills">
         <!-- class="active" in li -->
-        <li role="presentation" class="active"><a href="#home" aria-controls="audio" role="tab" data-toggle="tab"><img src="https://humblebundle-a.akamaihd.net/misc/files/hashed/daa4f4f06ae0362be8738d5a33f17ca31bf298b3.png" height="12em" alt="Welcome"></a></li>
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="https://humblebundle-a.akamaihd.net/misc/files/hashed/daa4f4f06ae0362be8738d5a33f17ca31bf298b3.png" height="12em" alt="Welcome"></a></li>
         <li role="presentation"><a href="#audio" aria-controls="audio" role="tab" data-toggle="tab">audio</a></li>
         <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">cart data</a></li>
+        <li role="presentation"><a href="#coroutines" aria-controls="coroutines" role="tab" data-toggle="tab">coroutines</a></li>
         <li role="presentation"><a href="#graphics" aria-controls="graphics" role="tab" data-toggle="tab">graphics</a></li>
         <li role="presentation"><a href="#input" aria-controls="input" role="tab" data-toggle="tab">input</a></li>
         <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">map</a></li>
@@ -37,8 +38,8 @@
         <li role="presentation"><a href="#memory" aria-controls="memory" role="tab" data-toggle="tab">memory</a></li>
         <li role="presentation"><a href="#strings" aria-controls="strings" role="tab" data-toggle="tab">strings</a></li>
         <li role="presentation"><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">tables</a></li>
-        <li role="presentation"><a href="#picocli" aria-controls="system" role="tab" data-toggle="tab">[ pico-8 ]</a></li>
-        <li role="presentation"><a href="#syscli" aria-controls="data" role="tab" data-toggle="tab">[ operating system ]</a></li>
+        <li role="presentation"><a href="#picocli" aria-controls="picocli" role="tab" data-toggle="tab">[ pico-8 ]</a></li>
+        <li role="presentation"><a href="#syscli" aria-controls="syscli" role="tab" data-toggle="tab">[ operating system ]</a></li>
         <li role="presentation"><a href="#keys" aria-controls="keys" role="tab" data-toggle="tab">[ key combos ]</a></li>
       </ul>
 
@@ -79,6 +80,15 @@ sspr(sx, sy, sw, sh, dx, dy, [dw, dh], [flip_x], [flip_y]) -- draw texture from 
 </code></pre>
         </div>
 
+        <!-- COROUTINES -->
+        <div role="tabpanel" class="tab-pane fade" id="coroutines">
+          <pre><code class="lua">-- coreoutines, see: http://www.lexaloffle.com/bbs/?tid=3458
+ocreate()
+coresume()
+costatus()
+yield()</code></pre>
+        </div>
+
         <!-- TABLES -->
         <div role="tabpanel" class="tab-pane fade" id="tables">
           <pre><code class="lua">add(t, v) -- add v to t
@@ -86,7 +96,10 @@ all(t) -- used in 'for v in all(t)' loops
 count(t) -- returns number of elements in the table
 del(t, v) -- delete first instance of v in t
 foreach(t, f) -- call f() for each v in t
-pairs(t) -- used in 'for k,v in pairs(t)' loops</code></pre>
+pairs(t) -- used in 'for k,v in pairs(t)' loops
+
+-- metatables, see: http://www.lexaloffle.com/bbs/?tid=3342
+setmetatable()</code></pre>
         </div>
 
         <!-- INPUT -->
@@ -219,7 +232,7 @@ info() -- print cart info
 -sound n -- sound volume 0..256
 -music n -- sound volume 0..256
 -joystick n -- joystick controls starts at player n (0..7)
--aspect n -- set the aspect ratio. 420 means 1:1 (default), 560 for 4:3, 525 for 5:4 etc. 
+-aspect n -- set the aspect ratio. 420 means 1:1 (default), 560 for 4:3, 525 for 5:4 etc.
 -run filename -- automatically load and run a cartridge
 -splore -- boot in splore mode</code></pre>
         </div>
