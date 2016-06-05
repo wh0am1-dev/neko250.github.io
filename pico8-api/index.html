@@ -16,6 +16,10 @@
       background-color: #337ab7;
       padding: 15px 15px 5px 15px;
     }
+    div.tab-pane ul {
+      padding-left: 1.7rem;
+      padding-bottom: 1.7rem;
+    }
     </style>
   </head>
 
@@ -243,11 +247,11 @@ stat(33) -> Y coord
 stat(34) -> button bitmask (1=primary, 2=secondary, 4=middle)
 
 -- extra graphics modes
-poke(0x5f2c, 0) -- standard 128x128
-poke(0x5f2c, 1) -- 64x128
-poke(0x5f2c, 2) -- 128x64
-poke(0x5f2c, 3) -- 64x64
-poke(0x5f2c, 4) -- standard 128x128
+poke(0x5f2c, 0) -- standard, 128x128
+poke(0x5f2c, 1) -- horizontal stretch, 64x128
+poke(0x5f2c, 2) -- vertical stretch, 128x64
+poke(0x5f2c, 3) -- zoomed, 64x64
+poke(0x5f2c, 4) -- standard, 128x128
 poke(0x5f2c, 5) -- mirror left half
 poke(0x5f2c, 6) -- mirror top half
 poke(0x5f2c, 7) -- mirror top-left quarter
