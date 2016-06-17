@@ -242,9 +242,9 @@ info() -- print cart info
         <div role="tabpanel" class="tab-pane fade" id="peekpoke">
           <pre><code class="lua">-- retrieve mouse coordinates
 poke(0x5F2D, 1)
-stat(32) -> X coord
-stat(33) -> Y coord
-stat(34) -> button bitmask (1=primary, 2=secondary, 4=middle)
+stat(32) -- X coord
+stat(33) -- Y coord
+stat(34) -- button bitmask (1 = primary, 2 = secondary, 4 = middle)
 
 -- extra graphics modes
 poke(0x5f2c, 0) -- standard, 128x128
