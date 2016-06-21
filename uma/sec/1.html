@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>1</title>
+
+
+<style type="text/css">
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+html body {
+  background-color: #fdf6e3;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  color: #586e75;
+  background-color: #eee8d5;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}
+
+th {
+  color: #b58900;
+  border: solid 2px #657b83;
+  padding: 2px;
+}
+
+td {
+  border: solid 1px #657b83;
+  padding: 4px;
+}
+
+img {
+  -webkit-box-shadow: 0 5px 20px 0 #5C5C5C;
+  box-shadow: 0 5px 20px 0 #5C5C5C;
+}
+
+code {
+  padding: 0 5px;
+  color: #586e75;
+  background-color: #eee8d5;
+}
+
+.token {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.line-numbers-rows > span:before {
+  line-height: 1.5em;
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js Dark theme for JavaScript, CSS and HTML
+ * Based on the slides of the talk “/Reg(exp){2}lained/”
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: white;
+	background: none;
+	text-shadow: 0 -.1em .2em black;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+	background: hsl(30, 20%, 25%);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border: .3em solid hsl(30, 20%, 40%);
+	border-radius: .5em;
+	box-shadow: 1px 1px .5em black inset;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .15em .2em .05em;
+	border-radius: .3em;
+	border: .13em solid hsl(30, 20%, 40%);
+	box-shadow: 1px 1px .3em -.1em black inset;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+	opacity: .7;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+	color: hsl(350, 40%, 70%);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: hsl(75, 70%, 60%);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: hsl(40, 90%, 60%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: hsl(350, 40%, 70%);
+}
+
+.token.regex,
+.token.important {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.deleted {
+	color: red;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<table><thead><tr><th>course</th><th>order</th><th>title</th></tr></thead><tbody><tr><td>seguridad en servicios y aplicaciones</td><td>1</td><td>fundamentos de seguridad</td></tr></tbody></table>
+<hr>
+
+<p><center><a href="index.html">index</a> | <a href="2.html">&gt;&gt;&gt;</a></center></p>
+
+<ul class="toc">
+<li>
+<a href="#toc_0">amenazas y vulnerabilidades</a>
+<ul>
+<li>
+<a href="#toc_1">malware</a>
+</li>
+<li>
+<a href="#toc_2">virus informáticos</a>
+</li>
+<li>
+<a href="#toc_3">tipos de virus informáticos</a>
+<ul>
+<li>
+<a href="#toc_4">gusano</a>
+</li>
+<li>
+<a href="#toc_5">troyano</a>
+</li>
+<li>
+<a href="#toc_6">ransomware</a>
+</li>
+<li>
+<a href="#toc_7">keyloggers</a>
+</li>
+<li>
+<a href="#toc_8">APT: advanced persistent threats</a>
+</li>
+<li>
+<a href="#toc_9">botnets y servidores de control (C&amp;C)</a>
+</li>
+<li>
+<a href="#toc_10">técnicas comunes usadas por APT</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">elementos de interconexión de redes</a>
+<ul>
+<li>
+<a href="#toc_12">amenazas en redes locales</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">contraseñas</a>
+</li>
+<li>
+<a href="#toc_14">técnicas de ingeniería social</a>
+<ul>
+<li>
+<a href="#toc_15">ciclo de vida de la ingeniería social</a>
+</li>
+<li>
+<a href="#toc_16">inversión en seguridad</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">ciclo de vida de software de seguridad</a>
+<ul>
+<li>
+<a href="#toc_18">prevención, detección y reacción</a>
+</li>
+<li>
+<a href="#toc_19">políticas de seguridad</a>
+</li>
+<li>
+<a href="#toc_20">servicios de seguridad</a>
+</li>
+<li>
+<a href="#toc_21">mecanismos de seguridad</a>
+</li>
+<li>
+<a href="#toc_22">categorías de servicios de seguridad</a>
+</li>
+<li>
+<a href="#toc_23">modelo de escenario de seguridad</a>
+<ul>
+<li>
+<a href="#toc_24">instancias del modelo</a>
+</li>
+<li>
+<a href="#toc_25">tipos de ataques</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_26">ciclo de vida de seguridad (ISO-7498-2)</a>
+</li>
+<li>
+<a href="#toc_27">ingeniería de requisitos de seguridad</a>
+<ul>
+<li>
+<a href="#toc_28"> modelado de ataques / amenazas</a>
+</li>
+<li>
+<a href="#toc_29">análisis y gestión de riesgos</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_30">evaluación de la seguridad</a>
+</li>
+<li>
+<a href="#toc_31">normativas de seguridad</a>
+</li>
+</ul>
+
+
+<h1 id="toc_0">amenazas y vulnerabilidades</h1>
+
+<p><strong><u>amenaza</u></strong>: un evento que puede producir un daño material o inmaterial en el sistema</p>
+
+<p><strong><u>vulnerabilidad</u></strong>: o fallo de seguridad, es todo aquello que provoca que nuestros sistemas informáticos funcionen de manera diferente para lo que estaban pensados, afectando a la seguridad de los mismos</p>
+
+<p>tres elementos a tener en cuenta:</p>
+
+<ul>
+<li>software</li>
+<li>comunicaciones</li>
+<li>usuarios</li>
+</ul>
+
+<h2 id="toc_1">malware</h2>
+
+<p>programas creados para <strong>manipular</strong> el normal funcionamiento de los sistemas, sin el <strong>conocimiento</strong> ni <strong>consentimiento</strong> de los usuarios</p>
+
+<p>ejemplos: virus, gusanos, troyanos, ransomware, keyloggers, &hellip;</p>
+
+<p>un <strong>código malicioso</strong> es un conjunto de instrucciones que comprometen la seguridad de un sistema</p>
+
+<h2 id="toc_2">virus informáticos</h2>
+
+<ul>
+<li>programa que se <strong>inserta</strong> en uno o más archivos y puede realizar algunas <strong>acciones</strong> en el sistema que lo hospeda</li>
+</ul>
+
+<h2 id="toc_3">tipos de virus informáticos</h2>
+
+<ul>
+<li><strong><u>infecciones en el sector de inicio</u></strong>: es ejecutado al acceder al sistema. el código original se mueve a otra ubicación del disco</li>
+<li><strong><u>infecciones en archivos ejecutables</u></strong></li>
+<li><strong><u>TSR</u></strong> (<em>Terminate and Stay Resident</em>): virus que <strong>permanece activo</strong> en memoria después de que la aplicación que lo hospeda haya <strong>terminado</strong></li>
+<li><strong><u>virus stealth</u></strong>: <strong>esconde</strong> la infección de archivos interceptando llamadas al sistema que accedan a los archivos</li>
+<li><strong><u>virus cifrado</u></strong>: hacen frente a los antivirus que <strong>reconocen</strong> las cadenas víricas</li>
+<li><strong><u>virus polimórficos</u></strong>: <strong>cambia de forma</strong> cada vez que se inserta en una app. a parte de emplear una <strong>clave de cifrado</strong> cambian las <strong>instrucciones</strong></li>
+</ul>
+
+<h3 id="toc_4">gusano</h3>
+
+<ul>
+<li>su objetivo es replicarse de forma rápida y distribuirse por todos los medios posibles para expandir su radio de acción</li>
+</ul>
+
+<h3 id="toc_5">troyano</h3>
+
+<ul>
+<li>programa con funcionalidades públicas conocidas y otro conjunto de funcionalidades <strong>ocultas</strong></li>
+</ul>
+
+<h3 id="toc_6">ransomware</h3>
+
+<ul>
+<li>bloquean el acceso a sistemas informáticos hasta que se page un <em>rescate</em></li>
+<li>suelen consistir en el cifrado del disco duro</li>
+<li>las claves sólo las conoce el atacante y después del pago este proporciona tanto la clave como el programa de descifrado</li>
+</ul>
+
+<h3 id="toc_7">keyloggers</h3>
+
+<ul>
+<li>registran todas las pulsaciones de teclado de la víctima. también movimientos de ratón o incluso hacer capturas de pantalla</li>
+<li>relacionado con herramientas de monitorización que también tienen un uso legítimo</li>
+</ul>
+
+<h3 id="toc_8">APT: advanced persistent threats</h3>
+
+<ul>
+<li>las APTs suelen manifestarse como un programa diseñado para mentenerse oculto y realizar un ataque de forma mucho más paciente frente a un objetivo muy concreto</li>
+<li><strong>amenaza</strong> a objetivos de cierta envergadura, a gran escala</li>
+<li>es <strong>persistente</strong> en el sentido de que se debe realizar un trabajo previo de preparación para poder acceder al objetivo</li>
+<li>es <strong>avanzada</strong> porque aporta novedades frente a las técnicas usadas o a los objetivos atacados</li>
+</ul>
+
+<h3 id="toc_9">botnets y servidores de control (C&amp;C)</h3>
+
+<ul>
+<li>el atacante nunca accede a los bots directamente, sino a través de una red jerárquica para evitar ser localizado</li>
+<li>la red de equipos C&amp;C se suele alojar en la nube, con cuentas gratuitas, para evitar que se puedan enlazar con el atacante</li>
+</ul>
+
+<h3 id="toc_10">técnicas comunes usadas por APT</h3>
+
+<ul>
+<li><strong><u>ingeniería social</u></strong></li>
+<li><strong><u>0-day exploits</u></strong></li>
+<li><strong><u>intrusiones</u></strong></li>
+</ul>
+
+<h2 id="toc_11">elementos de interconexión de redes</h2>
+
+<ul>
+<li><strong><u>HUB</u></strong> (concentrador): repite señales físicas que entran por cada uno de sus puertos en el resto de puertos. multiplicador a nivel eléctrico</li>
+<li><strong><u>SWITCH</u></strong> (conmutador): conmuta los puertos que necesitan comunicarse, es decir, establece un enlace físico entre los puertos en los que están conectados los equipos que se están comunicando</li>
+<li><strong><u>ROUTER</u></strong> (enrutador): une varias redes diferentes. tiene un puerto en cada red</li>
+</ul>
+
+<h3 id="toc_12">amenazas en redes locales</h3>
+
+<ul>
+<li><strong><u>IP spoofing</u></strong> y <strong><u>ARP poisoning</u></strong></li>
+<li><strong><u>MAC spoofing</u></strong></li>
+<li>WiFi:
+
+<ul>
+<li>abiertas</li>
+<li>WEP</li>
+<li>WPA/2</li>
+</ul></li>
+<li>en redes complejas como internet, los problemas de seguridad se agravan, ya que la información pasa por múltiples nodos de red</li>
+<li>imprescindible usar mecanismos de seguridad para proteger la información</li>
+</ul>
+
+<h2 id="toc_13">contraseñas</h2>
+
+<ul>
+<li>características:
+
+<ul>
+<li>pin (4 dígitos)</li>
+<li>alfanuméricos
+
+<ul>
+<li>minúsculas</li>
+<li>mayúsculas</li>
+</ul></li>
+<li>caracteres especiales</li>
+<li>evitar repeticiones</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_14">técnicas de ingeniería social</h2>
+
+<ul>
+<li><strong><u>phishing</u></strong></li>
+<li><strong><u>spear phishing</u></strong> (phishing dirigido)</li>
+<li><strong><u>vishing</u></strong> (voice phishing)</li>
+<li><strong><u>impersonation</u></strong> (id)</li>
+</ul>
+
+<h3 id="toc_15">ciclo de vida de la ingeniería social</h3>
+
+<table>
+<thead>
+<tr>
+<th>phase 1</th>
+<th>phase 2</th>
+<th>phase 3</th>
+<th>phase 4</th>
+<th>phase 5</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>pre-engagement interactions</td>
+<td>intelligence gathering</td>
+<td>pretexting</td>
+<td>exploitation</td>
+<td>post-exploitation</td>
+</tr>
+<tr>
+<td>rules; scope; contact info; project charter;</td>
+<td>public records; social networks; dumpster diving;</td>
+<td>create believeable scenarios;</td>
+<td>execute scenarios; attack;</td>
+<td>pillage; document; clean-up;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_16">inversión en seguridad</h3>
+
+<ul>
+<li>las medidas efectivas de seguridad no se implantan</li>
+<li>no se realizan actualizaciones</li>
+<li>no se monitoriza ni restringe el acceso correctamente</li>
+<li>los proveedores de servicios se rigen por el mercado y los servicios, no por la seguridad</li>
+<li>los usuarios toman pocas precauciones</li>
+<li>las organizaciones no dedican suficiente personal ni recursos a mejorar la seguridad</li>
+</ul>
+
+<h1 id="toc_17">ciclo de vida de software de seguridad</h1>
+
+<ul>
+<li><strong><u>activos</u></strong> (assets): todo lo que forma parte de un sistema de información, incluyendo hardware, software y personas</li>
+<li><strong><u>amenaza</u></strong> (threat): alguna cosa o circunstancia que pone en riesgo potencial la seguridad del sistema y sus activos</li>
+<li><strong><u>vulnerabilidad</u></strong>: debilidad en el sistema que influye en la probabilidad de que la amenaza sobre los activos se convierta en realidad</li>
+<li><strong><u>ataque</u></strong>: consumación de la amenaza</li>
+</ul>
+
+<p><img src="https://i.imgur.com/67L8yyG.png" alt=""></p>
+
+<h2 id="toc_18">prevención, detección y reacción</h2>
+
+<ul>
+<li><strong><u>prevención</u></strong>: medidas que previenen el problema</li>
+<li><strong><u>detección</u></strong>: medidas que permiten detectar que se ha producido un problema, cómo se ha producido y quién lo ha producido</li>
+<li><strong><u>reacción</u></strong>: medidas que permiten recuperarse del problema</li>
+</ul>
+
+<h2 id="toc_19">políticas de seguridad</h2>
+
+<p>cuando se diseña un sistema seguro, es fundamental conocer el <strong>conjunto de reglas</strong> que gobiernan el <strong>comportamiento</strong> del sistema en lo que a <strong>seguridad</strong> se refiere</p>
+
+<h2 id="toc_20">servicios de seguridad</h2>
+
+<p>los servicios de seguridad son los encargados de <strong>dar soporte a las políticas de seguridad</strong></p>
+
+<h2 id="toc_21">mecanismos de seguridad</h2>
+
+<p>los mecanismos de seguridad proporcionan soporte a los servicios de seguridad</p>
+
+<p>definición:</p>
+
+<blockquote>
+<p>a process (or a device incorporating such a process) that can be used in a system to implement a security service that is provided by or within the system</p>
+
+<blockquote>
+<p>RFC 2828</p>
+</blockquote>
+</blockquote>
+
+<p>los estándares <em>ISO 7498-2</em> e <em>ITU X.800</em> distinguen entre dos tipos de mecanismos de seguridad:</p>
+
+<ul>
+<li><strong><u>específicos</u></strong>: están implementados en una capa específica de la pila de protocolos</li>
+<li><strong><u>ubicuos</u></strong>: no son específicos de ninguna capa en particular</li>
+</ul>
+
+<h2 id="toc_22">categorías de servicios de seguridad</h2>
+
+<ul>
+<li>confidencialidad de datos</li>
+<li>autenticación</li>
+<li>integridad de datos</li>
+<li>no-repudio</li>
+<li>control de acceso</li>
+</ul>
+
+<h2 id="toc_23">modelo de escenario de seguridad</h2>
+
+<p>necesitamos un modelo de escenario para, desde una perspectiva general, empezar a razonar sobre:</p>
+
+<ul>
+<li>las amenazas que pueden existir</li>
+<li>los servicios que podemos usar para prevenirlos</li>
+</ul>
+
+<h3 id="toc_24">instancias del modelo</h3>
+
+<ul>
+<li>navegador web y servidor web para transacciones electrónicas</li>
+<li>banca on-line (cliente y servidor)</li>
+<li>servidores DNS</li>
+<li>routers intercambiando tablas de enrutamiento</li>
+<li>dos usuarios en un chat o enviándose e-mails</li>
+<li>&hellip;</li>
+</ul>
+
+<h3 id="toc_25">tipos de ataques</h3>
+
+<ul>
+<li><strong><u>intercepción</u></strong> (pasivo)</li>
+<li><strong><u>inserción</u></strong> (activo)</li>
+<li><strong><u>modificación</u></strong> (activo)</li>
+<li><strong><u>denegación</u></strong> (activo)</li>
+</ul>
+
+<h2 id="toc_26">ciclo de vida de seguridad (ISO-7498-2)</h2>
+
+<ul>
+<li><strong>definición de una política de seguridad</strong> que contiene una serie de requisitos genéricos de seguridad para el sistema</li>
+<li><strong>análisis de requisitos de seguridad</strong>, incluyendo el análisis de riesgos y un análisis de los requisitos legales, gubernamentales y normativos</li>
+<li><strong>definición de los servicios de seguridad</strong> necesarios para satisfacer los requisitos de seguridad</li>
+<li>diseño del sistema e implementación, así como la <strong>selección de los mecanismos de seguridad</strong> que van a proporcionarnos los servicios de seguridad definidos en la etapa anterior</li>
+<li><strong>administración y mantenimiento de la seguridad</strong></li>
+</ul>
+
+<h2 id="toc_27">ingeniería de requisitos de seguridad</h2>
+
+<p>la seguridad debe tratarse con la misma prioridad que cualquier otro requisito funcional</p>
+
+<p>enfoques:</p>
+
+<ul>
+<li>modelado de ataques / amenazas</li>
+<li>modelado de medidas de seguridad</li>
+</ul>
+
+<h3 id="toc_28"> modelado de ataques / amenazas</h3>
+
+<p>analizan posibles ataques y amenazas en el sistema:</p>
+
+<ul>
+<li><strong><u>attacker centric</u></strong>: se centra en las capacidades del atacante, requiere un conocimiento en detalle del atacante. intenta predecir el comportamiento del atacante, basándose en ataques previos dentro y fuera de la organización</li>
+<li><strong><u>asset centric</u></strong>: se centra en un activo en particular, permite simplificar el modelo. su objetivo es encontrar vulnerabilidades y definir controles adecuados al valor del activo</li>
+<li><strong><u>system centric</u></strong>: modela el sistema completo con todas sus relaciones, puede ser excesivamente complejo de analizar</li>
+</ul>
+
+<p>herramientas:</p>
+
+<ul>
+<li>casos de abuso</li>
+<li>casos de uso malicioso</li>
+<li>árboles de ataque</li>
+<li>árboles de errores</li>
+<li>grafos de ataque</li>
+</ul>
+
+<h3 id="toc_29">análisis y gestión de riesgos</h3>
+
+<p>el objetivo principal es controlar el riesgo, bajo un <strong>umbral</strong> aceptable, y analizar la <strong>probabilidad</strong> de las amenazas así como su potencial de <strong>impacto</strong> sobre los <strong>activos</strong></p>
+
+<p>además, en caso de que no se cumplan las políticas o las contramedidas no sean efectivas también deben considerar los planes de <strong>contingencia</strong></p>
+
+<p>al considerarse múltiples stakeholders aparecen riesgos diferentes: <strong>necesidad de priorizar y llegar a acuerdos</strong></p>
+
+<p>el coste es un riesgo muy importante en proyectos reales. hay que mentenerlo controlado a lo largo del SDLC</p>
+
+<p>ejemplos de metodologías de gestión de riesgos:</p>
+
+<ul>
+<li><em>NIST SP 800-30</em>: risk management guide for information technology systems</li>
+<li><em>OCTAVE</em>: <strong>O</strong>perationally <strong>C</strong>ritical <strong>T</strong>hreat, <strong>A</strong>sset and <strong>V</strong>ulnerability <strong>E</strong>valuation</li>
+<li><em>CORAS</em>: <strong>CO</strong>nstruct a platform for <strong>R</strong>isk <strong>A</strong>nalysis of <strong>S</strong>ecurity critical system</li>
+</ul>
+
+<h1 id="toc_30">evaluación de la seguridad</h1>
+
+<h1 id="toc_31">normativas de seguridad</h1>
+
+<hr>
+
+<p><center><a href="index.html">index</a> | <a href="2.html">&gt;&gt;&gt;</a></center></p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+
+</body>
+
+</html>
