@@ -291,6 +291,7 @@ _draw() -- called once per visible frame
 _init() -- called once on program startup
 holdframe() -- used automatically by _draw(), _update()</code></pre>
           <pre><code class="lua">-- cli
+assert(condition) -- verify that condition is true
 cd .. -- change to parent directory
 cd [dirname] -- change directory
 dir() -- list items
@@ -318,7 +319,8 @@ save(filename) -- save cart
 shutdown() -- close pico-8 app
 splore() -- explore cartridges
 stat(x) -- 0 = mem; 1 = cpu;
-time() -- returns seconds since last reboot</code></pre>
+time() -- returns seconds since last reboot
+type(v) -- returns type of v: number, string or table</code></pre>
           <pre><code class="javascript">// javascript
 pico8_gpio[] // read and write gpio pins</code></pre>
         </div>
