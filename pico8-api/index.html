@@ -237,12 +237,12 @@ end</code></pre>-->
 
         <!-- MEMORY -->
         <div role="tabpanel" class="tab-pane fade" id="memory">
-          <pre><code class="lua">cstore(dest_addr, src_addr, len) [filename] -- copy bytes from ram to rom [load from filename]
+          <pre><code class="lua">cstore(dest_addr, src_addr, len, [filename]) -- copy bytes from ram to rom [load from filename]
 memcpy(dest_addr, src_addr, len) -- copy bytes
 memset(dest_addr, val, len) -- set len bytes to val
 peek(addr) -- read byte in ram address
 poke(addr, val) -- write val in ram address
-reload(dest_addr, src_addr, len) [filename] -- copy bytes from rom to ram [load from filename]</code></pre>
+reload(dest_addr, src_addr, len, [filename]) -- copy bytes from rom to ram [load from filename]</code></pre>
           <pre><code class="markdown"># types:
 
 1. base ram (32kB)
