@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>MathInNaturalSciences-EugeneWigner</title>
+
+
+<style type="text/css">
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+html body {
+  background-color: #fdf6e3;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  color: #586e75;
+  background-color: #eee8d5;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}
+
+th {
+  color: #b58900;
+  border: solid 2px #657b83;
+  padding: 2px;
+}
+
+td {
+  border: solid 1px #657b83;
+  padding: 4px;
+}
+
+img {
+  -webkit-box-shadow: 0 5px 20px 0 #5C5C5C;
+  box-shadow: 0 5px 20px 0 #5C5C5C;
+}
+
+code {
+  padding: 0 5px;
+  color: #586e75;
+  background-color: #eee8d5;
+}
+
+.token {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.line-numbers-rows > span:before {
+  line-height: 1.5em;
+}
+</style>
+
+<style type="text/css">
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">The Unreasonable Effectiveness of Mathematics in the Natural Sciences</h1>
+
+<p>&ldquo;The Unreasonable Effectiveness of Mathematics in the Natural Sciences,&rdquo; in Communications in Pure and Applied Mathematics, vol. 13, No. I (February 1960). New York: John Wiley &amp; Sons, Inc. Copyright © 1960 by John Wiley &amp; Sons, Inc.</p>
+
+<blockquote>
+<p>Mathematics, rightly viewed, possesses not only truth, but supreme beautya beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show. The true spirit of delight, the exaltation, the sense of being more than Man, which is the touchstone of the highest excellence, is to be found in mathematics as surely as in poetry.</p>
+
+<blockquote>
+<p>Bertrand Russell, Study of Mathematics.</p>
+</blockquote>
+</blockquote>
+
+<p>THERE IS A story about two friends, who were classmates in high school, talking about their jobs. One of them became a statistician and was working on population trends. He showed a reprint to his former classmate. The reprint started, as usual, with the Gaussian distribution and the statistician explained to his former classmate the meaning of the symbols for the actual population, for the average population, and so on. His classmate was a bit incredulous and was not quite sure whether the statistician was pulling his leg. &ldquo;How can you know that?&rdquo; was his query. &ldquo;And what is this symbol here?&rdquo; &ldquo;Oh,&rdquo; said the statistician, &ldquo;this is pi.&rdquo; &ldquo;What is that?&rdquo; &ldquo;The ratio of the circumference of the circle to its diameter.&rdquo; &ldquo;Well, now you are pushing your joke too far,&rdquo; said the classmate, &ldquo;surely the population has nothing to do with the circumference of the circle.&rdquo;</p>
+
+<p>Naturally, we are inclined to smile about the simplicity of the classmate&rsquo;s approach. Nevertheless, when I heard this story, I had to admit to an eerie feeling because, surely, the reaction of the classmate betrayed only plain common sense. I was even more confused when, not many days later, someone came to me and expressed his bewilderment [1 The remark to be quoted was made by F. Werner when he was a student in Princeton.] with the fact that we make a rather narrow selection when choosing the data on which we test our theories. &ldquo;How do we know that, if we made a theory which focuses its attention on phenomena we disregard and disregards some of the phenomena now commanding our attention, that we could not build another theory which has little in common with the present one but which, nevertheless, explains just as many phenomena as the present theory?&rdquo; It has to be admitted that we have no definite evidence that there is no such theory.</p>
+
+<p>The preceding two stories illustrate the two main points which are the subjects of the present discourse. The first point is that mathematical concepts turn up in entirely unexpected connections. Moreover, they often permit an unexpectedly close and accurate description of the phenomena in these connections. Secondly, just because of this circumstance, and because we do not understand the reasons of their usefulness, we cannot know whether a theory formulated in terms of mathematical concepts is uniquely appropriate. We are in a position similar to that of a man who was provided with a bunch of keys and who, having to open several doors in succession, always hit on the right key on the first or second trial. He became skeptical concerning the uniqueness of the coordination between keys and doors.</p>
+
+<p>Most of what will be said on these questions will not be new; it has probably occurred to most scientists in one form or another. My principal aim is to illuminate it from several sides. The first point is that the enormous usefulness of mathematics in the natural sciences is something bordering on the mysterious and that there is no rational explanation for it. Second, it is just this uncanny usefulness of mathematical concepts that raises the question of the uniqueness of our physical theories. In order to establish the first point, that mathematics plays an unreasonably important role in physics, it will be useful to say a few words on the question, &ldquo;What is mathematics?&rdquo;, then, &ldquo;What is physics?&rdquo;, then, how mathematics enters physical theories, and last, why the success of mathematics in its role in physics appears so baffling. Much less will be said on the second point: the uniqueness of the theories of physics. A proper answer to this question would require elaborate experimental and theoretical work which has not been undertaken to date.</p>
+
+<h2 id="toc_1">What is mathematics?</h2>
+
+<p>Somebody once said that philosophy is the misuse of a terminology which was invented just for this purpose. [2 This statement is quoted here from W. Dubislav&rsquo;s Die Philosophie der Mathematik in der Gegenwart (Berlin: Junker and Dunnhaupt Verlag, 1932), p. 1.] In the same vein, I would say that mathematics is the science of skillful operations with concepts and rules invented just for this purpose. The principal emphasis is on the invention of concepts. Mathematics would soon run out of interesting theorems if these had to be formulated in terms of the concepts which already appear in the axioms. Furthermore, whereas it is unquestionably true that the concepts of elementary mathematics and particularly elementary geometry were formulated to describe entities which are directly suggested by the actual world, the same does not seem to be true of the more advanced concepts, in particular the concepts which play such an important role in physics. Thus, the rules for operations with pairs of numbers are obviously designed to give the same results as the operations with fractions which we first learned without reference to &ldquo;pairs of numbers.&rdquo; The rules for the operations with sequences, that is, with irrational numbers, still belong to the category of rules which were determined so as to reproduce rules for the operations with quantities which were already known to us. Most more advanced mathematical concepts, such as complex numbers, algebras, linear operators, Borel setsãand this list could be continued almost indefinitelyãwere so devised that they are apt subjects on which the mathematician can demonstrate his ingenuity and sense of formal beauty. In fact, the definition of these concepts, with a realization that interesting and ingenious considerations could be applied to them, is the first demonstration of the ingeniousness of the mathematician who defines them. The depth of thought which goes into the formulation of the mathematical concepts is later justified by the skill with which these concepts are used. The great mathematician fully, almost ruthlessly, exploits the domain of permissible reasoning and skirts the impermissible. That his recklessness does not lead him into a morass of contradictions is a miracle in itself: certainly it is hard to believe that our reasoning power was brought, by Darwin&rsquo;s process of natural selection, to the perfection which it seems to possess. However, this is not our present subject. The principal point which will have to be recalled later is that the mathematician could formulate only a handful of interesting theorems without defining concepts beyond those contained in the axioms and that the concepts outside those contained in the axioms are defined with a view of permitting ingenious logical operations which appeal to our aesthetic sense both as operations and also in their results of great generality and simplicity. [3 M. Polanyi, in his Personal Knowledge (Chicago: University of Chicago Press, 1958), says: &ldquo;All these difficulties are but consequences of our refusal to see that mathematics cannot be defined without acknowledging its most obvious feature: namely, that it is interesting&rdquo; (p 188).]</p>
+
+<p>The complex numbers provide a particularly striking example for the foregoing. Certainly, nothing in our experience suggests the introduction of these quantities. Indeed, if a mathematician is asked to justify his interest in complex numbers, he will point, with some indignation, to the many beautiful theorems in the theory of equations, of power series, and of analytic functions in general, which owe their origin to the introduction of complex numbers. The mathematician is not willing to give up his interest in these most beautiful accomplishments of his genius. [4 The reader may be interested, in this connection, in Hilbert&rsquo;s rather testy remarks about intuitionism which &ldquo;seeks to break up and to disfigure mathematics,&rdquo; Abh. Math. Sem., Univ. Hamburg, 157 (1922), or Gesammelte Werke (Berlin: Springer, 1935), p. 188.]</p>
+
+<h2 id="toc_2">What is physics?</h2>
+
+<p>The physicist is interested in discovering the laws of inanimate nature. In order to understand this statement, it is necessary to analyze the concept, &ldquo;law of nature.&rdquo;</p>
+
+<p>The world around us is of baffling complexity and the most obvious fact about it is that we cannot predict the future. Although the joke attributes only to the optimist the view that the future is uncertain, the optimist is right in this case: the future is unpredictable. It is, as Schrodinger has remarked, a miracle that in spite of the baffling complexity of the world, certain regularities in the events could be discovered. One such regularity, discovered by Galileo, is that two rocks, dropped at the same time from the same height, reach the ground at the same time. The laws of nature are concerned with such regularities. Galileo&rsquo;s regularity is a prototype of a large class of regularities. It is a surprising regularity for three reasons.</p>
+
+<p>The first reason that it is surprising is that it is true not only in Pisa, and in Galileo&rsquo;s time, it is true everywhere on the Earth, was always true, and will always be true. This property of the regularity is a recognized invariance property and, as I had occasion to point out some time ago, without invariance principles similar to those implied in the preceding generalization of Galileo&rsquo;s observation, physics would not be possible. The second surprising feature is that the regularity which we are discussing is independent of so many conditions which could have an effect on it. It is valid no matter whether it rains or not, whether the experiment is carried out in a room or from the Leaning Tower, no matter whether the person who drops the rocks is a man or a woman. It is valid even if the two rocks are dropped, simultaneously and from the same height, by two different people. There are, obviously, innumerable other conditions which are all immaterial from the point of view of the validity of Galileo&rsquo;s regularity. The irrelevancy of so many circumstances which could play a role in the phenomenon observed has also been called an invariance. However, this invariance is of a different character from the preceding one since it cannot be formulated as a general principle. The exploration of the conditions which do, and which do not, influence a phenomenon is part of the early experimental exploration of a field. It is the skill and ingenuity of the experimenter which show him phenomena which depend on a relatively narrow set of relatively easily realizable and reproducible conditions. [5 See, in this connection, the graphic essay of M. Deutsch, Daedalus 87, 86 (1958). A. Shimony has called my attention to a similar passage in C. S. Peirce&rsquo;s Essays in the Philosophy of Science (New York: The Liberal Arts Press, 1957), p. 237.] In the present case, Galileo&rsquo;s restriction of his observations to relatively heavy bodies was the most important step in this regard. Again, it is true that if there were no phenomena which are independent of all but a manageably small set of conditions, physics would be impossible.</p>
+
+<p>The preceding two points, though highly significant from the point of view of the philosopher, are not the ones which surprised Galileo most, nor do they contain a specific law of nature. The law of nature is contained in the statement that the length of time which it takes for a heavy object to fall from a given height is independent of the size, material, and shape of the body which drops. In the framework of Newton&rsquo;s second &ldquo;law,&rdquo; this amounts to the statement that the gravitational force which acts on the falling body is proportional to its mass but independent of the size, material, and shape of the body which falls.</p>
+
+<p>The preceding discussion is intended to remind us, first, that it is not at all natural that &ldquo;laws of nature&rdquo; exist, much less that man is able to discover them. [6 E. Schrodinger, in his What Is Life? (Cambridge: Cambridge University Press, 1945), p. 31, says that this second miracle may well be beyond human understanding.] The present writer had occasion, some time ago, to call attention to the succession of layers of &ldquo;laws of nature,&rdquo; each layer containing more general and more encompassing laws than the previous one and its discovery constituting a deeper penetration into the structure of the universe than the layers recognized before. However, the point which is most significant in the present context is that all these laws of nature contain, in even their remotest consequences, only a small part of our knowledge of the inanimate world. All the laws of nature are conditional statements which permit a prediction of some future events on the basis of the knowledge of the present, except that some aspects of the present state of the world, in practice the overwhelming majority of the determinants of the present state of the world, are irrelevant from the point of view of the prediction. The irrelevancy is meant in the sense of the second point in the discussion of Galileo&rsquo;s theorem. [7 The writer feels sure that it is unnecessary to mention that Galileo&rsquo;s theorem, as given in the text, does not exhaust the content of Galileo&rsquo;s observations in connection with the laws of freely falling bodies.]</p>
+
+<p>As regards the present state of the world, such as the existence of the earth on which we live and on which Galileo&rsquo;s experiments were performed, the existence of the sun and of all our surroundings, the laws of nature are entirely silent. It is in consonance with this, first, that the laws of nature can be used to predict future events only under exceptional circumstancesãwhen all the relevant determinants of the present state of the world are known. It is also in consonance with this that the construction of machines, the functioning of which he can foresee, constitutes the most spectacular accomplishment of the physicist. In these machines, the physicist creates a situation in which all the relevant coordinates are known so that the behavior of the machine can be predicted. Radars and nuclear reactors are examples of such machines.</p>
+
+<p>The principal purpose of the preceding discussion is to point out that the laws of nature are all conditional statements and they relate only to a very small part of our knowledge of the world. Thus, classical mechanics, which is the best known prototype of a physical theory, gives the second derivatives of the positional coordinates of all bodies, on the basis of the knowledge of the positions, etc., of these bodies. It gives no information on the existence, the present positions, or velocities of these bodies. It should be mentioned, for the sake of accuracy, that we discovered about thirty years ago that even the conditional statements cannot be entirely precise: that the conditional statements are probability laws which enable us only to place intelligent bets on future properties of the inanimate world, based on the knowledge of the present state. They do not allow us to make categorical statements, not even categorical statements conditional on the present state of the world. The probabilistic nature of the &ldquo;laws of nature&rdquo; manifests itself in the case of machines also, and can be verified, at least in the case of nuclear reactors, if one runs them at very low power. However, the additional limitation of the scope of the laws of nature which follows from their probabilistic nature will play no role in the rest of the discussion.</p>
+
+<h2 id="toc_3">The role of mathematics in physical theories</h2>
+
+<p>Having refreshed our minds as to the essence of mathematics and physics, we should be in a better position to review the role of mathematics in physical theories.</p>
+
+<p>Naturally, we do use mathematics in everyday physics to evaluate the results of the laws of nature, to apply the conditional statements to the particular conditions which happen to prevail or happen to interest us. In order that this be possible, the laws of nature must already be formulated in mathematical language. However, the role of evaluating the consequences of already established theories is not the most important role of mathematics in physics. Mathematics, or, rather, applied mathematics, is not so much the master of the situation in this function: it is merely serving as a tool.</p>
+
+<p>Mathematics does play, however, also a more sovereign role in physics. This was already implied in the statement, made when discussing the role of applied mathematics, that the laws of nature must have been formulated in the language of mathematics to be an object for the use of applied mathematics. The statement that the laws of nature are written in the language of mathematics was properly made three hundred years ago;[8 It is attributed to Galileo] it is now more true than ever before. In order to show the importance which mathematical concepts possess in the formulation of the laws of physics, let us recall, as an example, the axioms of quantum mechanics as formulated, explicitly, by the great physicist, Dirac. There are two basic concepts in quantum mechanics: states and observables. The states are vectors in Hilbert space, the observables self-adjoint operators on these vectors. The possible values of the observations are the characteristic values of the operatorsãbut we had better stop here lest we engage in a listing of the mathematical concepts developed in the theory of linear operators.</p>
+
+<p>It is true, of course, that physics chooses certain mathematical concepts for the formulation of the laws of nature, and surely only a fraction of all mathematical concepts is used in physics. It is true also that the concepts which were chosen were not selected arbitrarily from a listing of mathematical terms but were developed, in many if not most cases, independently by the physicist and recognized then as having been conceived before by the mathematician. It is not true, however, as is so often stated, that this had to happen because mathematics uses the simplest possible concepts and these were bound to occur in any formalism. As we saw before, the concepts of mathematics are not chosen for their conceptual simplicityeven sequences of pairs of numbers are far from being the simplest conceptsbut for their amenability to clever manipulations and to striking, brilliant arguments. Let us not forget that the Hilbert space of quantum mechanics is the complex Hilbert space, with a Hermitean scalar product. Surely to the unpreoccupied mind, complex numbers are far from natural or simple and they cannot be suggested by physical observations. Furthermore, the use of complex numbers is in this case not a calculational trick of applied mathematics but comes close to being a necessity in the formulation of the laws of quantum mechanics. Finally, it now begins to appear that not only complex numbers but so-called analytic functions are destined to play a decisive role in the formulation of quantum theory. I am referring to the rapidly developing theory of dispersion relations.</p>
+
+<p>It is difficult to avoid the impression that a miracle confronts us here, quite comparable in its striking nature to the miracle that the human mind can string a thousand arguments together without getting itself into contradictions, or to the two miracles of the existence of laws of nature and of the human mind&rsquo;s capacity to divine them. The observation which comes closest to an explanation for the mathematical concepts&#39; cropping up in physics which I know is Einstein&rsquo;s statement that the only physical theories which we are willing to accept are the beautiful ones. It stands to argue that the concepts of mathematics, which invite the exercise of so much wit, have the quality of beauty. However, Einstein&rsquo;s observation can at best explain properties of theories which we are willing to believe and has no reference to the intrinsic accuracy of the theory. We shall, therefore, turn to this latter question.</p>
+
+<h2 id="toc_4">Is the success of physical theories truly surprising?</h2>
+
+<p>A possible explanation of the physicist&rsquo;s use of mathematics to formulate his laws of nature is that he is a somewhat irresponsible person. As a result, when he finds a connection between two quantities which resembles a connection well-known from mathematics, he will jump at the conclusion that the connection is that discussed in mathematics simply because he does not know of any other similar connection. It is not the intention of the present discussion to refute the charge that the physicist is a somewhat irresponsible person. Perhaps he is. However, it is important to point out that the mathematical formulation of the physicist&rsquo;s often crude experience leads in an uncanny number of cases to an amazingly accurate description of a large class of phenomena. This shows that the mathematical language has more to commend it than being the only language which we can speak; it shows that it is, in a very real sense, the correct language. Let us consider a few examples.</p>
+
+<p>The first example is the oft-quoted one of planetary motion. The laws of falling bodies became rather well established as a result of experiments carried out principally in Italy. These experiments could not be very accurate in the sense in which we understand accuracy today partly because of the effect of air resistance and partly because of the impossibility, at that time, to measure short time intervals. Nevertheless, it is not surprising that, as a result of their studies, the Italian natural scientists acquired a familiarity with the ways in which objects travel through the atmosphere. It was Newton who then brought the law of freely falling objects into relation with the motion of the moon, noted that the parabola of the thrown rock&rsquo;s path on the earth and the circle of the moon&rsquo;s path in the sky are particular cases of the same mathematical object of an ellipse, and postulated the universal law of gravitation on the basis of a single, and at that time very approximate, numerical coincidence. Philosophically, the law of gravitation as formulated by Newton was repugnant to his time and to himself. Empirically, it was based on very scanty observations. The mathematical language in which it was formulated contained the concept of a second derivative and those of us who have tried to draw an osculating circle to a curve know that the second derivative is not a very immediate concept. The law of gravity which Newton reluctantly established and which he could verify with an accuracy of about 4% has proved to be accurate to less than a ten thousandth of a per cent and became so closely associated with the idea of absolute accuracy that only recently did physicists become again bold enough to inquire into the limitations of its accuracy. [9 See, for instance, R. H. Dicke, Am. Sci., 25 (1959).] Certainly, the example of Newton&rsquo;s law, quoted over and over again, must be mentioned first as a monumental example of a law, formulated in terms which appear simple to the mathematician, which has proved accurate beyond all reasonable expectations. Let us just recapitulate our thesis on this example: first, the law, particularly since a second derivative appears in it, is simple only to the mathematician, not to common sense or to non-mathematically-minded freshmen; second, it is a conditional law of very limited scope. It explains nothing about the earth which attracts Galileo&rsquo;s rocks, or about the circular form of the moon&rsquo;s orbit, or about the planets of the sun. The explanation of these initial conditions is left to the geologist and the astronomer, and they have a hard time with them.</p>
+
+<p>The second example is that of ordinary, elementary quantum mechanics. This originated when Max Born noticed that some rules of computation, given by Heisenberg, were formally identical with the rules of computation with matrices, established a long time before by mathematicians. Born, Jordan, and Heisenberg then proposed to replace by matrices the position and momentum variables of the equations of classical mechanics. They applied the rules of matrix mechanics to a few highly idealized problems and the results were quite satisfactory. However, there was, at that time, no rational evidence that their matrix mechanics would prove correct under more realistic conditions. Indeed, they say &ldquo;if the mechanics as here proposed should already be correct in its essential traits.&rdquo; As a matter of fact, the first application of their mechanics to a realistic problem, that of the hydrogen atom, was given several months later, by Pauli. This application gave results in agreement with experience. This was satisfactory but still understandable because Heisenberg&rsquo;s rules of calculation were abstracted from problems which included the old theory of the hydrogen atom. The miracle occurred only when matrix mechanics, or a mathematically equivalent theory, was applied to problems for which Heisenberg&rsquo;s calculating rules were meaningless. Heisenberg&rsquo;s rules presupposed that the classical equations of motion had solutions with certain periodicity properties; and the equations of motion of the two electrons of the helium atom, or of the even greater number of electrons of heavier atoms, simply do not have these properties, so that Heisenberg&rsquo;s rules cannot be applied to these cases. Nevertheless, the calculation of the lowest energy level of helium, as carried out a few months ago by Kinoshita at Cornell and by Bazley at the Bureau of Standards, agrees with the experimental data within the accuracy of the observations, which is one part in ten million. Surely in this case we &ldquo;got something out&rdquo; of the equations that we did not put in.</p>
+
+<p>The same is true of the qualitative characteristics of the &ldquo;complex spectra,&rdquo; that is, the spectra of heavier atoms. I wish to recall a conversation with Jordan, who told me, when the qualitative features of the spectra were derived, that a disagreement of the rules derived from quantum mechanical theory and the rules established by empirical research would have provided the last opportunity to make a change in the framework of matrix mechanics. In other words, Jordan felt that we would have been, at least temporarily, helpless had an unexpected disagreement occurred in the theory of the helium atom. This was, at that time, developed by Kellner and by Hilleraas. The mathematical formalism was too dear and unchangeable so that, had the miracle of helium which was mentioned before not occurred, a true crisis would have arisen. Surely, physics would have overcome that crisis in one way or another. It is true, on the other hand, that physics as we know it today would not be possible without a constant recurrence of miracles similar to the one of the helium atom, which is perhaps the most striking miracle that has occurred in the course of the development of elementary quantum mechanics, but by far not the only one. In fact, the number of analogous miracles is limited, in our view, only by our willingness to go after more similar ones. Quantum mechanics had, nevertheless, many almost equally striking successes which gave us the firm conviction that it is, what we call, correct.</p>
+
+<p>The last example is that of quantum electrodynamics, or the theory of the Lamb shift. Whereas Newton&rsquo;s theory of gravitation still had obvious connections with experience, experience entered the formulation of matrix mechanics only in the refined or sublimated form of Heisenberg&rsquo;s prescriptions. The quantum theory of the Lamb shift, as conceived by Bethe and established by Schwinger, is a purely mathematical theory and the only direct contribution of experiment was to show the existence of a measurable effect. The agreement with calculation is better than one part in a thousand.</p>
+
+<p>The preceding three examples, which could be multiplied almost indefinitely, should illustrate the appropriateness and accuracy of the mathematical formulation of the laws of nature in terms of concepts chosen for their manipulability, the &ldquo;laws of nature&rdquo; being of almost fantastic accuracy but of strictly limited scope. I propose to refer to the observation which these examples illustrate as the empirical law of epistemology. Together with the laws of invariance of physical theories, it is an indispensable foundation of these theories. Without the laws of invariance the physical theories could have been given no foundation of fact; if the empirical law of epistemology were not correct, we would lack the encouragement and reassurance which are emotional necessities, without which the &ldquo;laws of nature&rdquo; could not have been successfully explored. Dr. R. G. Sachs, with whom I discussed the empirical law of epistemology, called it an article of faith of the theoretical physicist, and it is surely that. However, what he called our article of faith can be well supported by actual examplesãmany examples in addition to the three which have been mentioned.</p>
+
+<h2 id="toc_5">The uniqueness of the theories of physics</h2>
+
+<p>The empirical nature of the preceding observation seems to me to be self-evident. It surely is not a &ldquo;necessity of thought&rdquo; and it should not be necessary, in order to prove this, to point to the fact that it applies only to a very small part of our knowledge of the inanimate world. It is absurd to believe that the existence of mathematically simple expressions for the second derivative of the position is self-evident, when no similar expressions for the position itself or for the velocity exist. It is therefore surprising how readily the wonderful gift contained in the empirical law of epistemology was taken for granted. The ability of the human mind to form a string of 1000 conclusions and still remain &ldquo;right,&rdquo; which was mentioned before, is a similar gift.</p>
+
+<p>Every empirical law has the disquieting quality that one does not know its limitations. We have seen that there are regularities in the events in the world around us which can be formulated in terms of mathematical concepts with an uncanny accuracy. There are, on the other hand, aspects of the world concerning which we do not believe in the existence of any accurate regularities. We call these initial conditions. The question which presents itself is whether the different regularities, that is, the various laws of nature which will be discovered, will fuse into a single consistent unit, or at least asymptotically approach such a fusion. Alternatively, it is possible that there always will be some laws of nature which have nothing in common with each other. At present, this is true, for instance, of the laws of heredity and of physics. It is even possible that some of the laws of nature will be in conflict with each other in their implications, but each convincing enough in its own domain so that we may not be willing to abandon any of them. We may resign ourselves to such a state of affairs or our interest in clearing up the conflict between the various theories may fade out. We may lose interest in the &ldquo;ultimate truth,&rdquo; that is, in a picture which is a consistent fusion into a single unit of the little pictures, formed on the various aspects of nature.</p>
+
+<p>It may be useful to illustrate the alternatives by an example. We now have, in physics, two theories of great power and interest: the theory of quantum phenomena and the theory of relativity. These two theories have their roots in mutually exclusive groups of phenomena. Relativity theory applies to macroscopic bodies, such as stars. The event of coincidence, that is, in ultimate analysis of collision, is the primitive event in the theory of relativity and defines a point in space-time, or at least would define a point if the colliding panicles were infinitely small. Quantum theory has its roots in the microscopic world and, from its point of view, the event of coincidence, or of collision, even if it takes place between particles of no spatial extent, is not primitive and not at all sharply isolated in space-time. The two theories operate with different mathematical conceptsãthe four dimensional Riemann space and the infinite dimensional Hilbert space, respectively. So far, the two theories could not be united, that is, no mathematical formulation exists to which both of these theories are approximations. All physicists believe that a union of the two theories is inherently possible and that we shall find it. Nevertheless, it is possible also to imagine that no union of the two theories can be found. This example illustrates the two possibilities, of union and of conflict, mentioned before, both of which are conceivable.</p>
+
+<p>In order to obtain an indication as to which alternative to expect ultimately, we can pretend to be a little more ignorant than we are and place ourselves at a lower level of knowledge than we actually possess. If we can find a fusion of our theories on this lower level of intelligence, we can confidently expect that we will find a fusion of our theories also at our real level of intelligence. On the other hand, if we would arrive at mutually contradictory theories at a somewhat lower level of knowledge, the possibility of the permanence of conflicting theories cannot be excluded for ourselves either. The level of knowledge and ingenuity is a continuous variable and it is unlikely that a relatively small variation of this continuous variable changes the attainable picture of the world from inconsistent to consistent. [10 This passage was written after a great deal of hesitation. The writer is convinced that it is useful, in epistemological discussions, to abandon the idealization that the level of human intelligence has a singular position on an absolute scale. In some cases it may even be useful to consider the attainment which is possible at the level of the intelligence of some other species. However, the writer also realizes that his thinking along the lines indicated in the text was too brief and not subject to sufficient critical appraisal to be reliable.] Considered from this point of view, the fact that some of the theories which we know to be false give such amazingly accurate results is an adverse factor. Had we somewhat less knowledge, the group of phenomena which these &ldquo;false&rdquo; theories explain would appear to us to be large enough to &ldquo;prove&rdquo; these theories. However, these theories are considered to be &ldquo;false&rdquo; by us just for the reason that they are, in ultimate analysis, incompatible with more encompassing pictures and, if sufficiently many such false theories are discovered, they are bound to prove also to be in conflict with each other. Similarly, it is possible that the theories, which we consider to be &ldquo;proved&rdquo; by a number of numerical agreements which appears to be large enough for us, are false because they are in conflict with a possible more encompassing theory which is beyond our means of discovery. If this were true, we would have to expect conflicts between our theories as soon as their number grows beyond a certain point and as soon as they cover a sufficiently large number of groups of phenomena. In contrast to the article of faith of the theoretical physicist mentioned before, this is the nightmare of the theorist.</p>
+
+<p>Let us consider a few examples of &ldquo;false&rdquo; theories which give, in view of their falseness, alarmingly accurate descriptions of groups of phenomena. With some goodwill, one can dismiss some of the evidence which these examples provide. The success of Bohr&rsquo;s early and pioneering ideas on the atom was always a rather narrow one and the same applies to Ptolemy&rsquo;s epicycles. Our present vantage point gives an accurate description of all phenomena which these more primitive theories can describe. The same is not true any longer of the so-called free-electron theory, which gives a marvelously accurate picture of many, if not most, properties of metals, semiconductors, and insulators. In particular, it explains the fact, never properly understood on the basis of the &ldquo;real theory,&rdquo; that insulators show a specific resistance to electricity which may be 1026 times greater than that of metals. In fact, there is no experimental evidence to show that the resistance is not infinite under the conditions under which the free-electron theory would lead us to expect an infinite resistance. Nevertheless, we are convinced that the free-electron theory is a crude approximation which should be replaced, in the description of all phenomena concerning solids, by a more accurate picture.</p>
+
+<p>If viewed from our real vantage point, the situation presented by the free-electron theory is irritating but is not likely to forebode any inconsistencies which are unsurmountable for us. The free-electron theory raises doubts as to how much we should trust numerical agreement between theory and experiment as evidence for the correctness of the theory. We are used to such doubts.</p>
+
+<p>A much more difficult and confusing situation would arise if we could, some day, establish a theory of the phenomena of consciousness, or of biology, which would be as coherent and convincing as our present theories of the inanimate world. Mendel&rsquo;s laws of inheritance and the subsequent work on genes may well form the beginning of such a theory as far as biology is concerned. Furthermore,, it is quite possible that an abstract argument can be found which shows that there is a conflict between such a theory and the accepted principles of physics. The argument could be of such abstract nature that it might not be possible to resolve the conflict, in favor of one or of the other theory, by an experiment. Such a situation would put a heavy strain on our faith in our theories and on our belief in the reality of the concepts which we form. It would give us a deep sense of frustration in our search for what I called &ldquo;the ultimate truth.&rdquo; The reason that such a situation is conceivable is that, fundamentally, we do not know why our theories work so well. Hence, their accuracy may not prove their truth and consistency. Indeed, it is this writer&rsquo;s belief that something rather akin to the situation which was described above exists if the present laws of heredity and of physics are confronted.</p>
+
+<p>Let me end on a more cheerful note. The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve. We should be grateful for it and hope that it will remain valid in future research and that it will extend, for better or for worse, to our pleasure, even though perhaps also to our bafflement, to wide branches of learning.</p>
+
+<p>Merci W. Cooper</p>
+
+<p>Histoire et philosophie des mathmatiques Le quasi-empirisme en philosophie des mathmatiques. Une presentation Liens mathmatiques en relation indirecte avec le quasi-empirisme Retour la page d&#39;accueil.</p>
+
+<blockquote>
+<p>Eugene Wigner</p>
+</blockquote>
+
+<hr>
+
+<p>Original: <a href="http://www.dartmouth.edu/%7Ematc/MathDrama/reading/Wigner.html">visit website</a>.</p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+
+</body>
+
+</html>
