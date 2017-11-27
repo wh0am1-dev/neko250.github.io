@@ -1,0 +1,120 @@
+#player,
+#player a {
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Courier New', Courier New, monospace;
+    /* font-family: VERDANA; */
+}
+
+#player {
+    background: url(http://static.tumblr.com/kwaqeuc/kWem2no0x/volumepaz.png);
+    background-position: bottom;
+    background-color: #000;
+}
+
+#player .mainImage {
+    background: url(http://static.tumblr.com/thjohj4/p1Pmwkol8/222-black.png);
+}
+
+#player #baseLeft {
+    width: 93px;
+}
+
+#player #baseRight {
+    width: 145px;
+}
+
+#player .button {
+    width: 26px;
+}
+
+#player #play {
+    background: url(http://static.tumblr.com/thjohj4/9r4mwkoml/222-play-black.png);
+}
+
+#player #play,
+#player #pause {
+    left: 0px;
+}
+
+#player #previous {
+    left: 26px;
+}
+
+#player #next {
+    left: 52px;
+}
+
+#player #title {
+    left: 90px;
+    font-size: 10px;
+}
+
+#player #tooltip {
+    right: 196px;
+}
+
+#player #timer {
+    right: 120px;
+}
+
+#player #list {
+    right: 0px;
+}
+
+#player #seeker {
+    right: 320px;
+}
+
+#player #seekerBase {
+    border-color: #FFFFFF;
+}
+
+#player #seekerBuffered {
+    background-color: #fff;
+}
+
+#player #seekerSliderBase {
+    background-color: #000000;
+}
+
+#player #volume {
+    width: 65px;
+    right: 39px;
+}
+
+#player #volumeSlider {
+    width: 8px;
+    background: url(http://static.tumblr.com/thjohj4/pDumwkona/222-black-volume.png);
+}
+
+#playlist,
+#playlist .module,
+#playlist h3 {
+    border-color: #000;
+}
+
+#playlist .module {
+    color: #fff;
+    background-color: #000;
+}
+
+#playlist h3 {
+	/* background: url(http://url.to/img); */
+    color: #fff;
+    background-color: #000;
+}
+
+#playlist .even {
+    background-color: #000;
+}
+
+#playlist .odd {
+    display: none;
+    background-color: #000;
+}
+
+#playlist .focus {
+    background-color: #fff;
+    color: #000;
+}
