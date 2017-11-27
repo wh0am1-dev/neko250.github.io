@@ -110,11 +110,14 @@
 }
 
 #playlist .odd {
-    display: none;
     background-color: #000;
 }
 
 #playlist .focus {
     background-color: #fff;
     color: #000;
+}
+
+ol.items + div.odd {
+    display: none;
 }
