@@ -4,7 +4,7 @@
 
 ## Autores
 
-- [Carlos Aguilar de la Morena](https://neko250.github.io).
+- [Carlos Aguilar de la Morena](https://carlos-aguilar.com).
 - Ignacio Huesa Cerdán.
 - Carlos López Rodríguez.
 - Andrés Tamayo Jímenez.
@@ -220,7 +220,7 @@ Todos los diferentes lenguajes que pertenezcan a un mismo bundle deberán declar
 Para usar una cadena de texto definida en un bundle en un archivo `.lml`, usaremos la siguiente notación:
 
 ```xml:BundleString.lml
-<linklabel href="https://neko250.github.io">@website</linklabel>
+<linklabel href="https://carlos-aguilar.com">@website</linklabel>
 ```
 
 ## LML.dtd

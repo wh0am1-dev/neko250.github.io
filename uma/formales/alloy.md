@@ -1,6 +1,6 @@
 # alloy
 
-[index](https://neko250.github.io/uma/formales/index.html)
+[index](https://carlos-aguilar.com/neko250.github.io/uma/formales/index.html)
 
 ## febrero 2014
 
@@ -115,4 +115,4 @@ pred unaCartaMas(j : Juego, t, t' : Tiempo, n : Naipe) {
 }
 ```
 
-[index](https://neko250.github.io/uma/formales/index.html)
+[index](https://carlos-aguilar.com/neko250.github.io/uma/formales/index.html)

@@ -1,6 +1,6 @@
 # ocl
 
-[index](https://neko250.github.io/uma/formales/index.html)
+[index](https://carlos-aguilar.com/neko250.github.io/uma/formales/index.html)
 
 ## febrero 2014
 
@@ -121,4 +121,4 @@ context Juego::manos() : Set(Set(Naipe))
   post: result->forAll(s1, s2 : Set(Naipe) | s1 <> s2 implies s1.excludesAll(s2))
 ```
 
-[index](https://neko250.github.io/uma/formales/index.html)
+[index](https://carlos-aguilar.com/neko250.github.io/uma/formales/index.html)
